@@ -1,0 +1,6 @@
+framework module Pods_StaqoTests {
+  umbrella header "Pods-StaqoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

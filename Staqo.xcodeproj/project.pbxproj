@@ -1,0 +1,1159 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B99BC3F01809C8F83EBB717 /* Pods_StaqoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2E46D574FB2E70C4259338 /* Pods_StaqoTests.framework */; };
+		23A54F90B0ACCF9B50BF18BB /* Pods_Staqo_StaqoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29A605CE636FBDDAD505C36 /* Pods_Staqo_StaqoUITests.framework */; };
+		BF8DCA3832A9A9BB23B1D424 /* Pods_Staqo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2501CD86A8CB56FC58286A6 /* Pods_Staqo.framework */; };
+		CD5DB42125D5A26300353084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB42025D5A26300353084 /* AppDelegate.swift */; };
+		CD5DB42325D5A26300353084 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB42225D5A26300353084 /* SceneDelegate.swift */; };
+		CD5DB42825D5A26300353084 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5DB42625D5A26300353084 /* Main.storyboard */; };
+		CD5DB42A25D5A26500353084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD5DB42925D5A26500353084 /* Assets.xcassets */; };
+		CD5DB42D25D5A26500353084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5DB42B25D5A26500353084 /* LaunchScreen.storyboard */; };
+		CD5DB43825D5A26500353084 /* StaqoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB43725D5A26500353084 /* StaqoTests.swift */; };
+		CD5DB44325D5A26500353084 /* StaqoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB44225D5A26500353084 /* StaqoUITests.swift */; };
+		CD5DB46225D5A52E00353084 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB46125D5A52E00353084 /* LoginVC.swift */; };
+		CD5DB46B25D5A56100353084 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB46A25D5A56100353084 /* BaseVC.swift */; };
+		CD5DB47125D5A5BD00353084 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB47025D5A5BD00353084 /* NetworkManager.swift */; };
+		CD5DB47825D5A5E500353084 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB47625D5A5E500353084 /* Configuration.swift */; };
+		CD5DB47925D5A5E500353084 /* EnvironmentList.plist in Resources */ = {isa = PBXBuildFile; fileRef = CD5DB47725D5A5E500353084 /* EnvironmentList.plist */; };
+		CD5DB48725D5A60C00353084 /* Interfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB47E25D5A60B00353084 /* Interfaces.swift */; };
+		CD5DB48825D5A60C00353084 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB47F25D5A60B00353084 /* UIColor.swift */; };
+		CD5DB48925D5A60C00353084 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB48025D5A60B00353084 /* Date.swift */; };
+		CD5DB48A25D5A60C00353084 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB48125D5A60B00353084 /* UserDefaults.swift */; };
+		CD5DB48B25D5A60C00353084 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB48225D5A60B00353084 /* Extension.swift */; };
+		CD5DB48C25D5A60C00353084 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB48325D5A60B00353084 /* CustomError.swift */; };
+		CD5DB48D25D5A60C00353084 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB48425D5A60B00353084 /* NetworkClient.swift */; };
+		CD5DB48E25D5A60C00353084 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB48525D5A60B00353084 /* Constant.swift */; };
+		CD5DB48F25D5A60C00353084 /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB48625D5A60B00353084 /* ResourceType.swift */; };
+		CD5DB49525D5A8E900353084 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB49425D5A8E900353084 /* BaseModel.swift */; };
+		CD5DB49F25D5A9C100353084 /* DashboardNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB49E25D5A9C100353084 /* DashboardNavigationVC.swift */; };
+		CD5DB4A925D5AA2800353084 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB4A725D5AA2800353084 /* DesignableButton.swift */; };
+		CD5DB4AA25D5AA2800353084 /* TTCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB4A825D5AA2800353084 /* TTCustomView.swift */; };
+		CD5DB4AF25D5AA4C00353084 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB4AE25D5AA4C00353084 /* LoginViewModel.swift */; };
+		CD5DB4B425D5AA5B00353084 /* LoginDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB4B325D5AA5B00353084 /* LoginDataSource.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CD5DB43425D5A26500353084 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD5DB41525D5A26300353084 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD5DB41C25D5A26300353084;
+			remoteInfo = Staqo;
+		};
+		CD5DB43F25D5A26500353084 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CD5DB41525D5A26300353084 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD5DB41C25D5A26300353084;
+			remoteInfo = Staqo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04EC2FA92BAE3115630112F4 /* Pods-StaqoTests.dev debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.dev debug.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.dev debug.xcconfig"; sourceTree = "<group>"; };
+		0ED6CC37FE804F939F579513 /* Pods-StaqoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.debug.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		37F6594EFE48F04EEB218C98 /* Pods-Staqo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo.debug.xcconfig"; path = "Target Support Files/Pods-Staqo/Pods-Staqo.debug.xcconfig"; sourceTree = "<group>"; };
+		52F3C86A15C2AD7D938AFE83 /* Pods-Staqo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo.release.xcconfig"; path = "Target Support Files/Pods-Staqo/Pods-Staqo.release.xcconfig"; sourceTree = "<group>"; };
+		6E2E46D574FB2E70C4259338 /* Pods_StaqoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaqoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8823E62ABD353BD79E5BCDC6 /* Pods-StaqoTests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.dev release.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.dev release.xcconfig"; sourceTree = "<group>"; };
+		8BF5CFF0968C9EF8AF072D1D /* Pods-StaqoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.release.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.release.xcconfig"; sourceTree = "<group>"; };
+		A29A605CE636FBDDAD505C36 /* Pods_Staqo_StaqoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Staqo_StaqoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F3B7D0CDCE427A40CB68E7 /* Pods-Staqo-StaqoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo-StaqoUITests.release.xcconfig"; path = "Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2501CD86A8CB56FC58286A6 /* Pods_Staqo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Staqo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B360DC8DF74B987DB41E2C8A /* Pods-Staqo.dev debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo.dev debug.xcconfig"; path = "Target Support Files/Pods-Staqo/Pods-Staqo.dev debug.xcconfig"; sourceTree = "<group>"; };
+		C348151C0A6B5D984ED56177 /* Pods-Staqo-StaqoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo-StaqoUITests.debug.xcconfig"; path = "Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CD5DB41D25D5A26300353084 /* Staqo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Staqo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5DB42025D5A26300353084 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD5DB42225D5A26300353084 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD5DB42725D5A26300353084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CD5DB42925D5A26500353084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD5DB42C25D5A26500353084 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD5DB42E25D5A26500353084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5DB43325D5A26500353084 /* StaqoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaqoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5DB43725D5A26500353084 /* StaqoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaqoTests.swift; sourceTree = "<group>"; };
+		CD5DB43925D5A26500353084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5DB43E25D5A26500353084 /* StaqoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaqoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD5DB44225D5A26500353084 /* StaqoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaqoUITests.swift; sourceTree = "<group>"; };
+		CD5DB44425D5A26500353084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD5DB46125D5A52E00353084 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CD5DB46A25D5A56100353084 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		CD5DB47025D5A5BD00353084 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CD5DB47625D5A5E500353084 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		CD5DB47725D5A5E500353084 /* EnvironmentList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = EnvironmentList.plist; sourceTree = "<group>"; };
+		CD5DB47E25D5A60B00353084 /* Interfaces.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interfaces.swift; sourceTree = "<group>"; };
+		CD5DB47F25D5A60B00353084 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		CD5DB48025D5A60B00353084 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		CD5DB48125D5A60B00353084 /* UserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		CD5DB48225D5A60B00353084 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		CD5DB48325D5A60B00353084 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		CD5DB48425D5A60B00353084 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		CD5DB48525D5A60B00353084 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		CD5DB48625D5A60B00353084 /* ResourceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
+		CD5DB49425D5A8E900353084 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		CD5DB49E25D5A9C100353084 /* DashboardNavigationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardNavigationVC.swift; sourceTree = "<group>"; };
+		CD5DB4A725D5AA2800353084 /* DesignableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		CD5DB4A825D5AA2800353084 /* TTCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTCustomView.swift; sourceTree = "<group>"; };
+		CD5DB4AE25D5AA4C00353084 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		CD5DB4B325D5AA5B00353084 /* LoginDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataSource.swift; sourceTree = "<group>"; };
+		CFF7CFB13DC865F912DAF79D /* Pods-Staqo-StaqoUITests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo-StaqoUITests.dev release.xcconfig"; path = "Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests.dev release.xcconfig"; sourceTree = "<group>"; };
+		D6636500224CB42B9AC5695A /* Pods-Staqo-StaqoUITests.dev debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo-StaqoUITests.dev debug.xcconfig"; path = "Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests.dev debug.xcconfig"; sourceTree = "<group>"; };
+		FF2EC32137CC399D65D6BD12 /* Pods-Staqo.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo.dev release.xcconfig"; path = "Target Support Files/Pods-Staqo/Pods-Staqo.dev release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD5DB41A25D5A26300353084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF8DCA3832A9A9BB23B1D424 /* Pods_Staqo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5DB43025D5A26500353084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1B99BC3F01809C8F83EBB717 /* Pods_StaqoTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5DB43B25D5A26500353084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23A54F90B0ACCF9B50BF18BB /* Pods_Staqo_StaqoUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8607090F101CFDC5106C8012 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37F6594EFE48F04EEB218C98 /* Pods-Staqo.debug.xcconfig */,
+				52F3C86A15C2AD7D938AFE83 /* Pods-Staqo.release.xcconfig */,
+				C348151C0A6B5D984ED56177 /* Pods-Staqo-StaqoUITests.debug.xcconfig */,
+				B0F3B7D0CDCE427A40CB68E7 /* Pods-Staqo-StaqoUITests.release.xcconfig */,
+				0ED6CC37FE804F939F579513 /* Pods-StaqoTests.debug.xcconfig */,
+				8BF5CFF0968C9EF8AF072D1D /* Pods-StaqoTests.release.xcconfig */,
+				B360DC8DF74B987DB41E2C8A /* Pods-Staqo.dev debug.xcconfig */,
+				FF2EC32137CC399D65D6BD12 /* Pods-Staqo.dev release.xcconfig */,
+				D6636500224CB42B9AC5695A /* Pods-Staqo-StaqoUITests.dev debug.xcconfig */,
+				CFF7CFB13DC865F912DAF79D /* Pods-Staqo-StaqoUITests.dev release.xcconfig */,
+				04EC2FA92BAE3115630112F4 /* Pods-StaqoTests.dev debug.xcconfig */,
+				8823E62ABD353BD79E5BCDC6 /* Pods-StaqoTests.dev release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CD5DB41425D5A26300353084 = {
+			isa = PBXGroup;
+			children = (
+				CD5DB41F25D5A26300353084 /* Staqo */,
+				CD5DB43625D5A26500353084 /* StaqoTests */,
+				CD5DB44125D5A26500353084 /* StaqoUITests */,
+				CD5DB41E25D5A26300353084 /* Products */,
+				8607090F101CFDC5106C8012 /* Pods */,
+				E3E17D8CE0A3F48DEE299812 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CD5DB41E25D5A26300353084 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB41D25D5A26300353084 /* Staqo.app */,
+				CD5DB43325D5A26500353084 /* StaqoTests.xctest */,
+				CD5DB43E25D5A26500353084 /* StaqoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD5DB41F25D5A26300353084 /* Staqo */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB46025D5A50600353084 /* Login */,
+				CD5DB49325D5A8D700353084 /* Model */,
+				CD5DB47D25D5A5EC00353084 /* Shared */,
+				CD5DB47525D5A5C100353084 /* Environment */,
+				CD5DB46F25D5A5A200353084 /* Network */,
+				CD5DB46625D5A54C00353084 /* BaseVC */,
+				CD5DB4A625D5AA1800353084 /* Custom View */,
+				CD5DB49D25D5A9B300353084 /* Navigation */,
+				CD5DB49925D5A93D00353084 /* Storyboard */,
+				CD5DB42025D5A26300353084 /* AppDelegate.swift */,
+				CD5DB42225D5A26300353084 /* SceneDelegate.swift */,
+				CD5DB42925D5A26500353084 /* Assets.xcassets */,
+				CD5DB42B25D5A26500353084 /* LaunchScreen.storyboard */,
+				CD5DB42E25D5A26500353084 /* Info.plist */,
+			);
+			path = Staqo;
+			sourceTree = "<group>";
+		};
+		CD5DB43625D5A26500353084 /* StaqoTests */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB43725D5A26500353084 /* StaqoTests.swift */,
+				CD5DB43925D5A26500353084 /* Info.plist */,
+			);
+			path = StaqoTests;
+			sourceTree = "<group>";
+		};
+		CD5DB44125D5A26500353084 /* StaqoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB44225D5A26500353084 /* StaqoUITests.swift */,
+				CD5DB44425D5A26500353084 /* Info.plist */,
+			);
+			path = StaqoUITests;
+			sourceTree = "<group>";
+		};
+		CD5DB46025D5A50600353084 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB46125D5A52E00353084 /* LoginVC.swift */,
+				CD5DB4AE25D5AA4C00353084 /* LoginViewModel.swift */,
+				CD5DB4B325D5AA5B00353084 /* LoginDataSource.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CD5DB46625D5A54C00353084 /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB46A25D5A56100353084 /* BaseVC.swift */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		CD5DB46F25D5A5A200353084 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB47025D5A5BD00353084 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CD5DB47525D5A5C100353084 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB47625D5A5E500353084 /* Configuration.swift */,
+				CD5DB47725D5A5E500353084 /* EnvironmentList.plist */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		CD5DB47D25D5A5EC00353084 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB48525D5A60B00353084 /* Constant.swift */,
+				CD5DB48325D5A60B00353084 /* CustomError.swift */,
+				CD5DB48025D5A60B00353084 /* Date.swift */,
+				CD5DB48225D5A60B00353084 /* Extension.swift */,
+				CD5DB47E25D5A60B00353084 /* Interfaces.swift */,
+				CD5DB48425D5A60B00353084 /* NetworkClient.swift */,
+				CD5DB48625D5A60B00353084 /* ResourceType.swift */,
+				CD5DB47F25D5A60B00353084 /* UIColor.swift */,
+				CD5DB48125D5A60B00353084 /* UserDefaults.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		CD5DB49325D5A8D700353084 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB49425D5A8E900353084 /* BaseModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD5DB49925D5A93D00353084 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB42625D5A26300353084 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		CD5DB49D25D5A9B300353084 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB49E25D5A9C100353084 /* DashboardNavigationVC.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		CD5DB4A625D5AA1800353084 /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				CD5DB4A725D5AA2800353084 /* DesignableButton.swift */,
+				CD5DB4A825D5AA2800353084 /* TTCustomView.swift */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		E3E17D8CE0A3F48DEE299812 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2501CD86A8CB56FC58286A6 /* Pods_Staqo.framework */,
+				A29A605CE636FBDDAD505C36 /* Pods_Staqo_StaqoUITests.framework */,
+				6E2E46D574FB2E70C4259338 /* Pods_StaqoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD5DB41C25D5A26300353084 /* Staqo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD5DB44725D5A26500353084 /* Build configuration list for PBXNativeTarget "Staqo" */;
+			buildPhases = (
+				2E2C8F6AF8E2C5877C5D2A1A /* [CP] Check Pods Manifest.lock */,
+				CD5DB41925D5A26300353084 /* Sources */,
+				CD5DB41A25D5A26300353084 /* Frameworks */,
+				CD5DB41B25D5A26300353084 /* Resources */,
+				1FC7681F000446C28BA4C2CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Staqo;
+			productName = Staqo;
+			productReference = CD5DB41D25D5A26300353084 /* Staqo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CD5DB43225D5A26500353084 /* StaqoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD5DB44A25D5A26500353084 /* Build configuration list for PBXNativeTarget "StaqoTests" */;
+			buildPhases = (
+				EA7849575D2BB109C4A3E1DD /* [CP] Check Pods Manifest.lock */,
+				CD5DB42F25D5A26500353084 /* Sources */,
+				CD5DB43025D5A26500353084 /* Frameworks */,
+				CD5DB43125D5A26500353084 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD5DB43525D5A26500353084 /* PBXTargetDependency */,
+			);
+			name = StaqoTests;
+			productName = StaqoTests;
+			productReference = CD5DB43325D5A26500353084 /* StaqoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CD5DB43D25D5A26500353084 /* StaqoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD5DB44D25D5A26500353084 /* Build configuration list for PBXNativeTarget "StaqoUITests" */;
+			buildPhases = (
+				965AE99CBA68826E5D65B42F /* [CP] Check Pods Manifest.lock */,
+				CD5DB43A25D5A26500353084 /* Sources */,
+				CD5DB43B25D5A26500353084 /* Frameworks */,
+				CD5DB43C25D5A26500353084 /* Resources */,
+				3DE2CDEFD59948FD5CA951D0 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CD5DB44025D5A26500353084 /* PBXTargetDependency */,
+			);
+			name = StaqoUITests;
+			productName = StaqoUITests;
+			productReference = CD5DB43E25D5A26500353084 /* StaqoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD5DB41525D5A26300353084 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					CD5DB41C25D5A26300353084 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					CD5DB43225D5A26500353084 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CD5DB41C25D5A26300353084;
+					};
+					CD5DB43D25D5A26500353084 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = CD5DB41C25D5A26300353084;
+					};
+				};
+			};
+			buildConfigurationList = CD5DB41825D5A26300353084 /* Build configuration list for PBXProject "Staqo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD5DB41425D5A26300353084;
+			productRefGroup = CD5DB41E25D5A26300353084 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD5DB41C25D5A26300353084 /* Staqo */,
+				CD5DB43225D5A26500353084 /* StaqoTests */,
+				CD5DB43D25D5A26500353084 /* StaqoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD5DB41B25D5A26300353084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5DB47925D5A5E500353084 /* EnvironmentList.plist in Resources */,
+				CD5DB42D25D5A26500353084 /* LaunchScreen.storyboard in Resources */,
+				CD5DB42A25D5A26500353084 /* Assets.xcassets in Resources */,
+				CD5DB42825D5A26300353084 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5DB43125D5A26500353084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5DB43C25D5A26500353084 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1FC7681F000446C28BA4C2CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Staqo/Pods-Staqo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Staqo/Pods-Staqo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Staqo/Pods-Staqo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E2C8F6AF8E2C5877C5D2A1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Staqo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3DE2CDEFD59948FD5CA951D0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		965AE99CBA68826E5D65B42F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Staqo-StaqoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA7849575D2BB109C4A3E1DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StaqoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD5DB41925D5A26300353084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5DB47825D5A5E500353084 /* Configuration.swift in Sources */,
+				CD5DB42125D5A26300353084 /* AppDelegate.swift in Sources */,
+				CD5DB42325D5A26300353084 /* SceneDelegate.swift in Sources */,
+				CD5DB47125D5A5BD00353084 /* NetworkManager.swift in Sources */,
+				CD5DB4B425D5AA5B00353084 /* LoginDataSource.swift in Sources */,
+				CD5DB48B25D5A60C00353084 /* Extension.swift in Sources */,
+				CD5DB48F25D5A60C00353084 /* ResourceType.swift in Sources */,
+				CD5DB49525D5A8E900353084 /* BaseModel.swift in Sources */,
+				CD5DB48C25D5A60C00353084 /* CustomError.swift in Sources */,
+				CD5DB4AF25D5AA4C00353084 /* LoginViewModel.swift in Sources */,
+				CD5DB48725D5A60C00353084 /* Interfaces.swift in Sources */,
+				CD5DB48E25D5A60C00353084 /* Constant.swift in Sources */,
+				CD5DB49F25D5A9C100353084 /* DashboardNavigationVC.swift in Sources */,
+				CD5DB48825D5A60C00353084 /* UIColor.swift in Sources */,
+				CD5DB4AA25D5AA2800353084 /* TTCustomView.swift in Sources */,
+				CD5DB48D25D5A60C00353084 /* NetworkClient.swift in Sources */,
+				CD5DB48A25D5A60C00353084 /* UserDefaults.swift in Sources */,
+				CD5DB46225D5A52E00353084 /* LoginVC.swift in Sources */,
+				CD5DB48925D5A60C00353084 /* Date.swift in Sources */,
+				CD5DB46B25D5A56100353084 /* BaseVC.swift in Sources */,
+				CD5DB4A925D5AA2800353084 /* DesignableButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5DB42F25D5A26500353084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5DB43825D5A26500353084 /* StaqoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD5DB43A25D5A26500353084 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD5DB44325D5A26500353084 /* StaqoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CD5DB43525D5A26500353084 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD5DB41C25D5A26300353084 /* Staqo */;
+			targetProxy = CD5DB43425D5A26500353084 /* PBXContainerItemProxy */;
+		};
+		CD5DB44025D5A26500353084 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CD5DB41C25D5A26300353084 /* Staqo */;
+			targetProxy = CD5DB43F25D5A26500353084 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CD5DB42625D5A26300353084 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD5DB42725D5A26300353084 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CD5DB42B25D5A26500353084 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CD5DB42C25D5A26500353084 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CD5DB44525D5A26500353084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD5DB44625D5A26500353084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD5DB44825D5A26500353084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F6594EFE48F04EEB218C98 /* Pods-Staqo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Staqo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.Staqo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD5DB44925D5A26500353084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52F3C86A15C2AD7D938AFE83 /* Pods-Staqo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Staqo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.Staqo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CD5DB44B25D5A26500353084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0ED6CC37FE804F939F579513 /* Pods-StaqoTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Staqo.app/Staqo";
+			};
+			name = Debug;
+		};
+		CD5DB44C25D5A26500353084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BF5CFF0968C9EF8AF072D1D /* Pods-StaqoTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Staqo.app/Staqo";
+			};
+			name = Release;
+		};
+		CD5DB44E25D5A26500353084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C348151C0A6B5D984ED56177 /* Pods-Staqo-StaqoUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Staqo;
+			};
+			name = Debug;
+		};
+		CD5DB44F25D5A26500353084 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F3B7D0CDCE427A40CB68E7 /* Pods-Staqo-StaqoUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Staqo;
+			};
+			name = Release;
+		};
+		CD5DB4B825D5AFDF00353084 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Dev Debug";
+		};
+		CD5DB4B925D5AFDF00353084 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B360DC8DF74B987DB41E2C8A /* Pods-Staqo.dev debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Staqo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.Staqo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Dev Debug";
+		};
+		CD5DB4BA25D5AFDF00353084 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04EC2FA92BAE3115630112F4 /* Pods-StaqoTests.dev debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Staqo.app/Staqo";
+			};
+			name = "Dev Debug";
+		};
+		CD5DB4BB25D5AFDF00353084 /* Dev Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6636500224CB42B9AC5695A /* Pods-Staqo-StaqoUITests.dev debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Staqo;
+			};
+			name = "Dev Debug";
+		};
+		CD5DB4C025D5B01800353084 /* Dev Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Dev Release";
+		};
+		CD5DB4C125D5B01800353084 /* Dev Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF2EC32137CC399D65D6BD12 /* Pods-Staqo.dev release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Staqo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.Staqo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Dev Release";
+		};
+		CD5DB4C225D5B01800353084 /* Dev Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8823E62ABD353BD79E5BCDC6 /* Pods-StaqoTests.dev release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Staqo.app/Staqo";
+			};
+			name = "Dev Release";
+		};
+		CD5DB4C325D5B01800353084 /* Dev Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFF7CFB13DC865F912DAF79D /* Pods-Staqo-StaqoUITests.dev release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StaqoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Staqo.StaqoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Staqo;
+			};
+			name = "Dev Release";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD5DB41825D5A26300353084 /* Build configuration list for PBXProject "Staqo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5DB44525D5A26500353084 /* Debug */,
+				CD5DB4B825D5AFDF00353084 /* Dev Debug */,
+				CD5DB44625D5A26500353084 /* Release */,
+				CD5DB4C025D5B01800353084 /* Dev Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD5DB44725D5A26500353084 /* Build configuration list for PBXNativeTarget "Staqo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5DB44825D5A26500353084 /* Debug */,
+				CD5DB4B925D5AFDF00353084 /* Dev Debug */,
+				CD5DB44925D5A26500353084 /* Release */,
+				CD5DB4C125D5B01800353084 /* Dev Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD5DB44A25D5A26500353084 /* Build configuration list for PBXNativeTarget "StaqoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5DB44B25D5A26500353084 /* Debug */,
+				CD5DB4BA25D5AFDF00353084 /* Dev Debug */,
+				CD5DB44C25D5A26500353084 /* Release */,
+				CD5DB4C225D5B01800353084 /* Dev Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD5DB44D25D5A26500353084 /* Build configuration list for PBXNativeTarget "StaqoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD5DB44E25D5A26500353084 /* Debug */,
+				CD5DB4BB25D5AFDF00353084 /* Dev Debug */,
+				CD5DB44F25D5A26500353084 /* Release */,
+				CD5DB4C325D5B01800353084 /* Dev Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD5DB41525D5A26300353084 /* Project object */;
+}
