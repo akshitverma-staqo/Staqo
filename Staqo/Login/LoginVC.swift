@@ -7,10 +7,14 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
-
+class LoginVC: BaseVC {
+    var viewModel:LoginViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = LoginViewModel(dataSource: LoginDataSource())
+        viewModel.delegate = self
+        viewModel.bootstrap()
+        
         print(Configuration.baseURL)
         // Do any additional setup after loading the view.
     }
@@ -26,4 +30,22 @@ class LoginVC: UIViewController {
     }
     */
 
+}
+extension LoginVC : ViewModelDelegate{
+    func willLoadData() {
+        startLoader()
+    }
+    
+    func didLoadData() {
+        stopLoader()
+    }
+    
+    func didFail(error: CustomError) {
+        showErrorMessage(title: "Error", error: error) { (action) in
+            
+        }
+        stopLoader()
+    }
+    
+    
 }
