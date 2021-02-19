@@ -34,6 +34,7 @@ enum CustomError:Printable {
     case ResetPasswordFail
     case ResetPassword
     case Otp
+    case OtherError(error: Error)
     
     var localizedDescription: String {
         switch  self {
@@ -75,6 +76,8 @@ enum CustomError:Printable {
             return "Reset Password email sent successfully"
         case .Otp:
             return "Please enter the valid Otp Number"
+        case .OtherError(let error):
+        return error.localizedDescription
             
         default:
             return ""

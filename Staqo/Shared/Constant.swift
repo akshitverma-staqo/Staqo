@@ -23,14 +23,14 @@ class Constant {
     
         // MARK:-   StoryBoard
         static let kMainStoryboard = "Main"
-   
+        static let kHomeStoryboard = "Home"
   
     
     // MARK:- View Controllers
     static let kDashboardNavigationVC = "DashboardNavigationVC"
     
     static let kLoginVC = "LoginVC"
-    static let kSignUpVC = "SignUpVC"
+    static let kHomeVC = "HomeVC"
     
     
     // MARK:-  Popup View
