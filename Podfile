@@ -11,6 +11,9 @@ target 'Staqo' do
 	pod 'Moya', '~> 13.0'
 	pod 'ReachabilitySwift'
 	pod 'IQKeyboardManagerSwift', '~> 6.2'
+	pod 'MSAL', '~> 1.1.1'
+	pod 'MSGraphClientSDK', ' ~> 1.0.0'
+	pod 'MSGraphClientModels', '~> 1.3.0'
 
   target 'StaqoTests' do
     inherit! :search_paths
