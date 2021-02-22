@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgView1: UIImageView!
     @IBOutlet weak var imgView2: UIImageView!
@@ -18,8 +18,11 @@ class HomeCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func dataBind(data:(imageArr:[String], curveArr:[String], TopLabArray:[String])) {
-        imgView1.image = UIImage(named: data.imageArr["")
+    func dataBind(data:(imageArr:[String], curveArr:[String], TopLabArray:[String])? , index:IndexPath) {
+        imgView1.image = UIImage(named: data?.imageArr[index.row] ?? "")
+        imgView2.image = UIImage(named: data?.curveArr[index.row] ?? "")
+        imgView3.image = UIImage(named: data?.TopLabArray[index.row] ?? "")
+        
         
     }
 

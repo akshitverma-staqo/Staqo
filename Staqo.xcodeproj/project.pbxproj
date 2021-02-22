@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B99BC3F01809C8F83EBB717 /* Pods_StaqoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E2E46D574FB2E70C4259338 /* Pods_StaqoTests.framework */; };
 		23A54F90B0ACCF9B50BF18BB /* Pods_Staqo_StaqoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A29A605CE636FBDDAD505C36 /* Pods_Staqo_StaqoUITests.framework */; };
+		26CD070625E41EE7001C6D60 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD070525E41EDD001C6D60 /* UPCarouselFlowLayout.swift */; };
 		76257D9E25DF70C100F1BD47 /* Century Gothic 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */; };
 		76257D9F25DF70C100F1BD47 /* Century Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */; };
 		76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B2057725DC402D0056FC68 /* AuthenticationManager.swift */; };
@@ -70,6 +71,7 @@
 /* Begin PBXFileReference section */
 		04EC2FA92BAE3115630112F4 /* Pods-StaqoTests.dev debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.dev debug.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.dev debug.xcconfig"; sourceTree = "<group>"; };
 		0ED6CC37FE804F939F579513 /* Pods-StaqoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.debug.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		26CD070525E41EDD001C6D60 /* UPCarouselFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UPCarouselFlowLayout.swift; sourceTree = "<group>"; };
 		37F6594EFE48F04EEB218C98 /* Pods-Staqo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo.debug.xcconfig"; path = "Target Support Files/Pods-Staqo/Pods-Staqo.debug.xcconfig"; sourceTree = "<group>"; };
 		52F3C86A15C2AD7D938AFE83 /* Pods-Staqo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo.release.xcconfig"; path = "Target Support Files/Pods-Staqo/Pods-Staqo.release.xcconfig"; sourceTree = "<group>"; };
 		6E2E46D574FB2E70C4259338 /* Pods_StaqoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaqoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +183,7 @@
 			children = (
 				76B205A725DED5370056FC68 /* HomeVC.swift */,
 				76B205AF25DED56E0056FC68 /* HomeViewModal.swift */,
+				26CD070525E41EDD001C6D60 /* UPCarouselFlowLayout.swift */,
 				76B205B425DED5BC0056FC68 /* HomeDataSource.swift */,
 				76B205BE25DEDBD70056FC68 /* HomeCollectionViewCell.swift */,
 				76B205BF25DEDBD70056FC68 /* HomeCollectionViewCell.xib */,
@@ -618,6 +621,7 @@
 				CD5DB47125D5A5BD00353084 /* NetworkManager.swift in Sources */,
 				CD5DB4B425D5AA5B00353084 /* LoginDataSource.swift in Sources */,
 				76B205C025DEDBD70056FC68 /* HomeCollectionViewCell.swift in Sources */,
+				26CD070625E41EE7001C6D60 /* UPCarouselFlowLayout.swift in Sources */,
 				CD5DB48B25D5A60C00353084 /* Extension.swift in Sources */,
 				CD5DB48F25D5A60C00353084 /* ResourceType.swift in Sources */,
 				CD5DB49525D5A8E900353084 /* BaseModel.swift in Sources */,
