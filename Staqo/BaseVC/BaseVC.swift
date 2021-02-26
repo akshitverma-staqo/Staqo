@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 
 
-class BaseVC: UIViewController {
+class BaseVC: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()

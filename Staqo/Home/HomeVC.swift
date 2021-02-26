@@ -11,6 +11,7 @@ class HomeVC: BaseVC {
     
     var viewModel:HomeViewModal!
 
+    @IBOutlet var currentPage: UIPageControl!
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
     private let kHomeCollectionViewCell = "HomeCollectionViewCell"
@@ -19,10 +20,34 @@ class HomeVC: BaseVC {
         viewModel = HomeViewModal(dataSource: HomeDataSource())
         viewModel.delegate = self
         viewModel.bootstrap()
-        homeCollectionView.register(UINib(nibName: kHomeCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeCollectionViewCell)       // Do any additional setup after loading the view.
+        homeCollectionView.register(UINib(nibName: kHomeCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeCollectionViewCell)
+        let floawLayout = UPCarouselFlowLayout()
+        floawLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60.0, height: homeCollectionView.frame.size.height)
+        floawLayout.scrollDirection = .horizontal
+        floawLayout.sideItemScale = 0.8
+        floawLayout.sideItemAlpha = 1.0
+        floawLayout.spacingMode = .fixed(spacing: 5.0)
+        homeCollectionView.collectionViewLayout = floawLayout
+        currentPage.currentPage = 0
+        // Do any additional setup after loading the view.
     }
-    
-
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
+        let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+        currentPage.currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+    }
+   
+    fileprivate var pageSize: CGSize {
+        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+        var pageSize = layout.itemSize
+        if layout.scrollDirection == .horizontal {
+            pageSize.width += layout.minimumLineSpacing
+        } else {
+            pageSize.height += layout.minimumLineSpacing
+        }
+        return pageSize
+    }
     /*
     // MARK: - Navigation
 
@@ -35,17 +60,14 @@ class HomeVC: BaseVC {
 
 }
 extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-  
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.size.width/1.2, height: collectionView.bounds.size.height)//CGSize(width: 230, height: 230)
-           }
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.rows?.count ?? 0
+        return viewModel.rows?.imageArr.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kHomeCollectionViewCell, for: indexPath) as! HomeCollectionViewCell
+        cell.dataBind(data: viewModel.rows, index: indexPath)
 //        cell.imgView1.image = UIImage(named: imageArr[indexPath.item])
 //        cell.imgView2.image = UIImage(named: curveArr[indexPath.item])
 //        cell.lbl1.text = TopLabArray[indexPath.item]
