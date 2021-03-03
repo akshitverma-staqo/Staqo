@@ -26,9 +26,8 @@ class HomeVC: BaseVC {
         floawLayout.scrollDirection = .horizontal
         floawLayout.sideItemScale = 0.8
         floawLayout.sideItemAlpha = 1.0
-        floawLayout.spacingMode = .fixed(spacing: 5.0)
+        floawLayout.spacingMode = .fixed(spacing: 10.0)
         homeCollectionView.collectionViewLayout = floawLayout
-        currentPage.currentPage = 0
         // Do any additional setup after loading the view.
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -68,14 +67,16 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kHomeCollectionViewCell, for: indexPath) as! HomeCollectionViewCell
         cell.dataBind(data: viewModel.rows, index: indexPath)
-//        cell.imgView1.image = UIImage(named: imageArr[indexPath.item])
-//        cell.imgView2.image = UIImage(named: curveArr[indexPath.item])
-//        cell.lbl1.text = TopLabArray[indexPath.item]
+
         
         return cell
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }
 extension HomeVC: ViewModelDelegate{
@@ -87,6 +88,9 @@ extension HomeVC: ViewModelDelegate{
     func didLoadData() {
         stopLoader()
         homeCollectionView.reloadData()
+        //currentPage.currentPage = viewModel.rows?.imageArr.count ?? 0
+        currentPage.numberOfPages = viewModel.rows?.imageArr.count ?? 0
+        
     }
     
     func didFail(error: CustomError) {

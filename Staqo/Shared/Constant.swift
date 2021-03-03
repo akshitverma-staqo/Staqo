@@ -31,7 +31,10 @@ class Constant {
     
     static let kLoginVC = "LoginVC"
     static let kHomeVC = "HomeVC"
+    static let kWebViewVC = "WebViewVC"
     
+    //MARK:- WebView URL
+   static let kOQPORTAL_LINK = "https://thisisoq.sharepoint.com" 
     
     // MARK:-  Popup View
     

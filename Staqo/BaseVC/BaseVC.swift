@@ -66,6 +66,20 @@ class BaseVC: UIViewController{
         }
     }
     
+    func showMessageWithOneArgument(title: String, message: String, btnConfirmTitle: String , handler:@escaping (Bool, UIAlertAction) -> Void) {
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let btnConfirmAction = UIAlertAction(title: btnConfirmTitle, style: .default) { (action) in
+            handler(true, action)
+        }
+        
+        alert.addAction(btnConfirmAction)
+        
+        self.present(alert, animated: true) {
+            
+        }
+    }
+    
 //   func logoutFromApp(){
 //       showMessage(title: Constant.kAlertTitle_LOGOUT, message: CustomError.Logout.localizedDescription, btnConfirmTitle: Constant.kAlertAction_YES, btnCancelTitle: Constant.kAlertAction_CANCEL) { (isConfirmTapped, action) in
 //

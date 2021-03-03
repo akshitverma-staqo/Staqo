@@ -21,6 +21,7 @@
 		76B205BA25DED6650056FC68 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B205B925DED6650056FC68 /* Home.storyboard */; };
 		76B205C025DEDBD70056FC68 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B205BE25DEDBD70056FC68 /* HomeCollectionViewCell.swift */; };
 		76B205C125DEDBD70056FC68 /* HomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B205BF25DEDBD70056FC68 /* HomeCollectionViewCell.xib */; };
+		76F1FB0D25E966F600D88F79 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1FB0C25E966F600D88F79 /* WebViewVC.swift */; };
 		BF8DCA3832A9A9BB23B1D424 /* Pods_Staqo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2501CD86A8CB56FC58286A6 /* Pods_Staqo.framework */; };
 		CD5DB42125D5A26300353084 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB42025D5A26300353084 /* AppDelegate.swift */; };
 		CD5DB42325D5A26300353084 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB42225D5A26300353084 /* SceneDelegate.swift */; };
@@ -87,6 +88,7 @@
 		76B205B925DED6650056FC68 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		76B205BE25DEDBD70056FC68 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		76B205BF25DEDBD70056FC68 /* HomeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCollectionViewCell.xib; sourceTree = "<group>"; };
+		76F1FB0C25E966F600D88F79 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		8823E62ABD353BD79E5BCDC6 /* Pods-StaqoTests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.dev release.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.dev release.xcconfig"; sourceTree = "<group>"; };
 		8BF5CFF0968C9EF8AF072D1D /* Pods-StaqoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.release.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.release.xcconfig"; sourceTree = "<group>"; };
 		A29A605CE636FBDDAD505C36 /* Pods_Staqo_StaqoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Staqo_StaqoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +193,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		76F1FB0B25E966C700D88F79 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				76F1FB0C25E966F600D88F79 /* WebViewVC.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		8607090F101CFDC5106C8012 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +245,7 @@
 		CD5DB41F25D5A26300353084 /* Staqo */ = {
 			isa = PBXGroup;
 			children = (
+				76F1FB0B25E966C700D88F79 /* WebView */,
 				76B205A625DED4F10056FC68 /* Home */,
 				76B205A225DC4C980056FC68 /* Staqo.entitlements */,
 				76B2057625DC3FFE0056FC68 /* MSGraph */,
@@ -629,6 +640,7 @@
 				76B205A825DED5370056FC68 /* HomeVC.swift in Sources */,
 				CD5DB4AF25D5AA4C00353084 /* LoginViewModel.swift in Sources */,
 				76B205B525DED5BC0056FC68 /* HomeDataSource.swift in Sources */,
+				76F1FB0D25E966F600D88F79 /* WebViewVC.swift in Sources */,
 				CD5DB48725D5A60C00353084 /* Interfaces.swift in Sources */,
 				CD5DB48E25D5A60C00353084 /* Constant.swift in Sources */,
 				CD5DB49F25D5A9C100353084 /* DashboardNavigationVC.swift in Sources */,

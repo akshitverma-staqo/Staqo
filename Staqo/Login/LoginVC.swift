@@ -120,7 +120,7 @@ extension LoginVC{
                     // ...
                     DispatchQueue.main.async { [unowned self] in
                         
-                        showMessage(title: "Alert", message: "For your security, you can only use OQ Employee App when It's Unlocked.", btnConfirmTitle: "Unlock", btnCancelTitle: "") { (isUnlock, action)  in
+                        showMessageWithOneArgument(title: "Alert", message: "For your security, you can only use OQ Employee App when It's Unlocked.", btnConfirmTitle: "Unlock") { (isUnlock, action)  in
                             if isUnlock {
                                 Auth()
 
