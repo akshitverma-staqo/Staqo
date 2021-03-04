@@ -14,7 +14,6 @@ extern NSString * _Nonnull const SVProgressHUDWillDisappearNotification;
 extern NSString * _Nonnull const SVProgressHUDDidDisappearNotification;
 extern NSString * _Nonnull const SVProgressHUDWillAppearNotification;
 extern NSString * _Nonnull const SVProgressHUDDidAppearNotification;
-
 extern NSString * _Nonnull const SVProgressHUDStatusUserInfoKey;
 
 typedef NS_ENUM(NSInteger, SVProgressHUDStyle) {

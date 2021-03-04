@@ -107,6 +107,7 @@
                     <connections>
                         <outlet property="currentPage" destination="paU-dA-FgR" id="AfU-kp-mtQ"/>
                         <outlet property="homeCollectionView" destination="qH3-rg-fuL" id="pki-7b-zcc"/>
+                        <outlet property="userLbl" destination="k87-0b-fp4" id="Fzg-87-U9w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XCZ-Mk-LzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

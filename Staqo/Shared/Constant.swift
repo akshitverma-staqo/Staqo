@@ -16,8 +16,54 @@ class Constant {
     
     static let kDomain = "com.staqo"
     static let kRootPath = "api/"
+    static let kSiteID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
     
+    static let NOTIFICATION_URL = "/lists/Notifications/items?$expand=fields"
     
+    static let VISITOR_LIST = "/lists/Visitor%20Master/items/?$expand=fields&$filter=fields/employeeidLookupId%20eq%20'**empid**'%20or%20fields/scanby%20eq%20'1'%20"
+    static let VISITOR_REGISTER = "/lists/Visitor%20Master/items"
+    static let SALMEEN_POINT1 = URL(string:"https://thisisoq.sharepoint.com/Pages/Salmeen.aspx")
+    static let SALMEEN_POINT2 = URL(string:"https://oq.com/en/covid-19/declaration-employees")
+    static let USER_PIC_FROMAD = "https://graph.microsoft.com/v1.0/users/**useremail**/photo/$value"
+    static let EMPLOYEE_FOR_ID = "/lists/Employee%20Master/items/?$expand=fields&$filter=fields/emailid%20eq%20'"
+    static let EMPLOYEE_FIND_BY_ID = "/lists/Employee%20Master/items/"
+    static let EMPLOYEE_REGISTER =  "/lists/Employee%20Master/items"
+    static let MAZZAYAKOM_SUB_CATEGORY_URL =  "/lists/Corporate_Offers/items/?$expand=fields&$filter=fields/CategoryLookupId%20eq%20'"
+    static let VISITOR_DUPLICATE =  "/lists/Visitor%20Master/items?$expand=fields&$filter=fields/emailid%20eq%20'**email**'%20and%20fields/scanby%20eq%20'1'%20"
+   
+    //Live Credentials
+    static let OQPORTAL_LINK = URL(string:"https://thisisoq.sharepoint.com")
+    //let OQPORTAL_LINK = "https://thisisoq.sharepoint.com"
+   
+    static let MAZZAYACOM_LINK =  "/lists/**OC_LIST_ID**/items?expand=fields"
+    static let MAZZAYACOM_SUB_LINK =  "/lists/**C_list_id**/items?expand=fields(select=CategoryLookupId,Title,Caption)&$filter=fields/CategoryLookupId%20eq%20'"
+    static let MAZZAYACOM_IMAGE_LINK = "/drives/**Assests_ID**/root:/lists/**A_list_ID**/"
+    
+    //Local
+    
+    //                let SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+    //                UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
+    //
+    //                let MAZZAYACOM_C_LIST_ID =  "a9aa5be4-4b8d-487d-ae72-839a1de9ba13"
+    //                UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
+    //
+    //                let MAZZAYACOM_ASSET_ID =  "b!yl5NVBxnZU-dvn1LULArnLdQ9qy4h6RMivIbCnyeHmVmO87f0Pt3SaG3WIEXWwfC"
+    //                UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
+    //
+    //                let MAZZAYACOM_C_SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+    //                UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
+    
+    //                let MAZZAYACOM_A_LIST_ID = "2fecd167-6659-4906-b8cc-8d06047056de"
+    //                UserDefaults.standard.set(MAZZAYACOM_A_LIST_ID, forKey: "MAZZAYACOM_A_LIST_ID")
+    //
+    
+    //  Live
+    static let MAZZAYACOM_C_SITE_ID = "9267b16d-b59f-4aaa-998c-c81bdea24279"
+    static let MAZZAYACOM_C_LIST_ID =  "35eec527-6587-458c-a35f-dd06e8e79487"
+    static let MAZZAYACOM_ASSET_ID =  "b!bbFnkp-1qkqZjMgb3qJCeTz4E1V1WUFLoF8xgKa1gCLpyFwaggbeRIZdZ0UUm0sz"
+    static let SITE_ID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
+    
+
     static let kLoginAuth = "customer/SendOTP"
     static let kDownloadPath = "downloadFile/"
     

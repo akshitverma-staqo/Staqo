@@ -9,7 +9,7 @@
 		<key>AuthURL</key>
 		<string>DEV AuthURL</string>
 		<key>BaseURL</key>
-		<string>BaseURl</string>
+		<string>https://graph.microsoft.com/v1.0/sites/</string>
 	</dict>
 	<key>PROD</key>
 	<dict>

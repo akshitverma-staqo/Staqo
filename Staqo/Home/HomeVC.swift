@@ -11,6 +11,7 @@ class HomeVC: BaseVC {
     
     var viewModel:HomeViewModal!
 
+    @IBOutlet weak var userLbl: UILabel!
     @IBOutlet var currentPage: UIPageControl!
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
@@ -86,7 +87,10 @@ extension HomeVC: ViewModelDelegate{
     }
     
     func didLoadData() {
+        
         stopLoader()
+        
+        userLbl.text = UserDefaults.standard.getProfile()?.displayName
         homeCollectionView.reloadData()
         //currentPage.currentPage = viewModel.rows?.imageArr.count ?? 0
         currentPage.numberOfPages = viewModel.rows?.imageArr.count ?? 0

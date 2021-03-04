@@ -8,7 +8,9 @@
 
 import Foundation
 
-
+import MSGraphClientModels
+import MSAL
+import MSGraphClientSDK
 enum UserDefaultsKeys : String {
     case isLoggedIn
     case userID
@@ -59,7 +61,7 @@ extension UserDefaults {
         //synchronize()
     }
     
-    func setUserID(value: Int){
+    func setUserID(value: String){
         set(value, forKey: UserDefaultsKeys.userID.rawValue)
         //synchronize()
     }
@@ -74,8 +76,8 @@ extension UserDefaults {
     }
     
     //// MARK:- : -  Retrieve User Data
-    func getUserID() -> Int{
-        return value(forKey: UserDefaultsKeys.userID.rawValue) as! Int
+    func getUserID() -> String{
+        return value(forKey: UserDefaultsKeys.userID.rawValue) as! String
     }
     
     func setEmailID(value: String) {
@@ -104,9 +106,21 @@ extension UserDefaults {
         set(value, forKey: UserDefaultsKeys.deviceToken.rawValue)
     }
     
-//    func setProfile(value:ProfileData?)  {
-//        set(try? PropertyListEncoder().encode(value), forKey: UserDefaultsKeys.profileData.rawValue)
-//    }
+    func setProfile(value:MSGraphUser?)  {
+     
+        if (try? NSKeyedArchiver.archivedData(withRootObject: value as Any, requiringSecureCoding: false)) != nil {
+            
+           }
+        
+        
+        
+        
+    }
+    
+    
+    
+
+
     func setCurrentAddress(value:String?){
         set(value, forKey: UserDefaultsKeys.currentAddress.rawValue)
     }
@@ -114,13 +128,22 @@ extension UserDefaults {
     func getCurrentAddress() -> String {
         return value(forKey: UserDefaultsKeys.currentAddress.rawValue) as? String ?? ""
     }
-//        func getProfile() -> ProfileData? {
-//            if let obj = data(forKey: UserDefaultsKeys.profileData.rawValue)  {
-//              let value = try? PropertyListDecoder().decode(ProfileData.self, from: obj)
-//                return value
-//            }
-//            return nil
-//        }
+        func getProfile() -> MSGraphUser? {
+            
+            if let decoded  = data(forKey: UserDefaultsKeys.profileData.rawValue){
+                
+            
+            let decodedTeams = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? MSGraphUser
+            
+            return decodedTeams
+            }
+            return nil
+        }
+    
+    
+
+    
+    
     
     func getDeviceToken() -> String {
         return value(forKey: UserDefaultsKeys.deviceToken.rawValue) as? String ?? ""
@@ -128,7 +151,7 @@ extension UserDefaults {
     
     
     func getUserName() -> String {
-        return value(forKey: UserDefaultsKeys.userName.rawValue) as! String
+        return value(forKey: UserDefaultsKeys.userName.rawValue) as? String ?? ""
     }
     func getUserToken() -> String {
         return value(forKey: UserDefaultsKeys.userToken.rawValue) as? String ?? ""
