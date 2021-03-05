@@ -26,8 +26,8 @@ class LoginViewModel: ViewModelType {
                 return
             }
                     DispatchQueue.main.async {
-
-                        guard let _ = token, error == nil else {
+                        
+                        guard let accessToken = token, error == nil else {
                             // If there is no token or if there's an error,
                             // no user is signed in, so stay here
                             ws.delegate?.didFail(error: CustomError.OtherError(error: error!))
@@ -36,7 +36,9 @@ class LoginViewModel: ViewModelType {
 
                         // Since we got a token, a user is signed in
                         // Go to welcome page
+                        UserDefaults.standard.setAccessToken(value: accessToken)
                         ws.delegate?.didLoadData()
+                        
 
                         }
                 }

@@ -10,9 +10,10 @@ import Foundation
 import Moya
 
 enum ResourceType {
-    case validateUser(mobileNo: String)
+    
+    case getEmployeeDataWithID(emailID: String)
     case download(fileName: String)
-  
+
     
     var localLocation: URL? {
 
@@ -50,8 +51,8 @@ extension ResourceType:TargetType {
     
     var path: String {
         switch self {
-        case .validateUser(_):
-            return Constant.kRootPath + Constant.kLoginAuth
+        case .getEmployeeDataWithID(let emailID):
+            return  Constant.kSiteID + Constant.kEMPLOYEE_FOR_ID + emailID + "'"
         case .download(let fileName):
             return  Constant.kDownloadPath + fileName
        
@@ -60,8 +61,8 @@ extension ResourceType:TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .validateUser(_):
-            return Moya.Method.post
+        case .getEmployeeDataWithID(_):
+            return Moya.Method.get
         case .download(_):
             return Moya.Method.get
        
@@ -70,22 +71,39 @@ extension ResourceType:TargetType {
     
     var parameters: [String: Any]? {
         switch self {
-        case .validateUser(let mobileNo):
-            return ["iMobNo":mobileNo]
+        //case .validateUser(let mobileNo):
+            //return ["iMobNo":mobileNo]
         
         default:
             return nil
         }
     }
     
+    var para: String?{
+        switch self {
+        case .getEmployeeDataWithID(let emailID):
+            return emailID
+        default:
+            return nil
+        }
+    }
+    
+    var parameterEncoding: ParameterEncoding{
+        switch self {
+        case .getEmployeeDataWithID(_):
+            return JSONEncoding.default
+        default:
+            return JSONEncoding.default
+        }
+    }
     var sampleData: Data {
         return Data()
     }
     
     var task: Task {
         switch self {
-        case .validateUser(_):
-            return  .requestParameters(parameters: parameters!, encoding: JSONEncoding.default)
+        case .getEmployeeDataWithID(_):
+            return .requestPlain
         case .download(_):
             return .downloadDestination(downloadDestination)
         }
@@ -96,7 +114,8 @@ extension ResourceType:TargetType {
         switch self {
 
         default:
-    //   httpHeaders["Authorization"] = UserDefaults.standard.getUserToken()
+        
+       httpHeaders["Authorization"] = "Bearer " + UserDefaults.standard.getAccessToken()
        httpHeaders["Content-Type"] = "application/json"
          return httpHeaders
         

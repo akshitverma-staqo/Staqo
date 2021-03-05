@@ -42,9 +42,11 @@ class HomeViewModal:ViewModelType{
                     delegate?.didFail(error: CustomError.OtherError(error: error!))
                     return
                 }
-               // UserDefaults.standard.setUserName(value: currentUser.displayName ?? "")
+                UserDefaults.standard.setUserName(value: currentUser.displayName ?? "")
+                UserDefaults.standard.setEmailID(value: currentUser.mail ?? "")
                 //UserDefaults.standard.setUserID(value: currentUser.employeeId ?? "")
-                UserDefaults.standard.setProfile(value: currentUser)
+                
+                //UserDefaults.standard.setProfile(value: currentUser)
                 delegate?.didLoadData()
                 
             }

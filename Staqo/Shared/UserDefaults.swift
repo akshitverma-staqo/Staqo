@@ -30,12 +30,13 @@ enum UserDefaultsKeys : String {
     case deviceToken
     case profileData
     case currentAddress
+    case accessToken
 }
 
 
 extension UserDefaults {
     
-    
+    //UserDefaults.standard.string(forKey: "tokenResult1") ?? ""
     //// MARK:- : -  Check Login
     func setLoggedIn(value: Bool) {
         set(value, forKey: UserDefaultsKeys.isLoggedIn.rawValue)
@@ -44,6 +45,14 @@ extension UserDefaults {
     
     func isLoggedIn()-> Bool {
         return bool(forKey: UserDefaultsKeys.isLoggedIn.rawValue)
+    }
+    
+    func setAccessToken(value: String) {
+        return set(value, forKey: UserDefaultsKeys.accessToken.rawValue)
+    }
+    
+    func getAccessToken() -> String{
+        return value(forKey: UserDefaultsKeys.accessToken.rawValue) as! String
     }
     
     //MARK:- check on board
@@ -106,17 +115,17 @@ extension UserDefaults {
         set(value, forKey: UserDefaultsKeys.deviceToken.rawValue)
     }
     
-    func setProfile(value:MSGraphUser?)  {
-     
-        if (try? NSKeyedArchiver.archivedData(withRootObject: value as Any, requiringSecureCoding: false)) != nil {
-            
-           }
-        
-        
-        
-        
-    }
-    
+//    func setProfile(value:MSGraphUser?)  {
+//     
+//        if (try? NSKeyedArchiver.archivedData(withRootObject: value as Any, requiringSecureCoding: false)) != nil {
+//            
+//           }
+//        
+//        
+//        
+//        
+//    }
+//    
     
     
 
@@ -128,17 +137,17 @@ extension UserDefaults {
     func getCurrentAddress() -> String {
         return value(forKey: UserDefaultsKeys.currentAddress.rawValue) as? String ?? ""
     }
-        func getProfile() -> MSGraphUser? {
-            
-            if let decoded  = data(forKey: UserDefaultsKeys.profileData.rawValue){
-                
-            
-            let decodedTeams = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? MSGraphUser
-            
-            return decodedTeams
-            }
-            return nil
-        }
+//        func getProfile() -> MSGraphUser? {
+//
+//            if let decoded  = data(forKey: UserDefaultsKeys.profileData.rawValue){
+//
+//
+//            let decodedTeams = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? MSGraphUser
+//
+//            return decodedTeams
+//            }
+//            return nil
+//        }
     
     
 

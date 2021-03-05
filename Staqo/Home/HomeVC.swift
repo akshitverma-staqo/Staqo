@@ -75,7 +75,8 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+        //let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -90,7 +91,7 @@ extension HomeVC: ViewModelDelegate{
         
         stopLoader()
         
-        userLbl.text = UserDefaults.standard.getProfile()?.displayName
+        //userLbl.text = UserDefaults.standard.getProfile()?.displayName
         homeCollectionView.reloadData()
         //currentPage.currentPage = viewModel.rows?.imageArr.count ?? 0
         currentPage.numberOfPages = viewModel.rows?.imageArr.count ?? 0

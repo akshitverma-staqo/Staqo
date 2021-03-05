@@ -78,8 +78,7 @@ class AuthenticationManager: NSObject, MSAuthenticationProvider {
                 }
 
                 print("Got token silently: \(tokenResult.accessToken)")
-                let acecTkn = tokenResult.accessToken
-                UserDefaults.standard.set(acecTkn, forKey: "tokenResult1")
+                
                 completion(tokenResult.accessToken, nil)
             })
         } else {
