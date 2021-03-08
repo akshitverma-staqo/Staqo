@@ -29,7 +29,7 @@ class LoginVC: BaseVC {
     }
 
     @IBAction func singInTapped(_ sender: UIButton) {
-        viewModel.bootstrap()
+        viewModel.signInAthentication(view: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -109,7 +109,7 @@ extension LoginVC{
                     print("step 2")
                     // Move to the main thread because a state update triggers UI changes.
                     DispatchQueue.main.async { [unowned self] in
-                    
+                        self.viewModel.bootstrap()
                     print("step 3")
                     }
                     

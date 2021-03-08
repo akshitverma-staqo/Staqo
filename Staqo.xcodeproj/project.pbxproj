@@ -12,6 +12,17 @@
 		26CD070625E41EE7001C6D60 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD070525E41EDD001C6D60 /* UPCarouselFlowLayout.swift */; };
 		76257D9E25DF70C100F1BD47 /* Century Gothic 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */; };
 		76257D9F25DF70C100F1BD47 /* Century Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */; };
+		7693C61725F3D695001665DF /* MenuViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C61625F3D694001665DF /* MenuViewModal.swift */; };
+		7693C61C25F3D6E9001665DF /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C61B25F3D6E9001665DF /* MenuVC.swift */; };
+		7693C62925F3E26D001665DF /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7693C62825F3E26D001665DF /* Business.storyboard */; };
+		7693C62E25F3E304001665DF /* BusinessCardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C62D25F3E304001665DF /* BusinessCardVC.swift */; };
+		7693C63325F3E353001665DF /* BusinessCardViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C63225F3E353001665DF /* BusinessCardViewModal.swift */; };
+		7693C63825F3E370001665DF /* BusinessCardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C63725F3E370001665DF /* BusinessCardDataSource.swift */; };
+		7693C63D25F3E5A6001665DF /* BusinessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C63C25F3E5A6001665DF /* BusinessVC.swift */; };
+		7693C64225F3E5BE001665DF /* BusinessViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C64125F3E5BE001665DF /* BusinessViewModal.swift */; };
+		7693C64C25F3E763001665DF /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C64925F3E762001665DF /* OCRViewController.swift */; };
+		7693C64D25F3E763001665DF /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C64A25F3E763001665DF /* CognitiveServices.swift */; };
+		7693C64E25F3E763001665DF /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C64B25F3E763001665DF /* OCR.swift */; };
 		76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B2057725DC402D0056FC68 /* AuthenticationManager.swift */; };
 		76B2057A25DC402D0056FC68 /* GraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B2057825DC402D0056FC68 /* GraphManager.swift */; };
 		76B2058F25DC49800056FC68 /* AuthSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B2058E25DC49800056FC68 /* AuthSettings.plist */; };
@@ -81,6 +92,17 @@
 		6E2E46D574FB2E70C4259338 /* Pods_StaqoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaqoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic 400.ttf"; sourceTree = "<group>"; };
 		76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic.ttf"; sourceTree = "<group>"; };
+		7693C61625F3D694001665DF /* MenuViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModal.swift; sourceTree = "<group>"; };
+		7693C61B25F3D6E9001665DF /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		7693C62825F3E26D001665DF /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
+		7693C62D25F3E304001665DF /* BusinessCardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCardVC.swift; sourceTree = "<group>"; };
+		7693C63225F3E353001665DF /* BusinessCardViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCardViewModal.swift; sourceTree = "<group>"; };
+		7693C63725F3E370001665DF /* BusinessCardDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessCardDataSource.swift; sourceTree = "<group>"; };
+		7693C63C25F3E5A6001665DF /* BusinessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessVC.swift; sourceTree = "<group>"; };
+		7693C64125F3E5BE001665DF /* BusinessViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewModal.swift; sourceTree = "<group>"; };
+		7693C64925F3E762001665DF /* OCRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
+		7693C64A25F3E763001665DF /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
+		7693C64B25F3E763001665DF /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
 		76B2057725DC402D0056FC68 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		76B2057825DC402D0056FC68 /* GraphManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphManager.swift; sourceTree = "<group>"; };
 		76B2058E25DC49800056FC68 /* AuthSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthSettings.plist; sourceTree = "<group>"; };
@@ -177,6 +199,30 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		7693C62625F3DAEB001665DF /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				7693C61B25F3D6E9001665DF /* MenuVC.swift */,
+				7693C61625F3D694001665DF /* MenuViewModal.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		7693C62725F3E1CD001665DF /* Business Card */ = {
+			isa = PBXGroup;
+			children = (
+				7693C63C25F3E5A6001665DF /* BusinessVC.swift */,
+				7693C64125F3E5BE001665DF /* BusinessViewModal.swift */,
+				7693C62D25F3E304001665DF /* BusinessCardVC.swift */,
+				7693C63225F3E353001665DF /* BusinessCardViewModal.swift */,
+				7693C63725F3E370001665DF /* BusinessCardDataSource.swift */,
+				7693C64A25F3E763001665DF /* CognitiveServices.swift */,
+				7693C64B25F3E763001665DF /* OCR.swift */,
+				7693C64925F3E762001665DF /* OCRViewController.swift */,
+			);
+			path = "Business Card";
+			sourceTree = "<group>";
+		};
 		76B2057625DC3FFE0056FC68 /* MSGraph */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,7 +307,9 @@
 		CD5DB41F25D5A26300353084 /* Staqo */ = {
 			isa = PBXGroup;
 			children = (
+				7693C62725F3E1CD001665DF /* Business Card */,
 				76F1FB0B25E966C700D88F79 /* WebView */,
+				7693C62625F3DAEB001665DF /* Menu */,
 				76F1FB3625F2997000D88F79 /* Employee */,
 				76B205A625DED4F10056FC68 /* Home */,
 				76B205A225DC4C980056FC68 /* Staqo.entitlements */,
@@ -368,6 +416,7 @@
 			children = (
 				CD5DB42625D5A26300353084 /* Main.storyboard */,
 				76B205B925DED6650056FC68 /* Home.storyboard */,
+				7693C62825F3E26D001665DF /* Business.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -509,6 +558,7 @@
 			files = (
 				CD5DB47925D5A5E500353084 /* EnvironmentList.plist in Resources */,
 				76B2058F25DC49800056FC68 /* AuthSettings.plist in Resources */,
+				7693C62925F3E26D001665DF /* Business.storyboard in Resources */,
 				CD5DB42D25D5A26500353084 /* LaunchScreen.storyboard in Resources */,
 				76B205BA25DED6650056FC68 /* Home.storyboard in Resources */,
 				76B205C125DEDBD70056FC68 /* HomeCollectionViewCell.xib in Resources */,
@@ -643,10 +693,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7693C64E25F3E763001665DF /* OCR.swift in Sources */,
 				CD5DB47825D5A5E500353084 /* Configuration.swift in Sources */,
 				CD5DB42125D5A26300353084 /* AppDelegate.swift in Sources */,
 				CD5DB42325D5A26300353084 /* SceneDelegate.swift in Sources */,
 				CD5DB47125D5A5BD00353084 /* NetworkManager.swift in Sources */,
+				7693C63D25F3E5A6001665DF /* BusinessVC.swift in Sources */,
 				CD5DB4B425D5AA5B00353084 /* LoginDataSource.swift in Sources */,
 				76B205C025DEDBD70056FC68 /* HomeCollectionViewCell.swift in Sources */,
 				26CD070625E41EE7001C6D60 /* UPCarouselFlowLayout.swift in Sources */,
@@ -655,16 +707,24 @@
 				CD5DB49525D5A8E900353084 /* BaseModel.swift in Sources */,
 				CD5DB48C25D5A60C00353084 /* CustomError.swift in Sources */,
 				76B205A825DED5370056FC68 /* HomeVC.swift in Sources */,
+				7693C64C25F3E763001665DF /* OCRViewController.swift in Sources */,
+				7693C63325F3E353001665DF /* BusinessCardViewModal.swift in Sources */,
 				CD5DB4AF25D5AA4C00353084 /* LoginViewModel.swift in Sources */,
 				76F1FB2525F281D300D88F79 /* EmpVC.swift in Sources */,
+				7693C62E25F3E304001665DF /* BusinessCardVC.swift in Sources */,
 				76B205B525DED5BC0056FC68 /* HomeDataSource.swift in Sources */,
 				76F1FB0D25E966F600D88F79 /* WebViewVC.swift in Sources */,
+				7693C64225F3E5BE001665DF /* BusinessViewModal.swift in Sources */,
 				CD5DB48725D5A60C00353084 /* Interfaces.swift in Sources */,
+				7693C61725F3D695001665DF /* MenuViewModal.swift in Sources */,
 				CD5DB48E25D5A60C00353084 /* Constant.swift in Sources */,
 				CD5DB49F25D5A9C100353084 /* DashboardNavigationVC.swift in Sources */,
+				7693C63825F3E370001665DF /* BusinessCardDataSource.swift in Sources */,
 				76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */,
+				7693C61C25F3D6E9001665DF /* MenuVC.swift in Sources */,
 				CD5DB48825D5A60C00353084 /* UIColor.swift in Sources */,
 				CD5DB4AA25D5AA2800353084 /* TTCustomView.swift in Sources */,
+				7693C64D25F3E763001665DF /* CognitiveServices.swift in Sources */,
 				CD5DB48D25D5A60C00353084 /* NetworkClient.swift in Sources */,
 				76B205B025DED56E0056FC68 /* HomeViewModal.swift in Sources */,
 				CD5DB48A25D5A60C00353084 /* UserDefaults.swift in Sources */,

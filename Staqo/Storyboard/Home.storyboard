@@ -678,9 +678,230 @@
             </objects>
             <point key="canvasLocation" x="3043" y="-286"/>
         </scene>
+        <!--MenuVC-->
+        <scene sceneID="9Le-uB-aQz">
+            <objects>
+                <viewController storyboardIdentifier="MenuVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ojA-TW-rlT" customClass="MenuVC" customModule="Staqo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOn-Ob-kOC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VDl-HG-cRz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRi-BR-5eZ" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="623"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-KC-5Ip">
+                                                <rect key="frame" x="50" y="100" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="Xcr-a2-uHU"/>
+                                                    <constraint firstAttribute="height" constant="30" id="vfg-Pu-IFP"/>
+                                                </constraints>
+                                                <state key="normal" image="crossBtn"/>
+                                                <connections>
+                                                    <action selector="closeBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="wCq-SI-HB7"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cg1-ex-z0x">
+                                                <rect key="frame" x="50" y="148" width="55" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="BGf-89-vBv"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9g-GK-Yr6">
+                                                <rect key="frame" x="50" y="212" width="44" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="f1H-dC-sVI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="Home">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="homeBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="cVY-Ij-cpR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgw-1G-ksG">
+                                                <rect key="frame" x="50" y="245" width="66" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="KCG-Ve-WXT"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="About Us">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="faqBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="OUf-yZ-X86"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOB-Gu-B73">
+                                                <rect key="frame" x="50" y="278" width="32" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="3Ig-eb-ODV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="FAQ">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="aboutBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="VVw-Dm-WnC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0K-lQ-sJ6">
+                                                <rect key="frame" x="50" y="311" width="41" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="bJh-NJ-blK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="Terms">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="contactBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="Val-qF-oqi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-4O-Z9F">
+                                                <rect key="frame" x="50" y="344" width="100" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="zhh-Vg-f8j"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="Privacy Policy">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="termBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="Os1-4m-VGt"/>
+                                                </connections>
+                                            </button>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="PUm-Fg-CBn">
+                                                <rect key="frame" x="50" y="474" width="102" height="64"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="64" id="3c3-3Y-Zov"/>
+                                                    <constraint firstAttribute="width" constant="102" id="ZPu-Pe-T1m"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2020 OQ SAOC. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvs-8s-eC9">
+                                                <rect key="frame" x="50" y="558" width="110" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="110" id="XTq-AJ-UCQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-sj-UTo">
+                                                <rect key="frame" x="50" y="410" width="59" height="31"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="Log Out">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="signoutBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="BWt-F5-UeE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3B-Jv-MrX">
+                                                <rect key="frame" x="50" y="377" width="82" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="jCF-bD-B2z"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="Contact Us">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="termBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="8Gh-1X-zAG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oU-6N-RCg">
+                                                <rect key="frame" x="50" y="377" width="76" height="15"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="6Cr-bJ-yZ5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
+                                                <state key="normal" title="Contact Us">
+                                                    <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="privacyBtn:" destination="ojA-TW-rlT" eventType="touchUpInside" id="NnA-o5-FKM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="IQB-4O-Z9F" firstAttribute="leading" secondItem="o0K-lQ-sJ6" secondAttribute="leading" id="2Dn-fL-7my"/>
+                                            <constraint firstItem="cg1-ex-z0x" firstAttribute="top" secondItem="dVR-KC-5Ip" secondAttribute="bottom" constant="18" id="2uY-PN-Ebi"/>
+                                            <constraint firstItem="vtt-sj-UTo" firstAttribute="leading" secondItem="ZRi-BR-5eZ" secondAttribute="leading" constant="50" id="62J-Gc-fq4"/>
+                                            <constraint firstItem="Zvs-8s-eC9" firstAttribute="top" secondItem="PUm-Fg-CBn" secondAttribute="bottom" constant="20" id="8K8-fw-Qwj"/>
+                                            <constraint firstItem="h3B-Jv-MrX" firstAttribute="top" secondItem="IQB-4O-Z9F" secondAttribute="bottom" constant="18" id="Cvu-lF-9Ot"/>
+                                            <constraint firstItem="o0K-lQ-sJ6" firstAttribute="leading" secondItem="mOB-Gu-B73" secondAttribute="leading" id="Gmy-qw-hpu"/>
+                                            <constraint firstAttribute="bottom" secondItem="Zvs-8s-eC9" secondAttribute="bottom" constant="50" id="Gw9-57-lxQ"/>
+                                            <constraint firstItem="PUm-Fg-CBn" firstAttribute="leading" secondItem="5oU-6N-RCg" secondAttribute="leading" id="Jvl-xP-Oct"/>
+                                            <constraint firstItem="dVR-KC-5Ip" firstAttribute="top" secondItem="ZRi-BR-5eZ" secondAttribute="top" constant="100" id="MeF-KD-zQ3"/>
+                                            <constraint firstItem="PUm-Fg-CBn" firstAttribute="top" secondItem="vtt-sj-UTo" secondAttribute="bottom" constant="33" id="NPI-wT-A4P"/>
+                                            <constraint firstItem="IQB-4O-Z9F" firstAttribute="top" secondItem="o0K-lQ-sJ6" secondAttribute="bottom" constant="18" id="O76-nh-kFT"/>
+                                            <constraint firstItem="mOB-Gu-B73" firstAttribute="top" secondItem="vgw-1G-ksG" secondAttribute="bottom" constant="18" id="QIf-rA-eIf"/>
+                                            <constraint firstItem="Zvs-8s-eC9" firstAttribute="leading" secondItem="PUm-Fg-CBn" secondAttribute="leading" id="QVM-sz-7eB"/>
+                                            <constraint firstItem="PUm-Fg-CBn" firstAttribute="top" secondItem="5oU-6N-RCg" secondAttribute="bottom" constant="115" id="Qh1-nh-JHY"/>
+                                            <constraint firstItem="h3B-Jv-MrX" firstAttribute="leading" secondItem="ZRi-BR-5eZ" secondAttribute="leading" constant="50" id="VnA-0J-x3u"/>
+                                            <constraint firstItem="cg1-ex-z0x" firstAttribute="leading" secondItem="dVR-KC-5Ip" secondAttribute="leading" id="Z9Q-uY-Hcz"/>
+                                            <constraint firstItem="vgw-1G-ksG" firstAttribute="top" secondItem="b9g-GK-Yr6" secondAttribute="bottom" constant="18" id="bP5-4I-vaK"/>
+                                            <constraint firstItem="b9g-GK-Yr6" firstAttribute="leading" secondItem="cg1-ex-z0x" secondAttribute="leading" id="cGU-WC-6mr"/>
+                                            <constraint firstItem="5oU-6N-RCg" firstAttribute="leading" secondItem="IQB-4O-Z9F" secondAttribute="leading" id="cPN-ry-b39"/>
+                                            <constraint firstItem="vtt-sj-UTo" firstAttribute="top" secondItem="h3B-Jv-MrX" secondAttribute="bottom" constant="18" id="gPs-sJ-2bD"/>
+                                            <constraint firstItem="Zvs-8s-eC9" firstAttribute="leading" secondItem="ZRi-BR-5eZ" secondAttribute="leading" constant="50" id="gua-z1-5om"/>
+                                            <constraint firstItem="vgw-1G-ksG" firstAttribute="leading" secondItem="b9g-GK-Yr6" secondAttribute="leading" id="hIz-JC-boD"/>
+                                            <constraint firstItem="dVR-KC-5Ip" firstAttribute="leading" secondItem="ZRi-BR-5eZ" secondAttribute="leading" constant="50" id="hp3-hJ-nx3"/>
+                                            <constraint firstItem="mOB-Gu-B73" firstAttribute="leading" secondItem="vgw-1G-ksG" secondAttribute="leading" id="mlM-jl-DfL"/>
+                                            <constraint firstItem="b9g-GK-Yr6" firstAttribute="top" secondItem="cg1-ex-z0x" secondAttribute="bottom" constant="40" id="oAv-ue-wi2"/>
+                                            <constraint firstItem="5oU-6N-RCg" firstAttribute="top" secondItem="IQB-4O-Z9F" secondAttribute="bottom" constant="18" id="rQ8-o9-dZP"/>
+                                            <constraint firstItem="o0K-lQ-sJ6" firstAttribute="top" secondItem="mOB-Gu-B73" secondAttribute="bottom" constant="18" id="yFL-ma-idB"/>
+                                            <constraint firstItem="PUm-Fg-CBn" firstAttribute="leading" secondItem="ZRi-BR-5eZ" secondAttribute="leading" constant="50" id="yxj-vW-Xjw"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="5oU-6N-RCg"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ZRi-BR-5eZ" firstAttribute="width" secondItem="azt-dT-BHG" secondAttribute="width" id="D5t-Xl-EuZ"/>
+                                    <constraint firstItem="ZRi-BR-5eZ" firstAttribute="bottom" secondItem="kzr-Pe-WkX" secondAttribute="bottom" id="dzX-3E-gfb"/>
+                                    <constraint firstItem="ZRi-BR-5eZ" firstAttribute="trailing" secondItem="kzr-Pe-WkX" secondAttribute="trailing" id="e7K-7P-26L"/>
+                                    <constraint firstItem="ZRi-BR-5eZ" firstAttribute="leading" secondItem="kzr-Pe-WkX" secondAttribute="leading" id="fgC-87-fC0"/>
+                                    <constraint firstItem="ZRi-BR-5eZ" firstAttribute="top" secondItem="kzr-Pe-WkX" secondAttribute="top" id="z0B-Pb-ns7"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="kzr-Pe-WkX"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="azt-dT-BHG"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KwF-yO-sde"/>
+                        <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="KwF-yO-sde" firstAttribute="bottom" secondItem="VDl-HG-cRz" secondAttribute="bottom" id="DPk-Xn-KjD"/>
+                            <constraint firstItem="VDl-HG-cRz" firstAttribute="leading" secondItem="KwF-yO-sde" secondAttribute="leading" id="Hgy-dR-zgY"/>
+                            <constraint firstAttribute="trailing" secondItem="VDl-HG-cRz" secondAttribute="trailing" id="MsE-uf-jKr"/>
+                            <constraint firstItem="VDl-HG-cRz" firstAttribute="top" secondItem="BOn-Ob-kOC" secondAttribute="top" id="rYi-6N-nkH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8ac-KO-6gy"/>
+                    <connections>
+                        <outlet property="bottomLabel" destination="Zvs-8s-eC9" id="ZUs-Tg-YTW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4AH-wu-em3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="863" y="-857"/>
+        </scene>
     </scenes>
     <resources>
         <image name="backArrow" width="32" height="32"/>
+        <image name="crossBtn" width="29" height="29"/>
         <image name="logo" width="102" height="64.5"/>
         <image name="menu_icon" width="20" height="19"/>
         <image name="notification" width="18.5" height="21.5"/>
