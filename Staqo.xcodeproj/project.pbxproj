@@ -23,6 +23,14 @@
 		7693C64C25F3E763001665DF /* OCRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C64925F3E762001665DF /* OCRViewController.swift */; };
 		7693C64D25F3E763001665DF /* CognitiveServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C64A25F3E763001665DF /* CognitiveServices.swift */; };
 		7693C64E25F3E763001665DF /* OCR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C64B25F3E763001665DF /* OCR.swift */; };
+		76A1039E25F7E61300C536B9 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A1039D25F7E61300C536B9 /* Value.swift */; };
+		76A103A325F7E69E00C536B9 /* CreatedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103A225F7E69E00C536B9 /* CreatedBy.swift */; };
+		76A103A825F7E6B300C536B9 /* Fields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103A725F7E6B300C536B9 /* Fields.swift */; };
+		76A103AD25F7E6C500C536B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103AC25F7E6C500C536B9 /* User.swift */; };
+		76A103B225F7E6D600C536B9 /* ParentReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103B125F7E6D600C536B9 /* ParentReference.swift */; };
+		76A103B725F7E6F100C536B9 /* LastModifiedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103B625F7E6F100C536B9 /* LastModifiedBy.swift */; };
+		76A103C225F7E72D00C536B9 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103C125F7E72D00C536B9 /* ContentType.swift */; };
+		76A103CA25F7F2AA00C536B9 /* MSGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103C925F7F2AA00C536B9 /* MSGraphData.swift */; };
 		76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B2057725DC402D0056FC68 /* AuthenticationManager.swift */; };
 		76B2057A25DC402D0056FC68 /* GraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B2057825DC402D0056FC68 /* GraphManager.swift */; };
 		76B2058F25DC49800056FC68 /* AuthSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B2058E25DC49800056FC68 /* AuthSettings.plist */; };
@@ -103,6 +111,14 @@
 		7693C64925F3E762001665DF /* OCRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCRViewController.swift; sourceTree = "<group>"; };
 		7693C64A25F3E763001665DF /* CognitiveServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CognitiveServices.swift; sourceTree = "<group>"; };
 		7693C64B25F3E763001665DF /* OCR.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCR.swift; sourceTree = "<group>"; };
+		76A1039D25F7E61300C536B9 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		76A103A225F7E69E00C536B9 /* CreatedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatedBy.swift; sourceTree = "<group>"; };
+		76A103A725F7E6B300C536B9 /* Fields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fields.swift; sourceTree = "<group>"; };
+		76A103AC25F7E6C500C536B9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		76A103B125F7E6D600C536B9 /* ParentReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentReference.swift; sourceTree = "<group>"; };
+		76A103B625F7E6F100C536B9 /* LastModifiedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastModifiedBy.swift; sourceTree = "<group>"; };
+		76A103C125F7E72D00C536B9 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentType.swift; path = ../../../../../Downloads/codegen_6047acb6ca84f/ContentType.swift; sourceTree = "<group>"; };
+		76A103C925F7F2AA00C536B9 /* MSGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSGraphData.swift; sourceTree = "<group>"; };
 		76B2057725DC402D0056FC68 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		76B2057825DC402D0056FC68 /* GraphManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphManager.swift; sourceTree = "<group>"; };
 		76B2058E25DC49800056FC68 /* AuthSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthSettings.plist; sourceTree = "<group>"; };
@@ -407,6 +423,14 @@
 			isa = PBXGroup;
 			children = (
 				CD5DB49425D5A8E900353084 /* BaseModel.swift */,
+				76A1039D25F7E61300C536B9 /* Value.swift */,
+				76A103A225F7E69E00C536B9 /* CreatedBy.swift */,
+				76A103AC25F7E6C500C536B9 /* User.swift */,
+				76A103A725F7E6B300C536B9 /* Fields.swift */,
+				76A103B625F7E6F100C536B9 /* LastModifiedBy.swift */,
+				76A103C125F7E72D00C536B9 /* ContentType.swift */,
+				76A103B125F7E6D600C536B9 /* ParentReference.swift */,
+				76A103C925F7F2AA00C536B9 /* MSGraphData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -694,6 +718,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7693C64E25F3E763001665DF /* OCR.swift in Sources */,
+				76A103A325F7E69E00C536B9 /* CreatedBy.swift in Sources */,
 				CD5DB47825D5A5E500353084 /* Configuration.swift in Sources */,
 				CD5DB42125D5A26300353084 /* AppDelegate.swift in Sources */,
 				CD5DB42325D5A26300353084 /* SceneDelegate.swift in Sources */,
@@ -707,20 +732,25 @@
 				CD5DB49525D5A8E900353084 /* BaseModel.swift in Sources */,
 				CD5DB48C25D5A60C00353084 /* CustomError.swift in Sources */,
 				76B205A825DED5370056FC68 /* HomeVC.swift in Sources */,
+				76A103C225F7E72D00C536B9 /* ContentType.swift in Sources */,
 				7693C64C25F3E763001665DF /* OCRViewController.swift in Sources */,
 				7693C63325F3E353001665DF /* BusinessCardViewModal.swift in Sources */,
 				CD5DB4AF25D5AA4C00353084 /* LoginViewModel.swift in Sources */,
 				76F1FB2525F281D300D88F79 /* EmpVC.swift in Sources */,
 				7693C62E25F3E304001665DF /* BusinessCardVC.swift in Sources */,
 				76B205B525DED5BC0056FC68 /* HomeDataSource.swift in Sources */,
+				76A103B225F7E6D600C536B9 /* ParentReference.swift in Sources */,
 				76F1FB0D25E966F600D88F79 /* WebViewVC.swift in Sources */,
+				76A103AD25F7E6C500C536B9 /* User.swift in Sources */,
 				7693C64225F3E5BE001665DF /* BusinessViewModal.swift in Sources */,
 				CD5DB48725D5A60C00353084 /* Interfaces.swift in Sources */,
 				7693C61725F3D695001665DF /* MenuViewModal.swift in Sources */,
 				CD5DB48E25D5A60C00353084 /* Constant.swift in Sources */,
 				CD5DB49F25D5A9C100353084 /* DashboardNavigationVC.swift in Sources */,
+				76A1039E25F7E61300C536B9 /* Value.swift in Sources */,
 				7693C63825F3E370001665DF /* BusinessCardDataSource.swift in Sources */,
 				76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */,
+				76A103A825F7E6B300C536B9 /* Fields.swift in Sources */,
 				7693C61C25F3D6E9001665DF /* MenuVC.swift in Sources */,
 				CD5DB48825D5A60C00353084 /* UIColor.swift in Sources */,
 				CD5DB4AA25D5AA2800353084 /* TTCustomView.swift in Sources */,
@@ -735,6 +765,8 @@
 				CD5DB48925D5A60C00353084 /* Date.swift in Sources */,
 				CD5DB46B25D5A56100353084 /* BaseVC.swift in Sources */,
 				CD5DB4A925D5AA2800353084 /* DesignableButton.swift in Sources */,
+				76A103CA25F7F2AA00C536B9 /* MSGraphData.swift in Sources */,
+				76A103B725F7E6F100C536B9 /* LastModifiedBy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

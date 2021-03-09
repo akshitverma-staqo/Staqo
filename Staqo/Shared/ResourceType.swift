@@ -58,7 +58,14 @@ extension ResourceType:TargetType {
        
         }
     }
-    
+//    var parameterEncoding: JSONEncoding{
+//        switch self {
+//        case .getEmployeeDataWithID(_):
+//            return JSONEncoding.default
+//        default:
+//            return JSONEncoding.default
+//        }
+//    }
     var method: Moya.Method {
         switch self {
         case .getEmployeeDataWithID(_):
@@ -81,21 +88,12 @@ extension ResourceType:TargetType {
     
     var para: String?{
         switch self {
-        case .getEmployeeDataWithID(let emailID):
-            return emailID
         default:
             return nil
         }
     }
     
-    var parameterEncoding: ParameterEncoding{
-        switch self {
-        case .getEmployeeDataWithID(_):
-            return JSONEncoding.default
-        default:
-            return JSONEncoding.default
-        }
-    }
+  
     var sampleData: Data {
         return Data()
     }

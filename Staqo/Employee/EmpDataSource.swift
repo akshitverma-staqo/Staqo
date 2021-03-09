@@ -8,6 +8,9 @@
 import Foundation
 protocol EmpDataSourceDeleate {
     func getEmployeeDataWithID(emailID: String, completion: @escaping(StaoqResult<BaseModel>) -> Void)
+//    func <#name#>(<#parameters#>) -> <#return type#> {
+//    <#function body#>
+//    }
     
     
 }

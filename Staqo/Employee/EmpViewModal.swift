@@ -8,10 +8,8 @@
 import Foundation
 
 class EmpViewModal: ViewModelType {
-   
-    
-    
-    var delegate: ViewModelDelegate?
+   var delegate: ViewModelDelegate?
+    var value:[Value]?
     private let dataSource:EmpDataSourceDeleate?
     init(dataSource: EmpDataSourceDeleate) {
         self.dataSource = dataSource
@@ -19,10 +17,10 @@ class EmpViewModal: ViewModelType {
     
         
     func bootstrap() {
-        self.getEmployeeDataWithID(emailID: UserDefaults.standard.getEmail())
+        self.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
     }
     
-    func getEmployeeDataWithID(emailID: String){
+  private func getEmployeeDataWithID(emailID: String){
         
         delegate?.willLoadData()
         dataSource?.getEmployeeDataWithID(emailID: emailID, completion: { [weak self] result in
@@ -32,12 +30,22 @@ class EmpViewModal: ViewModelType {
                 
                 case .success(let baseModal):
                     print(baseModal)
-                    ws.delegate?.didLoadData()
+                    if baseModal.value?.count == 0  {
+                        
+                    }else{
+                        ws.value = baseModal.value
+                        ws.delegate?.didLoadData()
+                    }
+                    
                 case .failure(let error):
                     ws.delegate?.didFail(error: error)
                     
                 }
             }
         })
+    }
+    private func insertData(){
+        delegate?.willLoadData()
+        
     }
 }
