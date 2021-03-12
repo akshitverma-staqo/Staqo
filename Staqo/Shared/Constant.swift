@@ -25,7 +25,7 @@ class Constant {
     static let kSALMEEN_POINT1 = URL(string:"https://thisisoq.sharepoint.com/Pages/Salmeen.aspx")
     static let kSALMEEN_POINT2 = URL(string:"https://oq.com/en/covid-19/declaration-employees")
     static let kUSER_PIC_FROMAD = "https://graph.microsoft.com/v1.0/users/**useremail**/photo/$value"
-    static let kEMPLOYEE_FOR_ID = "/lists/Employee Master/items/?$expand=fields&$filter=fields/emailid eq '"
+    static let kEMPLOYEE_FOR_ID = "/lists/Employee Master/items/\("?")$expand=fields&$filter=fields/emailid eq '"
     static let kEMPLOYEE_FIND_BY_ID = "/lists/Employee%20Master/items/"
     static let kEMPLOYEE_REGISTER =  "/lists/Employee%20Master/items"
     static let kMAZZAYAKOM_SUB_CATEGORY_URL =  "/lists/Corporate_Offers/items/?$expand=fields&$filter=fields/CategoryLookupId%20eq%20'"

@@ -7,9 +7,11 @@
 
 import Foundation
 
+
 class EmpViewModal: ViewModelType {
    var delegate: ViewModelDelegate?
-    var value:[Value]?
+    var field: Fields?
+    var valueData:Value?
     private let dataSource:EmpDataSourceDeleate?
     init(dataSource: EmpDataSourceDeleate) {
         self.dataSource = dataSource
@@ -28,12 +30,16 @@ class EmpViewModal: ViewModelType {
             DispatchQueue.main.async {
                 switch result{
                 
-                case .success(let baseModal):
-                    print(baseModal)
-                    if baseModal.value?.count == 0  {
+                case .success(let baseModel):
+                    print(baseModel)
+                   
+                    if baseModel.value?.count == 0  {
                         
                     }else{
-                        ws.value = baseModal.value
+                        baseModel.value?.forEach({data in
+                            ws.valueData = data
+                            ws.field = data.fields
+                        })
                         ws.delegate?.didLoadData()
                     }
                     
@@ -44,6 +50,24 @@ class EmpViewModal: ViewModelType {
             }
         })
     }
+    func updateByEmpID(mobileNo:String, ID:String){
+        delegate?.willLoadData()
+        dataSource?.updateByEmpID(mobileNo: mobileNo, ID: ID, completion: { [weak self] result in
+            guard let ws = self else{return}
+            DispatchQueue.main.async {
+                switch result{
+                case .success(let baseModel):
+                    print(baseModel)
+                    ws.field = baseModel.fieldsData
+                    ws.delegate?.didLoadData()
+                case .failure(let error):
+                    ws.delegate?.didFail(error: error)
+                }
+            }
+            
+        })
+    }
+    
     private func insertData(){
         delegate?.willLoadData()
         

@@ -13,6 +13,7 @@ struct BaseModel : Codable {
     var message : String?
     var data : String?
     var value : [Value]?
+    var fieldsData: Fields?
     
     enum CodingKeys: String, CodingKey {
 
@@ -20,6 +21,7 @@ struct BaseModel : Codable {
         case message = "message"
         case data = "@odata.context"
         case value = "value"
+        case fieldsData = "fields"
     }
     init() {
         
@@ -30,6 +32,7 @@ struct BaseModel : Codable {
         message = try values.decodeIfPresent(String.self, forKey: .message)
         data = try values.decodeIfPresent(String.self, forKey: .data)
         value = try values.decodeIfPresent([Value].self, forKey: .value)
+        fieldsData = try values.decodeIfPresent(Fields.self, forKey: .fieldsData)
         
         }
 

@@ -26,7 +26,7 @@ class EmpVC: BaseVC {
     @IBOutlet weak var empIdLabel: UILabel!
     @IBOutlet weak var jobTitleLabel: UILabel!
     @IBOutlet weak var mobile1Label: UILabel!
-    @IBOutlet weak var emailIDLabel: UILabel!
+    @IBOutlet weak var telephoneLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
     @IBOutlet weak var secNumber: UITextField!
@@ -70,11 +70,23 @@ class EmpVC: BaseVC {
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
         // Do any additional setup after loading the view.
+        
     }
     
 
-   
-
+    @IBAction func btnSubmitTapped(_ sender: UIButton) {
+        if (secNumber.text?.count) ?? 0 <= 9 {
+            showErrorMessage(title: "Error..", error: CustomError.InValidNoLength) { (action) in
+            }
+        }else{
+            viewModal.updateByEmpID(mobileNo:secNumber.text! , ID: viewModal.valueData?.id ?? "")
+        }
+        
+    }
+    
+    @IBAction func btnDeleteTapped(_ sender: UIButton) {
+    }
+    
 }
 extension EmpVC : ViewModelDelegate{
     func willLoadData() {
@@ -83,10 +95,13 @@ extension EmpVC : ViewModelDelegate{
     
     func didLoadData() {
         stopLoader()
-        
-       
-        
-        
+         nameLabel.text = viewModal.field?.name ?? ""
+         empIdLabel.text = (viewModal.field?.emailid ?? "").replacingOccurrences(of: "@oq.com", with: "")
+        mobile1Label.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
+        telephoneLabel.text = UserDefaults.standard.getProfile()?.businessPhone ?? ""
+        addressLabel.text = viewModal.field?.emailid ?? ""
+        secNumber.text = viewModal.field?.mobileno2 ?? ""
+                
     }
     
     func didFail(error: CustomError) {

@@ -12,6 +12,7 @@ import Moya
 enum ResourceType {
     
     case getEmployeeDataWithID(emailID: String)
+    case  updateByEmpID(mobileNo:String, ID:String)
     case download(fileName: String)
 
     
@@ -56,30 +57,24 @@ extension ResourceType:TargetType {
         case .download(let fileName):
             return  Constant.kDownloadPath + fileName
        
+        case .updateByEmpID(_, let ID):
+            return Constant.kSiteID + Constant.kEMPLOYEE_FIND_BY_ID + ID + "/fields"
         }
     }
-//    var parameterEncoding: JSONEncoding{
-//        switch self {
-//        case .getEmployeeDataWithID(_):
-//            return JSONEncoding.default
-//        default:
-//            return JSONEncoding.default
-//        }
-//    }
+
     var method: Moya.Method {
         switch self {
-        case .getEmployeeDataWithID(_):
+        case .getEmployeeDataWithID(_),.download(_):
             return Moya.Method.get
-        case .download(_):
-            return Moya.Method.get
-       
+        case .updateByEmpID(_,_):
+            return Moya.Method.patch
         }
     }
     
     var parameters: [String: Any]? {
         switch self {
-        //case .validateUser(let mobileNo):
-            //return ["iMobNo":mobileNo]
+        case .updateByEmpID(let mobileNo , _):
+            return ["mobileno2":mobileNo]
         
         default:
             return nil
@@ -104,6 +99,9 @@ extension ResourceType:TargetType {
             return .requestPlain
         case .download(_):
             return .downloadDestination(downloadDestination)
+        case .updateByEmpID(_,_):
+            return .requestParameters(parameters: parameters!, encoding: JSONEncoding.default)
+            
         }
     }
     

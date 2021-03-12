@@ -44,6 +44,7 @@ public enum MultiTarget: TargetType {
     public var headers: [String: String]? {
         return target.headers
     }
+   
 
     /// The embedded `TargetType`.
     public var target: TargetType {

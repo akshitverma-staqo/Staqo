@@ -42,7 +42,7 @@ class HomeViewModal:ViewModelType{
                     delegate?.didFail(error: CustomError.OtherError(error: error!))
                     return
                 }
-                let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "")
+                let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "" , businessPhone: currentUser.businessPhones.first  as? String ?? "")
 
                 UserDefaults.standard.setProfile(value: data)
                 delegate?.didLoadData()
