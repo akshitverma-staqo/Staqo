@@ -5,7 +5,7 @@
 	<key>DEV</key>
 	<dict>
 		<key>FTP_URL</key>
-		<string>FTP_URL</string>
+		<string>http://182.73.254.13/oq</string>
 		<key>AuthURL</key>
 		<string>DEV AuthURL</string>
 		<key>BaseURL</key>

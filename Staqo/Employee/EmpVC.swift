@@ -9,6 +9,10 @@ import UIKit
 
 
 class EmpVC: BaseVC {
+    
+    @IBOutlet weak var herderView: HeaderView!
+
+    var header:HeaderView!
     @IBOutlet weak var deleteBtnnumberView: UIView!
     @IBOutlet weak var deleteBtnOutlet: UIButton!
     @IBOutlet weak var submitBtnOutlet: UIButton!
@@ -36,6 +40,11 @@ class EmpVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:100))
+        header.delegate = self
+       
+        herderView.addSubview(header)
         shadowView.dropShadow()
         viewModal = EmpViewModal(dataSource: EmpDataSource())
         viewModal.delegate = self
@@ -73,7 +82,12 @@ class EmpVC: BaseVC {
         
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
+        header.btnProfile .isHidden = true
+        self.navigationController?.isNavigationBarHidden = true
+    }
     @IBAction func btnSubmitTapped(_ sender: UIButton) {
         if (secNumber.text?.count) ?? 0 <= 9 {
             showErrorMessage(title: "Error..", error: CustomError.InValidNoLength) { (action) in
@@ -136,4 +150,23 @@ extension UIView{
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor.cgColor
     }
+}
+extension EmpVC: HeaderViewDelegate{
+    func btnMenuTapped(sender: UIButton) {
+        
+        _ = navigationController?.popViewController(animated: true)
+
+    }
+    
+    func btnProfileTapped(sender: UIButton) {
+        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func btnLogoutTapped(sender: UIButton) {
+        
+        let vc = Constant.getViewController(storyboard: Constant.kNotification, identifier: Constant.kNotificationVC, type: NotificationVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -5,7 +5,9 @@ ${BUILT_PRODUCTS_DIR}/MSAL/MSAL.framework
 ${BUILT_PRODUCTS_DIR}/MSGraphClientModels/MSGraphClientModels.framework
 ${BUILT_PRODUCTS_DIR}/MSGraphClientSDK/MSGraphClientSDK.framework
 ${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
+${BUILT_PRODUCTS_DIR}/PullUpController/PullUpController.framework
 ${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework
 ${BUILT_PRODUCTS_DIR}/Result/Result.framework
 ${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
 ${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/ScalingCarousel/ScalingCarousel.framework

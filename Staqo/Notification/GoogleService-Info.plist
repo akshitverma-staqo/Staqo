@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>472298999681-lrldmsup49p7p2u1ui2n9ah20lftfadk.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.472298999681-lrldmsup49p7p2u1ui2n9ah20lftfadk</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAs_UAxywVMhhPc1w5lEdHorKhvFkdokGQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>472298999681</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.OQ.EmployeeApp</string>
+	<key>PROJECT_ID</key>
+	<string>oqmobileappnotification</string>
+	<key>STORAGE_BUCKET</key>
+	<string>oqmobileappnotification.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:472298999681:ios:c1ed9a32eb417caa246280</string>
+</dict>
+</plist>

@@ -21,7 +21,7 @@ class LoginVC: BaseVC {
         super.viewDidLoad()
         viewModel = LoginViewModel(dataSource: LoginDataSource())
         viewModel.delegate = self
-        
+      //  UserDefaults.standard.setMenuValue(value: true)
         print(Configuration.baseURL)
         self.navigationController?.isNavigationBarHidden = true
         
@@ -166,35 +166,16 @@ extension LoginVC{
             // Check 2 : Reading and writing in system directories (sandbox violation)
             let stringToWrite = "Jailbreak Test"
             do
-        {
+            {
             try stringToWrite.write(toFile:"/private/JailbreakTest.txt", atomically:true, encoding:String.Encoding.utf8)
             //Device is jailbroken
-            
             print("@@@@@Device is jailbreak")
-            
-            
-            let alert = UIAlertController(title: "Alert",
-                                          message: "Your Device is Jailbreak",
-                                          preferredStyle: .alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true)
-            
-            
-            
-            
-            
+
             return true
         }catch
         {
             print("@@@@@Device not jailbreak1")
-            return false
+            return true
         }
-//        }else
-//        {
-//            print("@@@@@Device not jailbreak2")
-//            return false
-//        }
-        
     }
 }

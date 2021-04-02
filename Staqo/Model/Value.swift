@@ -24,7 +24,7 @@ struct Value : Codable {
 	let parentReference : ParentReference?
 	let contentType : ContentType?
 	let fieldsdata : String?
-	let fields : Fields?
+    var fields : Fields?
 
 	enum CodingKeys: String, CodingKey {
 

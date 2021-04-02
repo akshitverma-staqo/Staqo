@@ -16,8 +16,10 @@ PODS:
   - MSGraphClientSDK/Authentication (1.0.0)
   - MSGraphClientSDK/Common (1.0.0):
     - MSGraphClientSDK/Authentication
+  - PullUpController (0.8.0)
   - ReachabilitySwift (5.0.0)
   - Result (4.1.0)
+  - ScalingCarousel (3.2.0)
   - SDWebImage (4.4.8):
     - SDWebImage/Core (= 4.4.8)
   - SDWebImage/Core (4.4.8)
@@ -29,7 +31,9 @@ DEPENDENCIES:
   - MSAL (~> 1.1.1)
   - MSGraphClientModels (~> 1.3.0)
   - MSGraphClientSDK (~> 1.0.0)
+  - PullUpController
   - ReachabilitySwift
+  - ScalingCarousel
   - SDWebImage (~> 4.0)
   - SVProgressHUD
 
@@ -41,8 +45,10 @@ SPEC REPOS:
     - MSAL
     - MSGraphClientModels
     - MSGraphClientSDK
+    - PullUpController
     - ReachabilitySwift
     - Result
+    - ScalingCarousel
     - SDWebImage
     - SVProgressHUD
 
@@ -53,11 +59,13 @@ SPEC CHECKSUMS:
   MSAL: 2e41554542ea07d764cc1bd6a39cb063d19b3269
   MSGraphClientModels: ffef6d0a1cdaa774e1689e38da35301cb74fc72a
   MSGraphClientSDK: ffc07a58a838e0702c7bf2a856367035d4a335d7
+  PullUpController: 2f7ccaa0f35b31b47e3efbe1854c7f781552b3c7
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  ScalingCarousel: d40f0ce438af5cfb2225e2f723f7161597961128
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c542b5de9aa7129f9de491c2503d3dc373e1614c
+PODFILE CHECKSUM: 607ae3a5fa3a9f23f44b0952f25fd3769456b8b1
 
 COCOAPODS: 1.10.0

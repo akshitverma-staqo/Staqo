@@ -18,7 +18,7 @@ enum StaoqResult<T> {
 
 enum DownloadResult {
     case progress(Double)
-    case success(String)
+    case success(Data)
     case failure(CustomError)
 }
 
@@ -26,7 +26,7 @@ class NetworkClient {
     
     static let provider = MoyaProvider<ResourceType>()
     
-    // Method using Moya
+// Method using Moya
 //    static func request<K:Codable>(target: ResourceType, success successCallBack: @escaping (Result<K>) -> Void, error errorCallBack: @escaping (Swift.Error) -> Void, failure failureCallBack: @escaping (Error) -> Void) {
 //
 //        provider.request(target) { (result) in
@@ -78,7 +78,7 @@ class NetworkClient {
                         let data = response.data
                         let strJson = String(data: data, encoding: .utf8)
                         print("DOWNLOAD RESPONSE JSON: \(strJson ?? "NO JSON STRING")")
-                        completion(DownloadResult.success(strJson ?? ""))
+                        completion(DownloadResult.success(data))
             case .failure(_):
                 completion(.failure(CustomError.DownloadFailed))
             }

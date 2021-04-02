@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OQ</title>
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<script>
+
+    var SingNowIsInstalled = false;
+    var isIos = false;
+    var isAndroid = true;
+    function redirectToApp(SingNowIsInstd, accessToken, refreshToken, hostname) {
+    var check = SingNowIsInstd;
+    if(check == '1') {
+	// App is installed. Open SignNowApp. Note: hostname sometimes isn't needed. I beleive it's safe to remove it but you can test.
+	// Launch URL
+        window.location = "signnow-private-cloud://sso_login?refresh_token=" + refreshToken + "&access_token=" + accessToken + "&hostname=" + hostname;
+    } else {
+	// App isn't installed. Redirect to App Store/Play store.
+	if(isIos) {
+		window.location = "https://apps.apple.com/us/app/signnow-private-cloud/id1491162399";
+	} else if (isAndroid) {
+		window.location = "https://play.google.com/store/apps/details?id=com.signnow.android.appliance";
+	}
+    }
+
+}
+</script>
+<body>
+    <div class="staticPages mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="pname">FAQs</h2>
+                    <p>Last Modified <strong class="text-blue">20 January 2021</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contentArea">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <h5>Q1. What is OQ mobile application?</h5>
+                    <p>OQ Mobile App is a facility provided to you by OQ to access Company Services any time anywhere in a smart way for 24/7,365 days a year. It is available for Android and IOS devices.</p>
+
+                    <h5>Q2. Can I edit my profile?</h5>
+                    <p>No, user cannot edit the profile.</p>
+
+                    <h5>Q3. Will I be able to use all the features in the mobile app straight away?</h5>
+                    <p>All @oq.com employees will have access to the app.</p>
+
+                    <h5>Q4. What are the objectives of the Mobile App?</h5>
+                    <p>This app acts as a container of the most important systems in OQ and to be accessed through mobile.</p>
+
+                    <h5>Q5. Will I be notified if new content is uploaded in the app?</h5>
+                    <p>Yes, you will be notified.  </p>
+
+                    <h5>Q6. What can I access through the app?</h5>
+                    <ul>
+                        <li>OQ portal </li>
+                        <li>Salmeen and COVID-19 declaration form </li>
+                        <li>Mazayacom </li>
+                        <!--<li>I-HSSE (Incident reporting)</li>-->
+                        <li>Your own Business card.</li>
+                        <li>Global offices</li>
+                    </ul>
+
+                    <h5>Q7. I am not able to access the new app, why?</h5>
+                    <p>All employees with @oq.com email domain will be able to access the mobile app.</p>
+
+                    <h5>Q8. Why does OQ need a mobile app?</h5>
+                    <p>To serve you better in your day to day activities.</p>
+
+                    <h5>Q9. What is the name of the app?</h5>
+                    <p>OQ Mobile App</p>
+
+                    <h5>Q10. Will there be one single login and password to access everything?</h5>
+                    <p>Yes</p>
+
+                    <h5>Q11. What if I have more queries on OQ mobile app?</h5>
+                    <p>Contact Help Desk at helpdesk@oq.com or chat with a help desk employee at OQ Help Desk on Microsoft Teams.</p>
+
+                    <h5>Q12. Is the App safe and secure?</h5>
+                    <p>OQ Cyber Security is committed to ensuring the security and confidentiality of our systems and technology. While we do our utmost to ensure the security of our systems, there are steps you need to take as well to ensure your security. Please visit the OQ Cyber Security page on the intranet for further details.</p>
+
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>

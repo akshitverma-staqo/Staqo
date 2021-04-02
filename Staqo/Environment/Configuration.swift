@@ -48,6 +48,8 @@ struct Configuration {
         return url
     }()
     
+    
+    
     static let authURL: String = {
         guard let url = environmentSettings?["AuthURL"] else {
             assertionFailure("AuthURL is not set for environment: \(environment)!")

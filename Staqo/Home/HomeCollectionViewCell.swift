@@ -22,8 +22,8 @@ class HomeCollectionViewCell: UICollectionViewCell {
         imgView1.image = UIImage(named: data?.imageArr[index.row] ?? "")
         imgView2.image = UIImage(named: data?.curveArr[index.row] ?? "")
         imgView3.image = UIImage(named: data?.TopLabArray[index.row] ?? "")
-        
-        
+        lbl1.text = (data?.TopLabArray[index.row] ?? "")
+         
     }
 
 }

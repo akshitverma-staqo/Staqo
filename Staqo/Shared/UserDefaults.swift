@@ -19,6 +19,7 @@ enum UserDefaultsKeys : String {
     case profileData
     case currentAddress
     case accessToken
+    case menuStatus
 }
 
 
@@ -43,13 +44,25 @@ extension UserDefaults {
         return value(forKey: UserDefaultsKeys.accessToken.rawValue) as! String
     }
     
+    
    
+    
     
     func setUserID(value: String){
         set(value, forKey: UserDefaultsKeys.userID.rawValue)
         //synchronize()
     }
  
+    
+    func setMenuStatus() -> Bool {
+        return bool(forKey: UserDefaultsKeys.menuStatus.rawValue)
+    }
+    
+    func setMenuValue(value:Bool){
+        set(value, forKey: UserDefaultsKeys.menuStatus.rawValue)
+        
+    }
+    
     
     
     //// MARK:- : -  Retrieve User Data

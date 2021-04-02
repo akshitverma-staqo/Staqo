@@ -14,6 +14,9 @@ target 'Staqo' do
 	pod 'MSAL', '~> 1.1.1'
 	pod 'MSGraphClientSDK', ' ~> 1.0.0'
 	pod 'MSGraphClientModels', '~> 1.3.0'
+	pod 'PullUpController'
+	pod "ScalingCarousel"
+
 
   target 'StaqoTests' do
     inherit! :search_paths

@@ -20,7 +20,7 @@
         <!--Navigation Controller-->
         <scene sceneID="OI9-OE-IcU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R5f-UK-tU9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DashboardNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="R5f-UK-tU9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0I-6g-VIT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -51,7 +51,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2021 OQ SAOC. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fq-1I-ydY">
-                                <rect key="frame" x="156.5" y="817" width="101.5" height="15"/>
+                                <rect key="frame" x="154.5" y="817" width="105" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Cb4-rG-dtP"/>
                                 </constraints>

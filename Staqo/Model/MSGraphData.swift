@@ -12,6 +12,7 @@ struct MSGraphData : Codable {
     var mobileNo1 : String?
     var jobDesignation:String?
     var businessPhone:String?
+    var jobTitle:String?
     
     
     enum CodingKeys: String, CodingKey {
@@ -21,6 +22,7 @@ struct MSGraphData : Codable {
         case mobileNo1 = "mobileNo1"
         case jobDesignation = "jobDesignation"
         case businessPhone = "businessPhones"
+        
     }
     init(email:String , name:String , mobileNo1:String , jobDesignation:String, businessPhone:String) {
         self.email = email
@@ -28,6 +30,7 @@ struct MSGraphData : Codable {
         self.mobileNo1 = mobileNo1
         self.jobDesignation = jobDesignation
         self.businessPhone = businessPhone
+        
         
     }
     init(from decoder: Decoder) throws {
@@ -37,6 +40,7 @@ struct MSGraphData : Codable {
         mobileNo1 = try values.decodeIfPresent(String.self, forKey: .mobileNo1)
         jobDesignation = try values.decodeIfPresent(String.self, forKey: .jobDesignation)
         businessPhone = try values.decodeIfPresent(String.self, forKey: .businessPhone)
+        
         
         }
 

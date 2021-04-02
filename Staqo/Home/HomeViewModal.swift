@@ -21,10 +21,36 @@ class HomeViewModal:ViewModelType{
     func bootstrap() {
         self.scrollImage()
         self.getGraphData()
+    //    self.dashboardData()
     }
+    
+    func dashboardData(){
+          
+      delegate?.willLoadData()
+      dataSource?.dashboardMeneData(completion: {[weak self] result in
+          guard let ws = self else{return}
+          
+          switch result {
+          case .success(let baseModel):
+              print(baseModel)
+              ws.delegate?.didLoadData()
+          case .failure(let error):
+              ws.delegate?.didFail(error: error)
+          }
+          
+      })
+
+}
+
+    
+    
     private func scrollImage(){
 
-        rows = (["set1.png","set2.png","salmeenicon.png","bcimage.png"],["blob1.png","blob2.png","blob1.png","blob2.png"],["OQ Portal","Mazzayacom","Salmeen","Business Card"])
+        rows = (["set1.png","set2.png","salmeenicon.png","bcimage.png","dashboard6","dashboard7","dashboard8","dashboard9","dashboard10"],["blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png"],["OQ Portal","Mazzayacom","Salmeen","Business Card","Helpdesk","IHSSE","E-SIGN","Travel & Leave Request","Majalis"])
+        
+        
+       
+        
         
         delegate?.didLoadData()
     }

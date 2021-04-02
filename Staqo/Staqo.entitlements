@@ -8,7 +8,6 @@
 	<array>
 		<string>$(AppIdentifierPrefix)com.microsoft.adalcache</string>
 		<string>$(AppIdentifierPrefix)com.OQ.EmployeeApp</string>
-		<string>$(AppIdentifierPrefix)com.microsoft.identity.universalstorage</string>
 		<string>$(AppIdentifierPrefix)com.microsoft.OQ.EmployeeApp</string>
 	</array>
 </dict>
