@@ -26,7 +26,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dtg-fH-Uwe">
-                                <rect key="frame" x="0.0" y="136.5" width="375" height="510.5"/>
+                                <rect key="frame" x="0.0" y="134" width="375" height="513"/>
                                 <subviews>
                                     <pageControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="paU-dA-FgR">
                                         <rect key="frame" x="10" y="10" width="160" height="0.0"/>
@@ -37,7 +37,7 @@
                                         <color key="currentPageIndicatorTintColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </pageControl>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qH3-rg-fuL" customClass="HomeCollectionView">
-                                        <rect key="frame" x="0.0" y="20" width="375" height="480.5"/>
+                                        <rect key="frame" x="0.0" y="20" width="375" height="483"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HER-Lx-S0k">
                                             <size key="itemSize" width="128" height="128"/>
@@ -52,10 +52,10 @@
                                         </connections>
                                     </collectionView>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i9z-0V-LTg">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="510.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="513"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LCi-9v-ggm">
-                                                <rect key="frame" x="0.0" y="20" width="375" height="490.5"/>
+                                                <rect key="frame" x="0.0" y="20" width="375" height="493"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="nZf-1L-82Z">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -94,25 +94,25 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxb-bh-loO">
-                                <rect key="frame" x="20" y="69" width="18" height="25"/>
+                                <rect key="frame" x="20" y="69" width="19" height="23.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="20"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rehman" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k87-0b-fp4">
-                                <rect key="frame" x="43" y="69" width="80.5" height="25"/>
+                                <rect key="frame" x="44" y="69" width="74.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
                                 <color key="textColor" red="0.14117647058823529" green="0.30196078431372547" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What will you do today?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkp-7B-eWn">
-                                <rect key="frame" x="20" y="99" width="165" height="17.5"/>
+                                <rect key="frame" x="20" y="97.5" width="150.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaA-DQ-s0B">
-                                <rect key="frame" x="317" y="97" width="44" height="30"/>
+                                <rect key="frame" x="317" y="94.5" width="44" height="30"/>
                                 <state key="normal" title="MENU"/>
                                 <connections>
                                     <action selector="changeMenuTap:" destination="hOF-yf-gTd" eventType="touchUpInside" id="99Q-fA-iI5"/>
@@ -205,8 +205,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xvF-hk-hPP" customClass="HeaderView" customModule="Staqo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="g4n-PJ-wvU"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="menuImg" value="backArrow.png"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-Jw-kgr">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -265,21 +275,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="S7K-jo-Ajt" firstAttribute="centerX" secondItem="Cvh-Xr-k7R" secondAttribute="centerX" id="2Xk-9X-M48"/>
-                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="top" secondItem="Cvh-Xr-k7R" secondAttribute="top" id="8uc-VO-saf"/>
-                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="leading" secondItem="Cvh-Xr-k7R" secondAttribute="leading" id="PFY-zA-tft"/>
-                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="trailing" secondItem="Cvh-Xr-k7R" secondAttribute="trailing" id="R5g-iv-XnJ"/>
-                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="bottom" secondItem="Cvh-Xr-k7R" secondAttribute="bottom" id="uR0-6Q-76W"/>
+                            <constraint firstAttribute="trailing" secondItem="xvF-hk-hPP" secondAttribute="trailing" id="9Lc-2W-zFY"/>
+                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="trailing" secondItem="Cvh-Xr-k7R" secondAttribute="trailing" id="CJG-zu-Pu0"/>
+                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="bottom" secondItem="Cvh-Xr-k7R" secondAttribute="bottom" id="UYv-xA-kTD"/>
+                            <constraint firstItem="xvF-hk-hPP" firstAttribute="leading" secondItem="FGc-Gj-D4k" secondAttribute="leading" id="Ye8-2l-kJ4"/>
+                            <constraint firstItem="xvF-hk-hPP" firstAttribute="top" secondItem="Cvh-Xr-k7R" secondAttribute="top" id="pGI-C6-JLy"/>
+                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="leading" secondItem="Cvh-Xr-k7R" secondAttribute="leading" id="sST-7f-WIg"/>
                             <constraint firstItem="S7K-jo-Ajt" firstAttribute="centerY" secondItem="Cvh-Xr-k7R" secondAttribute="centerY" id="wPd-Es-QtO"/>
+                            <constraint firstItem="Qog-Jw-kgr" firstAttribute="top" secondItem="xvF-hk-hPP" secondAttribute="bottom" id="xJ5-aQ-RVL"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="herderView" destination="xvF-hk-hPP" id="GXt-gd-UQE"/>
                         <outlet property="loaderView" destination="S7K-jo-Ajt" id="mG6-2e-qYt"/>
                         <outlet property="webView" destination="Qog-Jw-kgr" id="VuC-7j-bLP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIw-96-LWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1956" y="-57"/>
+            <point key="canvasLocation" x="1956" y="-57.121439280359823"/>
         </scene>
         <!--EmpVC-->
         <scene sceneID="bvp-Tf-IbD">
@@ -322,7 +336,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmployeeID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNQ-kH-exn">
-                                                <rect key="frame" x="92" y="49" width="85.5" height="17"/>
+                                                <rect key="frame" x="92" y="49" width="79.5" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="3ie-gi-SXP"/>
                                                 </constraints>
@@ -331,7 +345,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJ8-m0-dfC">
-                                                <rect key="frame" x="177.5" y="47" width="167.5" height="21"/>
+                                                <rect key="frame" x="171.5" y="47" width="173.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -349,7 +363,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO3-M0-iiy">
-                                                                <rect key="frame" x="25" y="25" width="47" height="15"/>
+                                                                <rect key="frame" x="25" y="25" width="47" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -362,7 +376,7 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="M:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOb-ZN-9Yy">
-                                                                <rect key="frame" x="25" y="68" width="14" height="15"/>
+                                                                <rect key="frame" x="25" y="67" width="14" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="eXE-9S-6sr"/>
                                                                 </constraints>
@@ -371,13 +385,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyN-1H-pEX">
-                                                                <rect key="frame" x="43" y="68" width="0.0" height="15"/>
+                                                                <rect key="frame" x="43" y="67" width="0.0" height="15"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="T:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJz-aX-64s">
-                                                                <rect key="frame" x="25" y="85" width="9" height="15"/>
+                                                                <rect key="frame" x="25" y="84" width="9" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="Nz8-a4-ccQ"/>
                                                                 </constraints>
@@ -386,13 +400,13 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uaf-LP-BtJ">
-                                                                <rect key="frame" x="43" y="92.5" width="0.0" height="0.0"/>
+                                                                <rect key="frame" x="43" y="91.5" width="0.0" height="0.0"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a66-qa-Ud0">
-                                                                <rect key="frame" x="25" y="105" width="10" height="15"/>
+                                                                <rect key="frame" x="25" y="104" width="11" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="gnO-Ym-S21"/>
                                                                 </constraints>
@@ -401,7 +415,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZWf-Dq-82A">
-                                                                <rect key="frame" x="43" y="105" width="153" height="0.0"/>
+                                                                <rect key="frame" x="43" y="104" width="153" height="0.0"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="153" id="mUi-EF-yfJ"/>
                                                                 </constraints>
@@ -410,7 +424,7 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="www.oq.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QcM-HL-2mD">
-                                                                <rect key="frame" x="183" y="130" width="117" height="15"/>
+                                                                <rect key="frame" x="183" y="129" width="117" height="14"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="117" id="nOS-eI-2QY"/>
                                                                 </constraints>
@@ -455,7 +469,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6E5-qh-rdW">
-                                                <rect key="frame" x="30" y="328" width="80.5" height="20"/>
+                                                <rect key="frame" x="30" y="328" width="76.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="LdY-4N-lKs"/>
                                                 </constraints>
@@ -464,10 +478,10 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="izj-jv-49x">
-                                                <rect key="frame" x="28" y="358" width="323" height="63.5"/>
+                                                <rect key="frame" x="28" y="358" width="323" height="62"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your changes will be updated automatically on your business card too." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thN-7D-XGX">
-                                                        <rect key="frame" x="14" y="17" width="292" height="29.5"/>
+                                                        <rect key="frame" x="14" y="17" width="292" height="28"/>
                                                         <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="12"/>
                                                         <color key="textColor" red="0.073083855210000007" green="0.30496299269999999" blue="0.38455867770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -482,16 +496,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pC-z2-KQG">
-                                                <rect key="frame" x="30" y="441.5" width="315" height="17"/>
+                                                <rect key="frame" x="30" y="440" width="315" height="17"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone no." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIw-wm-Gj0">
-                                                        <rect key="frame" x="0.0" y="0.0" width="68" height="17"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="64" height="17"/>
                                                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="14"/>
                                                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Qxu-UQ-wN1">
-                                                        <rect key="frame" x="69" y="3" width="5" height="5"/>
+                                                        <rect key="frame" x="65" y="3" width="5" height="5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="5" id="3ys-g5-hPe"/>
                                                             <constraint firstAttribute="width" constant="5" id="dnO-6T-PRo"/>
@@ -509,7 +523,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZa-pg-4OR">
-                                                <rect key="frame" x="30" y="471.5" width="315" height="60"/>
+                                                <rect key="frame" x="30" y="470" width="315" height="60"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V3j-7l-ANQ">
                                                         <rect key="frame" x="28" y="13" width="174" height="34"/>
@@ -531,7 +545,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TB-oc-eIm">
-                                                <rect key="frame" x="30" y="551.5" width="315" height="17"/>
+                                                <rect key="frame" x="30" y="550" width="315" height="17"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="Gsh-OX-5vk"/>
@@ -704,7 +718,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRi-BR-5eZ" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="621"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVR-KC-5Ip">
                                                 <rect key="frame" x="50" y="100" width="30" height="30"/>
@@ -718,7 +732,7 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cg1-ex-z0x">
-                                                <rect key="frame" x="50" y="148" width="55" height="24"/>
+                                                <rect key="frame" x="50" y="148" width="50.5" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="24" id="BGf-89-vBv"/>
                                                 </constraints>
@@ -727,7 +741,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9g-GK-Yr6">
-                                                <rect key="frame" x="50" y="212" width="44" height="15"/>
+                                                <rect key="frame" x="50" y="212" width="41" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="f1H-dC-sVI"/>
                                                 </constraints>
@@ -740,7 +754,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgw-1G-ksG">
-                                                <rect key="frame" x="50" y="245" width="66" height="15"/>
+                                                <rect key="frame" x="50" y="245" width="63" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="KCG-Ve-WXT"/>
                                                 </constraints>
@@ -753,7 +767,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOB-Gu-B73">
-                                                <rect key="frame" x="50" y="278" width="32" height="15"/>
+                                                <rect key="frame" x="50" y="278" width="30" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="3Ig-eb-ODV"/>
                                                 </constraints>
@@ -779,7 +793,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQB-4O-Z9F">
-                                                <rect key="frame" x="50" y="344" width="100" height="15"/>
+                                                <rect key="frame" x="50" y="344" width="94" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="zhh-Vg-f8j"/>
                                                 </constraints>
@@ -792,14 +806,14 @@
                                                 </connections>
                                             </button>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="PUm-Fg-CBn">
-                                                <rect key="frame" x="50" y="474" width="102" height="64"/>
+                                                <rect key="frame" x="50" y="473" width="102" height="64"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="64" id="3c3-3Y-Zov"/>
                                                     <constraint firstAttribute="width" constant="102" id="ZPu-Pe-T1m"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2020 OQ SAOC. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvs-8s-eC9">
-                                                <rect key="frame" x="50" y="558" width="110" height="15"/>
+                                                <rect key="frame" x="50" y="557" width="110" height="14"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="XTq-AJ-UCQ"/>
                                                 </constraints>
@@ -808,7 +822,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtt-sj-UTo">
-                                                <rect key="frame" x="50" y="410" width="59" height="31"/>
+                                                <rect key="frame" x="50" y="410" width="55" height="30"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="15"/>
                                                 <state key="normal" title="Log Out">
                                                     <color key="titleColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -818,7 +832,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h3B-Jv-MrX">
-                                                <rect key="frame" x="50" y="377" width="82" height="15"/>
+                                                <rect key="frame" x="50" y="377" width="76" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="jCF-bD-B2z"/>
                                                 </constraints>
@@ -924,42 +938,42 @@
                                 <rect key="frame" x="0.0" y="84" width="320" height="484"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CBe-OZ-pfz" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="581.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="551"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xlb-fT-Hcg">
-                                                <rect key="frame" x="30" y="25" width="86" height="25"/>
+                                                <rect key="frame" x="30" y="25" width="84" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGK-d5-HRa">
-                                                <rect key="frame" x="30" y="55" width="72" height="17.5"/>
+                                                <rect key="frame" x="30" y="53.5" width="64.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cec-Ii-2xu">
-                                                <rect key="frame" x="30" y="96.5" width="260" height="120.5"/>
+                                                <rect key="frame" x="30" y="94" width="260" height="98"/>
                                                 <string key="text">OQ is a global integrated energy company with roots in Oman. It emerged in late 2019 upon the successful integration of nine legacy companies, united to form a stronger, more efficient, and consolidated entity. </string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4L5-Ih-RjQ">
-                                                <rect key="frame" x="30" y="237" width="260" height="86"/>
+                                                <rect key="frame" x="30" y="212" width="260" height="82"/>
                                                 <string key="text"> OQ operates in 17 countries and covers the entire value chain in the hydrocarbon sector from exploration and production, to marketing and distribution of end-user products.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Its fuels and chemicals are sold in over 60 countries worldwide." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7j8-js-o3F">
-                                                <rect key="frame" x="30" y="343" width="260" height="34.5"/>
+                                                <rect key="frame" x="30" y="314" width="260" height="33"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NnG-nS-z03">
-                                                <rect key="frame" x="97" y="453.5" width="126" height="78"/>
+                                                <rect key="frame" x="97" y="423" width="126" height="78"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="78" id="DAr-h1-Xgs"/>
                                                     <constraint firstAttribute="width" constant="126" id="zIi-Zl-y0W"/>
@@ -1046,76 +1060,76 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="76t-CX-Rhh" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="962"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIVACY POLICY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxh-tT-slD">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="PRIVACY POLICY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxh-tT-slD">
                                                 <rect key="frame" x="30" y="15" width="161" height="25"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-xD-PsJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-xD-PsJ">
                                                 <rect key="frame" x="30" y="86.5" width="260" height="120.5"/>
                                                 <string key="text">Your privacy is especially important to us. Accordingly, we have developed this Policy for you to understand how we collect, use, communicate and disclose and make use of personal information. The following outlines our privacy policy.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-5m-OtH">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-5m-OtH">
                                                 <rect key="frame" x="40" y="217" width="250" height="65.5"/>
                                                 <string key="text">Before or at the time of collecting personal information, we will identify the purposes for which information is being collected.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aga-lH-l6j">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aga-lH-l6j">
                                                 <rect key="frame" x="40" y="292.5" width="250" height="114.5"/>
                                                 <string key="text">We will collect and use of personal information solely with the objective of fulfilling those purposes specified by us and for other compatible purposes, unless we obtain the consent of the individual concerned or as required by law.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will only retain personal information if necessary, for the fulfillment of those purposes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-FA-21K">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="We will only retain personal information if necessary, for the fulfillment of those purposes." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6k-FA-21K">
                                                 <rect key="frame" x="40" y="417" width="250" height="49"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk5-1E-MNG">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yk5-1E-MNG">
                                                 <rect key="frame" x="40" y="476" width="250" height="65.5"/>
                                                 <string key="text">We will collect personal information by lawful and fair means and, where appropriate, with the knowledge or consent of the individual concerned.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRp-rV-0vf">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRp-rV-0vf">
                                                 <rect key="frame" x="40" y="551.5" width="250" height="82"/>
                                                 <string key="text">Personal data should be relevant to the purposes for which it is to be used, and, to the extent necessary for those purposes, should be accurate, complete, and up to date.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZl-mf-D6J">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZl-mf-D6J">
                                                 <rect key="frame" x="40" y="643.5" width="250" height="82"/>
                                                 <string key="text">We will protect personal information by reasonable security safeguards against loss or theft, as well as unauthorized access, disclosure, copying, use or modification.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meY-Yg-mPI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meY-Yg-mPI">
                                                 <rect key="frame" x="40" y="735.5" width="250" height="65.5"/>
                                                 <string key="text">We will make readily available to customers information about our policies and practices relating to the management of personal information.</string>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojR-lP-3TK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojR-lP-3TK">
                                                 <rect key="frame" x="30" y="811" width="260" height="86"/>
                                                 <string key="text">We are committed to conducting our business in accordance with these principles to ensure that the confidentiality of personal information is protected and maintained.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Modified: 3 February 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWx-6y-6Bt">
-                                                <rect key="frame" x="30" y="41" width="204.5" height="17.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Last Modified: 3 February 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YWx-6y-6Bt">
+                                                <rect key="frame" x="30" y="41" width="195.5" height="17.5"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1216,41 +1230,41 @@
                                 <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F8x-OW-TRP">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2685"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2516.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terms &amp; Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tv-p0-6jP">
-                                                <rect key="frame" x="30" y="25" width="183" height="25"/>
+                                                <rect key="frame" x="30" y="25" width="174.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Modified: 3 February 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3w-my-wpE">
-                                                <rect key="frame" x="30" y="50" width="204.5" height="17.5"/>
+                                                <rect key="frame" x="30" y="48.5" width="195.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. TERMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZXX-JW-NNz">
-                                                <rect key="frame" x="30" y="87.5" width="73.5" height="22.5"/>
+                                                <rect key="frame" x="30" y="85" width="81.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7N-V5-N6D">
-                                                <rect key="frame" x="30" y="118" width="317" height="172"/>
+                                                <rect key="frame" x="30" y="114" width="317" height="147"/>
                                                 <string key="text">By downloading this Mobile App, you are agreeing to be bound by these Terms and Conditions of Use, all applicable laws, and regulations, and agree that you are responsible for compliance with any applicable local laws. If you do not agree with any of these terms, you are prohibited from using or accessing and using this App.  The materials contained in this App are protected by applicable copyright and trademark law.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Device Management" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plx-pa-MOg">
-                                                <rect key="frame" x="30" y="300" width="206" height="22.5"/>
+                                                <rect key="frame" x="30" y="271" width="185.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d22-S3-heI">
-                                                <rect key="frame" x="30" y="332.5" width="317" height="240.5"/>
+                                                <rect key="frame" x="30" y="302" width="317" height="196"/>
                                                 <string key="text">OQ utilizes Microsoft Intune to manage mobile devices accessing its corporate applications which will require employees to download Intune.  OQ however cannot see employee personal information when they enroll their device with Microsoft Intune and all devices are classified as “Personal” (not corporate) devices.   
 When you enroll a device, you give OQ permission to view certain pieces of information on your device, such as device model and serial number. OQ uses this information to help protect the corporate data on the device.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
@@ -1258,13 +1272,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What OQ can never see:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaA-0a-m91">
-                                                <rect key="frame" x="44" y="583" width="303" height="22.5"/>
+                                                <rect key="frame" x="44" y="508" width="303" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0ea-lf-k0r">
-                                                <rect key="frame" x="44" y="615.5" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="539" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="tkS-ck-aAK">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1292,7 +1306,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rNU-zY-efK">
-                                                <rect key="frame" x="44" y="636" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="559.5" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="ynU-x4-6sq">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1320,7 +1334,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrD-Gr-xmV">
-                                                <rect key="frame" x="44" y="657.5" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="581" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="k9f-GT-C3Q">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1348,7 +1362,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r7Z-eb-H3M">
-                                                <rect key="frame" x="44" y="679" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="602.5" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="nsD-pL-JNi">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1376,7 +1390,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAq-Ie-5zZ">
-                                                <rect key="frame" x="44" y="700.5" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="624" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="jEP-mK-PtX">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1404,7 +1418,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3P-US-sc6">
-                                                <rect key="frame" x="44" y="722" width="303" height="33"/>
+                                                <rect key="frame" x="44" y="645.5" width="303" height="33"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="BvG-n3-wfj">
                                                         <rect key="frame" x="0.0" y="13.5" width="6" height="6"/>
@@ -1432,7 +1446,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqJ-o2-a5R">
-                                                <rect key="frame" x="44" y="755" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="678.5" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="Z05-xl-4I6">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1460,13 +1474,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What OQ can always see:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP7-L8-0Ej">
-                                                <rect key="frame" x="44" y="781.5" width="226" height="22.5"/>
+                                                <rect key="frame" x="44" y="705" width="207.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9P2-aR-CVq">
-                                                <rect key="frame" x="44" y="814" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="736" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="UVx-wg-ac6">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1494,7 +1508,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIa-Jm-rQK">
-                                                <rect key="frame" x="44" y="834.5" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="756.5" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="WTT-nn-JLC">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1522,7 +1536,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jod-mc-Wqr">
-                                                <rect key="frame" x="44" y="894" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="816" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="Hm9-o9-c8z">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1550,7 +1564,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVM-zb-4hs">
-                                                <rect key="frame" x="44" y="915.5" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="837.5" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="et7-u6-WBd">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1578,7 +1592,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ma6-Js-NPt">
-                                                <rect key="frame" x="44" y="958.5" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="880.5" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="iyR-Gf-bIf">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1606,7 +1620,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yEB-p9-zlP">
-                                                <rect key="frame" x="44" y="856" width="303" height="33"/>
+                                                <rect key="frame" x="44" y="778" width="303" height="33"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="Of4-Wj-OZR">
                                                         <rect key="frame" x="0.0" y="13.5" width="6" height="6"/>
@@ -1634,7 +1648,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nBh-Ct-aET">
-                                                <rect key="frame" x="44" y="937" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="859" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="1VK-d5-Vsq">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1662,7 +1676,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ibf-VD-70m">
-                                                <rect key="frame" x="44" y="980" width="303" height="16.5"/>
+                                                <rect key="frame" x="44" y="902" width="303" height="16.5"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dot" translatesAutoresizingMaskIntoConstraints="NO" id="xw6-br-5QA">
                                                         <rect key="frame" x="0.0" y="5.5" width="6" height="6"/>
@@ -1690,16 +1704,16 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. USE LICENSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvM-gb-dpH">
-                                                <rect key="frame" x="30" y="1006.5" width="124" height="22.5"/>
+                                                <rect key="frame" x="30" y="928.5" width="135" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgy-Z4-eig">
-                                                <rect key="frame" x="30" y="1039" width="317" height="98"/>
+                                                <rect key="frame" x="30" y="959.5" width="317" height="98"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozo-mQ-tWk">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="SnU-cp-khT"/>
                                                         </constraints>
@@ -1726,10 +1740,10 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGg-OB-JFq">
-                                                <rect key="frame" x="30" y="1141" width="317" height="16.5"/>
+                                                <rect key="frame" x="30" y="1061.5" width="317" height="16.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="a." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbh-Qf-Tum">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="2Nf-JC-nhq"/>
                                                         </constraints>
@@ -1755,10 +1769,10 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LW-Dg-gdy">
-                                                <rect key="frame" x="30" y="1161.5" width="317" height="49"/>
+                                                <rect key="frame" x="30" y="1082" width="317" height="49"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="b." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFs-81-hzx">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="0gY-Z6-LQY"/>
                                                         </constraints>
@@ -1784,10 +1798,10 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAx-R8-9BT">
-                                                <rect key="frame" x="30" y="1214.5" width="317" height="33"/>
+                                                <rect key="frame" x="30" y="1135" width="317" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="c." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lvb-gl-twZ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="zmo-bn-NXs"/>
                                                         </constraints>
@@ -1813,10 +1827,10 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0t0-zU-BMj">
-                                                <rect key="frame" x="30" y="1251.5" width="317" height="33"/>
+                                                <rect key="frame" x="30" y="1172" width="317" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="d." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3B-7e-xf6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="lUC-2O-Srf"/>
                                                         </constraints>
@@ -1842,10 +1856,10 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W8s-fV-RgE">
-                                                <rect key="frame" x="30" y="1288.5" width="317" height="33"/>
+                                                <rect key="frame" x="30" y="1209" width="317" height="33"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-Ot-qZy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="qms-oG-aXI"/>
                                                         </constraints>
@@ -1871,10 +1885,10 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Az-a6-GQh">
-                                                <rect key="frame" x="30" y="1325.5" width="317" height="130.5"/>
+                                                <rect key="frame" x="30" y="1246" width="317" height="130.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RzA-MP-hpN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="18.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="17.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="12" id="5Kn-wt-f4B"/>
                                                         </constraints>
@@ -1901,13 +1915,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. DISCLAIMER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIn-jq-IZH">
-                                                <rect key="frame" x="30" y="1476" width="317" height="22.5"/>
+                                                <rect key="frame" x="30" y="1396.5" width="317" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jSC-az-NGt">
-                                                <rect key="frame" x="30" y="1508.5" width="317" height="196"/>
+                                                <rect key="frame" x="30" y="1427.5" width="317" height="196"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1b-BT-GqG">
                                                         <constraints>
@@ -1936,65 +1950,65 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. LIMITATIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBo-mG-o92">
-                                                <rect key="frame" x="30" y="1724.5" width="126" height="22.5"/>
+                                                <rect key="frame" x="30" y="1643.5" width="127.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfM-5V-fQg">
-                                                <rect key="frame" x="30" y="1751" width="317" height="223.5"/>
+                                                <rect key="frame" x="30" y="1668.5" width="317" height="196"/>
                                                 <string key="text">In no event shall OQ or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption,) arising out of the use or inability to use the materials on OQ Mobile App, even if OQ or an OQ authorized representative has been notified orally or in writing of the possibility of such damage. Because some jurisdictions do not allow limitations on implied warranties, or limitations of liability for consequential or incidental damages, these limitations may not apply to you.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. REVISIONS AND ERRATA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftM-gl-i6u">
-                                                <rect key="frame" x="30" y="1994.5" width="317" height="22.5"/>
+                                                <rect key="frame" x="30" y="1884.5" width="317" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cea-gt-jKP">
-                                                <rect key="frame" x="30" y="2021" width="317" height="154.5"/>
+                                                <rect key="frame" x="30" y="1909.5" width="317" height="130.5"/>
                                                 <string key="text">The materials appearing on OQ's App could include technical, typographical, or photographic errors. OQ does not warrant that any of the materials on its App are accurate, complete, or current. OQ may make changes to the materials contained on its App at any time without notice. OQ does not, however, make any commitment to update the materials.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. LINKS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHf-CN-zp9">
-                                                <rect key="frame" x="30" y="2195.5" width="67" height="22.5"/>
+                                                <rect key="frame" x="30" y="2060" width="71.5" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBp-ik-Z75">
-                                                <rect key="frame" x="30" y="2222" width="317" height="103"/>
+                                                <rect key="frame" x="30" y="2085" width="317" height="98"/>
                                                 <string key="text">OQ has not reviewed all the sites linked to its Mobile App and is not responsible for the contents of any such linked sites. The inclusion of any link does not imply endorsement by OQ of the site. Use of any such linked web site is at the user's own risk.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7. APP TERMS OF USE MODIFICATIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgJ-lX-zQk">
-                                                <rect key="frame" x="30" y="2345" width="317" height="20"/>
+                                                <rect key="frame" x="30" y="2203" width="317" height="19"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzD-ic-AP1">
-                                                <rect key="frame" x="30" y="2369" width="317" height="86"/>
+                                                <rect key="frame" x="30" y="2226" width="317" height="65.5"/>
                                                 <string key="text">OQ may revise these terms of use for its Mobile App at any time without notice. By using this App, you are agreeing to be bound by the then current version of these Terms and Conditions of Use.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8. GOVERNING LAW" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFu-Tr-Gfh">
-                                                <rect key="frame" x="30" y="2475" width="172.5" height="22.5"/>
+                                                <rect key="frame" x="30" y="2311.5" width="169" height="21"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="18"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRP-eN-YnH">
-                                                <rect key="frame" x="30" y="2501.5" width="317" height="69"/>
+                                                <rect key="frame" x="30" y="2336.5" width="317" height="65.5"/>
                                                 <string key="text">Any claim relating to OQ's Mobile App shall be governed by the laws of the laws of the Sultanate of Oman without regard to its conflict of law provisions.</string>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -2179,13 +2193,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTK-El-3c2">
-                                <rect key="frame" x="28" y="94" width="41.5" height="25"/>
+                                <rect key="frame" x="28" y="94" width="39" height="23.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lxr-hE-Z4F">
-                                <rect key="frame" x="20" y="151.5" width="335" height="515.5"/>
+                                <rect key="frame" x="20" y="149" width="335" height="518"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0dZ-YX-WBV" id="OiV-g5-bCf"/>
@@ -2193,7 +2207,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequently asked questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPi-mH-c8J">
-                                <rect key="frame" x="28" y="124" width="183" height="17.5"/>
+                                <rect key="frame" x="28" y="122.5" width="172.5" height="16.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -2238,7 +2252,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
         <!--Contact View Controller-->
         <scene sceneID="jaX-rs-WmM">
             <objects>
-                <viewController storyboardIdentifier="ContactViewController" id="2lj-6i-Aih" customClass="ContactViewController" customModule="OQ" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContactViewController" id="2lj-6i-Aih" customClass="ContactViewController" customModule="Staqo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZT4-PM-UuC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2254,35 +2268,35 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FZR-GJ-eu4" userLabel="ContetView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1827.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1825"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJH-pG-Cdc">
-                                                <rect key="frame" x="28" y="25" width="106" height="25"/>
+                                                <rect key="frame" x="28" y="25" width="101.5" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Support" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjq-j9-Cbd">
-                                                <rect key="frame" x="28" y="55" width="81" height="17.5"/>
+                                                <rect key="frame" x="28" y="53.5" width="76" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
                                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wa-bU-iKh">
-                                                <rect key="frame" x="32" y="242.5" width="311" height="30"/>
+                                                <rect key="frame" x="32" y="240" width="311" height="30"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="4Dy-ls-ruR"/>
                                                 </constraints>
                                             </view>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="contact us pagehero v2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BzL-u3-xll">
-                                                <rect key="frame" x="20" y="122.5" width="335" height="142"/>
+                                                <rect key="frame" x="20" y="120" width="335" height="142"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="142" id="jzI-wx-yhk"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Help Desk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOr-gg-hd8">
-                                                <rect key="frame" x="30" y="302.5" width="95.5" height="20"/>
+                                                <rect key="frame" x="30" y="300" width="90" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="5ra-On-mcT"/>
                                                 </constraints>
@@ -2291,13 +2305,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4FA-cf-Rxb">
-                                                <rect key="frame" x="28" y="332.5" width="323" height="115"/>
+                                                <rect key="frame" x="28" y="330" width="323" height="115"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uTY-9d-694">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="115"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oman &amp; Middle East" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9N-Hd-tea">
-                                                                <rect key="frame" x="15" y="20" width="118" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="110.5" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="YlB-vO-pFN"/>
                                                                 </constraints>
@@ -2313,7 +2327,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 2214 3333" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzU-N7-GbB">
-                                                                <rect key="frame" x="50" y="52.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2326,7 +2340,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="helpdesk@oq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCR-26-1w4">
-                                                                <rect key="frame" x="50" y="77.5" width="108.5" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="99.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2357,13 +2371,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozi-ji-yzC">
-                                                <rect key="frame" x="28" y="457.5" width="323" height="115"/>
+                                                <rect key="frame" x="28" y="455" width="323" height="115"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqV-R1-DWC">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="115"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Chemicals Help Desk" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tj-4k-u5R">
-                                                                <rect key="frame" x="15" y="20" width="147.5" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="136.5" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="0yI-nC-q78"/>
                                                                 </constraints>
@@ -2379,7 +2393,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00800 – 11 44 77 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9g-kJ-OIT">
-                                                                <rect key="frame" x="50" y="52.5" width="110.5" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="109.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2392,7 +2406,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sc.servicedesk@oq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkO-Br-8dN">
-                                                                <rect key="frame" x="50" y="77.5" width="140.5" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="130.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2423,13 +2437,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lRc-be-dfm">
-                                                <rect key="frame" x="28" y="582.5" width="323" height="115"/>
+                                                <rect key="frame" x="28" y="580" width="323" height="115"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkM-ME-Ydw">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="115"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="United States of America" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LcU-jN-cxU">
-                                                                <rect key="frame" x="15" y="20" width="143" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="134.5" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="Qbd-nm-Iwp"/>
                                                                 </constraints>
@@ -2445,7 +2459,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1 346 378 7397" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVj-ty-3NE">
-                                                                <rect key="frame" x="50" y="52.5" width="91" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="91" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2458,7 +2472,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sc.servicedesk@oq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ddv-nb-vc4">
-                                                                <rect key="frame" x="50" y="77.5" width="140.5" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="130.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2489,13 +2503,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzb-hm-x5J">
-                                                <rect key="frame" x="28" y="707.5" width="323" height="115"/>
+                                                <rect key="frame" x="28" y="705" width="323" height="115"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pjr-gj-zRT">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="115"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="China" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEd-Q3-PdC">
-                                                                <rect key="frame" x="15" y="20" width="35" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="31.5" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="cai-DX-Qem"/>
                                                                 </constraints>
@@ -2511,7 +2525,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="010800 – 11 44 77 00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YP-8S-moX">
-                                                                <rect key="frame" x="50" y="52.5" width="117" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="117" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2524,7 +2538,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sc.servicedesk@oq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Nh-vU-KPH">
-                                                                <rect key="frame" x="50" y="77.5" width="140.5" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="130.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2555,13 +2569,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="67K-bf-mJA">
-                                                <rect key="frame" x="28" y="832.5" width="323" height="115"/>
+                                                <rect key="frame" x="28" y="830" width="323" height="115"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gA-xz-FZP">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="115"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worldwide (Chargeable)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abT-5X-FFQ">
-                                                                <rect key="frame" x="15" y="20" width="144" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="127.5" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="bE2-sS-Dra"/>
                                                                 </constraints>
@@ -2577,7 +2591,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0049 (0) 231 – 79 94 9112" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCX-3v-q9A">
-                                                                <rect key="frame" x="50" y="52.5" width="143" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="139" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2590,7 +2604,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sc.servicedesk@oq.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUS-eR-p80">
-                                                                <rect key="frame" x="50" y="77.5" width="140.5" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="130.5" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2621,7 +2635,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ HSSE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQB-40-OSm">
-                                                <rect key="frame" x="28" y="977.5" width="59" height="20"/>
+                                                <rect key="frame" x="28" y="975" width="62" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="aYX-yb-P5c"/>
                                                 </constraints>
@@ -2630,13 +2644,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XeC-gT-yyk">
-                                                <rect key="frame" x="28" y="1017.5" width="323" height="115"/>
+                                                <rect key="frame" x="28" y="1015" width="323" height="115"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="60w-mt-9g6">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="115"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Worldwide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nK9-sy-EfS">
-                                                                <rect key="frame" x="15" y="20" width="61.5" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="56.5" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="BpJ-sz-Oh3"/>
                                                                 </constraints>
@@ -2652,7 +2666,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 2214 4444" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bia-NK-nho">
-                                                                <rect key="frame" x="50" y="52.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2665,7 +2679,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 7230 0099" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6so-9j-DB1">
-                                                                <rect key="frame" x="50" y="77.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2696,7 +2710,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Downstream" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sdh-pR-MTd">
-                                                <rect key="frame" x="28" y="1162.5" width="112" height="20"/>
+                                                <rect key="frame" x="28" y="1160" width="104.5" height="20"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="20" id="9CQ-k7-3Sd"/>
                                                 </constraints>
@@ -2705,7 +2719,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xOh-ii-ZEA">
-                                                <rect key="frame" x="28" y="1202.5" width="323" height="90"/>
+                                                <rect key="frame" x="28" y="1200" width="323" height="90"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c6B-sp-Y31">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="90"/>
@@ -2727,7 +2741,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPO - 22106128" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2u-3c-gaQ">
-                                                                <rect key="frame" x="50" y="52.5" width="89" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="89" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2754,7 +2768,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WoL-3Y-DI1">
-                                                <rect key="frame" x="28" y="1302.5" width="323" height="90"/>
+                                                <rect key="frame" x="28" y="1300" width="323" height="90"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFy-nT-Ns5">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="90"/>
@@ -2776,7 +2790,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPO - 22106130" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ym-Xg-FaY">
-                                                                <rect key="frame" x="50" y="52.5" width="89" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="89" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2803,13 +2817,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ayX-a2-Xh3">
-                                                <rect key="frame" x="28" y="1402.5" width="323" height="90"/>
+                                                <rect key="frame" x="28" y="1400" width="323" height="90"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d4f-n1-tkt">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="90"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlJifnain - Control Room" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ux1-CD-dVG">
-                                                                <rect key="frame" x="15" y="20" width="140" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="132" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="qsE-WN-4M5"/>
                                                                 </constraints>
@@ -2825,7 +2839,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 2210 7721" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7w-vu-k7y">
-                                                                <rect key="frame" x="50" y="52.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2852,7 +2866,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXu-sP-Lwp">
-                                                <rect key="frame" x="28" y="1502.5" width="323" height="115"/>
+                                                <rect key="frame" x="28" y="1500" width="323" height="115"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IPm-Jc-zv0">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="115"/>
@@ -2874,7 +2888,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 2210 6772" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NX-Lf-W4e">
-                                                                <rect key="frame" x="50" y="52.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2887,7 +2901,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 9191 0554" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5b-fq-Jk1">
-                                                                <rect key="frame" x="50" y="77.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2918,13 +2932,13 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rzN-as-qmf">
-                                                <rect key="frame" x="28" y="1627.5" width="323" height="140"/>
+                                                <rect key="frame" x="28" y="1625" width="323" height="140"/>
                                                 <subviews>
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MaJ-Dd-Y9O">
                                                         <rect key="frame" x="0.0" y="0.0" width="323" height="140"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Methanol Salalah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTh-GN-91E">
-                                                                <rect key="frame" x="15" y="20" width="101.5" height="15"/>
+                                                                <rect key="frame" x="15" y="20" width="92.5" height="15"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="15" id="Pt0-lz-guV"/>
                                                                 </constraints>
@@ -2940,7 +2954,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 2321 8999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXV-kr-xAM">
-                                                                <rect key="frame" x="50" y="52.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="53" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2953,7 +2967,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 2321 8927" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTM-gc-c8P">
-                                                                <rect key="frame" x="50" y="77.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="78" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -2966,7 +2980,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+968 2321 8928" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSv-IL-HDh">
-                                                                <rect key="frame" x="50" y="102.5" width="88" height="15"/>
+                                                                <rect key="frame" x="50" y="103" width="88" height="14"/>
                                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="12"/>
                                                                 <color key="textColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3114,8 +3128,179 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
             </objects>
             <point key="canvasLocation" x="383" y="-754"/>
         </scene>
+        <!--Salmeen View Controller-->
+        <scene sceneID="3Ve-ng-gP3">
+            <objects>
+                <viewController storyboardIdentifier="SalmeenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UCH-Mm-RCH" customClass="SalmeenViewController" customModule="OQ" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vfU-4c-SBh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salmeenicon" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-oq-ZMT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="XHH-09-xod"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="az9-1w-Ofa" userLabel="backBtnView">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="84"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backArrow" translatesAutoresizingMaskIntoConstraints="NO" id="FOP-TW-CPu">
+                                        <rect key="frame" x="30" y="46" width="20" height="20"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Mqm-tA-qCW"/>
+                                            <constraint firstAttribute="width" constant="20" id="NyP-O8-jbz"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNf-46-pF7">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="84"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <action selector="backBtn:" destination="UCH-Mm-RCH" eventType="touchUpInside" id="GsN-Mn-Jw9"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hNf-46-pF7" secondAttribute="bottom" id="0zm-lv-LJo"/>
+                                    <constraint firstItem="FOP-TW-CPu" firstAttribute="leading" secondItem="az9-1w-Ofa" secondAttribute="leading" constant="30" id="7eO-r6-SS7"/>
+                                    <constraint firstItem="hNf-46-pF7" firstAttribute="top" secondItem="az9-1w-Ofa" secondAttribute="top" id="7hf-4s-2xN"/>
+                                    <constraint firstItem="hNf-46-pF7" firstAttribute="leading" secondItem="az9-1w-Ofa" secondAttribute="leading" id="Bic-rv-INe"/>
+                                    <constraint firstAttribute="height" constant="84" id="U0p-3f-cOj"/>
+                                    <constraint firstItem="FOP-TW-CPu" firstAttribute="top" secondItem="az9-1w-Ofa" secondAttribute="top" constant="46" id="W4v-Zt-YxN"/>
+                                    <constraint firstAttribute="width" constant="60" id="iGA-he-ddv"/>
+                                    <constraint firstAttribute="trailing" secondItem="hNf-46-pF7" secondAttribute="trailing" id="ryn-jp-9aT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wcg-Ty-4lf">
+                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.10000000149011612" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RdG-NH-HbK">
+                                        <rect key="frame" x="172.5" y="10" width="30" height="4"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="ZB6-aH-ohH"/>
+                                            <constraint firstAttribute="height" constant="4" id="hPW-3z-C72"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salmeen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-Zo-tH5">
+                                        <rect key="frame" x="30" y="55" width="102" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="TQu-FS-sDm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="24"/>
+                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fRZ-wk-KOD">
+                                        <rect key="frame" x="30" y="99" width="299" height="103"/>
+                                        <string key="text">The COVID-19 pandemic, also known as the coronavirus pandemic, is an ongoing pandemic of coronavirus disease 2019 (COVID-19) caused by severe acute respiratory syndrome coronavirus 2 (SARS- CoV-2).</string>
+                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
+                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pgO-Qz-q6J">
+                                        <rect key="frame" x="60" y="232" width="255" height="67"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dR8-ka-2ti">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
+                                                <color key="backgroundColor" red="0.1058823529" green="0.67843137249999996" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                                <state key="normal" title="COVID-19 Info">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="covieBtnTap:" destination="UCH-Mm-RCH" eventType="touchUpInside" id="lsj-Jy-SNE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="dR8-ka-2ti" secondAttribute="bottom" id="1SG-vV-2VM"/>
+                                            <constraint firstItem="dR8-ka-2ti" firstAttribute="top" secondItem="pgO-Qz-q6J" secondAttribute="top" id="2Lw-Zr-UGf"/>
+                                            <constraint firstAttribute="height" constant="67" id="cWX-pd-H21"/>
+                                            <constraint firstAttribute="trailing" secondItem="dR8-ka-2ti" secondAttribute="trailing" id="hHx-84-kCU"/>
+                                            <constraint firstItem="dR8-ka-2ti" firstAttribute="leading" secondItem="pgO-Qz-q6J" secondAttribute="leading" id="trs-sH-jSe"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qY-zV-soL">
+                                        <rect key="frame" x="60" y="323" width="255" height="67"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9a-Us-d4c">
+                                                <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
+                                                <color key="backgroundColor" red="0.97647058819999999" green="0.62745098040000002" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                                <state key="normal" title="Self-declaration">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sefdecBtnTap:" destination="UCH-Mm-RCH" eventType="touchUpInside" id="OEs-Rd-B16"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="L9a-Us-d4c" firstAttribute="leading" secondItem="9qY-zV-soL" secondAttribute="leading" id="A8P-F2-XGP"/>
+                                            <constraint firstAttribute="height" constant="67" id="XLF-Cx-rtI"/>
+                                            <constraint firstAttribute="bottom" secondItem="L9a-Us-d4c" secondAttribute="bottom" id="bgt-wz-Jgl"/>
+                                            <constraint firstItem="L9a-Us-d4c" firstAttribute="top" secondItem="9qY-zV-soL" secondAttribute="top" id="gav-af-NP1"/>
+                                            <constraint firstAttribute="trailing" secondItem="L9a-Us-d4c" secondAttribute="trailing" id="iu5-FP-He0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9qY-zV-soL" firstAttribute="top" secondItem="pgO-Qz-q6J" secondAttribute="bottom" constant="24" id="5X2-rk-Iw7"/>
+                                    <constraint firstAttribute="trailing" secondItem="fRZ-wk-KOD" secondAttribute="trailing" constant="46" id="5pJ-tF-qsg"/>
+                                    <constraint firstItem="9qY-zV-soL" firstAttribute="leading" secondItem="Wcg-Ty-4lf" secondAttribute="leading" constant="60" id="Hrw-wN-vnq"/>
+                                    <constraint firstItem="RdG-NH-HbK" firstAttribute="centerX" secondItem="Wcg-Ty-4lf" secondAttribute="centerX" id="NjF-AI-WBL"/>
+                                    <constraint firstAttribute="trailing" secondItem="pgO-Qz-q6J" secondAttribute="trailing" constant="60" id="Qi8-YP-CF9"/>
+                                    <constraint firstItem="fRZ-wk-KOD" firstAttribute="top" secondItem="0xM-Zo-tH5" secondAttribute="bottom" constant="15" id="XtD-C6-jD1"/>
+                                    <constraint firstItem="fRZ-wk-KOD" firstAttribute="leading" secondItem="Wcg-Ty-4lf" secondAttribute="leading" constant="30" id="ZkJ-EQ-B8G"/>
+                                    <constraint firstItem="0xM-Zo-tH5" firstAttribute="leading" secondItem="Wcg-Ty-4lf" secondAttribute="leading" constant="30" id="aEe-Vr-tu7"/>
+                                    <constraint firstItem="pgO-Qz-q6J" firstAttribute="leading" secondItem="Wcg-Ty-4lf" secondAttribute="leading" constant="60" id="eFV-ea-hAi"/>
+                                    <constraint firstItem="0xM-Zo-tH5" firstAttribute="top" secondItem="Wcg-Ty-4lf" secondAttribute="top" constant="55" id="kYm-1A-jVr"/>
+                                    <constraint firstItem="pgO-Qz-q6J" firstAttribute="top" secondItem="fRZ-wk-KOD" secondAttribute="bottom" constant="30" id="wgL-eF-wO7"/>
+                                    <constraint firstAttribute="trailing" secondItem="9qY-zV-soL" secondAttribute="trailing" constant="60" id="x4K-28-Uez"/>
+                                    <constraint firstItem="RdG-NH-HbK" firstAttribute="top" secondItem="Wcg-Ty-4lf" secondAttribute="top" constant="10" id="xbk-8V-8ap"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="26U-cH-1K7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="26U-cH-1K7" firstAttribute="trailing" secondItem="Wcg-Ty-4lf" secondAttribute="trailing" id="1j2-C0-K1c"/>
+                            <constraint firstItem="26U-cH-1K7" firstAttribute="bottom" secondItem="Wcg-Ty-4lf" secondAttribute="bottom" id="GWQ-zW-oKY"/>
+                            <constraint firstItem="Hdc-oq-ZMT" firstAttribute="top" secondItem="26U-cH-1K7" secondAttribute="top" id="co8-DF-Rn2"/>
+                            <constraint firstItem="Wcg-Ty-4lf" firstAttribute="leading" secondItem="26U-cH-1K7" secondAttribute="leading" id="idi-8l-JTN"/>
+                            <constraint firstItem="26U-cH-1K7" firstAttribute="trailing" secondItem="Hdc-oq-ZMT" secondAttribute="trailing" id="jQh-qz-JrD"/>
+                            <constraint firstItem="Wcg-Ty-4lf" firstAttribute="top" secondItem="Hdc-oq-ZMT" secondAttribute="bottom" constant="-200" id="kp7-6b-oln"/>
+                            <constraint firstItem="az9-1w-Ofa" firstAttribute="top" secondItem="26U-cH-1K7" secondAttribute="top" id="peW-c3-BhJ"/>
+                            <constraint firstItem="Hdc-oq-ZMT" firstAttribute="leading" secondItem="26U-cH-1K7" secondAttribute="leading" id="zAA-nb-eUQ"/>
+                            <constraint firstItem="az9-1w-Ofa" firstAttribute="leading" secondItem="26U-cH-1K7" secondAttribute="leading" id="zgR-gP-iEd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cr2-vd-KwH"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="bottomView" destination="Wcg-Ty-4lf" id="hBj-gw-Fc8"/>
+                        <outlet property="covidBtnShadowView" destination="pgO-Qz-q6J" id="Lka-V5-lg7"/>
+                        <outlet property="covieBtnOutlet" destination="dR8-ka-2ti" id="3Qw-CX-mVS"/>
+                        <outlet property="declerationBtnOutlet" destination="L9a-Us-d4c" id="82v-zH-pYb"/>
+                        <outlet property="declerationBtnShadowView" destination="9qY-zV-soL" id="hf1-il-dBV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48N-CN-rZe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-364" y="-1473"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="backArrow" width="32" height="32"/>
         <image name="call" width="20" height="20"/>
         <image name="contact us pagehero v2.jpg" width="1920" height="540"/>
         <image name="crossBtn" width="29" height="29"/>
@@ -3124,6 +3309,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
         <image name="logo" width="102" height="64.5"/>
         <image name="menu_icon" width="20" height="19"/>
         <image name="notification" width="18.5" height="21.5"/>
+        <image name="salmeenicon" width="409" height="429"/>
         <image name="star" width="12" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

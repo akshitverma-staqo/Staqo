@@ -18,4 +18,28 @@ init(dataSource: BookRoomDataSourceDelegate) {
 func bootstrap() {
     
 }
+    
+        
+        
+        func roomBookService(roomId: Int, attendents: Int, fromDateTime: String, toDateTime: String, roomStatus: String, purpose: String, visitorType: String, roomType: String, arrangementType: String, notificationId: String, roomCode: String, recurringDay: String, bookedBy: String ){
+            delegate?.willLoadData()
+            dataSource?.bookRoom(roomId: roomId, attendents: attendents, fromDateTime: fromDateTime, toDateTime: toDateTime, roomStatus: roomStatus, purpose: purpose, visitorType: visitorType, roomType: roomType, arrangementType: arrangementType, notificationId: notificationId, roomCode: roomCode, recurringDay: recurringDay, bookedBy: bookedBy, completion: { [weak self] result in
+                guard let ws = self else{return}
+                switch result {
+                
+                case .success(let baseModel):
+                    print(baseModel)
+                  //ws.rows = baseModel
+                  ws.delegate?.didLoadData()
+                case .failure(let error):
+                    ws.delegate?.didFail(error: error)
+                }
+            })
+        }
+        
+     
+   
+        
+    
+    
 }

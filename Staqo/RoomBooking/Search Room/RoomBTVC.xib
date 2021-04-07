@@ -79,6 +79,9 @@
                                 <rect key="frame" x="2" y="5" width="283" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KGk-i7-Jjw" id="oTI-lx-UK8"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -786,9 +789,16 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="EmpCheckTap" destination="Xkv-Bl-ITK" id="D00-jv-2JP"/>
+                <outlet property="FriCheckTap" destination="WyM-ea-usB" id="iQG-Se-WST"/>
+                <outlet property="MonCheckTap" destination="fAo-k0-Lk7" id="wuQ-lu-Y0M"/>
                 <outlet property="NumberVisitorTxt" destination="aPd-Y3-5YX" id="xzN-95-87I"/>
+                <outlet property="SatCheckTap" destination="gRQ-hZ-PG7" id="u9g-rn-gI5"/>
+                <outlet property="SunCheckTap" destination="FXJ-3s-Xcc" id="kMt-vz-9eG"/>
+                <outlet property="ThuCheckTap" destination="XxF-br-Aly" id="qTr-mx-TlN"/>
+                <outlet property="TueCheckTap" destination="oIw-5D-ecM" id="kZV-7a-gDo"/>
                 <outlet property="VipCheckTap" destination="Z3F-fD-0jl" id="n2D-hU-LQb"/>
                 <outlet property="VisitorCheckTap" destination="OP4-jD-I1s" id="esA-UD-BbX"/>
+                <outlet property="WedCheckTap" destination="XfL-dm-oBy" id="ltC-7B-PiG"/>
                 <outlet property="arrangmentTct" destination="aHd-bj-dmr" id="eIB-ch-qq9"/>
                 <outlet property="fromDateTxt" destination="23x-sc-ON4" id="u2R-AG-ELF"/>
                 <outlet property="fromTimeTxt" destination="smH-1E-Frq" id="Hi1-sC-sZ3"/>

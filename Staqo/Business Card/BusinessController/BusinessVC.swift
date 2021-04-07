@@ -52,13 +52,13 @@ class BusinessVC: BaseVC {
         
     }
     @IBAction func btnSVCTapped(_ sender: UIButton) {
-        let vc = Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kBusinessVC, type: BusinessVC.self)
+        let vc = Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kVisitorListVC, type: VisitorListVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func backButton(_ sender: Any) {
        
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
    
     func processImage(image: UIImage) {

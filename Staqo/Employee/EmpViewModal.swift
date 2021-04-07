@@ -6,10 +6,13 @@
 //
 
 import Foundation
-
+protocol EmpViewModalDelegate:class {
+    func getEmpID(ID:String)
+}
 
 class EmpViewModal: ViewModelType {
    var delegate: ViewModelDelegate?
+    var _delegate:EmpViewModalDelegate?
     var field: Fields?
     var valueData:Value?
     private let dataSource:EmpDataSourceDeleate?
@@ -39,7 +42,9 @@ class EmpViewModal: ViewModelType {
                         baseModel.value?.forEach({data in
                             ws.valueData = data
                             ws.field = data.fields
+                            
                         })
+                        ws._delegate?.getEmpID(ID:ws.field?.id ?? "" )
                         ws.delegate?.didLoadData()
                     }
                     

@@ -9,6 +9,7 @@ import UIKit
 
 class ViewLogTicketVC: BaseVC ,UITableViewDelegate{
     var viewModel:LogTicketViewModel!
+    private let kViewLogTicketTVC = "ViewLogTicketTVC"
     @IBOutlet weak var herderView: HeaderView!
 
     var header:HeaderView!
@@ -25,7 +26,7 @@ class ViewLogTicketVC: BaseVC ,UITableViewDelegate{
         viewModel = LogTicketViewModel(dataSource: LogTicketDataSource())
         viewModel.delegate = self
 
-        tableView.register(UINib(nibName: "ViewLogTicketTVC", bundle: nil), forCellReuseIdentifier: "ViewLogTicketTVC")
+        tableView.register(UINib(nibName: kViewLogTicketTVC, bundle: nil), forCellReuseIdentifier: kViewLogTicketTVC)
         self.navigationController?.isNavigationBarHidden = true
 
         viewModel.bootstrap()
@@ -56,14 +57,14 @@ extension ViewLogTicketVC: UITableViewDataSource{
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ViewLogTicketTVC", for: indexPath) as! ViewLogTicketTVC
+        let cell = tableView.dequeueReusableCell(withIdentifier: kViewLogTicketTVC, for: indexPath) as! ViewLogTicketTVC
        
       
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = Constant.getViewController(storyboard: Constant.kHelpDesk, identifier: Constant.kTicketStatusVC, type: TicketStatusVC.self)
+        let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kTicketStatusVC, type: TicketStatusVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

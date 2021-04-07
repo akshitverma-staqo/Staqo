@@ -16,7 +16,6 @@
         
         var selectedIndex = 0
         
-        private let spinner = SpinnerViewController()
         
         var accessToken = ""
         var arrDara = [MazzayakomCatListModel]()
@@ -28,7 +27,7 @@
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            commonNavigationBar(controller: .listing)
+            //commonNavigationBar(controller: .listing)
             setCollectionLayout()
             collectionView.delegate = self
             let itemcount = (catId as NSString).integerValue
@@ -50,46 +49,7 @@
             ]
             let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYAKOM_SUB_CATEGORY_URL")!))\(catId)'"
             //  NetworkClient.request(url: urlStr, method: .get, parameters: nil, encoder: JSONEncoding.default, headers: headers)
-            AF.request(urlStr, encoding: JSONEncoding.default, headers: headers)
-                .responseJSON { response in
-                    
-                    
-                    if let data = response.data {
-                        do{
-                            
-                            let json1 = try JSON(data:data)
-                            let fieldsValue = json1["value"]
-                            print("fieldsValue")
-                            print(fieldsValue)
-                            
-                            self.checkTableViewCount = fieldsValue.count
-                            if fieldsValue.count == 0 {
-                                self.arrDara.removeAll()
-                                
-                                DispatchQueue.main.async{
-                                    self.tableView.reloadData()
-                                }
-                                let alert = UIAlertController(title: "Alert",
-                                                              message: "No Items.",
-                                                              preferredStyle: .alert)
-                                
-                                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                                self.present(alert, animated: true)
-                                
-                            }else{
-                                self.arrDara.removeAll()
-                                for array in fieldsValue.arrayValue{
-                                    self.arrDara.append(MazzayakomCatListModel(json: array["fields"]))
-                                    DispatchQueue.main.async{
-                                        self.tableView.reloadData()
-                                    }
-                                }
-                            }
-                        }catch let err{
-                            print(err.localizedDescription)
-                        }
-                    }
-                }  
+           
         }
         
         
@@ -148,7 +108,7 @@
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            self.navigationController?.pushViewController(Constant.Controllers.get(.backBottom)(), animated: true)
+           // self.navigationController?.pushViewController(Constant.Controllers.get(.backBottom)(), animated: true)
         }
         
         
@@ -181,14 +141,14 @@
             print("You selected cell #\(indexPath.item)!")
             catId = catIdList[indexPath.row]
             if indexPath.item == selectedIndex {
-                mainLbl.backgroundColor = .darkGreen
+               // mainLbl.backgroundColor = .darkGreen
                 mainLbl.textColor = .white
                 getAllUsreDataAF()
                 
             }else
             {
-                mainLbl.backgroundColor = .lightGreen
-                mainLbl.textColor = .darkGreen
+//                mainLbl.backgroundColor = .lightGreen
+//                mainLbl.textColor = .darkGreen
             }
             return cell
         }

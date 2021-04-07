@@ -21,12 +21,13 @@ class Constant {
     
    // static let kNOTIFICATION_URL = "/lists/Notifications/items?$expand=fields"
     
-    static let kVISITOR_LIST = "/lists/Visitor%20Master/items/?$expand=fields&$filter=fields/employeeidLookupId%20eq%20'**empid**'%20or%20fields/scanby%20eq%20'1'%20"
+    static let kVISITOR_LIST = "/lists/Visitor%20Master/items/?$expand=fields&$filter=fields/employeeidLookupId%20eq%20'"
+    static let kVisiterList1 = "'%20or%20fields/scanby%20eq%20'1'%20"
     static let kVISITOR_REGISTER = "/lists/Visitor%20Master/items"
-    static let kSALMEEN_POINT1 = URL(string:"https://thisisoq.sharepoint.com/Pages/Salmeen.aspx")
-    static let kSALMEEN_POINT2 = URL(string:"https://oq.com/en/covid-19/declaration-employees")
+    static let kSALMEEN_POINT1 = "https://thisisoq.sharepoint.com/Pages/Salmeen.aspx"
+    static let kSALMEEN_POINT2 = "https://oq.com/en/covid-19/declaration-employees"
     static let kUSER_PIC_FROMAD = "https://graph.microsoft.com/v1.0/users/**useremail**/photo/$value"
-    static let kEMPLOYEE_FOR_ID = "/lists/Employee Master/items/\("?")$expand=fields&$filter=fields/emailid eq '"
+    static let kEMPLOYEE_FOR_ID = "/lists/Employee Master/items/?$expand=fields&$filter=fields/emailid eq '"
     static let kEMPLOYEE_FIND_BY_ID = "/lists/Employee%20Master/items/"
     static let kEMPLOYEE_REGISTER =  "/lists/Employee%20Master/items"
     static let kMAZZAYAKOM_SUB_CATEGORY_URL =  "/lists/Corporate_Offers/items/?$expand=fields&$filter=fields/CategoryLookupId%20eq%20'"
@@ -35,7 +36,7 @@ class Constant {
     
     //Live Credentials
     //static let kOQPORTAL_LINK = URL(string:"https://thisisoq.sharepoint.com")
-    //let OQPORTAL_LINK = "https://thisisoq.sharepoint.com"
+    static let OQPORTAL_LINK = "https://thisisoq.sharepoint.com"
     
     static let kMAZZAYACOM_LINK =  "/lists/**OC_LIST_ID**/items?expand=fields"
     static let kMAZZAYACOM_SUB_LINK =  "/lists/**C_list_id**/items?expand=fields(select=CategoryLookupId,Title,Caption)&$filter=fields/CategoryLookupId%20eq%20'"
@@ -71,21 +72,28 @@ class Constant {
     static let kMAZZAYACOM_ASSET_ID =  "b!bbFnkp-1qkqZjMgb3qJCeTz4E1V1WUFLoF8xgKa1gCLpyFwaggbeRIZdZ0UUm0sz"
     //static let kSITE_ID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
     
-    //HelpDesk
+    //MARK:-HelpDesk
     static let kHelpCategory = "/api/helpdesk/categories"
     static let kHelpSubCat = "/api/helpdesk/{category_id}/subcategories"
     
     //Room API
-    static let kGET_ROOM = "/api/getAllRoom"
+    static let kGET_ROOM = "/api/room/"
     static let kAllRoomType = "/api/getAllRoomType"
     static let kAllRoomFeature = "/api/getAllRoomFeature"
     static let kAllRoomAuthority = "/api/getAllRoomAuthority"
     static let kAllAuthorityMaster = "/api/getAllAuthorityMaster"
     static let kAllLocationMaster = "/api/getAllLocationMaster"
-    static let kAllArrangementType = "/api/getAllArrangementType"
+    static let kAllArrangementType = "/api/arrangementtype"
     static let kSearchBooking = "/api/searchbooking"
+    static let kViewBookedRoom = "/api/booking/" + (UserDefaults.standard.getProfile()?.email)! + "/list"//api​/booking​/{email_id}​/list
+    static let kFreeRoomBooking = "/api/booking"
     
     
+    //Admin Level API
+    static let kBookingAdmin = "/api/booking/admin"
+    
+    
+   
     
     //Notification read unread
     static let kGetAllNotification = "/lists/Notifications/items?$expand=fields"
@@ -100,15 +108,15 @@ class Constant {
     
     
     static let kLoginAuth = "customer/SendOTP"
-    static let kDownloadPath = "downloadFile/"
+    static let kDownloadPath = "me/photo/$value"
     
     // MARK:-   StoryBoard
     static let kMainStoryboard = "Main"
     static let kHomeStoryboard = "Home"
     static let kBusinessStoryboard = "Business"
-    static let kRoom = "Room"
+    static let kRoomStroyboard = "Room"
     static let kNotification = "Notification"
-    static let kHelpDesk = "HelpDesk"
+    static let kHDStroyboard = "HelpDesk"
     
     
     // MARK:- View Controllers
@@ -137,6 +145,8 @@ class Constant {
     static let kBooKRoomVC = "BooKRoomVC"
     static let kRoomPhotoVC = "RoomPhotoVC"
     static let kRoomBookMainVC = "RoomBookMainVC"
+    static let kApproveCancelVC = "ApproveCancelVC"
+    static let kSalmeenVC = "SalmeenViewController"
     
     
     
@@ -254,6 +264,13 @@ class Constant {
         // let resultDate = formatter.date(from: date)
         return resultDate ?? "-"
     }
+    static func stringToDate(format:String , dateValue:String) -> Date? {
+    let formatter = DateFormatter()
+    formatter.dateFormat = format
+    let resultDate = formatter.date(from: dateValue)
+    return resultDate
+    }
+    
     static func getTimeFromDate(date: Date) -> String {
         
         let calendar = Calendar.current
@@ -339,41 +356,9 @@ class Constant {
         return emailTest.evaluate(with: testStr)
     }
     
+  
+   
     
-    static func addBarButton() -> UIBarButtonItem{
-        let logoutBtn = UIButton(type: .custom)
-        logoutBtn.setImage(UIImage(named: "logout"), for: .normal)
-        logoutBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-        //   logoutBtn.addTarget(self, action: #selector(Constant.logoutBtnTapped), for: .touchUpInside)
-        let item = UIBarButtonItem(customView: logoutBtn)
-        return item
-    }
-    
-    //    @objc func logoutBtnTapped(){
-    //        let loginVC = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)   //self.storyboard?.instantiateViewController(withIdentifier: Constant.kLoginVC) as! LoginVC
-    //        UserDefaults.standard.setLoggedIn(value: false)
-    //        let navController = UINavigationController(rootViewController: loginVC)
-    //        navController.isNavigationBarHidden = true
-    //        let appDel = UIApplication.shared.delegate as! AppDelegate
-    //        appDel.window?.rootViewController = navController
-    //    }
-    //
-    static func gererateCode(cnt: Int?, code: String?) -> String?  {
-        
-        return nil
-    }
-    
-    
-    static func addCartValue(value:Int)-> Int{
-        var count:Int = value
-        count = count + 1
-        return count
-    }
-    static func removeCartValue(value:Int)-> Int{
-        var count:Int = value
-        count = count - 1
-        return count
-    }
     
 }
 

@@ -32,13 +32,6 @@ class LoginViewModel: ViewModelType {
                 
                 guard let _ = token, error == nil else {
                     ws.delegate?.didFail(error: CustomError.OtherError(error: error!))
-                    // Show the error and stay on the sign-in page
-                    //                    let alert = UIAlertController(title: "Error signing in@@@@",
-                    //                                                  message: error.debugDescription,
-                    //                                                  preferredStyle: .alert)
-                    //
-                    //                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    //                    self.present(alert, animated: true)
                     return
                 }
                 ws.delegate?.didLoadData()

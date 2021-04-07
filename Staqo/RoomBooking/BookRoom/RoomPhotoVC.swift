@@ -10,29 +10,23 @@ import UIKit
 class RoomPhotoVC: UIViewController {
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
+    @IBOutlet weak var imageView: UIImageView!
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:100))
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
         header.delegate = self
+        herderView.addSubview(header)
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
+        header.btnNotiyCount.isHidden = true
         self.navigationController?.isNavigationBarHidden = true
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 extension RoomPhotoVC: HeaderViewDelegate{
     func btnMenuTapped(sender: UIButton) {
@@ -53,3 +47,4 @@ extension RoomPhotoVC: HeaderViewDelegate{
     }
     
 }
+

@@ -7,17 +7,28 @@
 
 import Foundation
 protocol RoomDataSourceDelegate {
-    func roomData(completion:@escaping(StaoqResult<[RoomModel]>) -> Void)
+    func roomData(ID:String,completion:@escaping(StaoqResult<[RoomModel]>) -> Void)
     func roomLocation(completion:@escaping(StaoqResult<[Location]>) -> Void)
     func roomType(completion:@escaping(StaoqResult<[RoomType]>) -> Void)
-    func roomArrangment(completion:@escaping(StaoqResult<[ArrangmentModel]>) -> Void)
+    func roomArrangment(ID:String,completion:@escaping(StaoqResult<[ArrangmentModel]>) -> Void)
+    func searchRoom(value :String, completion:@escaping(StaoqResult<BaseModel>) -> Void)
 
 }
 
 class RoomDataSource: RoomDataSourceDelegate {
+    func searchRoom(value :String,completion: @escaping (StaoqResult<BaseModel>) -> Void) {
+        NetworkClient.request(target: ResourceType.searchRoom(value: value), success: { result in
+            completion(result as StaoqResult<BaseModel>)
+            }, error: { (error) in
+                completion(StaoqResult.failure(error))
+            }) { (moyaError) in
+            completion(StaoqResult.failure(moyaError))
+            }
+    }
+    
    
-    func roomArrangment(completion: @escaping (StaoqResult<[ArrangmentModel]>) -> Void) {
-        NetworkClient.request(target: ResourceType.roomArrangment, success: { result in
+    func roomArrangment(ID:String,completion: @escaping (StaoqResult<[ArrangmentModel]>) -> Void) {
+        NetworkClient.request(target: ResourceType.roomArrangment(ID: ID), success: { result in
             completion(result as StaoqResult<[ArrangmentModel]>)
             }, error: { (error) in
                 completion(StaoqResult.failure(error))
@@ -50,8 +61,8 @@ class RoomDataSource: RoomDataSourceDelegate {
     
     
     
-    func roomData(completion: @escaping (StaoqResult<[RoomModel]>) -> Void) {
-        NetworkClient.request(target: ResourceType.roomData, success: { result in
+    func roomData(ID:String ,completion: @escaping (StaoqResult<[RoomModel]>) -> Void) {
+        NetworkClient.request(target: ResourceType.roomData(ID: ID), success: { result in
             completion(result as StaoqResult<[RoomModel]>)
             }, error: { (error) in
                 completion(StaoqResult.failure(error))

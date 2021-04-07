@@ -12,16 +12,18 @@ import MSGraphClientSDK
 
 class HomeViewModal:ViewModelType{
 
-    var rows : (imageArr:[String], curveArr:[String], TopLabArray:[String])?
+    var rows : [MenuModel]? // (imageArr:[String], curveArr:[String], TopLabArray:[String])?
     private let dataSource: HomeDataSourceDelegate?
     var delegate: ViewModelDelegate?
+    var imgValue:Bool = true
     init(dataSource: HomeDataSourceDelegate) {
         self.dataSource = dataSource
     }
     func bootstrap() {
-        self.scrollImage()
+     //   self.scrollImage()
         self.getGraphData()
-    //    self.dashboardData()
+        self.getImage()
+        self.dashboardData()
     }
     
     func dashboardData(){
@@ -33,6 +35,20 @@ class HomeViewModal:ViewModelType{
           switch result {
           case .success(let baseModel):
               print(baseModel)
+           
+            let filterData = baseModel.filter{$0.status == "Active"}
+            ws.rows = filterData
+            for item in 0..<(ws.rows?.count ?? 0) {
+                if ws.imgValue {
+                    ws.rows?[item].isSelected = false
+                    ws.imgValue = false
+                }else{
+                    ws.rows?[item].isSelected = true
+                    ws.imgValue = true
+                }
+                
+            }
+            
               ws.delegate?.didLoadData()
           case .failure(let error):
               ws.delegate?.didFail(error: error)
@@ -44,16 +60,16 @@ class HomeViewModal:ViewModelType{
 
     
     
-    private func scrollImage(){
-
-        rows = (["set1.png","set2.png","salmeenicon.png","bcimage.png","dashboard6","dashboard7","dashboard8","dashboard9","dashboard10"],["blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png"],["OQ Portal","Mazzayacom","Salmeen","Business Card","Helpdesk","IHSSE","E-SIGN","Travel & Leave Request","Majalis"])
-        
-        
-       
-        
-        
-        delegate?.didLoadData()
-    }
+//    private func scrollImage(){
+//
+//        rows = (["set1","set2","salmeenicon","bcimage","dashboard6","dashboard7","dashboard8","dashboard9","dashboard10"],["blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png"],["OQ Portal","Mazzayacom","Salmeen","Business Card","Helpdesk","IHSSE","E-SIGN","Travel & Leave Request","Majalis"])
+//
+//
+//
+//
+//
+//        delegate?.didLoadData()
+//    }
     
     func getGraphData() {
         delegate?.willLoadData()
@@ -77,5 +93,13 @@ class HomeViewModal:ViewModelType{
         }
         
     }
-    
+    func getImage()  {
+        
+        dataSource?.profile(fileName:"profile", completion: { [weak self] result in
+            guard let ws = self else{return}
+            if  result {
+                
+            }
+        })
+    }
 }

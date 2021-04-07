@@ -36,6 +36,9 @@
 		<string>msauthv2</string>
 		<string>msauthv3</string>
         <string>intelex</string>
+        <string>signnow-private-cloud://sso_login?</string>
+      
+        
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

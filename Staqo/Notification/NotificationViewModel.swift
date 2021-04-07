@@ -39,7 +39,6 @@ class NotificationViewModel: ViewModelType {
           switch result {
           case .success(let baseModel):
               print(baseModel)
-            ws.rows = baseModel.value
             ws.readNotification(email: UserDefaults.standard.getProfile()?.email ?? "")
            //   ws.delegate?.didLoadData()
           case .failure(let error):

@@ -15,6 +15,11 @@ struct BaseModel : Codable {
     var value : [Value]?
     var fieldsData: Fields?
     var readNotify:[ReadNotify]?
+    var freeRoomModel:[FreeRoomModel]?
+    var bookedRoomModel:[BookedRoomModel]?
+    var selectedRoomOptionModel:SelectedRoomOptionModel?
+    
+    
     
     
     enum CodingKeys: String, CodingKey {
@@ -24,7 +29,12 @@ struct BaseModel : Codable {
         case data = "@odata.context"
         case value = "value"
         case fieldsData = "fields"
-        case readNotify = "ReadNotify"
+        case readNotify = "readNotify"
+        case freeRoomModel = "freeRoom"
+        case bookedRoomModel = "booked"
+        case selectedRoomOptionModel = "selectedOptions"
+       
+        
     }
     init() {
         
@@ -37,7 +47,10 @@ struct BaseModel : Codable {
         value = try values.decodeIfPresent([Value].self, forKey: .value)
         fieldsData = try values.decodeIfPresent(Fields.self, forKey: .fieldsData)
         readNotify = try values.decodeIfPresent([ReadNotify].self, forKey: .readNotify)
-        
-        }
+        freeRoomModel = try values.decodeIfPresent([FreeRoomModel].self, forKey: .freeRoomModel)
+        bookedRoomModel = try values.decodeIfPresent([BookedRoomModel].self, forKey: .bookedRoomModel)
+        selectedRoomOptionModel = try values.decodeIfPresent(SelectedRoomOptionModel.self, forKey: .selectedRoomOptionModel)
+       
+}
 
     }

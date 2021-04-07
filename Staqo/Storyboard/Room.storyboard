@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gAq-wo-sgT">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -158,9 +158,9 @@
                                             <segment title="Free Room"/>
                                             <segment title="Booked Room"/>
                                         </segments>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <nil key="selectedSegmentTintColor"/>
-                                        </variation>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="6Aq-aF-rj4" eventType="valueChanged" id="c8d-Ry-pdL"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -204,6 +204,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcF-Lr-hXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3160.8000000000002" y="22.938530734632685"/>
+        </scene>
+        <!--Room PhotoVC-->
+        <scene sceneID="cJ2-9A-LH0">
+            <objects>
+                <viewController storyboardIdentifier="RoomPhotoVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ROw-Rf-hIl" customClass="RoomPhotoVC" customModule="Staqo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCj-dP-ADV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXM-xb-uAn" userLabel="NavigationView" customClass="HeaderView" customModule="Staqo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="GA7-4w-bud"/>
+                                    <constraint firstAttribute="height" constant="64" id="GPN-wm-oi2"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="emN-oZ-P9c"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="nfe-f4-r51"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yZN-QN-4kI">
+                                <rect key="frame" x="5" y="144" width="365" height="347"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPB-aL-cWi">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="9Va-tg-sQd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ae3-00-jZs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dPB-aL-cWi" firstAttribute="top" secondItem="yZN-QN-4kI" secondAttribute="bottom" constant="106" id="2DX-tP-qBR"/>
+                            <constraint firstAttribute="bottom" secondItem="dPB-aL-cWi" secondAttribute="bottom" id="ELU-Pp-t0P"/>
+                            <constraint firstItem="yZN-QN-4kI" firstAttribute="top" secondItem="GXM-xb-uAn" secondAttribute="bottom" constant="80" id="EbY-u9-u46"/>
+                            <constraint firstItem="GXM-xb-uAn" firstAttribute="top" secondItem="ae3-00-jZs" secondAttribute="top" id="G7v-19-VQ1"/>
+                            <constraint firstItem="dPB-aL-cWi" firstAttribute="leading" secondItem="ae3-00-jZs" secondAttribute="leading" id="GEI-JJ-qLR"/>
+                            <constraint firstItem="yZN-QN-4kI" firstAttribute="leading" secondItem="ae3-00-jZs" secondAttribute="leading" constant="5" id="X6Q-hs-XT9"/>
+                            <constraint firstItem="ae3-00-jZs" firstAttribute="trailing" secondItem="GXM-xb-uAn" secondAttribute="trailing" id="Yx6-BG-HbT"/>
+                            <constraint firstItem="GXM-xb-uAn" firstAttribute="leading" secondItem="tCj-dP-ADV" secondAttribute="leading" id="fMK-lb-f8T"/>
+                            <constraint firstItem="ae3-00-jZs" firstAttribute="trailing" secondItem="dPB-aL-cWi" secondAttribute="trailing" id="qW0-Lv-Qdt"/>
+                            <constraint firstItem="ae3-00-jZs" firstAttribute="trailing" secondItem="yZN-QN-4kI" secondAttribute="trailing" constant="5" id="rSe-I4-VI2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="herderView" destination="GXM-xb-uAn" id="qB8-7X-xUy"/>
+                        <outlet property="imageView" destination="yZN-QN-4kI" id="uLz-9z-Jyq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWT-Zf-xao" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4104.8000000000002" y="-31.03448275862069"/>
         </scene>
         <!--RoomBookMainVC-->
         <scene sceneID="HWu-WF-2Yc">
@@ -345,15 +398,15 @@
                     <navigationItem key="navigationItem" title="Business Companion" id="D0F-UM-RsE"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="businessBtnOutlet" destination="tmg-70-zG1" id="3OT-Nx-bNI"/>
+                        <outlet property="approveCancelTap" destination="I5a-eL-g3g" id="M6c-qW-Qyh"/>
                         <outlet property="businessShadowView" destination="1ha-jh-fMD" id="gMn-zF-kGB"/>
-                        <outlet property="scanBtnOutlet" destination="I5a-eL-g3g" id="tbe-DD-wjW"/>
+                        <outlet property="roomSearchTap" destination="tmg-70-zG1" id="zRT-l0-zhI"/>
                         <outlet property="scanShadowView" destination="QUY-hK-yga" id="ASq-3B-ZBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2w-jJ-hWu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1628" y="44.527736131934034"/>
+            <point key="canvasLocation" x="1594" y="9"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UBy-Mv-Dtu">
@@ -371,6 +424,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a86-SI-b3L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="688.79999999999995" y="44.527736131934034"/>
+        </scene>
+        <!--Approve CancelVC-->
+        <scene sceneID="2Gm-SH-1Aa">
+            <objects>
+                <viewController storyboardIdentifier="ApproveCancelVC" id="qof-3s-eCk" customClass="ApproveCancelVC" customModule="Staqo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nQL-Mw-H77">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dwx-9X-gJU" userLabel="NavigationView" customClass="HeaderView" customModule="Staqo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Vsb-Uh-F3u"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="aim-82-AhI"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="cQf-7p-jms"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W7-5G-TzW" userLabel="segment">
+                                <rect key="frame" x="0.0" y="64" width="375" height="80"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Me6-5J-nfI">
+                                        <rect key="frame" x="10" y="30" width="355" height="32"/>
+                                        <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <segments>
+                                            <segment title="Unapproved"/>
+                                            <segment title="Approved"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="indexChanged:" destination="qof-3s-eCk" eventType="valueChanged" id="4Ay-W1-yqe"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Me6-5J-nfI" firstAttribute="top" secondItem="9W7-5G-TzW" secondAttribute="top" constant="30" id="7CA-KU-pCo"/>
+                                    <constraint firstAttribute="height" constant="80" id="Ifz-yJ-5lS"/>
+                                    <constraint firstItem="Me6-5J-nfI" firstAttribute="leading" secondItem="9W7-5G-TzW" secondAttribute="leading" constant="10" id="eKB-ax-Tee"/>
+                                    <constraint firstAttribute="trailing" secondItem="Me6-5J-nfI" secondAttribute="trailing" constant="10" id="wqK-MD-T3t"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3zT-hP-Pal">
+                                <rect key="frame" x="5" y="149" width="365" height="513"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qof-3s-eCk" id="u6k-0Q-O3G"/>
+                                    <outlet property="delegate" destination="qof-3s-eCk" id="6Es-Tm-27c"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1G9-Of-K1E"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1G9-Of-K1E" firstAttribute="trailing" secondItem="dwx-9X-gJU" secondAttribute="trailing" id="ELD-OE-wfh"/>
+                            <constraint firstItem="1G9-Of-K1E" firstAttribute="trailing" secondItem="3zT-hP-Pal" secondAttribute="trailing" constant="5" id="Ppq-Vt-XuQ"/>
+                            <constraint firstItem="3zT-hP-Pal" firstAttribute="top" secondItem="9W7-5G-TzW" secondAttribute="bottom" constant="5" id="R2u-0F-S6u"/>
+                            <constraint firstItem="9W7-5G-TzW" firstAttribute="leading" secondItem="1G9-Of-K1E" secondAttribute="leading" id="RgB-q9-GE2"/>
+                            <constraint firstItem="9W7-5G-TzW" firstAttribute="top" secondItem="dwx-9X-gJU" secondAttribute="bottom" id="Sud-Rd-9KW"/>
+                            <constraint firstItem="dwx-9X-gJU" firstAttribute="top" secondItem="nQL-Mw-H77" secondAttribute="top" id="hWq-Mg-ylv"/>
+                            <constraint firstAttribute="bottom" secondItem="3zT-hP-Pal" secondAttribute="bottom" constant="5" id="jya-5t-Svs"/>
+                            <constraint firstItem="3zT-hP-Pal" firstAttribute="leading" secondItem="nQL-Mw-H77" secondAttribute="leading" constant="5" id="lxY-EE-Ebn"/>
+                            <constraint firstAttribute="trailing" secondItem="9W7-5G-TzW" secondAttribute="trailing" id="qRc-3v-E8K"/>
+                            <constraint firstItem="dwx-9X-gJU" firstAttribute="leading" secondItem="nQL-Mw-H77" secondAttribute="leading" id="yMJ-IV-fIN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="herderView" destination="dwx-9X-gJU" id="8CY-B8-UYU"/>
+                        <outlet property="roomSegment" destination="Me6-5J-nfI" id="HdP-BX-JzY"/>
+                        <outlet property="tableView" destination="3zT-hP-Pal" id="gK1-DH-Gxi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Z6-wj-iuZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3206" y="-672"/>
         </scene>
     </scenes>
     <resources>

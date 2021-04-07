@@ -34,9 +34,7 @@ class SwipeUpViewController: PullUpController {
         case expanded
         
     }
-    
-    private let spinner = SpinnerViewController()
-    
+        
     var initialState: InitialState = .contracted
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,32 +146,31 @@ class SwipeUpViewController: PullUpController {
             "Authorization": "Bearer "+accessToken+""
             
         ]
-        spinner.start(container: self)
         let maazycomlist = UserDefaults.standard.string(forKey: "MAZZAYACOM_LINK")
         let replaced = maazycomlist!.replacingOccurrences(of: "**OC_LIST_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_LIST_ID") ?? "")
         let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID")!))\(String(describing: replaced))"
         
-        AF.request(urlStr, encoding: JSONEncoding.default, headers: headers)
-            .responseJSON { response in
-                if let data = response.data {
-                    do{
-                        self.spinner.stop()
-                        let json1 = try JSON(data:data)
-                        let fieldsValue = json1["value"]
-                        self.arrDara.removeAll()
-                        for array in fieldsValue.arrayValue{
-                            self.arrDara.append(MazzayakomCatListModel(json: array["fields"]))
-                            let listValue = MazzayakomCatListModel(json: array["fields"])
-                            print(listValue.name)
-                            
-                        }
-                        
-                    }catch let err{
-                        print(err.localizedDescription)
-                        self.spinner.stop()
-                    }
-                }
-            }
+//        AF.request(urlStr, encoding: JSONEncoding.default, headers: headers)
+//            .responseJSON { response in
+//                if let data = response.data {
+//                    do{
+//                        self.spinner.stop()
+//                        let json1 = try JSON(data:data)
+//                        let fieldsValue = json1["value"]
+//                        self.arrDara.removeAll()
+//                        for array in fieldsValue.arrayValue{
+//                            self.arrDara.append(MazzayakomCatListModel(json: array["fields"]))
+//                            let listValue = MazzayakomCatListModel(json: array["fields"])
+//                            print(listValue.name)
+//
+//                        }
+//
+//                    }catch let err{
+//                        print(err.localizedDescription)
+//                        self.spinner.stop()
+//                    }
+//                }
+//            }
     }
     
 }
@@ -252,32 +249,32 @@ extension SwipeUpViewController : UITableViewDelegate, UITableViewDataSource
                         
                         let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID")!))\(String(describing: replaced))\(imagStrUrl)"
                         
-                        AF.request(urlStr, encoding: JSONEncoding.default, headers: headers)
-                            .responseJSON { response in
-                                //print(response)
-                                //to get status code
-                                
-                                if let data = response.data {
-                                    do{
-                                        let json1 = try JSON(data:data)
-                                        downloadURL = json1["@microsoft.graph.downloadUrl"].stringValue
-                                        print("URL ITHNK" + downloadURL)
-                                        AF.request(downloadURL)
-                                            .response { response in
-                                                print("Response value")
-                                                print(response)
-                                                if let data = response.data {
-                                                    do{
-                                                        imgView.image = UIImage(data: data)
-                                                    }
-                                                }
-                                            }
-            
-                                    }catch let err{
-                                        print(err.localizedDescription)
-                                    }
-                                }
-                            }
+//                        AF.request(urlStr, encoding: JSONEncoding.default, headers: headers)
+//                            .responseJSON { response in
+//                                //print(response)
+//                                //to get status code
+//                                
+//                                if let data = response.data {
+//                                    do{
+//                                        let json1 = try JSON(data:data)
+//                                        downloadURL = json1["@microsoft.graph.downloadUrl"].stringValue
+//                                        print("URL ITHNK" + downloadURL)
+//                                        AF.request(downloadURL)
+//                                            .response { response in
+//                                                print("Response value")
+//                                                print(response)
+//                                                if let data = response.data {
+//                                                    do{
+//                                                        imgView.image = UIImage(data: data)
+//                                                    }
+//                                                }
+//                                            }
+//            
+//                                    }catch let err{
+//                                        print(err.localizedDescription)
+//                                    }
+//                                }
+//                            }
                     }
                 }
                 catch let error as NSError {

@@ -6,16 +6,14 @@
 //
 
 import UIKit
-
+protocol RoomBookingVCDelegate:class {
+    func selectIndex()
+}
 class RoomBookingVC: BaseVC, UITableViewDelegate {
     var viewModel:RoomBookingViewModel!
     var header:HeaderView!
-    
-    
-    
-    
-    
-    
+    private let kRoomBTVC = "RoomBTVC"
+    var delegate:RoomBookingVCDelegate?
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var herderView: HeaderView!
@@ -30,13 +28,12 @@ class RoomBookingVC: BaseVC, UITableViewDelegate {
 
         viewModel = RoomBookingViewModel(dataSource: RoomDataSource())
         viewModel.delegate = self
+        viewModel._delegate = self
         // Do any additional setup after loading the view.
         self.tblView.delegate = self
         self.tblView.dataSource = self
-        tblView.register(UINib(nibName: "RoomBTVC", bundle: nil), forCellReuseIdentifier: "RoomBTVC")
+        tblView.register(UINib(nibName: kRoomBTVC, bundle: nil), forCellReuseIdentifier: kRoomBTVC)
         viewModel.bootstrap()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,7 +52,9 @@ class RoomBookingVC: BaseVC, UITableViewDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc func doneBtnClicked(){
+        delegate?.selectIndex()
+    }
 }
 extension RoomBookingVC : ViewModelDelegate{
     func willLoadData() {
@@ -90,9 +89,8 @@ extension RoomBookingVC: UITableViewDataSource{
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RoomBTVC", for: indexPath) as! RoomBTVC
-        cell.dataBind(data: viewModel.rows, roomData: viewModel.rowsRoom, locData: viewModel.rowsLocation, arrangData:viewModel.arrangModel, picker: picker, viewDataPicker:viewPicker)
-      
+        let cell = tableView.dequeueReusableCell(withIdentifier: kRoomBTVC, for: indexPath) as! RoomBTVC
+        cell.dataBind(data: viewModel.rows, roomData: viewModel.rowsRoom, locData: viewModel.rowsLocation, arrangData:viewModel.arrangModel, picker: picker, viewDataPicker:viewPicker, delegateVC: delegate)
         cell.delegate = self
         return cell
     }
@@ -104,69 +102,29 @@ extension RoomBookingVC: UITableViewDataSource{
     
 }
 extension RoomBookingVC : RoomBTVCDelegate{
+    func getArrangement(ID: String) {
+        viewModel.getArrangmentType(ID: ID)
+    }
+    
+    func getAllRooms(ID: String) {
+        viewModel.getAllRoomData(ID: ID)
+    }
+    
+    func showMsgValidation(msg: String) {
+        showErrorMessage(title: "Error...", message: msg) { (action) in
+            
+        }
+    }
+    
     func selectedTxtField(txtField: UITextField) {
-        if txtField.tag == 3 {
-            datePicker.isHidden = false
-            datePicker.datePickerMode = .date
-            if #available(iOS 13.4, *) {
-                datePicker.preferredDatePickerStyle = .wheels
-            } else {
-                // Fallback on earlier versions
-            }
-            datePicker.minimumDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())
-            datePicker.maximumDate = Calendar.current.date(byAdding: .month, value: 1, to: Date())
-
-            txtField.inputView = datePicker
-            
-        }else if txtField.tag == 4 {
-            datePicker.isHidden = false
-            datePicker.datePickerMode = .time
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
-            let min = dateFormatter.date(from: "9:00")
-            let max = dateFormatter.date(from: "18:00")
-            datePicker.minimumDate = min
-            datePicker.maximumDate = max
-            if #available(iOS 13.4, *) {
-                datePicker.preferredDatePickerStyle = .wheels
-            } else {
-                // Fallback on earlier versions
-            }
-            txtField.inputView = datePicker
-        }else if  txtField.tag == 5 {
-            datePicker.isHidden = false
-            datePicker.datePickerMode = .date
-            if #available(iOS 13.4, *) {
-                datePicker.preferredDatePickerStyle = .wheels
-            } else {
-                // Fallback on earlier versions
-            }
-            datePicker.minimumDate = Calendar.current.date(byAdding: .day, value: -1, to: Date())
-            datePicker.maximumDate = Calendar.current.date(byAdding: .month, value: 1, to: Date())
-
-            txtField.inputView = datePicker
-        }else if txtField.tag == 6 {
-            datePicker.isHidden = false
-            datePicker.datePickerMode = .time
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
-            let min = dateFormatter.date(from: "9:00")
-            let max = dateFormatter.date(from: "18:00")
-            datePicker.minimumDate = min
-            datePicker.maximumDate = max
-            if #available(iOS 13.4, *) {
-                datePicker.preferredDatePickerStyle = .wheels
-            } else {
-                // Fallback on earlier versions
-            }
-            txtField.inputView = datePicker
-        }else{
-            datePicker.isHidden = true
+       
         txtField.inputView = viewPicker
         picker.reloadAllComponents()
-        }
+     //   picker.keyboardToolbar.doneBarButton.setTarget(self, action: #selector(doneBtnClicked))
+        
+    }
+    func filledData(value: String) {
+        viewModel.searchRoomData(value: value)
     }
     
     
@@ -189,5 +147,16 @@ extension RoomBookingVC: HeaderViewDelegate{
         let vc = Constant.getViewController(storyboard: Constant.kNotification, identifier: Constant.kNotificationVC, type: NotificationVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+}
+extension RoomBookingVC : RoomBookingViewModelDelegate{
+    func updatedResult(data: BaseModel?) {
+        stopLoader()
+        let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kBooKRoomVC, type: BooKRoomVC.self)
+        vc.baseModel = data
+        self.navigationController?.pushViewController(vc, animated: true)
+       
+    }
+    
     
 }

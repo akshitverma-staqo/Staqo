@@ -16,6 +16,8 @@ target 'Staqo' do
 	pod 'MSGraphClientModels', '~> 1.3.0'
 	pod 'PullUpController'
 	pod "ScalingCarousel"
+	pod 'ANActivityIndicator'
+
 
 
   target 'StaqoTests' do

@@ -8,6 +8,7 @@
 
 import Foundation
 import Moya
+import Alamofire
 
 enum StaoqResult<T> {
     case success(T)
@@ -18,14 +19,14 @@ enum StaoqResult<T> {
 
 enum DownloadResult {
     case progress(Double)
-    case success(Data)
+    case success(String)
     case failure(CustomError)
 }
 
 class NetworkClient {
     
     static let provider = MoyaProvider<ResourceType>()
-    
+   
 // Method using Moya
 //    static func request<K:Codable>(target: ResourceType, success successCallBack: @escaping (Result<K>) -> Void, error errorCallBack: @escaping (Swift.Error) -> Void, failure failureCallBack: @escaping (Error) -> Void) {
 //
@@ -78,7 +79,7 @@ class NetworkClient {
                         let data = response.data
                         let strJson = String(data: data, encoding: .utf8)
                         print("DOWNLOAD RESPONSE JSON: \(strJson ?? "NO JSON STRING")")
-                        completion(DownloadResult.success(data))
+                completion(DownloadResult.success(strJson ?? ""))
             case .failure(_):
                 completion(.failure(CustomError.DownloadFailed))
             }
@@ -107,9 +108,39 @@ class NetworkClient {
 //            }
 //        }
 //    }
+    static func requestAlmofire<K:Codable>(passToUrl url:String, passToMethod method:HTTPMethod, passToParameter parameter:Any?=nil, passToHeader header:HTTPHeaders? , success successCallBack: @escaping (StaoqResult<K>) -> Void,error errorCallBack: @escaping (CustomError) -> Void, failure failureCallBack: @escaping (CustomError) -> Void ){
+        Alamofire.request(url, method: method, parameters:parameter as! [String: Any]?, encoding: JSONEncoding.default, headers: header).responseJSON { (responce) in
+            switch responce.result {
+            
+            case .success(let data):
+                do {
+                    
+                    let strJson = String(data:responce.data!, encoding: .utf8)
+                    print("RESPONSE JSON: \(strJson ?? "NO JSON STRING")")
+                    
+                    
+                    let decoder = JSONDecoder()
+                    let object = try decoder.decode(K.self, from: responce.data! )
+                    let result: StaoqResult<K> = StaoqResult.success(object)
+                    successCallBack(result)
+                }
+                catch (let error) {
+                    print(error)
+                    errorCallBack(CustomError.ParsingError)
+                }
+                
+               
+            case .failure(let error):
+                print(error)
+                failureCallBack(CustomError.HTTPError(err: error))
+            }
+        }
+    }
+    
+    
     
     static func request<K:Codable>(target: ResourceType, success successCallBack: @escaping (StaoqResult<K>) -> Void, error errorCallBack: @escaping (CustomError) -> Void, failure failureCallBack: @escaping (CustomError) -> Void) {
-
+        
         provider.request(target) { (result) in
             
             switch result {

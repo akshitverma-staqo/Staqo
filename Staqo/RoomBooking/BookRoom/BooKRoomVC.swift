@@ -10,9 +10,11 @@ import UIKit
 class BooKRoomVC: BaseVC, UITableViewDelegate {
     var viewModel:BookRoomViewModel!
     var header:HeaderView!
+    private let kBookRoomTVC = "BookRoomTVC"
     @IBOutlet weak var roomSegment: UISegmentedControl!
     @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var tableView: UITableView!
+    var baseModel:BaseModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
@@ -24,8 +26,9 @@ class BooKRoomVC: BaseVC, UITableViewDelegate {
         // Do any additional setup after loading the view.
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        tableView.register(UINib(nibName: "BookRoomTVC", bundle: nil), forCellReuseIdentifier: "BookRoomTVC")
-        viewModel.bootstrap()
+        tableView.register(UINib(nibName: kBookRoomTVC, bundle: nil), forCellReuseIdentifier: kBookRoomTVC)
+        self.checkedData(index:  roomSegment.selectedSegmentIndex)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,13 +36,33 @@ class BooKRoomVC: BaseVC, UITableViewDelegate {
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
         self.navigationController?.isNavigationBarHidden = true
     }
+    func checkedData(index:Int){
+        if index == 1 {
+            if baseModel?.freeRoomModel == [] ||  baseModel?.freeRoomModel == nil {
+                showErrorMessage(title: "Alert", message: "Free Room Not Available.") { (action) in
+                
+                }
+        }else{
+            if  baseModel?.bookedRoomModel == [] ||  baseModel?.bookedRoomModel == nil {
+                 showErrorMessage(title: "Alert", message: "Booked Room Not Available.") { (action) in
+                 
+                 }
+             }
+        }
+     
+        }
+    }
     
    
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         switch roomSegment.selectedSegmentIndex {
         case 0:
             print("Free Room")
+            self.checkedData(index:  roomSegment.selectedSegmentIndex)
+            tableView.reloadData()
         case 1:
+            self.checkedData(index:roomSegment.selectedSegmentIndex)
+            tableView.reloadData()
             print("Booked Room")
         default:
             break;
@@ -86,13 +109,27 @@ extension BooKRoomVC : ViewModelDelegate{
 extension BooKRoomVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        if roomSegment.selectedSegmentIndex == 0 {
+            
+            return baseModel?.freeRoomModel?.count ?? 0
+        }else{
+            return baseModel?.bookedRoomModel?.count ?? 0
+        }
+        
     }
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookRoomTVC", for: indexPath) as! BookRoomTVC
-       
+        let cell = tableView.dequeueReusableCell(withIdentifier: kBookRoomTVC, for: indexPath) as! BookRoomTVC
+        if roomSegment.selectedSegmentIndex == 0 {
+                cell.dataBind(data: baseModel?.freeRoomModel?[indexPath.row])
+                cell.bookRoomClick.tag = indexPath.row
+            
+            }else{
+            cell.dataBind1(data:  baseModel?.bookedRoomModel?[indexPath.row])
+                        cell.bookRoomClick.tag = indexPath.row
+        }
+        cell.delegate = self
       
         return cell
     }
@@ -121,4 +158,11 @@ extension BooKRoomVC: HeaderViewDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+extension BooKRoomVC : BookRoomTVCDelegate{
+    func bookRoomData(index: Int) {
+        let free = baseModel?.freeRoomModel?[index]
+        let selectedOption = baseModel?.selectedRoomOptionModel
+        viewModel.roomBookService(roomId: Int(free?.id ?? 0), attendents: Int(free?.capacity ?? 0), fromDateTime: selectedOption?.fromDateTime ?? "", toDateTime: selectedOption?.toDateTime  ?? "", roomStatus: selectedOption?.roomStatus  ?? "", purpose: selectedOption?.remarks  ?? "", visitorType: selectedOption?.visitorType  ?? "", roomType: selectedOption?.roomType ?? "", arrangementType: selectedOption?.arrangementType ?? "", notificationId: "\(free?.id ?? 0)", roomCode: selectedOption?.roomCode ?? "", recurringDay: selectedOption?.recurringDay ?? "", bookedBy: selectedOption?.bookedBy ?? "")
+    }
 }

@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.9.1)
+  - ANActivityIndicator (1.2.0)
   - IQKeyboardManagerSwift (6.5.5)
   - Moya (13.0.1):
     - Moya/Core (= 13.0.1)
@@ -26,6 +27,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - ANActivityIndicator
   - IQKeyboardManagerSwift (~> 6.2)
   - Moya (~> 13.0)
   - MSAL (~> 1.1.1)
@@ -40,6 +42,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - ANActivityIndicator
     - IQKeyboardManagerSwift
     - Moya
     - MSAL
@@ -54,6 +57,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ANActivityIndicator: 44a996931d0c554cf157b31056603b23bbdbe76a
   IQKeyboardManagerSwift: 0fb93310284665245591f50f7a5e38de615960b7
   Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
   MSAL: 2e41554542ea07d764cc1bd6a39cb063d19b3269
@@ -66,6 +70,6 @@ SPEC CHECKSUMS:
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 607ae3a5fa3a9f23f44b0952f25fd3769456b8b1
+PODFILE CHECKSUM: 4deea17331939fe2aeedaffad7102ab9c7993189
 
 COCOAPODS: 1.10.0

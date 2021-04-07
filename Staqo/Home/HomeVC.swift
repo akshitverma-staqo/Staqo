@@ -34,6 +34,9 @@ class HomeVC: BaseVC {
         viewModel.delegate = self
         viewModel.bootstrap()
         
+            homeCollectionView.register(UINib(nibName: kHomeCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeCollectionViewCell)
+            gridCollectionView.register(UINib(nibName: kHomeMenuCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeMenuCollectionViewCell)
+        
         viewModelNotify = NotificationViewModel(dataSource: NotificationDataSource())
         viewModelNotify.delegateNotify = self
         
@@ -51,10 +54,18 @@ class HomeVC: BaseVC {
         }
         
     
-        homeCollectionView.register(UINib(nibName: kHomeCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeCollectionViewCell)
-        gridCollectionView.register(UINib(nibName: kHomeMenuCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeMenuCollectionViewCell)
-    
+        self.getImage()
         // Do any additional setup after loading the view.
+    }
+    func getImage(){
+        var downloadPath = FileSystem.downloadDirectory
+        downloadPath.appendPathComponent("profile")
+        if FileManager().fileExists(atPath: downloadPath.path){
+            if let image = UIImage(contentsOfFile: downloadPath.path) {
+                herderView.btnProfile.setImage(image, for: .normal)
+            }
+        }
+       
     }
     func getCarousalView() {
         let floawLayout = UPCarouselFlowLayout()
@@ -127,18 +138,19 @@ class HomeVC: BaseVC {
 extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.rows?.imageArr.count ?? 0
+        return viewModel.rows?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
        if menuFlag {
             let cell = homeCollectionView.dequeueReusableCell(withReuseIdentifier: kHomeCollectionViewCell, for: indexPath) as! HomeCollectionViewCell
-            cell.dataBind(data: viewModel.rows, index: indexPath)
+           cell.dataBind(index: indexPath, data: viewModel.rows)
+        
             return cell
 
         }else{
             let cell = gridCollectionView.dequeueReusableCell(withReuseIdentifier: kHomeMenuCollectionViewCell, for: indexPath) as! HomeMenuCollectionViewCell
-            cell.dataBind(data: viewModel.rows, index: indexPath)
+            cell.dataBind(index: indexPath, data: viewModel.rows)
             return cell
 
         }
@@ -154,6 +166,9 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
         switch indexPath.row {
         case 0:
         
+            
+            UserDefaults.standard.set("oqportal", forKey: "webcheck")
+            UserDefaults.standard.
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
 
             self.navigationController?.pushViewController(vc, animated: true)
@@ -167,7 +182,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
             
         case 2:
            
-            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
+            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kSalmeenVC, type: SalmeenViewController.self)
             self.navigationController?.pushViewController(vc, animated: true)
             
         case 3:
@@ -178,7 +193,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
         
         case 4:
             print("Helpdesk")
-            let vc = Constant.getViewController(storyboard: Constant.kHelpDesk, identifier: Constant.kHelpDeskVC, type: HelpDeskVC.self)
+            let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kHelpDeskVC, type: HelpDeskVC.self)
             self.navigationController?.pushViewController(vc, animated: true)
            
         case 5:
@@ -199,7 +214,8 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
 
         case 6:
             print("ESIGN")
-            guard let url = URL(string: "signnow-private-cloud://sso_login?refresh_token=" + (UserDefaults.standard.getAccessToken()) + "&access_token=" + (UserDefaults.standard.getAccessToken()) + "&hostname=" + "esign.oq.com")else{
+            //guard let url = URL(string: "signnow-private-cloud://sso_login?refresh_token=" + (UserDefaults.standard.getAccessToken()) + "&access_token=" + (UserDefaults.standard.getAccessToken()) + "&hostname=" + "esign.oq.com")else{https://esign.oq.com/webapp/login-sso
+            guard let url = URL(string: "signnow-private-cloud://sso_login?")else{
                 
                 return
             }
@@ -217,7 +233,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
      
         case 8:
            print("Majalish")
-            let vc = Constant.getViewController(storyboard: Constant.kRoom, identifier: Constant.kRoomBookMainVC, type: RoomBookMainVC.self)
+            let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kRoomBookMainVC, type: RoomBookMainVC.self)
             self.navigationController?.isNavigationBarHidden = true
             self.navigationController?.pushViewController(vc, animated: true)
 
@@ -249,11 +265,12 @@ extension HomeVC: ViewModelDelegate{
         
         stopLoader()
        
-        
+        currentPage.numberOfPages = viewModel.rows?.count ?? 0
         //userLbl.text = UserDefaults.standard.getProfile()?.displayName
         homeCollectionView.reloadData()
+        gridCollectionView.reloadData()
         //currentPage.currentPage = viewModel.rows?.imageArr.count ?? 0
-        currentPage.numberOfPages = viewModel.rows?.imageArr.count ?? 0
+        
         
     }
     

@@ -91,8 +91,8 @@
                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfasdf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-lt-oTT">
-                        <rect key="frame" x="141" y="130" width="61.5" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdfasdf sfasdfasdfasdfasdfa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-lt-oTT">
+                        <rect key="frame" x="141" y="130" width="208.5" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="0fZ-kg-GAi"/>
                             <constraint firstAttribute="height" constant="20" id="CZ0-5k-8Jw"/>
@@ -103,11 +103,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ka-UQ-BEi">
-                        <rect key="frame" x="115.5" y="160" width="130" height="36"/>
+                        <rect key="frame" x="20" y="161" width="120" height="35"/>
                         <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="36" id="hpe-ts-Pnb"/>
-                            <constraint firstAttribute="width" constant="130" id="uiF-5n-lDg"/>
+                            <constraint firstAttribute="width" constant="120" id="1l0-eD-BvB"/>
+                            <constraint firstAttribute="height" constant="35" id="cgp-t3-3pe"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
                         <state key="normal" title="Photo View">
@@ -117,13 +117,28 @@
                             <action selector="btnPhotoView:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7JM-EV-GgW"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnS-Xi-pRG">
+                        <rect key="frame" x="221" y="162" width="120" height="35"/>
+                        <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="ApP-nY-KQx"/>
+                            <constraint firstAttribute="width" constant="120" id="Z41-Ke-fUT"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
+                        <state key="normal" title="Book Room">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="btBookRoomTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="lq4-nL-j7U"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="qjm-bk-HjT" firstAttribute="top" secondItem="39U-oS-IXv" secondAttribute="bottom" constant="20" id="037-AQ-piB"/>
                     <constraint firstItem="8S5-A4-aEO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="2A9-rD-HI8"/>
+                    <constraint firstItem="2Ka-UQ-BEi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="6Y4-U1-ZcP"/>
                     <constraint firstItem="iWd-lt-oTT" firstAttribute="top" secondItem="Jny-WC-h4V" secondAttribute="bottom" constant="20" id="Aqe-8i-ClQ"/>
                     <constraint firstItem="Jny-WC-h4V" firstAttribute="top" secondItem="ntA-p0-et6" secondAttribute="bottom" constant="20" id="CX4-Pk-8nV"/>
-                    <constraint firstItem="2Ka-UQ-BEi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Drq-KX-MIu"/>
                     <constraint firstItem="ntA-p0-et6" firstAttribute="top" secondItem="vFr-eA-Uix" secondAttribute="bottom" constant="20" id="E3b-1K-j6E"/>
                     <constraint firstItem="AQ3-id-Pdw" firstAttribute="top" secondItem="qjm-bk-HjT" secondAttribute="bottom" constant="20" id="EfA-x5-OtX"/>
                     <constraint firstItem="Jny-WC-h4V" firstAttribute="top" secondItem="ntA-p0-et6" secondAttribute="bottom" constant="20" id="Gmd-VH-z4g"/>
@@ -131,20 +146,23 @@
                     <constraint firstItem="39U-oS-IXv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Ncv-oN-WKH"/>
                     <constraint firstItem="ntA-p0-et6" firstAttribute="leading" secondItem="39U-oS-IXv" secondAttribute="trailing" constant="20" id="Vfe-du-y10"/>
                     <constraint firstItem="qjm-bk-HjT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="X9S-ox-kXd"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="2Ka-UQ-BEi" secondAttribute="bottom" constant="5" id="YMu-hJ-Otn"/>
-                    <constraint firstItem="2Ka-UQ-BEi" firstAttribute="top" secondItem="iWd-lt-oTT" secondAttribute="bottom" constant="10" id="fBr-PD-EWl"/>
+                    <constraint firstItem="2Ka-UQ-BEi" firstAttribute="top" secondItem="AQ3-id-Pdw" secondAttribute="bottom" constant="11" id="cFm-LR-vHE"/>
+                    <constraint firstAttribute="bottom" secondItem="CnS-Xi-pRG" secondAttribute="bottom" constant="10" id="eZF-SD-Kgn"/>
                     <constraint firstItem="39U-oS-IXv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="gaE-dr-hm2"/>
                     <constraint firstItem="iWd-lt-oTT" firstAttribute="top" secondItem="Jny-WC-h4V" secondAttribute="bottom" constant="20" id="k6H-ST-EOl"/>
                     <constraint firstItem="AQ3-id-Pdw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="m1w-0K-Drk"/>
                     <constraint firstItem="Jny-WC-h4V" firstAttribute="leading" secondItem="qjm-bk-HjT" secondAttribute="trailing" constant="20" id="qhU-e8-S1K"/>
+                    <constraint firstAttribute="trailing" secondItem="CnS-Xi-pRG" secondAttribute="trailing" constant="20" id="tX5-Au-Yca"/>
                     <constraint firstItem="vFr-eA-Uix" firstAttribute="leading" secondItem="8S5-A4-aEO" secondAttribute="trailing" constant="20" id="v17-td-ZeW"/>
                     <constraint firstItem="vFr-eA-Uix" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vPV-sw-k9t"/>
                     <constraint firstItem="39U-oS-IXv" firstAttribute="top" secondItem="8S5-A4-aEO" secondAttribute="bottom" constant="20" id="vyN-iW-K86"/>
                     <constraint firstItem="iWd-lt-oTT" firstAttribute="leading" secondItem="AQ3-id-Pdw" secondAttribute="trailing" constant="20" id="yyE-Tv-WpA"/>
+                    <constraint firstAttribute="bottom" secondItem="2Ka-UQ-BEi" secondAttribute="bottom" constant="11" id="zmZ-aI-T8C"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bookRoomClick" destination="CnS-Xi-pRG" id="1ae-y9-v11"/>
                 <outlet property="capacityLbl" destination="ntA-p0-et6" id="em3-p1-wrQ"/>
                 <outlet property="roomCodeLbl" destination="vFr-eA-Uix" id="phM-dv-l0Y"/>
                 <outlet property="roomFeatureLbl" destination="iWd-lt-oTT" id="iQI-qM-PKF"/>

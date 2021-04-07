@@ -10,7 +10,7 @@ import UIKit
 class LogTicketVC: BaseVC, UITableViewDelegate {
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
-
+    private let kLogTicketTVC = "LogTicketTVC"
 
     var viewModel:LogTicketViewModel!
 
@@ -27,7 +27,7 @@ class LogTicketVC: BaseVC, UITableViewDelegate {
         viewModel.delegate = self
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        tableView.register(UINib(nibName: "LogTicketTVC", bundle: nil), forCellReuseIdentifier: "LogTicketTVC")
+        tableView.register(UINib(nibName: kLogTicketTVC, bundle: nil), forCellReuseIdentifier: kLogTicketTVC)
         self.navigationController?.isNavigationBarHidden = true
 
         viewModel.bootstrap()
@@ -59,7 +59,7 @@ extension LogTicketVC: UITableViewDataSource{
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LogTicketTVC", for: indexPath) as! LogTicketTVC
+        let cell = tableView.dequeueReusableCell(withIdentifier: kLogTicketTVC, for: indexPath) as! LogTicketTVC
        
       
         return cell

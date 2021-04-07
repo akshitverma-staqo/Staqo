@@ -20,6 +20,7 @@ enum UserDefaultsKeys : String {
     case currentAddress
     case accessToken
     case menuStatus
+    //case webStatus
 }
 
 

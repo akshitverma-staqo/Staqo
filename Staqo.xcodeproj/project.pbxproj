@@ -98,8 +98,28 @@
 		76B42531260869C000895BDE /* HomeMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B4252F260869C000895BDE /* HomeMenuCollectionViewCell.swift */; };
 		76B42532260869C000895BDE /* HomeMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76B42530260869C000895BDE /* HomeMenuCollectionViewCell.xib */; };
 		76B425372608B08D00895BDE /* faq.html in Resources */ = {isa = PBXBuildFile; fileRef = 76B425362608B08C00895BDE /* faq.html */; };
+		76C3AC67261DBDF000FC6B85 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC66261DBDEF00FC6B85 /* MenuModel.swift */; };
 		76D66E72261727380013E5B4 /* RoomBookMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66E71261727380013E5B4 /* RoomBookMainVC.swift */; };
 		76D66E7A2617829F0013E5B4 /* ArrangmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66E792617829F0013E5B4 /* ArrangmentModel.swift */; };
+		76D66E7F261898500013E5B4 /* RoomSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66E7E2618984F0013E5B4 /* RoomSearchModel.swift */; };
+		76D66E842618A3450013E5B4 /* FreeRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66E832618A3450013E5B4 /* FreeRoomModel.swift */; };
+		76D66E892618A3530013E5B4 /* BookedRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66E882618A3530013E5B4 /* BookedRoomModel.swift */; };
+		76D66E8E2618A3890013E5B4 /* SelectedRoomOptionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66E8D2618A3890013E5B4 /* SelectedRoomOptionModel.swift */; };
+		76D66EA92619B3570013E5B4 /* ApproveCancelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EA82619B3570013E5B4 /* ApproveCancelVC.swift */; };
+		76D66EB12619B3690013E5B4 /* ACViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EB02619B3690013E5B4 /* ACViewModel.swift */; };
+		76D66EB62619B3850013E5B4 /* ACDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EB52619B3850013E5B4 /* ACDataSource.swift */; };
+		76D66EBC2619BAC50013E5B4 /* ACViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EBA2619BAC50013E5B4 /* ACViewCell.swift */; };
+		76D66EBD2619BAC50013E5B4 /* ACViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D66EBB2619BAC50013E5B4 /* ACViewCell.xib */; };
+		76D66EC42619F8450013E5B4 /* MazzayakomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EC12619F8440013E5B4 /* MazzayakomViewController.swift */; };
+		76D66EC52619F8450013E5B4 /* SwipeUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EC22619F8440013E5B4 /* SwipeUpViewController.swift */; };
+		76D66EC62619F8450013E5B4 /* MazzayakomSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EC32619F8440013E5B4 /* MazzayakomSubViewController.swift */; };
+		76D66ECB2619F9630013E5B4 /* MazzayakomCatListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66ECA2619F9630013E5B4 /* MazzayakomCatListModel.swift */; };
+		76D66ED1261A008A0013E5B4 /* VisiterListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66ECF261A00890013E5B4 /* VisiterListTVC.swift */; };
+		76D66ED2261A008A0013E5B4 /* VisiterListTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76D66ED0261A00890013E5B4 /* VisiterListTVC.xib */; };
+		76D66EDF261A0C030013E5B4 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EDD261A0C030013E5B4 /* SwiftyJSON.swift */; };
+		76D66EFE261C30450013E5B4 /* SalmeenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66EFD261C30440013E5B4 /* SalmeenViewController.swift */; };
+		76D66F03261C4CE50013E5B4 /* BRVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66F02261C4CE30013E5B4 /* BRVModel.swift */; };
+		76D66F1B261CA1230013E5B4 /* RoomBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D66F1A261CA1220013E5B4 /* RoomBookModel.swift */; };
 		76F1FB0D25E966F600D88F79 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1FB0C25E966F600D88F79 /* WebViewVC.swift */; };
 		76F1FB2525F281D300D88F79 /* EmpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1FB2425F281D300D88F79 /* EmpVC.swift */; };
 		76F1FB2A25F281F200D88F79 /* EmpViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1FB2925F281F100D88F79 /* EmpViewModal.swift */; };
@@ -249,8 +269,29 @@
 		76B4252F260869C000895BDE /* HomeMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		76B42530260869C000895BDE /* HomeMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeMenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		76B425362608B08C00895BDE /* faq.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = faq.html; sourceTree = "<group>"; };
+		76C3AC66261DBDEF00FC6B85 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		76D66E71261727380013E5B4 /* RoomBookMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomBookMainVC.swift; sourceTree = "<group>"; };
 		76D66E792617829F0013E5B4 /* ArrangmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrangmentModel.swift; sourceTree = "<group>"; };
+		76D66E7E2618984F0013E5B4 /* RoomSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomSearchModel.swift; sourceTree = "<group>"; };
+		76D66E832618A3450013E5B4 /* FreeRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeRoomModel.swift; sourceTree = "<group>"; };
+		76D66E882618A3530013E5B4 /* BookedRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookedRoomModel.swift; sourceTree = "<group>"; };
+		76D66E8D2618A3890013E5B4 /* SelectedRoomOptionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedRoomOptionModel.swift; sourceTree = "<group>"; };
+		76D66EA82619B3570013E5B4 /* ApproveCancelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApproveCancelVC.swift; sourceTree = "<group>"; };
+		76D66EB02619B3690013E5B4 /* ACViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACViewModel.swift; sourceTree = "<group>"; };
+		76D66EB52619B3850013E5B4 /* ACDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACDataSource.swift; sourceTree = "<group>"; };
+		76D66EBA2619BAC50013E5B4 /* ACViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACViewCell.swift; sourceTree = "<group>"; };
+		76D66EBB2619BAC50013E5B4 /* ACViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ACViewCell.xib; sourceTree = "<group>"; };
+		76D66EC12619F8440013E5B4 /* MazzayakomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MazzayakomViewController.swift; sourceTree = "<group>"; };
+		76D66EC22619F8440013E5B4 /* SwipeUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeUpViewController.swift; sourceTree = "<group>"; };
+		76D66EC32619F8440013E5B4 /* MazzayakomSubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MazzayakomSubViewController.swift; sourceTree = "<group>"; };
+		76D66ECA2619F9630013E5B4 /* MazzayakomCatListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MazzayakomCatListModel.swift; sourceTree = "<group>"; };
+		76D66ECF261A00890013E5B4 /* VisiterListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisiterListTVC.swift; sourceTree = "<group>"; };
+		76D66ED0261A00890013E5B4 /* VisiterListTVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisiterListTVC.xib; sourceTree = "<group>"; };
+		76D66EDD261A0C030013E5B4 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		76D66EDE261A0C030013E5B4 /* SwiftyJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftyJSON.h; sourceTree = "<group>"; };
+		76D66EFD261C30440013E5B4 /* SalmeenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SalmeenViewController.swift; sourceTree = "<group>"; };
+		76D66F02261C4CE30013E5B4 /* BRVModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BRVModel.swift; sourceTree = "<group>"; };
+		76D66F1A261CA1220013E5B4 /* RoomBookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomBookModel.swift; sourceTree = "<group>"; };
 		76F1FB0C25E966F600D88F79 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		76F1FB2425F281D300D88F79 /* EmpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpVC.swift; sourceTree = "<group>"; };
 		76F1FB2925F281F100D88F79 /* EmpViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpViewModal.swift; sourceTree = "<group>"; };
@@ -427,10 +468,10 @@
 		76A0AF0D2616DA7F0084E1F8 /* BookRoom */ = {
 			isa = PBXGroup;
 			children = (
-				76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */,
 				76A0AF162616E2750084E1F8 /* BooKRoomVC.swift */,
 				76A0AF1E2616E36D0084E1F8 /* BookRoomViewModel.swift */,
 				76A0AF232616E37C0084E1F8 /* BookRoomDataSource.swift */,
+				76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */,
 				76A0AF0F2616DAF50084E1F8 /* BookRoomTVC.xib */,
 				76A0AF282616FDE70084E1F8 /* RoomPhotoVC.swift */,
 			);
@@ -453,6 +494,7 @@
 			isa = PBXGroup;
 			children = (
 				76D66E71261727380013E5B4 /* RoomBookMainVC.swift */,
+				76D66EA72619B3010013E5B4 /* ApproveCancel */,
 				76A0AF152616E22E0084E1F8 /* Search Room */,
 				76A0AF0D2616DA7F0084E1F8 /* BookRoom */,
 			);
@@ -465,6 +507,8 @@
 				76A1046025FFA76300C536B9 /* VisitorListVC.swift */,
 				76A1046525FFA7F100C536B9 /* VisitorListViewModal.swift */,
 				76A1046A25FFA81000C536B9 /* VisitorListDataSource.swift */,
+				76D66ECF261A00890013E5B4 /* VisiterListTVC.swift */,
+				76D66ED0261A00890013E5B4 /* VisiterListTVC.xib */,
 			);
 			path = VisiterData;
 			sourceTree = "<group>";
@@ -503,6 +547,10 @@
 		76A14EFA260FB33400A5E7BF /* Mazzayakom */ = {
 			isa = PBXGroup;
 			children = (
+				76D66EDC261A0C030013E5B4 /* SwiftyJSON */,
+				76D66EC32619F8440013E5B4 /* MazzayakomSubViewController.swift */,
+				76D66EC12619F8440013E5B4 /* MazzayakomViewController.swift */,
+				76D66EC22619F8440013E5B4 /* SwipeUpViewController.swift */,
 			);
 			path = Mazzayakom;
 			sourceTree = "<group>";
@@ -521,14 +569,43 @@
 			children = (
 				76B205A725DED5370056FC68 /* HomeVC.swift */,
 				76B205AF25DED56E0056FC68 /* HomeViewModal.swift */,
-				26CD070525E41EDD001C6D60 /* UPCarouselFlowLayout.swift */,
 				76B205B425DED5BC0056FC68 /* HomeDataSource.swift */,
+				26CD070525E41EDD001C6D60 /* UPCarouselFlowLayout.swift */,
 				76B4252F260869C000895BDE /* HomeMenuCollectionViewCell.swift */,
 				76B42530260869C000895BDE /* HomeMenuCollectionViewCell.xib */,
 				76B205BE25DEDBD70056FC68 /* HomeCollectionViewCell.swift */,
 				76B205BF25DEDBD70056FC68 /* HomeCollectionViewCell.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		76D66EA72619B3010013E5B4 /* ApproveCancel */ = {
+			isa = PBXGroup;
+			children = (
+				76D66EA82619B3570013E5B4 /* ApproveCancelVC.swift */,
+				76D66EB02619B3690013E5B4 /* ACViewModel.swift */,
+				76D66EB52619B3850013E5B4 /* ACDataSource.swift */,
+				76D66EBA2619BAC50013E5B4 /* ACViewCell.swift */,
+				76D66EBB2619BAC50013E5B4 /* ACViewCell.xib */,
+			);
+			path = ApproveCancel;
+			sourceTree = "<group>";
+		};
+		76D66EDC261A0C030013E5B4 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				76D66EDD261A0C030013E5B4 /* SwiftyJSON.swift */,
+				76D66EDE261A0C030013E5B4 /* SwiftyJSON.h */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		76D66EF9261C30200013E5B4 /* Salmeen */ = {
+			isa = PBXGroup;
+			children = (
+				76D66EFD261C30440013E5B4 /* SalmeenViewController.swift */,
+			);
+			path = Salmeen;
 			sourceTree = "<group>";
 		};
 		76F1FB0B25E966C700D88F79 /* WebView */ = {
@@ -604,6 +681,7 @@
 				76F1FB3625F2997000D88F79 /* Employee */,
 				76B205A625DED4F10056FC68 /* Home */,
 				76B205A225DC4C980056FC68 /* Staqo.entitlements */,
+				76D66EF9261C30200013E5B4 /* Salmeen */,
 				76B2057625DC3FFE0056FC68 /* MSGraph */,
 				CD5DB46025D5A50600353084 /* Login */,
 				76A14EFA260FB33400A5E7BF /* Mazzayakom */,
@@ -699,6 +777,7 @@
 		CD5DB49325D5A8D700353084 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				76D66ECA2619F9630013E5B4 /* MazzayakomCatListModel.swift */,
 				7660FD822613858B00C43B25 /* RoomModel.swift */,
 				CD5DB49425D5A8E900353084 /* BaseModel.swift */,
 				76A1039D25F7E61300C536B9 /* Value.swift */,
@@ -711,10 +790,17 @@
 				76A103C925F7F2AA00C536B9 /* MSGraphData.swift */,
 				767BEBD92601264900B6A3C3 /* Documents.swift */,
 				767BEBD42601261B00B6A3C3 /* TextReader.swift */,
+				76D66E7E2618984F0013E5B4 /* RoomSearchModel.swift */,
+				76D66F1A261CA1220013E5B4 /* RoomBookModel.swift */,
 				7667E7912614BC7F00EB624E /* ReadNotify.swift */,
 				7667E7962614F53A00EB624E /* Location.swift */,
 				7667E79B2614F57300EB624E /* RoomType.swift */,
 				76D66E792617829F0013E5B4 /* ArrangmentModel.swift */,
+				76D66E832618A3450013E5B4 /* FreeRoomModel.swift */,
+				76D66E882618A3530013E5B4 /* BookedRoomModel.swift */,
+				76D66E8D2618A3890013E5B4 /* SelectedRoomOptionModel.swift */,
+				76D66F02261C4CE30013E5B4 /* BRVModel.swift */,
+				76C3AC66261DBDEF00FC6B85 /* MenuModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -879,6 +965,7 @@
 				7693C62925F3E26D001665DF /* Business.storyboard in Resources */,
 				CD5DB42D25D5A26500353084 /* LaunchScreen.storyboard in Resources */,
 				76B42532260869C000895BDE /* HomeMenuCollectionViewCell.xib in Resources */,
+				76D66EBD2619BAC50013E5B4 /* ACViewCell.xib in Resources */,
 				76A0AF112616DAF50084E1F8 /* BookRoomTVC.xib in Resources */,
 				76A0F546260B435500601483 /* Room.storyboard in Resources */,
 				7667E7A426158D0400EB624E /* LogTicketTVC.xib in Resources */,
@@ -889,6 +976,7 @@
 				76257D9E25DF70C100F1BD47 /* Century Gothic 400.ttf in Resources */,
 				76656D9B260DAA110080669B /* GoogleService-Info.plist in Resources */,
 				76A14F05260FB42200A5E7BF /* Mazzayakom.storyboard in Resources */,
+				76D66ED2261A008A0013E5B4 /* VisiterListTVC.xib in Resources */,
 				76257D9F25DF70C100F1BD47 /* Century Gothic.ttf in Resources */,
 				76A0F54D260B4EFE00601483 /* RoomBTVC.xib in Resources */,
 				CD5DB42825D5A26300353084 /* Main.storyboard in Resources */,
@@ -1023,18 +1111,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76D66EC52619F8450013E5B4 /* SwipeUpViewController.swift in Sources */,
 				7693C64E25F3E763001665DF /* OCR.swift in Sources */,
 				7667E7DC2615AD9600EB624E /* LogTicketViewModel.swift in Sources */,
+				76D66EDF261A0C030013E5B4 /* SwiftyJSON.swift in Sources */,
 				76A103A325F7E69E00C536B9 /* CreatedBy.swift in Sources */,
 				76A0AF242616E37C0084E1F8 /* BookRoomDataSource.swift in Sources */,
 				7667E7A326158D0300EB624E /* LogTicketTVC.swift in Sources */,
 				CD5DB47825D5A5E500353084 /* Configuration.swift in Sources */,
 				76A1046125FFA76300C536B9 /* VisitorListVC.swift in Sources */,
 				CD5DB42125D5A26300353084 /* AppDelegate.swift in Sources */,
+				76D66EB12619B3690013E5B4 /* ACViewModel.swift in Sources */,
 				CD5DB42325D5A26300353084 /* SceneDelegate.swift in Sources */,
 				CD5DB47125D5A5BD00353084 /* NetworkManager.swift in Sources */,
 				76A0F54C260B4EFE00601483 /* RoomBTVC.swift in Sources */,
 				7660FD832613858C00C43B25 /* RoomModel.swift in Sources */,
+				76D66EA92619B3570013E5B4 /* ApproveCancelVC.swift in Sources */,
 				7693C63D25F3E5A6001665DF /* BusinessVC.swift in Sources */,
 				76656DAB260DAB280080669B /* NotificationViewModel.swift in Sources */,
 				76656D88260C65B10080669B /* FAQViewController.swift in Sources */,
@@ -1048,10 +1140,14 @@
 				CD5DB48F25D5A60C00353084 /* ResourceType.swift in Sources */,
 				767BEBE526012CCC00B6A3C3 /* BusinessDataSource.swift in Sources */,
 				CD5DB49525D5A8E900353084 /* BaseModel.swift in Sources */,
+				76D66E892618A3530013E5B4 /* BookedRoomModel.swift in Sources */,
 				CD5DB48C25D5A60C00353084 /* CustomError.swift in Sources */,
 				76B205A825DED5370056FC68 /* HomeVC.swift in Sources */,
+				76D66E8E2618A3890013E5B4 /* SelectedRoomOptionModel.swift in Sources */,
 				76656D8B260C65B10080669B /* PrivacyViewController.swift in Sources */,
+				76D66EB62619B3850013E5B4 /* ACDataSource.swift in Sources */,
 				76A103C225F7E72D00C536B9 /* ContentType.swift in Sources */,
+				76D66EBC2619BAC50013E5B4 /* ACViewCell.swift in Sources */,
 				76656D8A260C65B10080669B /* TermConditionViewController.swift in Sources */,
 				7693C64C25F3E763001665DF /* OCRViewController.swift in Sources */,
 				76A0AF1F2616E36D0084E1F8 /* BookRoomViewModel.swift in Sources */,
@@ -1075,15 +1171,21 @@
 				7667E7F02615D93800EB624E /* HelpDeskVC.swift in Sources */,
 				76A103B225F7E6D600C536B9 /* ParentReference.swift in Sources */,
 				76F1FB0D25E966F600D88F79 /* WebViewVC.swift in Sources */,
+				76D66F03261C4CE50013E5B4 /* BRVModel.swift in Sources */,
 				76A103AD25F7E6C500C536B9 /* User.swift in Sources */,
 				76A0F541260B433C00601483 /* RoomBookingVC.swift in Sources */,
+				76D66E7F261898500013E5B4 /* RoomSearchModel.swift in Sources */,
 				7693C64225F3E5BE001665DF /* BusinessViewModal.swift in Sources */,
 				CD5DB48725D5A60C00353084 /* Interfaces.swift in Sources */,
+				76D66ECB2619F9630013E5B4 /* MazzayakomCatListModel.swift in Sources */,
 				7693C61725F3D695001665DF /* MenuViewModal.swift in Sources */,
+				76D66EFE261C30450013E5B4 /* SalmeenViewController.swift in Sources */,
 				CD5DB48E25D5A60C00353084 /* Constant.swift in Sources */,
 				7667E79C2614F57300EB624E /* RoomType.swift in Sources */,
+				76D66ED1261A008A0013E5B4 /* VisiterListTVC.swift in Sources */,
 				76656DA6260DAB140080669B /* NotificationVC.swift in Sources */,
 				CD5DB49F25D5A9C100353084 /* DashboardNavigationVC.swift in Sources */,
+				76D66E842618A3450013E5B4 /* FreeRoomModel.swift in Sources */,
 				76A1039E25F7E61300C536B9 /* Value.swift in Sources */,
 				7693C63825F3E370001665DF /* BusinessCardDataSource.swift in Sources */,
 				76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */,
@@ -1100,17 +1202,21 @@
 				76A0AF292616FDE70084E1F8 /* RoomPhotoVC.swift in Sources */,
 				CD5DB48D25D5A60C00353084 /* NetworkClient.swift in Sources */,
 				76B205B025DED56E0056FC68 /* HomeViewModal.swift in Sources */,
+				76D66EC62619F8450013E5B4 /* MazzayakomSubViewController.swift in Sources */,
 				7667E7E62615ADC500EB624E /* LogTicketVC.swift in Sources */,
 				76656D89260C65B10080669B /* AboutUsController.swift in Sources */,
 				CD5DB48A25D5A60C00353084 /* UserDefaults.swift in Sources */,
 				76A0AF102616DAF50084E1F8 /* BookRoomTVC.swift in Sources */,
 				76B2057A25DC402D0056FC68 /* GraphManager.swift in Sources */,
+				76D66F1B261CA1230013E5B4 /* RoomBookModel.swift in Sources */,
 				CD5DB46225D5A52E00353084 /* LoginVC.swift in Sources */,
 				76656D9A260DAA110080669B /* NotificationTableViewCell.swift in Sources */,
 				76F1FB3225F2915B00D88F79 /* EmpDataSource.swift in Sources */,
 				76A1045C25FF9AE100C536B9 /* ScanQRViewController.swift in Sources */,
 				76F1FB2A25F281F200D88F79 /* EmpViewModal.swift in Sources */,
 				76656D8F260C65B10080669B /* FAQAnswerTableViewCell.swift in Sources */,
+				76C3AC67261DBDF000FC6B85 /* MenuModel.swift in Sources */,
+				76D66EC42619F8450013E5B4 /* MazzayakomViewController.swift in Sources */,
 				76A0F557260B7B4600601483 /* RoomDataSource.swift in Sources */,
 				CD5DB48925D5A60C00353084 /* Date.swift in Sources */,
 				76656D8D260C65B10080669B /* FAQHeaderTableViewCell.swift in Sources */,

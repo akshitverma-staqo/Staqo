@@ -8,7 +8,8 @@
 import UIKit
 
 class BusinessCardVC: BaseVC {
-
+    var header:HeaderView!
+    @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var QRCodeImg: UIImageView!
     @IBOutlet weak var qrBtnShadowView: UIView!
     @IBOutlet weak var qrBtnWithConstrant: NSLayoutConstraint!
@@ -37,6 +38,11 @@ class BusinessCardVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
+        header.delegate = self
+        herderView.addSubview(header)
+        
         qrCodeView.isHidden = true
         shaddowView.dropShadow()
         qrBtnShadowView.dropShadow()
@@ -56,7 +62,11 @@ class BusinessCardVC: BaseVC {
         viewModal.bootstrap()
         // Do any additional setup after loading the view.
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
+        self.navigationController?.isNavigationBarHidden = true
+    }
     
     func generateQRCodef(from string: String) -> UIImage? {
         let data = string.data(using: String.Encoding.ascii)
@@ -180,5 +190,24 @@ extension BusinessCardVC: ViewModelDelegate{
         stopLoader()
     }
     
+    
+}
+extension BusinessCardVC: HeaderViewDelegate{
+    func btnMenuTapped(sender: UIButton) {
+        
+        _ = navigationController?.popViewController(animated: true)
+
+    }
+    
+    func btnProfileTapped(sender: UIButton) {
+        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func btnLogoutTapped(sender: UIButton) {
+        
+        let vc = Constant.getViewController(storyboard: Constant.kNotification, identifier: Constant.kNotificationVC, type: NotificationVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
 }

@@ -7,17 +7,17 @@
 
 import Foundation
 protocol VisitorListDataSourceDelegare {
-    func getEmployeeDataWithID(emailID: String, completion: @escaping(StaoqResult<BaseModel>) -> Void)
+    func getVisiterListData(ID: String, completion: @escaping(StaoqResult<BaseModel>) -> Void)
     
     
 }
 class VisitorListDataSource: VisitorListDataSourceDelegare{
+   
     
-    func getEmployeeDataWithID(emailID: String, completion: @escaping (StaoqResult<BaseModel>) -> Void) {
-        NetworkClient.request(target: ResourceType.getEmployeeDataWithID(emailID: emailID), success: { result in
+    
+    func getVisiterListData(ID: String, completion: @escaping (StaoqResult<BaseModel>) -> Void) {
+        NetworkClient.request(target: ResourceType.getVisiterListData(ID: ID), success: { result in
             completion(result as StaoqResult<BaseModel>)
-            
-            
             }, error: { (error) in
                 completion(StaoqResult.failure(error))
             }) { (moyaError) in

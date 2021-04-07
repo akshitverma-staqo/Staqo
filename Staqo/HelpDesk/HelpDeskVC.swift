@@ -34,13 +34,13 @@ class HelpDeskVC: UIViewController {
     }
     @IBAction func viewLogTicketVCTap(_ sender: Any) {
         
-        let vc = Constant.getViewController(storyboard: Constant.kHelpDesk, identifier: Constant.kViewLogTicketVC, type: ViewLogTicketVC.self)
+        let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kViewLogTicketVC, type: ViewLogTicketVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
     }
    
     @IBAction func logTicketVCTap(_ sender: Any) {
         
-        let vc = Constant.getViewController(storyboard: Constant.kHelpDesk, identifier: Constant.kLogTicketVC, type: LogTicketVC.self)
+        let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kLogTicketVC, type: LogTicketVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     /*
