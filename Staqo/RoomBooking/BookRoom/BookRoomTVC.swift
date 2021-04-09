@@ -26,7 +26,6 @@ class BookRoomTVC: UITableViewCell {
     
     @IBAction func btnPhotoView(_ sender: Any) {
         
-        
     }
 
     @IBAction func btBookRoomTap(_ sender: UIButton) {

@@ -50,10 +50,43 @@ class Helper {
         bookingdata.roomCode = roomCode
         bookingdata.recurringDay = recurringDay
         bookingdata.bookedBy = UserDefaults.standard.getProfile()?.email ?? ""
-        
-        
-
-        
        return bookingdata
+    }
+    
+    static func createTicket(desc:String , subj:String , catID:String , prioName:String , subID:String) -> ReqHelper?  {
+        var reqHelper = ReqHelper()
+        var request = Request()
+        request.description = desc
+        request.subject = subj
+        request.impact_details = "Routine tasks are pending due to mail server problem"
+        
+        var category = Categories()
+        category.id = catID
+        request.category = category
+        
+        var priority = Priority()
+        priority.name = prioName
+        request.priority = priority
+        
+        var requester = Requester()
+        requester.id = "4"
+        requester.name = "administrator"
+        request.requester = requester
+        
+        var status = Status()
+        status.name = "Open"
+        request.status = status
+        
+        var subCat = Subcategories()
+        subCat.id = subID
+        request.subcategory = subCat
+        
+        var resolution = Resolution()
+        resolution.content = "Mail Fetching Server problem has been fixed"
+
+        request.resolution = resolution
+        
+        reqHelper.request = request
+        return reqHelper
     }
 }

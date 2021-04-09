@@ -8,8 +8,19 @@
 import Foundation
 
 protocol ViewLogTicketDataSourceDelegate {
+    func getTicket(completion:@escaping(StaoqResult<BaseModel>) -> Void)
     
 }
+
 class ViewLogTicketDataSource: ViewLogTicketDataSourceDelegate {
+    func getTicket(completion: @escaping (StaoqResult<BaseModel>) -> Void) {
+        NetworkClient.request(target: ResourceType.getTicket, success: { result in
+            completion(result as StaoqResult<BaseModel>)
+            }, error: { (error) in
+                completion(StaoqResult.failure(error))
+            }) { (moyaError) in
+            completion(StaoqResult.failure(moyaError))
+            }
+    }
     
 }

@@ -435,7 +435,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dashboard6" translatesAutoresizingMaskIntoConstraints="NO" id="jMZ-2m-GsZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5" translatesAutoresizingMaskIntoConstraints="NO" id="jMZ-2m-GsZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="4NB-Ur-qV7"/>
@@ -478,7 +478,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
                                                 <color key="backgroundColor" red="0.10980392160000001" green="0.72941176470000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
-                                                <state key="normal" title="Log Ticket">
+                                                <state key="normal" title="Generate Ticket">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -502,7 +502,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
-                                                <state key="normal" title="View Log Ticket">
+                                                <state key="normal" title="View Ticket">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -596,8 +596,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5" width="472.5" height="497.5"/>
         <image name="backArrow" width="32" height="32"/>
-        <image name="dashboard6" width="472.5" height="497.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

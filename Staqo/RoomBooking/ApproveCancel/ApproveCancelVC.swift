@@ -27,6 +27,20 @@ class ApproveCancelVC: BaseVC, UITableViewDelegate {
         viewModel = ACViewModel(dataSource: ACDataSource())
         viewModel.delegate = self
         
+        if UserDefaults.standard.getWebStatus() == "Admin" {
+            print("Admin")
+            roomSegment.setTitle("Approved", forSegmentAt: 0)
+            roomSegment.setTitle("Unapproved", forSegmentAt: 1)
+        }else{
+            
+            print("User")
+            roomSegment.setTitle("Approved", forSegmentAt: 0)
+            roomSegment.setTitle("Cancel", forSegmentAt: 1)
+        }
+        
+        
+        
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.register(UINib(nibName: kACViewCell, bundle: nil), forCellReuseIdentifier: kACViewCell)
@@ -41,11 +55,11 @@ class ApproveCancelVC: BaseVC, UITableViewDelegate {
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         switch roomSegment.selectedSegmentIndex {
         case 0:
-            print("Free Room")
+            print("Free Room and Approved")
             tableView.reloadData()
         case 1:
             tableView.reloadData()
-            print("Booked Room")
+            print("Booked Room and unapproved")
         default:
             break;
         }
@@ -78,6 +92,7 @@ extension ApproveCancelVC : ViewModelDelegate{
     
     
 }
+// MARK: - Tableview Delegate
 
 extension ApproveCancelVC: UITableViewDataSource{
     
@@ -97,11 +112,16 @@ extension ApproveCancelVC: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
         
+      //  let data = viewModel.rows?[indexPath.row]
+        
+        //var selectedData = 
     }
     
 }
+
+// MARK: - Header Delegate
+
 extension ApproveCancelVC: HeaderViewDelegate{
     func btnMenuTapped(sender: UIButton) {
         

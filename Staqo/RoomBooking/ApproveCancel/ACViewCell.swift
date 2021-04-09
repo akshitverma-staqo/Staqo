@@ -9,6 +9,8 @@ import UIKit
 
 class ACViewCell: UITableViewCell {
 
+    @IBOutlet weak var cancelClick: UIButton!
+    @IBOutlet weak var approveClick: UIButton!
     @IBOutlet weak var roomCapacity: UILabel!
     @IBOutlet weak var roomCodeLbl: UILabel!
     @IBOutlet weak var dateTimeLbl: UILabel!
@@ -17,6 +19,19 @@ class ACViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        if UserDefaults.standard.getWebStatus() == "Admin" {
+            print("Admin")
+            
+            
+        }else{
+            
+            print("User")
+            
+            approveClick.isHidden = true
+            
+            
+        }
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,11 +48,22 @@ class ACViewCell: UITableViewCell {
         nameLbl.text = data?[index.row].bookedBy ?? ""
     }
     
+    
+    
     @IBAction func btnCancelTap(_ sender: Any) {
-        
+        if UserDefaults.standard.getWebStatus() == "Admin" {
+            print("Admin")
+        }else{
+            print("User")
+        }
     }
 
     @IBAction func btnApproveTap(_ sender: Any) {
+        if UserDefaults.standard.getWebStatus() == "Admin" {
+            print("Admin")
+        }else{
+            print("User")
+        }
         
     }
     

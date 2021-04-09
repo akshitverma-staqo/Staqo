@@ -53,7 +53,7 @@ class RoomBookingVC: BaseVC, UITableViewDelegate {
     }
     */
     @objc func doneBtnClicked(){
-        delegate?.selectIndex()
+       // delegate?.selectIndex()
     }
 }
 extension RoomBookingVC : ViewModelDelegate{
@@ -97,7 +97,6 @@ extension RoomBookingVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
        
-        
     }
     
 }

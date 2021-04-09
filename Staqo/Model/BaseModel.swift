@@ -18,7 +18,11 @@ struct BaseModel : Codable {
     var freeRoomModel:[FreeRoomModel]?
     var bookedRoomModel:[BookedRoomModel]?
     var selectedRoomOptionModel:SelectedRoomOptionModel?
-    
+    var categories : [Categories]?
+    var allrequests : Allrequests?
+    var subcategories : [Subcategories]?
+
+  
     
     
     
@@ -33,7 +37,9 @@ struct BaseModel : Codable {
         case freeRoomModel = "freeRoom"
         case bookedRoomModel = "booked"
         case selectedRoomOptionModel = "selectedOptions"
-       
+        case categories = "categories"
+        case allrequests = "allrequests"
+        case subcategories = "subcategories"
         
     }
     init() {
@@ -50,6 +56,10 @@ struct BaseModel : Codable {
         freeRoomModel = try values.decodeIfPresent([FreeRoomModel].self, forKey: .freeRoomModel)
         bookedRoomModel = try values.decodeIfPresent([BookedRoomModel].self, forKey: .bookedRoomModel)
         selectedRoomOptionModel = try values.decodeIfPresent(SelectedRoomOptionModel.self, forKey: .selectedRoomOptionModel)
+        categories = try values.decodeIfPresent([Categories].self, forKey: .categories)
+        allrequests = try values.decodeIfPresent(Allrequests.self, forKey: .allrequests)
+        subcategories = try values.decodeIfPresent([Subcategories].self, forKey: .subcategories)
+
        
 }
 

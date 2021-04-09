@@ -10,7 +10,7 @@ import UIKit
 class TicketStatusVC: UIViewController {
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
-
+    var rowsRequests:[Requests]?
     @IBOutlet weak var closeDateTxt: UITextField!
     @IBOutlet weak var statusTxt: UITextField!
     @IBOutlet weak var taskDetailsTxtv: UITextView!
@@ -22,6 +22,7 @@ class TicketStatusVC: UIViewController {
         header.delegate = self
        
         herderView.addSubview(header)
+        
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {

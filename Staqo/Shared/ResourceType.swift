@@ -28,6 +28,11 @@ enum ResourceType {
     case getVisiterListData(ID: String)
     case bookedRoom
     case bookRoom(roomId: Int, attendents: Int, fromDateTime: String, toDateTime: String, roomStatus: String, purpose: String, visitorType: String, roomType: String, arrangementType: String, notificationId: String, roomCode: String, recurringDay: String, bookedBy: String)
+    case getCatData
+    case getTicket
+    case getSubCatData(ID:String)
+    case submitTicketData(value:String)
+    case ticketImageUpload(file: Data, ID:String)
     
     var localLocation: URL? {
 
@@ -63,7 +68,7 @@ extension ResourceType:TargetType {
         switch self {
         case .download(_):
             return URL(string: Configuration.authURL)!
-        case.roomData(_) , .readNotification(_),.addNotification(_,_,_,_),.roomLocation,.roomType,.roomArrangment(_),.dashboardMeneData,.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_):
+        case.roomData(_) , .readNotification(_),.addNotification(_,_,_,_),.roomLocation,.roomType,.roomArrangment(_),.dashboardMeneData,.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getCatData,.getTicket,.getSubCatData(_),.submitTicketData(_),.ticketImageUpload(_,_):
             return URL(string: Configuration.ftpURL)!
         default:
             return URL(string:Configuration.baseURL)!
@@ -112,6 +117,16 @@ extension ResourceType:TargetType {
             return Constant.kViewBookedRoom
         case .bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_):
         return Constant.kFreeRoomBooking
+        case .getCatData:
+            return Constant.kHelpCategory
+        case .getTicket:
+        return Constant.kHelpViewTicket
+        case .getSubCatData(let ID):
+            return Constant.kHelpSubCat1 + ID + Constant.kHelpSubCat2
+        case .submitTicketData(_):
+            return Constant.kHelpSubmitReq
+        case .ticketImageUpload(_,let ID):
+            return Constant.kHelpAttach1 + ID + Constant.kHelpAttach2
         }
         
         
@@ -119,11 +134,11 @@ extension ResourceType:TargetType {
 
     var method: Moya.Method {
         switch self {
-        case .getEmployeeDataWithID(_),.download(_),.roomData(_),.notificationData,.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom:
+        case .getEmployeeDataWithID(_),.download(_),.roomData(_),.notificationData,.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return Moya.Method.get
         case .updateByEmpID(_,_):
             return Moya.Method.patch
-        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_):
+        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_):
             return Moya.Method.post
         
         }
@@ -138,6 +153,9 @@ extension ResourceType:TargetType {
        
         case .bookRoom(let roomId, let attendents, let fromDateTime, let toDateTime, let roomStatus, let purpose, let visitorType, let roomType, let arrangementType, let notificationId, let roomCode, let recurringDay, let bookedBy):
         return ["roomId": roomId, "attendents": attendents,"fromDateTime": fromDateTime,"toDateTime": toDateTime,"roomStatus": roomStatus,"purpose": purpose,"visitorType": visitorType,"roomType": roomType,"arrangementType": arrangementType,"notificationId": notificationId,"roomCode": roomCode,"recurringDay": recurringDay,"bookedBy": bookedBy]
+            
+        case .ticketImageUpload(let file, let ID):
+            return ["file":file , "request_id":ID]
         
         default:
             return nil
@@ -153,6 +171,9 @@ extension ResourceType:TargetType {
             return value
         case .download(let fileName):
             return fileName
+        case .submitTicketData(let Value):
+            return Value
+        
         default:
             return nil
         }
@@ -165,7 +186,7 @@ extension ResourceType:TargetType {
     
     var task: Task {
         switch self {
-        case .getEmployeeDataWithID(_),.roomData(_),.notificationData,.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom:
+        case .getEmployeeDataWithID(_),.roomData(_),.notificationData,.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return .requestPlain
         case .download(_):
             return .downloadDestination(downloadDestination)
@@ -177,6 +198,14 @@ extension ResourceType:TargetType {
         case .searchRoom(_):
             let data = Data(para!.utf8)
             return .requestData(data)
+        case .submitTicketData(_):
+            let data = Data(para!.utf8)
+            return .requestData(data)
+            
+        case .ticketImageUpload(let file,let ID):
+            let uploadFile = MultipartFormData(provider: .data(file), name: "file", fileName: "User.png", mimeType: "image/gif")
+           // let requestID = MultipartFormData(provider: .data("\(ID)".data(using: String.Encoding.utf8) ?? Data()), name: "request_id")
+            return .uploadMultipart([uploadFile])
 //        case .bookRoom(_):
 //            let data = Data(para!.utf8)
 //            return .requestData(data)
@@ -192,13 +221,19 @@ extension ResourceType:TargetType {
         httpHeaders["Content-Type"] = "application/json"
             return httpHeaders
             
-        case .roomData(_),.addNotification(_,_,_,_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.roomArrangment(_),.searchRoom(_),.bookedRoom,.bookRoom(_):
+        case .roomData(_),.addNotification(_,_,_,_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.roomArrangment(_),.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getTicket,.getCatData,.getSubCatData(_),.submitTicketData(_):
         httpHeaders["Accesstoken"] = "Bearer " + UserDefaults.standard.getAccessToken()
+        httpHeaders["TechnicianKey"] = "B649E3D6-3FBF-45E5-8396-109F325FACCA"
         httpHeaders["Content-Type"] = "application/json"
         return httpHeaders
         case .download(_):
             httpHeaders["Authorization"] = "Bearer " + UserDefaults.standard.getAccessToken()
             httpHeaders["Content-Type"] = "application/json"
+            return httpHeaders
+        case .ticketImageUpload(_,_):
+            httpHeaders["Accesstoken"] = "Bearer " + UserDefaults.standard.getAccessToken()
+            httpHeaders["TechnicianKey"] = "B649E3D6-3FBF-45E5-8396-109F325FACCA"
+            httpHeaders["Content-type" ] = "application/json"
             return httpHeaders
         default:
         

@@ -74,7 +74,13 @@ class Constant {
     
     //MARK:-HelpDesk
     static let kHelpCategory = "/api/helpdesk/categories"
-    static let kHelpSubCat = "/api/helpdesk/{category_id}/subcategories"
+    static let kHelpSubCat1 = "/api/helpdesk/"
+    static let kHelpSubCat2 = "/subcategories"
+    static let kHelpSubmitReq = "/api/helpdesk/request" //Post to submit
+    static let kHelpViewTicket = "/api/helpdesk/request" // Get to view Ticket
+    static let kHelpAttach1 = "/api/helpdesk/"
+    static let kHelpAttach2 = "/attachment"
+ 
     
     //Room API
     static let kGET_ROOM = "/api/room/"
@@ -154,7 +160,7 @@ class Constant {
     
     //MARK:- WebView URL
     static let kOQPORTAL_LINK = "https://thisisoq.sharepoint.com"
-    static let kOQPORTAL_LINK1 = "signnow-private-cloud://sso_login?refresh_token=" + UserDefaults.standard.getAccessToken() + "&access_token=" + UserDefaults.standard.getAccessToken() + "&hostname=//esign.oq.com"
+    //static let kOQPORTAL_LINK1 = "signnow-private-cloud://sso_login?refresh_token=" + UserDefaults.standard.getAccessToken() + "&access_token=" + UserDefaults.standard.getAccessToken() + "&hostname=//esign.oq.com"
     
     // MARK:-  Popup View
     

@@ -83,11 +83,24 @@ class HomeVC: BaseVC {
         self.navigationController?.isNavigationBarHidden = true
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
-        let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
-        let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
-        currentPage.currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+        
+        if menuFlag {
+             
+            let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
+            let pageSide = (layout.scrollDirection == .horizontal) ? self.pageSize.width : self.pageSize.height
+            let offset = (layout.scrollDirection == .horizontal) ? scrollView.contentOffset.x : scrollView.contentOffset.y
+            currentPage.currentPage = Int(floor((offset - pageSide / 2) / pageSide) + 1)
+
+         }else{
+           
+         }
+       
     }
+    
+   
+    
+    
+    
    
     fileprivate var pageSize: CGSize {
         let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
@@ -150,7 +163,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
 
         }else{
             let cell = gridCollectionView.dequeueReusableCell(withReuseIdentifier: kHomeMenuCollectionViewCell, for: indexPath) as! HomeMenuCollectionViewCell
-            cell.dataBind(index: indexPath, data: viewModel.rows)
+                cell.dataBind(index: indexPath, data: viewModel.rows)
             return cell
 
         }
@@ -160,46 +173,47 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
        
-        
         print("You selected cell #\(indexPath.row)!")
         
-        switch indexPath.row {
-        case 0:
+        switch viewModel.rows?[indexPath.row].title ?? "" {
+        case "1":
         
-            
+            UserDefaults.standard.setWebStatus(value: "User")
             UserDefaults.standard.set("oqportal", forKey: "webcheck")
-            UserDefaults.standard.
+            //UserDefaults.standard.setWebStatus(value: "")
+            //            UserDefaults.standard.getWebStatus()
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
 
             self.navigationController?.pushViewController(vc, animated: true)
             
             
-        case 1:
-          
+        case "2":
+            UserDefaults.standard.setWebStatus(value: "User")
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
             self.navigationController?.pushViewController(vc, animated: true)
             
             
-        case 2:
-           
+        case "3":
+            UserDefaults.standard.setWebStatus(value: "User")
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kSalmeenVC, type: SalmeenViewController.self)
             self.navigationController?.pushViewController(vc, animated: true)
             
-        case 3:
-
+        case "4":
+            UserDefaults.standard.setWebStatus(value: "User")
             let vc = Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kBusinessVC, type: BusinessVC.self)
             self.navigationController?.pushViewController(vc, animated: true)
        
         
-        case 4:
+        case "5":
             print("Helpdesk")
+            UserDefaults.standard.setWebStatus(value: "User")
             let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kHelpDeskVC, type: HelpDeskVC.self)
             self.navigationController?.pushViewController(vc, animated: true)
            
-        case 5:
+        case "6":
             
             print("IHSEE")
-            
+            UserDefaults.standard.setWebStatus(value: "User")
             guard let url = URL(string: "intelex://")else{
                 
                 return
@@ -212,8 +226,9 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
                 UIApplication.shared.open(URL(string: "https://apps.apple.com/us/app/intelex-mobile/id1097232446")!)
             }
 
-        case 6:
+        case "7":
             print("ESIGN")
+            UserDefaults.standard.setWebStatus(value: "User")
             //guard let url = URL(string: "signnow-private-cloud://sso_login?refresh_token=" + (UserDefaults.standard.getAccessToken()) + "&access_token=" + (UserDefaults.standard.getAccessToken()) + "&hostname=" + "esign.oq.com")else{https://esign.oq.com/webapp/login-sso
             guard let url = URL(string: "signnow-private-cloud://sso_login?")else{
                 
@@ -226,16 +241,27 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
                 UIApplication.shared.open(URL(string: "https://apps.apple.com/us/app/signnow-private-cloud/id1491162399")!)
             }
 
-        case 7:
+        case "8":
             print("Travel & leave request")
            
 
      
-        case 8:
+        case "9":
            print("Majalish")
+            UserDefaults.standard.setWebStatus(value: "User")
             let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kRoomBookMainVC, type: RoomBookMainVC.self)
             self.navigationController?.isNavigationBarHidden = true
             self.navigationController?.pushViewController(vc, animated: true)
+            
+        case "10":
+           print("ApproveStatus")
+        
+            
+                UserDefaults.standard.setWebStatus(value: "Admin")
+            
+             let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kApproveCancelVC, type: ApproveCancelVC.self)
+             self.navigationController?.isNavigationBarHidden = true
+             self.navigationController?.pushViewController(vc, animated: true)
 
         default:
             print("Nothing")
@@ -266,7 +292,7 @@ extension HomeVC: ViewModelDelegate{
         stopLoader()
        
         currentPage.numberOfPages = viewModel.rows?.count ?? 0
-        //userLbl.text = UserDefaults.standard.getProfile()?.displayName
+        userLbl.text = UserDefaults.standard.getProfile()?.name
         homeCollectionView.reloadData()
         gridCollectionView.reloadData()
         //currentPage.currentPage = viewModel.rows?.imageArr.count ?? 0

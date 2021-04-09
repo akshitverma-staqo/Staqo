@@ -96,7 +96,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="tmR-PD-3RR" firstAttribute="top" secondItem="E7K-b4-RKD" secondAttribute="bottom" constant="20" id="74j-sj-zto"/>
                             <constraint firstItem="jmI-gK-l6F" firstAttribute="top" secondItem="E7K-b4-RKD" secondAttribute="bottom" constant="20" id="7Xf-tw-Vbf"/>
@@ -133,12 +133,19 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="closeDateTimeLbl" destination="jmI-gK-l6F" id="cxg-z5-fz7"/>
+                <outlet property="dateTimeLbl" destination="3kL-MY-Mc4" id="b6L-38-MaJ"/>
+                <outlet property="statusLbl" destination="E7K-b4-RKD" id="Ab6-Cw-reL"/>
+                <outlet property="subjectlbl" destination="Z7v-Ad-Sk1" id="1F7-0U-005"/>
+                <outlet property="ticketLbl" destination="eDF-Hs-SBX" id="tCP-wZ-hhY"/>
+            </connections>
             <point key="canvasLocation" x="125.36231884057972" y="91.071428571428569"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

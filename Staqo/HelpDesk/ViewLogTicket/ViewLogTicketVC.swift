@@ -7,10 +7,12 @@
 
 import UIKit
 
-class ViewLogTicketVC: BaseVC ,UITableViewDelegate{
-    var viewModel:LogTicketViewModel!
+class ViewLogTicketVC: BaseVC{
+    var viewModel:ViewLogTicketViewModel!
     private let kViewLogTicketTVC = "ViewLogTicketTVC"
     @IBOutlet weak var herderView: HeaderView!
+    
+    var baseModel:BaseModel?
 
     var header:HeaderView!
 
@@ -20,10 +22,10 @@ class ViewLogTicketVC: BaseVC ,UITableViewDelegate{
 
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:100))
         header.delegate = self
-       
+
         herderView.addSubview(header)
         // Do any additional setup after loading the view.
-        viewModel = LogTicketViewModel(dataSource: LogTicketDataSource())
+        viewModel = ViewLogTicketViewModel(dataSource:ViewLogTicketDataSource())
         viewModel.delegate = self
 
         tableView.register(UINib(nibName: kViewLogTicketTVC, bundle: nil), forCellReuseIdentifier: kViewLogTicketTVC)
@@ -49,16 +51,18 @@ class ViewLogTicketVC: BaseVC ,UITableViewDelegate{
     */
 
 }
-extension ViewLogTicketVC: UITableViewDataSource{
+// MARK: - TableView Delegate
+
+extension ViewLogTicketVC: UITableViewDataSource , UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel.rowsRequests?.count ?? 0
     }
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kViewLogTicketTVC, for: indexPath) as! ViewLogTicketTVC
-       
+        cell.dataBind(data: viewModel.rowsRequests?[indexPath.row])
       
         return cell
     }
@@ -94,6 +98,9 @@ extension ViewLogTicketVC : ViewModelDelegate{
     
     
 }
+
+// MARK: - HeaderViewDelegate
+
 extension ViewLogTicketVC: HeaderViewDelegate{
     func btnMenuTapped(sender: UIButton) {
         

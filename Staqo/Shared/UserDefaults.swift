@@ -12,30 +12,20 @@ import MSGraphClientModels
 import MSAL
 import MSGraphClientSDK
 enum UserDefaultsKeys : String {
-    case isLoggedIn
-    case userID
     case userName
     case emailID
     case profileData
-    case currentAddress
     case accessToken
     case menuStatus
-    //case webStatus
+    case webStatus
+    case adminStatus
 }
 
 
 extension UserDefaults {
     
     //UserDefaults.standard.string(forKey: "tokenResult1") ?? ""
-    //// MARK:- : -  Check Login
-    func setLoggedIn(value: Bool) {
-        set(value, forKey: UserDefaultsKeys.isLoggedIn.rawValue)
-        //synchronize()
-    }
-    
-    func isLoggedIn()-> Bool {
-        return bool(forKey: UserDefaultsKeys.isLoggedIn.rawValue)
-    }
+
     
     func setAccessToken(value: String) {
         return set(value, forKey: UserDefaultsKeys.accessToken.rawValue)
@@ -46,12 +36,21 @@ extension UserDefaults {
     }
     
     
-   
+    func setWebStatus(value:String){
+        return set(value, forKey: UserDefaultsKeys.webStatus.rawValue)
+    }
+    
+    func getWebStatus() -> String {
+        return value(forKey: UserDefaultsKeys.webStatus.rawValue) as! String
+    }
     
     
-    func setUserID(value: String){
-        set(value, forKey: UserDefaultsKeys.userID.rawValue)
-        //synchronize()
+    func setAdminStatus(value: String) {
+        return set(value, forKey: UserDefaultsKeys.adminStatus.rawValue)
+        
+    }
+    func getAdminStatus() -> String {
+        return value(forKey: UserDefaultsKeys.adminStatus.rawValue) as! String
     }
  
     
@@ -67,10 +66,7 @@ extension UserDefaults {
     
     
     //// MARK:- : -  Retrieve User Data
-    func getUserID() -> String{
-        return value(forKey: UserDefaultsKeys.userID.rawValue) as! String
-    }
-    
+   
     func setEmailID(value: String) {
         set(value, forKey: UserDefaultsKeys.emailID.rawValue)
     }
@@ -87,13 +83,7 @@ extension UserDefaults {
         set(try? PropertyListEncoder().encode(value), forKey: UserDefaultsKeys.profileData.rawValue)
     }
     
-    func setCurrentAddress(value:String?){
-        set(value, forKey: UserDefaultsKeys.currentAddress.rawValue)
-    }
-    
-    func getCurrentAddress() -> String {
-        return value(forKey: UserDefaultsKeys.currentAddress.rawValue) as? String ?? ""
-    }
+  
     
     func getProfile() -> MSGraphData? {
             if let obj = data(forKey: UserDefaultsKeys.profileData.rawValue){
@@ -109,9 +99,7 @@ extension UserDefaults {
    
     
     func reset() {
-        removeObject(forKey: UserDefaultsKeys.userID.rawValue)
         removeObject(forKey: UserDefaultsKeys.userName.rawValue)
         removeObject(forKey: UserDefaultsKeys.emailID.rawValue)
-        set(false, forKey: UserDefaultsKeys.isLoggedIn.rawValue)
     }
 }

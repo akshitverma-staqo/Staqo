@@ -17,6 +17,7 @@ init(dataSource: ACDataSourceDelegate) {
 
 func bootstrap() {
     getBookedRoomData()
+    
 }
     
     func getBookedRoomData(){

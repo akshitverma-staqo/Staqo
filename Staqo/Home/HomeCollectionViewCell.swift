@@ -18,7 +18,7 @@ class HomeCollectionViewCell: UICollectionViewCell {
     }
     
     func dataBind (index:IndexPath ,data:[MenuModel]?) {
-        imgView1.image = UIImage(named: "\(data?[index.row].seqid ?? 0)")
+        imgView1.image = UIImage(named: data?[index.row].title ?? "")
         lbl1.text = data?[index.row].menuname ?? ""
         if data?[index.row].isSelected ?? false {
             imgView2.image = UIImage(named: "blob1")

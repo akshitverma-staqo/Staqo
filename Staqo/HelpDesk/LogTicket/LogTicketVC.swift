@@ -60,8 +60,9 @@ extension LogTicketVC: UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kLogTicketTVC, for: indexPath) as! LogTicketTVC
-       
-      
+        cell.delegate = self
+        cell.dataBind(data: viewModel.rows, index: indexPath, vc: self)
+        cell.dataBind1(dataSubCat: viewModel.rowsSubCat, index: indexPath)
         return cell
     }
     
@@ -114,4 +115,36 @@ extension LogTicketVC: HeaderViewDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+
+
+extension LogTicketVC : LogTicketTCVDelegate{
+    func uploadImage(file: Data, ID: String) {
+        viewModel.ticketImageUpload(file: file, ID: ID)
+    }
+    
+    func submitRequest(desc: String, subj: String, catID: String, prioName: String, subID: String) {
+        guard  let value = Helper.createTicket(desc: desc, subj: subj, catID: catID, prioName: prioName, subID: subID) else {
+                return
+            }
+            do {
+            let data = try JSONEncoder().encode(value)
+                let str = String(data: data, encoding:.utf8)
+                print(str)
+                viewModel.submitTicketData(value: str!)
+            }catch{
+                
+            }
+        
+    }
+    func getSubCat(ID: String) {
+        viewModel.getSubCatType(ID: ID)
+    }
+    
+    func showMsgValidation(msg: String) {
+        showErrorMessage(title: "Error...", message: msg) { (action) in
+            
+        }
+    }
+
 }

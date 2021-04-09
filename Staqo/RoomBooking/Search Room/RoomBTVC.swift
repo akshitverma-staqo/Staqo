@@ -266,6 +266,7 @@ class RoomBTVC: UITableViewCell {
     
     }
 }
+//MARK:- Textfield Delegats
 extension RoomBTVC: UITextFieldDelegate{
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let textString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
@@ -421,6 +422,7 @@ extension RoomBTVC: UITextFieldDelegate{
         }
     }
 }
+//MARK:- Picker view Delegats
 extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
