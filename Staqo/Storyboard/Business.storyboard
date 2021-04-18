@@ -72,7 +72,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="btnBCVTapped:" destination="3bU-8n-0S0" eventType="touchUpInside" id="aO6-Al-9xq"/>
+                                                    <action selector="btnSVTapped:" destination="3bU-8n-0S0" eventType="touchUpInside" id="upE-NV-XSo"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -96,7 +96,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="btnBCVTapped:" destination="3bU-8n-0S0" eventType="touchUpInside" id="HUh-fH-S3U"/>
+                                                    <action selector="btnBCVTapped:" destination="3bU-8n-0S0" eventType="touchUpInside" id="cSC-8m-zIg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -639,7 +639,7 @@
         <!--Visiting Card Data-->
         <scene sceneID="b5E-5K-SW3">
             <objects>
-                <viewController storyboardIdentifier="visitingCardDataContentsVC" id="dKn-0y-NMp" customClass="VisitingCardData" customModule="Staqo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VisitingCardData" id="dKn-0y-NMp" customClass="VisitingCardData" customModule="Staqo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yCy-Pc-5hM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -727,7 +727,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJe-Lk-qOj">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Mohammed KT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7H-wj-E4T">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A7H-wj-E4T">
                                                                         <rect key="frame" x="25" y="22" width="270" height="16"/>
                                                                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="14"/>
@@ -790,7 +790,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Mq-Y1-wZq">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="mohammed.kt@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="267-Pr-8Nw">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="267-Pr-8Nw">
                                                                         <rect key="frame" x="25" y="22" width="270" height="16"/>
                                                                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="14"/>
@@ -856,7 +856,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yxu-r8-JXy">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="9876543210" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ewk-Es-Jun">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ewk-Es-Jun">
                                                                         <rect key="frame" x="25" y="22" width="270" height="16"/>
                                                                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="14"/>
@@ -919,7 +919,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oAh-s2-oLa">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="OXEA GmbH, Rheinpromenade 4a …" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-vi-Grz">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Ma-vi-Grz">
                                                                         <rect key="frame" x="25" y="22" width="270" height="16"/>
                                                                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="14"/>
@@ -982,7 +982,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VrM-1y-Q9E">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ABC example company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1s-gR-mU4">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C1s-gR-mU4">
                                                                         <rect key="frame" x="25" y="22" width="270" height="16"/>
                                                                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="14"/>
@@ -1045,7 +1045,7 @@
                                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gle-EA-3MN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="60"/>
                                                                 <subviews>
-                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ABC example company" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKF-Pb-K6Z">
+                                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nKF-Pb-K6Z">
                                                                         <rect key="frame" x="25" y="22" width="270" height="16"/>
                                                                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="14"/>
@@ -1380,6 +1380,7 @@
                         <outlet property="emailInnerView" destination="3Mq-Y1-wZq" id="VGj-xC-7rB"/>
                         <outlet property="emailShadowView" destination="Q7t-Of-Fsp" id="aUL-E0-fla"/>
                         <outlet property="emailTxtField" destination="267-Pr-8Nw" id="aVj-kS-PlT"/>
+                        <outlet property="herderView" destination="Gty-3q-Xca" id="Kre-7G-Dk9"/>
                         <outlet property="nameInner" destination="gJe-Lk-qOj" id="JPa-GW-NzR"/>
                         <outlet property="nameShadow" destination="7QV-WT-9Q3" id="inU-iK-RJM"/>
                         <outlet property="nameTextField" destination="A7H-wj-E4T" id="4fw-lr-gA1"/>

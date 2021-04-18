@@ -85,6 +85,7 @@ class EmpVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
+        
         header.btnProfile .isHidden = true
         self.navigationController?.isNavigationBarHidden = true
     }
@@ -119,10 +120,11 @@ extension EmpVC : ViewModelDelegate{
     }
     
     func didFail(error: CustomError) {
+        stopLoader()
         showErrorMessage(title: "Error", error: error) { (action) in
             
         }
-        stopLoader()
+      
     }
     
     

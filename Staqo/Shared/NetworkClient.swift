@@ -109,7 +109,7 @@ class NetworkClient {
 //        }
 //    }
     static func requestAlmofire<K:Codable>(passToUrl url:String, passToMethod method:HTTPMethod, passToParameter parameter:Any?=nil, passToHeader header:HTTPHeaders? , success successCallBack: @escaping (StaoqResult<K>) -> Void,error errorCallBack: @escaping (CustomError) -> Void, failure failureCallBack: @escaping (CustomError) -> Void ){
-        Alamofire.request(url, method: method, parameters:parameter as! [String: Any]?, encoding: JSONEncoding.default, headers: header).responseJSON { (responce) in
+        Alamofire.request(url, method: method, parameters:parameter as! [String: Any]?, encoding: JSONEncoding.prettyPrinted, headers: header).responseJSON { (responce) in
             switch responce.result {
             
             case .success(let data):

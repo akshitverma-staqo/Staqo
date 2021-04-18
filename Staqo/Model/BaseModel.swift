@@ -21,7 +21,7 @@ struct BaseModel : Codable {
     var categories : [Categories]?
     var allrequests : Allrequests?
     var subcategories : [Subcategories]?
-
+    var documentsData : [Documents]?
   
     
     
@@ -40,7 +40,7 @@ struct BaseModel : Codable {
         case categories = "categories"
         case allrequests = "allrequests"
         case subcategories = "subcategories"
-        
+        case documentsData = "documents"
     }
     init() {
         
@@ -59,7 +59,7 @@ struct BaseModel : Codable {
         categories = try values.decodeIfPresent([Categories].self, forKey: .categories)
         allrequests = try values.decodeIfPresent(Allrequests.self, forKey: .allrequests)
         subcategories = try values.decodeIfPresent([Subcategories].self, forKey: .subcategories)
-
+        documentsData = try values.decodeIfPresent([Documents].self, forKey: .documentsData)
        
 }
 

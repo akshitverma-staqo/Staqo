@@ -15,11 +15,13 @@ import Contacts
 
 
 
-public class VisitingCardData: UIViewController, UITextFieldDelegate,UITextViewDelegate {
+class VisitingCardData: BaseVC {
     
+    var header:HeaderView!
+    @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var profileImage: UIImageView!
-    
-    
+    var docData:[Entities]?
+    var viewModel:VCDViewModel!
     @IBOutlet weak var submitBtnOutlet: UIButton!
     @IBOutlet weak var submitShadowView: UIView!
     @IBOutlet weak var noImageView: UIImageView!
@@ -81,6 +83,9 @@ public class VisitingCardData: UIViewController, UITextFieldDelegate,UITextViewD
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
+        header.delegate = self
+        herderView.addSubview(header)
         
         nameShadow.dropShadow()
         nameInner.layer.cornerRadius = 10
@@ -126,13 +131,41 @@ public class VisitingCardData: UIViewController, UITextFieldDelegate,UITextViewD
         self.emailTxtField.delegate = self
         self.companyText.delegate = self
         self.addressTxtField?.delegate = self
-        self.nameTextField?.text = UserDefaults.standard.string(forKey: "person")
-        self.phoneTxtField?.text = UserDefaults.standard.string(forKey: "scanphone")
-        self.webSiteTextField?.text = UserDefaults.standard.string(forKey: "scanwebsite")
-        self.emailTxtField?.text = UserDefaults.standard.string(forKey: "scanemail")
-        self.addressTxtField?.text = UserDefaults.standard.string(forKey: "finalLocation")
-        self.companyText?.text = UserDefaults.standard.string(forKey: "Organization")
+        var addressString:String = ""
+        docData?.forEach({ (value) in
+            if value.category == "Phone Number"{
+                self.phoneTxtField.text = value.text
+            }else if value.category == "URL"{
+                self.webSiteTextField.text = value.text
+
+            }else if value.category == "Organization"{
+                self.companyText.text = value.text
+
+            }else if value.category == "Email"{
+                self.emailTxtField.text = value.text
+
+            }else if value.category == "Person"{
+                self.nameTextField.text = value.text
+
+            }else if value.category == "Address"{
+                addressString =  addressString +  (value.text ?? "")
+
+            }else if value.category == "Location"{
+                addressString = addressString +  (value.text ?? "")
+
+            }
+    
+    })
         
+       
+        self.addressTxtField.text = addressString
+
+        
+//        for  item in 0..< (docData?.count ?? 0) {
+//
+//        }
+        
+
         self.commentTextView.placeholder = "Remark"
        
         
@@ -140,59 +173,63 @@ public class VisitingCardData: UIViewController, UITextFieldDelegate,UITextViewD
         accessToken = UserDefaults.standard.string(forKey: "tokenResult1") ?? ""
         
         isCheck = true
-        GraphManager.instance.getMe {
-            (user: MSGraphUser?, error: Error?) in
-            
-            DispatchQueue.main.async { [self] in
-                guard let currentUser = user, error == nil else {
-                    print("Error getting user: \(String(describing: error))")
-                    return
-                }
-               
-                visitorEmailID = currentUser.mail ?? currentUser.userPrincipalName ?? ""
-                let headers: HTTPHeaders = [
-                    "Authorization": "Bearer "+accessToken+""
-                ]
-                let urlEmp = UserDefaults.standard.string(forKey: "EMPLOYEE_FOR_ID")
-                let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "SITE_ID")!))\(String(describing: urlEmp!))\(visitorEmailID)'"
-                print("EMPLOYEE_FOR_ID" + urlStr)
-               
-                //NetworkClient.request(url: urlStr, method: .get, parameters: nil, encoder: JSONEncoding.default, headers: headers)
-//                AF.request(urlStr, encoding: JSONEncoding.default, headers: headers)
-//                    .responseJSON { response in
-//                        print(response)
-//                        //to get status code
+        
+        
+        viewModel = VCDViewModel(dataSource: VCDDataSource())
+        viewModel.delegate = self
+//        GraphManager.instance.getMe {
+//            (user: MSGraphUser?, error: Error?) in
 //
-//                        if let data = response.data {
-//                            do{
-//                                let json = try JSON(data:data)
-//                                //print(json)
-//                                self.spinner.stop()
+//            DispatchQueue.main.async { [self] in
+//                guard let currentUser = user, error == nil else {
+//                    print("Error getting user: \(String(describing: error))")
+//                    return
+//                }
 //
-//                                valueId = json["value"][0]["id"].string ?? ""
-//                                print(valueId)
+//                visitorEmailID = currentUser.mail ?? currentUser.userPrincipalName ?? ""
+//                let headers: HTTPHeaders = [
+//                    "Authorization": "Bearer "+accessToken+""
+//                ]
+//                let urlEmp = UserDefaults.standard.string(forKey: "EMPLOYEE_FOR_ID")
+//                let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "SITE_ID")!))\(String(describing: urlEmp!))\(visitorEmailID)'"
+//                print("EMPLOYEE_FOR_ID" + urlStr)
+//
+//                //NetworkClient.request(url: urlStr, method: .get, parameters: nil, encoder: JSONEncoding.default, headers: headers)
+////                AF.request(urlStr, encoding: JSONEncoding.default, headers: headers)
+////                    .responseJSON { response in
+////                        print(response)
+////                        //to get status code
+////
+////                        if let data = response.data {
+////                            do{
+////                                let json = try JSON(data:data)
+////                                //print(json)
+////                                self.spinner.stop()
+////
+////                                valueId = json["value"][0]["id"].string ?? ""
+////                                print(valueId)
+////
+////
+////
+////
+////                            }catch let err{
+////                                self.spinner.stop()
+////
+////                                print(err.localizedDescription)
+////                            }
+////
+////
+////
+////                        }
+////                    }
 //
 //
 //
-//
-//                            }catch let err{
-//                                self.spinner.stop()
-//
-//                                print(err.localizedDescription)
-//                            }
+//            }
 //
 //
 //
-//                        }
-//                    }
-                
-                
-                
-            }
-            
-            
-            
-        }
+//        }
         
         
         
@@ -200,21 +237,13 @@ public class VisitingCardData: UIViewController, UITextFieldDelegate,UITextViewD
         
     }
     
-   
-    
-    public func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            commentTextView.resignFirstResponder()
-            return false
-        }
-        return true
+    public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
+        header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() )", for: .normal)
+
+        self.navigationController?.isNavigationBarHidden = true
     }
-    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
-    
-    
     
     
     @IBAction func yesBtnAction(_ sender: UIButton) {
@@ -333,46 +362,7 @@ public class VisitingCardData: UIViewController, UITextFieldDelegate,UITextViewD
         
         }else{
             
-            let headers: HTTPHeaders = [
-                "Authorization": "Bearer "+accessToken+"",
-                "Content-Type" : "application/json"
-                
-            ]
-            let str = UserDefaults.standard.string(forKey: "VISITOR_DUPLICATE")
-            let replaced = str!.replacingOccurrences(of: "**email**", with: emailTxtField.text ?? "").replacingOccurrences(of: "**mobile**", with: phoneTxtField.text ?? "")
-           
-            
-            let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "SITE_ID")!))\(String(describing: replaced))"
-
-            //NetworkClient.request(url: urlStr, method: .get, parameters: nil, encoder: JSONEncoding.prettyPrinted, headers: headers)
-//            AF.request(urlStr, encoding: JSONEncoding.prettyPrinted, headers: headers)
-//                .responseJSON { response in
-//                    print(response)
-//                    //to get status code
-//                    self.spinner.stop()
-//                    if let data = response.data {
-//                        do{
-//                            let json = try JSON(data:data)
-//                            let value = json["value"]
-//                            //let jsonvalue = json["value"][0]["fields"]
-//
-//                            print("Hello the value part is")
-//                            print(value.count)
-//                            if value.count == 0 {
-//
-//                                self.setData()
-//                                print("Data not saved already")
-//                            }
-//                            else{
-//                                print("Contact Already Saved,...")
-//                            }
-//                        }catch let err{
-//                            print(err.localizedDescription)
-//                            self.spinner.stop()
-//
-//                        }
-//                    }
-//                }
+            viewModel.visitSaveData(email: emailTxtField.text ?? "", empID: Int( UserDefaults.standard.getEmpID()) ?? 0, name: nameTextField.text ?? "", cmpName: companyText.text ?? "", webSite: webSiteTextField.text ?? "", address: addressTxtField.text ?? "", mobileNo: phoneTxtField.text ?? "", remark: commentTextView.text ?? "", scanBy: scanby)
         }
     }
 
@@ -424,30 +414,60 @@ public class VisitingCardData: UIViewController, UITextFieldDelegate,UITextViewD
 
 }
 
-
-//extension UIViewController{
-//    
-//    public func openAlert(title: String,
-//                          message: String,
-//                          alertStyle:UIAlertController.Style,
-//                          actionTitles:[String],
-//                          actionStyles:[UIAlertAction.Style],
-//                          actions: [((UIAlertAction) -> Void)]){
-//        
-//        let alertController = UIAlertController(title: title, message: message, preferredStyle: alertStyle)
-//        for(index, indexTitle) in actionTitles.enumerated(){
-//            let action = UIAlertAction(title: indexTitle, style: actionStyles[index], handler: actions[index])
-//            alertController.addAction(action)
-//        }
-//        self.present(alertController, animated: true)
-//    }
-//}
-extension String {
-    func isEmailFormatted() -> Bool {
-        // swiftlint:disable line_length
-        let emailRegex = "[A-Za-z0-9!#$%&'+/=?^_`{|}~-]+(\\.[A-Za-z0-9!#$%&'+/=?^_`{|}~-]+)@([A-Za-z0-9]([A-Za-z0-9-][A-Za-z0-9])?\\.)+[A-Za-z0-9]([A-Za-z0-9-]*[A-Za-z0-9])?"
-        // swiftlint:enable line_length
-        let predicate = NSPredicate(format: "SELF MATCHES %@", emailRegex)
-        return predicate.evaluate(with: self)
+extension VisitingCardData: HeaderViewDelegate{
+    func btnMenuTapped(sender: UIButton) {
+        let vc =  Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kBusinessVC, type: BusinessVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    func btnProfileTapped(sender: UIButton) {
+        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func btnLogoutTapped(sender: UIButton) {
+        
+        let vc = Constant.getViewController(storyboard: Constant.kNotification, identifier: Constant.kNotificationVC, type: NotificationVC.self)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+}
+
+
+
+extension VisitingCardData : UITextFieldDelegate{
+    public override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            commentTextView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+}
+extension VisitingCardData : ViewModelDelegate{
+    func willLoadData() {
+        startLoader()
+    }
+    
+    func didLoadData() {
+        stopLoader()
+        showErrorMessage(title: "", error: CustomError.Saved) { (action) in
+            let vc =  Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kBusinessVC, type: BusinessVC.self)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+       
+    }
+    
+    func didFail(error: CustomError) {
+        stopLoader()
+        showErrorMessage(title: "Error...", error: error) { (action) in
+            
+        }
+    }
+    
+    
 }

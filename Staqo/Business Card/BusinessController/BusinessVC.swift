@@ -35,7 +35,8 @@ class BusinessVC: BaseVC {
         scanBtnOutlet.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
         
         self.navigationController?.isNavigationBarHidden = true
-
+        viewModal = BusinessViewModal(dataSource: BusinessDataSource())
+        viewModal.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -89,17 +90,7 @@ class BusinessVC: BaseVC {
                 //self.scannedText = text
                 
                 DispatchQueue.main.async {
-                    guard  let value = Helper.createTextReader(scannedText: text) else {
-                        return
-                    }
-                    do {
-                    let data = try JSONEncoder().encode(value)
-                        let str = String(data: data, encoding:.utf8)
-                        print(str)
-                        self.viewModal.getTextReader(value: str ?? "")
-                    }catch{
-                        
-                    }
+                    self.viewModal.getTextReader(value:text)
                 }
                 
             }
@@ -116,6 +107,10 @@ extension BusinessVC: ViewModelDelegate{
     }
     
     func didLoadData() {
+        dismiss(animated: true, completion: nil)
+        let vc = Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kVisitingCardDataVC, type: VisitingCardData.self)
+        vc.docData = viewModal.docData
+        self.navigationController?.pushViewController(vc, animated: true)
         stopLoader()
     }
     
@@ -143,6 +138,12 @@ extension BusinessVC: VNDocumentCameraViewControllerDelegate {
                 
             }
         }
+    }
+    func documentCameraViewControllerDidCancel(_ controller: VNDocumentCameraViewController) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    func documentCameraViewController(_ controller: VNDocumentCameraViewController, didFailWithError error: Error) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
 

@@ -34,6 +34,8 @@ enum ResourceType {
     case submitTicketData(value:String)
     case ticketImageUpload(file: Data, ID:String)
     case approveCancel(bookingId: Int, roomStatus: String, approvedBy: String, userType: String,cancelBy: String, cancelRemark: String)
+    case insertEmpData(email:String , orgID:Int, name:String , fcmToken:String , desig:String,mobileNo:String)
+   
     var localLocation: URL? {
 
         switch self {
@@ -70,6 +72,8 @@ extension ResourceType:TargetType {
             return URL(string: Configuration.authURL)!
         case.roomData(_) , .readNotification(_),.addNotification(_,_,_,_),.roomLocation,.roomType,.roomArrangment(_),.dashboardMeneData,.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getCatData,.getTicket,.getSubCatData(_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
             return URL(string: Configuration.ftpURL)!
+        case .getTextReader(_):
+            return URL(string: Configuration.BNSUrl)!
         default:
             return URL(string:Configuration.baseURL)!
         }
@@ -85,7 +89,7 @@ extension ResourceType:TargetType {
         case .updateByEmpID(_, let ID):
             return Constant.kSiteID + Constant.kEMPLOYEE_FIND_BY_ID + ID + "/fields"
         case .getTextReader(_):
-            return Constant.kTest_Reader
+            return Constant.kBusinessData2
         case .roomData(let ID):
             return Constant.kGET_ROOM + ID
         case .notificationData(let email):
@@ -97,7 +101,7 @@ extension ResourceType:TargetType {
             return  Constant.kAddNotification
             
         case .dashboardMeneData:
-            return Constant.kGetDashboardData
+            return Constant.kGetDashboardData + "/" + (UserDefaults.standard.getProfile()?.email ?? "")
     
         case .roomType:
             return Constant.kAllRoomType
@@ -129,6 +133,8 @@ extension ResourceType:TargetType {
             return Constant.kHelpAttach1 + ID + Constant.kHelpAttach2
         case .approveCancel(_, _, _, _, _,_):
             return Constant.kUpdateRoomStatus
+        case .insertEmpData:
+            return Constant.kSiteID + Constant.kEMPLOYEE_REGISTER
         }
         
         
@@ -140,7 +146,7 @@ extension ResourceType:TargetType {
             return Moya.Method.get
         case .updateByEmpID(_,_):
             return Moya.Method.patch
-        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_):
+        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_),.insertEmpData(_,_,_,_,_,_):
             return Moya.Method.post
         
         }
@@ -161,6 +167,15 @@ extension ResourceType:TargetType {
             
         case .approveCancel(let bookingId,let roomStatus,let approvedBy,let userType,let cancelBy,let cancelRemark):
         return ["bookingId":bookingId, "roomStatus":roomStatus, "approvedBy":approvedBy, "userType":userType, "cancelBy":cancelBy,"cancelRemark":cancelRemark]
+        case .insertEmpData(let email, let orgID, let name, let fcmToken, let desig, let mobileNo):
+            return
+                ["fields": ["Title":"oqtest@staqo.com","organizationidLookupId":"5","name":"Vishnu","ipaddress":"","designation":"hello","department":"IT","emailid":"oqtest@staqo.com","mobileno1":"9911933243"]]
+            //["fields":["Title":email,"organizationidLookupId":orgID,"name":name,"ipaddress":fcmToken,"designation":desig,"department":"IT","emailid":email,"mobileno1":mobileNo]]
+        case .getTextReader(let value):
+            return  ["documents" : [
+                ["language":"","id":"5","text":value]
+]
+]
         default:
             return nil
         }
@@ -169,8 +184,8 @@ extension ResourceType:TargetType {
     
     var para: String?{
         switch self {
-        case .getTextReader(let value):
-            return value
+//        case .getTextReader(let value):
+//            return value
         case.searchRoom(let value):
             return value
         case .download(let fileName):
@@ -194,11 +209,11 @@ extension ResourceType:TargetType {
             return .requestPlain
         case .download(_):
             return .downloadDestination(downloadDestination)
-        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_):
+        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_),.getTextReader(_):
             return .requestParameters(parameters: parameters!, encoding: JSONEncoding.default)
-        case .getTextReader(_):
-            let data = Data(para!.utf8)
-            return .requestData(data)
+//        case .getTextReader(_):
+//            let data = Data(para!.utf8)
+//            return .requestData(data)
         case .searchRoom(_):
             let data = Data(para!.utf8)
             return .requestData(data)
@@ -212,6 +227,8 @@ extension ResourceType:TargetType {
             print(uploadFile)
            // let requestID = MultipartFormData(provider: .data("\(ID)".data(using: String.Encoding.utf8) ?? Data()), name: "request_id")
             return .uploadMultipart([uploadFile])
+        case .insertEmpData(_,_,_,_,_,_):
+            return .requestParameters(parameters: parameters!, encoding: JSONEncoding.prettyPrinted)
 //        case .bookRoom(_):
 //            let data = Data(para!.utf8)
 //            return .requestData(data)

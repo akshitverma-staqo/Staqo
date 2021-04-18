@@ -30,10 +30,11 @@ class LoginViewModel: ViewModelType {
             DispatchQueue.main.async {
               
                 
-                guard let _ = token, error == nil else {
+                guard let accessToken = token, error == nil else {
                     ws.delegate?.didFail(error: CustomError.OtherError(error: error!))
                     return
                 }
+                UserDefaults.standard.setAccessToken(value: accessToken)
                 ws.delegate?.didLoadData()
                 // Signed in successfully
                 // Go to welcome page

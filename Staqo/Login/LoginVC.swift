@@ -10,6 +10,7 @@ import LocalAuthentication
 
 class LoginVC: BaseVC {
     var viewModel:LoginViewModel!
+    
     @IBOutlet weak var xConstraint: NSLayoutConstraint!
     @IBOutlet weak var yConstraint: NSLayoutConstraint!
     @IBOutlet weak var halfLogo: UIImageView!
@@ -21,6 +22,9 @@ class LoginVC: BaseVC {
         super.viewDidLoad()
         viewModel = LoginViewModel(dataSource: LoginDataSource())
         viewModel.delegate = self
+        
+        
+        
       //  UserDefaults.standard.setMenuValue(value: true)
         print(Configuration.baseURL)
         self.navigationController?.isNavigationBarHidden = true

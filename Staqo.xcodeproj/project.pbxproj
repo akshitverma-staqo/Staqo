@@ -153,6 +153,9 @@
 		76F1FB2525F281D300D88F79 /* EmpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1FB2425F281D300D88F79 /* EmpVC.swift */; };
 		76F1FB2A25F281F200D88F79 /* EmpViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1FB2925F281F100D88F79 /* EmpViewModal.swift */; };
 		76F1FB3225F2915B00D88F79 /* EmpDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F1FB3125F2915B00D88F79 /* EmpDataSource.swift */; };
+		76F372BC262C6017001DF34E /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F372BB262C6017001DF34E /* Entities.swift */; };
+		76F372C1262C980B001DF34E /* VCDDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F372C0262C980B001DF34E /* VCDDataSource.swift */; };
+		76F372C6262C9826001DF34E /* VCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F372C5262C9826001DF34E /* VCDViewModel.swift */; };
 		76FFB4DF2616243A003FBBF8 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76FFB4DD26162438003FBBF8 /* HeaderView.xib */; };
 		76FFB4E02616243A003FBBF8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FFB4DE2616243A003FBBF8 /* HeaderView.swift */; };
 		BF8DCA3832A9A9BB23B1D424 /* Pods_Staqo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2501CD86A8CB56FC58286A6 /* Pods_Staqo.framework */; };
@@ -354,6 +357,9 @@
 		76F1FB2425F281D300D88F79 /* EmpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpVC.swift; sourceTree = "<group>"; };
 		76F1FB2925F281F100D88F79 /* EmpViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpViewModal.swift; sourceTree = "<group>"; };
 		76F1FB3125F2915B00D88F79 /* EmpDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmpDataSource.swift; sourceTree = "<group>"; };
+		76F372BB262C6017001DF34E /* Entities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
+		76F372C0262C980B001DF34E /* VCDDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDDataSource.swift; sourceTree = "<group>"; };
+		76F372C5262C9826001DF34E /* VCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDViewModel.swift; sourceTree = "<group>"; };
 		76FFB4DD26162438003FBBF8 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		76FFB4DE2616243A003FBBF8 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8823E62ABD353BD79E5BCDC6 /* Pods-StaqoTests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.dev release.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.dev release.xcconfig"; sourceTree = "<group>"; };
@@ -541,6 +547,8 @@
 			children = (
 				76970620262880000063BABA /* UITextViewPlaceholder.swift */,
 				7697061B26287F4A0063BABA /* VisitingCardData.swift */,
+				76F372C0262C980B001DF34E /* VCDDataSource.swift */,
+				76F372C5262C9826001DF34E /* VCDViewModel.swift */,
 			);
 			path = BCScannedData;
 			sourceTree = "<group>";
@@ -885,6 +893,7 @@
 				76A103C925F7F2AA00C536B9 /* MSGraphData.swift */,
 				767BEBD92601264900B6A3C3 /* Documents.swift */,
 				767BEBD42601261B00B6A3C3 /* TextReader.swift */,
+				76F372BB262C6017001DF34E /* Entities.swift */,
 				76D66E7E2618984F0013E5B4 /* RoomSearchModel.swift */,
 				76D66F1A261CA1220013E5B4 /* RoomBookModel.swift */,
 				7667E7912614BC7F00EB624E /* ReadNotify.swift */,
@@ -1234,6 +1243,7 @@
 				76A1046125FFA76300C536B9 /* VisitorListVC.swift in Sources */,
 				CD5DB42125D5A26300353084 /* AppDelegate.swift in Sources */,
 				76D66EB12619B3690013E5B4 /* ACViewModel.swift in Sources */,
+				76F372C1262C980B001DF34E /* VCDDataSource.swift in Sources */,
 				76C3AC8D261F5AE500FC6B85 /* Status.swift in Sources */,
 				CD5DB42325D5A26300353084 /* SceneDelegate.swift in Sources */,
 				76C3ACA0261F602700FC6B85 /* Technician.swift in Sources */,
@@ -1289,6 +1299,7 @@
 				76F1FB2525F281D300D88F79 /* EmpVC.swift in Sources */,
 				76A1046B25FFA81000C536B9 /* VisitorListDataSource.swift in Sources */,
 				7667E7C32615AC8300EB624E /* ViewLogTicketDataSource.swift in Sources */,
+				76F372C6262C9826001DF34E /* VCDViewModel.swift in Sources */,
 				7667E7BE2615AC7100EB624E /* ViewLogTicketViewModel.swift in Sources */,
 				76656D90260C65B10080669B /* ContactViewController.swift in Sources */,
 				7693C62E25F3E304001665DF /* BusinessCardVC.swift in Sources */,
@@ -1300,6 +1311,7 @@
 				76F1FB0D25E966F600D88F79 /* WebViewVC.swift in Sources */,
 				76C3AC79261F5A4800FC6B85 /* Allrequests.swift in Sources */,
 				76D66F03261C4CE50013E5B4 /* BRVModel.swift in Sources */,
+				76F372BC262C6017001DF34E /* Entities.swift in Sources */,
 				76A103AD25F7E6C500C536B9 /* User.swift in Sources */,
 				76A0F541260B433C00601483 /* RoomBookingVC.swift in Sources */,
 				76D66E7F261898500013E5B4 /* RoomSearchModel.swift in Sources */,

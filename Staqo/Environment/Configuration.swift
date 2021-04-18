@@ -66,11 +66,11 @@ struct Configuration {
         return url
     }()
     
-//    static let Users: String = {
-//        guard let user = environmentSettings?["Users"] else {
-//            assertionFailure("Users is not set for environment: \(environment)!")
-//            return ""
-//        }
-//        return user
-//    }()
+    static let BNSUrl: String = {
+        guard let user = environmentSettings?["BNSUrl"] else {
+            assertionFailure("Users is not set for environment: \(environment)!")
+            return ""
+        }
+        return user
+    }()
 }

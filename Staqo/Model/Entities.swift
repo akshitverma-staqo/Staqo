@@ -12,32 +12,29 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Documents : Codable {
-	var language : String?
-	var id : String?
-	var text : String?
-    var entities : [Entities]?
-    var warnings : [String]?
-    
+struct Entities : Codable {
+	let text : String?
+	let category : String?
+	let offset : Int?
+	let length : Int?
+	let confidenceScore : Double?
+
 	enum CodingKeys: String, CodingKey {
 
-		case language = "language"
-		case id = "id"
 		case text = "text"
-        case entities = "entities"
-        case warnings = "warnings"
-
+		case category = "category"
+		case offset = "offset"
+		case length = "length"
+		case confidenceScore = "confidenceScore"
 	}
-    init() {
-        
-    }
+
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		language = try values.decodeIfPresent(String.self, forKey: .language)
-		id = try values.decodeIfPresent(String.self, forKey: .id)
 		text = try values.decodeIfPresent(String.self, forKey: .text)
-        entities = try values.decodeIfPresent([Entities].self, forKey: .entities)
-        warnings = try values.decodeIfPresent([String].self, forKey: .warnings)
+		category = try values.decodeIfPresent(String.self, forKey: .category)
+		offset = try values.decodeIfPresent(Int.self, forKey: .offset)
+		length = try values.decodeIfPresent(Int.self, forKey: .length)
+		confidenceScore = try values.decodeIfPresent(Double.self, forKey: .confidenceScore)
 	}
 
 }

@@ -10,6 +10,8 @@
 		<string>https://graph.microsoft.com/v1.0</string>
 		<key>BaseURL</key>
 		<string>https://graph.microsoft.com/v1.0/sites/</string>
+		<key>BNSUrl</key>
+		<string>https://textmobile.cognitiveservices.azure.com/</string>
 	</dict>
 	<key>PROD</key>
 	<dict>
@@ -19,6 +21,8 @@
 		<string>PROD AuthURL</string>
 		<key>BaseURL</key>
 		<string>BaseURl</string>
+		<key>BNSUrl</key>
+		<string>https://textmobile.cognitiveservices.azure.com//</string>
 	</dict>
 </dict>
 </plist>

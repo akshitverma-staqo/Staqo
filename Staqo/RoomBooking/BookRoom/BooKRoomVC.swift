@@ -40,6 +40,8 @@ class BooKRoomVC: BaseVC, UITableViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
+        header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() )", for: .normal)
+
         self.navigationController?.isNavigationBarHidden = true
     }
     func checkedData(index:Int){

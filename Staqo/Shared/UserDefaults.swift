@@ -20,6 +20,7 @@ enum UserDefaultsKeys : String {
     case webStatus
     case adminStatus
     case notifyCount
+    case empID
 }
 
 
@@ -38,7 +39,12 @@ extension UserDefaults {
         return value(forKey: UserDefaultsKeys.accessToken.rawValue) as! String
     }
     
-    
+    func setEmpID(value:String) {
+        set(value , forKey: UserDefaultsKeys.empID.rawValue)
+    }
+    func getEmpID() ->String{
+        return value(forKey: UserDefaultsKeys.empID.rawValue) as! String
+    }
     func setWebStatus(value:String){
         return set(value, forKey: UserDefaultsKeys.webStatus.rawValue)
     }

@@ -14,6 +14,7 @@ class HomeVC: BaseVC {
     var header:HeaderView!
     var viewModel:HomeViewModal!
     var viewModelNotify: NotificationViewModel!
+    var empViewModel:EmpViewModal!
     var menuFlag:Bool = true
     @IBOutlet weak var userLbl: UILabel!
     @IBOutlet var currentPage: UIPageControl!
@@ -33,6 +34,8 @@ class HomeVC: BaseVC {
         viewModel = HomeViewModal(dataSource: HomeDataSource())
         viewModel.delegate = self
         viewModel.bootstrap()
+        empViewModel = EmpViewModal(dataSource: EmpDataSource())
+        empViewModel.empDelegate = self
         
             homeCollectionView.register(UINib(nibName: kHomeCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeCollectionViewCell)
             gridCollectionView.register(UINib(nibName: kHomeMenuCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeMenuCollectionViewCell)
@@ -97,11 +100,7 @@ class HomeVC: BaseVC {
        
     }
     
-   
-    
-    
-    
-   
+
     fileprivate var pageSize: CGSize {
         let layout = self.homeCollectionView.collectionViewLayout as! UPCarouselFlowLayout
         var pageSize = layout.itemSize
@@ -292,6 +291,7 @@ extension HomeVC: ViewModelDelegate{
         
         stopLoader()
        
+        empViewModel.bootstrap()
         currentPage.numberOfPages = viewModel.rows?.count ?? 0
         userLbl.text = UserDefaults.standard.getProfile()?.name
         homeCollectionView.reloadData()
@@ -331,9 +331,15 @@ extension HomeVC: HeaderViewDelegate{
 }
 extension HomeVC : GetNotifyCountDelegate{
     func getNotifyCount() {
-    
-        header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() ?? 0)", for: .normal)
+    stopLoader()
+        header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() )", for: .normal)
     }
     
+    
+}
+extension HomeVC:EmpRefreshDelegate{
+    func getRefresh() {
+        stopLoader()
+    }
     
 }

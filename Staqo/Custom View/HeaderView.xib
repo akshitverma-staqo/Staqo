@@ -59,7 +59,7 @@
                         <constraint firstAttribute="width" constant="25" id="td3-BL-myU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <state key="normal" title="2">
+                    <state key="normal">
                         <color key="titleColor" red="1" green="0.22745098039215686" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                 </button>

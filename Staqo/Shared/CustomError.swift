@@ -60,7 +60,7 @@ enum CustomError:Printable {
         case .Logout:
             return "You are about to logout, click Yes to end the session or cancel to continue."
         case .NoContent:
-            return "There are no contents available for the selection."
+            return "There are no available."
         case .DownloadFailed:
             return "We were unable to download, try later."
         case .Saved:

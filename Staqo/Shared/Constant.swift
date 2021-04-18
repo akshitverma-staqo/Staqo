@@ -27,12 +27,13 @@ class Constant {
     static let kSALMEEN_POINT1 = "https://thisisoq.sharepoint.com/Pages/Salmeen.aspx"
     static let kSALMEEN_POINT2 = "https://oq.com/en/covid-19/declaration-employees"
     static let kUSER_PIC_FROMAD = "https://graph.microsoft.com/v1.0/users/**useremail**/photo/$value"
-    static let kEMPLOYEE_FOR_ID = "/lists/Employee Master/items/?$expand=fields&$filter=fields/emailid eq '"
+    static let kEMPLOYEE_FOR_ID = "/lists/Employee%20Master/items/?$expand=fields&$filter=fields/emailid%20eq%20'"
     static let kEMPLOYEE_FIND_BY_ID = "/lists/Employee%20Master/items/"
-    static let kEMPLOYEE_REGISTER =  "/lists/Employee%20Master/items"
+    static let kEMPLOYEE_REGISTER =  "/lists/Employee Master/items"
     static let kMAZZAYAKOM_SUB_CATEGORY_URL =  "/lists/Corporate_Offers/items/?$expand=fields&$filter=fields/CategoryLookupId%20eq%20'"
-    static let kVISITOR_DUPLICATE =  "/lists/Visitor%20Master/items?$expand=fields&$filter=fields/emailid%20eq%20'**email**'%20and%20fields/scanby%20eq%20'1'%20"
-    static let kTest_Reader = "https://textmobile.cognitiveservices.azure.com//text/analytics/v3.0/entities/recognition/general"
+    static let kVISITOR_DUPLICATE =  "/lists/Visitor%20Master/items?$expand=fields&$filter=fields/emailid%20eq%20'"
+    static let kVISITOR_DUPLICATE1 = "'%20and%20fields/scanby%20eq%20'1'%20"
+    
     
     //Live Credentials
     //static let kOQPORTAL_LINK = URL(string:"https://thisisoq.sharepoint.com")
@@ -111,7 +112,8 @@ class Constant {
     //Dashboard API
     static let kGetDashboardData = "/api/getAllMenuMaster"
     
-    
+    //Businesscard data scan api
+    static let kBusinessData2 = "text/analytics/v3.0/entities/recognition/general"
     
     
     
@@ -158,6 +160,7 @@ class Constant {
     static let kSalmeenVC = "SalmeenViewController"
     static let kSwipeController = "SwipeUpViewController"
     static let kMazzayakomViewController = "MazzayakomViewController"
+    static let kVisitingCardDataVC = "VisitingCardData"
     
     
     
