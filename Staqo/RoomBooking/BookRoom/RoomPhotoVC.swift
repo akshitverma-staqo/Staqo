@@ -11,13 +11,16 @@ class RoomPhotoVC: UIViewController {
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var imageView: UIImageView!
-    
-
+    var urlString:String? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
         header.delegate = self
         herderView.addSubview(header)
+        if let url = urlString {
+            imageView.image = UIImage(contentsOfFile:url)
+        }
+       
         // Do any additional setup after loading the view.
     }
     

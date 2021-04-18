@@ -267,6 +267,7 @@ extension LogTicketTVC :ImagePickerDelegate{
         }
                let root = UIApplication.shared.keyWindow?.rootViewController
                root?.dismiss(animated: true, completion: nil)
+                
     }
     
     func imagePickerDelegate(didCancel delegatedForm: ImagePicker) {

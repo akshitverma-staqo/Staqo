@@ -68,7 +68,10 @@ extension ViewLogTicketVC: UITableViewDataSource , UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kTicketStatusVC, type: TicketStatusVC.self)
+        vc.rowsRequests = viewModel.rowsRequests?[indexPath.row]
+        //vc.viewModel.rowsRequests?[indexPath.row] = data
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

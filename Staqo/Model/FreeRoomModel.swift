@@ -15,7 +15,7 @@ struct FreeRoomModel : Codable,Equatable {
     let capacity : Double?
     let status : String?
     let sequenceNumber : Int?
-
+    let webUrl:String?
     enum CodingKeys: String, CodingKey {
 
         case id = "id"
@@ -26,6 +26,7 @@ struct FreeRoomModel : Codable,Equatable {
         case capacity = "capacity"
         case status = "status"
         case sequenceNumber = "sequenceNumber"
+        case webUrl = "webUrl"
     }
 
     init(from decoder: Decoder) throws {
@@ -38,6 +39,7 @@ struct FreeRoomModel : Codable,Equatable {
         capacity = try values.decodeIfPresent(Double.self, forKey: .capacity)
         status = try values.decodeIfPresent(String.self, forKey: .status)
         sequenceNumber = try values.decodeIfPresent(Int.self, forKey: .sequenceNumber)
+        webUrl = try values.decodeIfPresent(String.self, forKey: .webUrl)
     }
     
 

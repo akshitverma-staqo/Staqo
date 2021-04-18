@@ -16,7 +16,7 @@ enum ResourceType {
     case getTextReader(value:String)
     case download(fileName: String)
     case roomData(ID:String)
-    case notificationData
+    case notificationData(email:String)
     case readNotification(email: String)
     case addNotification(ID:String,notifyID:String, email:String, flag:String)
     case dashboardMeneData
@@ -33,7 +33,7 @@ enum ResourceType {
     case getSubCatData(ID:String)
     case submitTicketData(value:String)
     case ticketImageUpload(file: Data, ID:String)
-    
+    case approveCancel(bookingId: Int, roomStatus: String, approvedBy: String, userType: String,cancelBy: String, cancelRemark: String)
     var localLocation: URL? {
 
         switch self {
@@ -68,7 +68,7 @@ extension ResourceType:TargetType {
         switch self {
         case .download(_):
             return URL(string: Configuration.authURL)!
-        case.roomData(_) , .readNotification(_),.addNotification(_,_,_,_),.roomLocation,.roomType,.roomArrangment(_),.dashboardMeneData,.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getCatData,.getTicket,.getSubCatData(_),.submitTicketData(_),.ticketImageUpload(_,_):
+        case.roomData(_) , .readNotification(_),.addNotification(_,_,_,_),.roomLocation,.roomType,.roomArrangment(_),.dashboardMeneData,.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getCatData,.getTicket,.getSubCatData(_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
             return URL(string: Configuration.ftpURL)!
         default:
             return URL(string:Configuration.baseURL)!
@@ -88,8 +88,8 @@ extension ResourceType:TargetType {
             return Constant.kTest_Reader
         case .roomData(let ID):
             return Constant.kGET_ROOM + ID
-        case .notificationData:
-            return Constant.kSiteID + Constant.kGetAllNotification
+        case .notificationData(let email):
+            return Constant.kGetAllNotification + email
         case .readNotification(let email):
             return   Constant.kNotificationRead + email
             
@@ -127,6 +127,8 @@ extension ResourceType:TargetType {
             return Constant.kHelpSubmitReq
         case .ticketImageUpload(_,let ID):
             return Constant.kHelpAttach1 + ID + Constant.kHelpAttach2
+        case .approveCancel(_, _, _, _, _,_):
+            return Constant.kUpdateRoomStatus
         }
         
         
@@ -134,11 +136,11 @@ extension ResourceType:TargetType {
 
     var method: Moya.Method {
         switch self {
-        case .getEmployeeDataWithID(_),.download(_),.roomData(_),.notificationData,.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
+        case .getEmployeeDataWithID(_),.download(_),.roomData(_),.notificationData(_),.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return Moya.Method.get
         case .updateByEmpID(_,_):
             return Moya.Method.patch
-        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_):
+        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_):
             return Moya.Method.post
         
         }
@@ -156,7 +158,9 @@ extension ResourceType:TargetType {
             
         case .ticketImageUpload(let file, let ID):
             return ["file":file , "request_id":ID]
-        
+            
+        case .approveCancel(let bookingId,let roomStatus,let approvedBy,let userType,let cancelBy,let cancelRemark):
+        return ["bookingId":bookingId, "roomStatus":roomStatus, "approvedBy":approvedBy, "userType":userType, "cancelBy":cancelBy,"cancelRemark":cancelRemark]
         default:
             return nil
         }
@@ -186,11 +190,11 @@ extension ResourceType:TargetType {
     
     var task: Task {
         switch self {
-        case .getEmployeeDataWithID(_),.roomData(_),.notificationData,.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
+        case .getEmployeeDataWithID(_),.roomData(_),.notificationData(_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return .requestPlain
         case .download(_):
             return .downloadDestination(downloadDestination)
-        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_):
+        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_):
             return .requestParameters(parameters: parameters!, encoding: JSONEncoding.default)
         case .getTextReader(_):
             let data = Data(para!.utf8)
@@ -202,8 +206,10 @@ extension ResourceType:TargetType {
             let data = Data(para!.utf8)
             return .requestData(data)
             
-        case .ticketImageUpload(let file,let ID):
-            let uploadFile = MultipartFormData(provider: .data(file), name: "file", fileName: "User.png", mimeType: "image/gif")
+        case .ticketImageUpload(let file,_):
+            let uploadFile = MultipartFormData(provider: .data(file), name: "file", fileName: "file.jpeg", mimeType: "image/jpeg")
+            print(file)
+            print(uploadFile)
            // let requestID = MultipartFormData(provider: .data("\(ID)".data(using: String.Encoding.utf8) ?? Data()), name: "request_id")
             return .uploadMultipart([uploadFile])
 //        case .bookRoom(_):
@@ -221,9 +227,9 @@ extension ResourceType:TargetType {
         httpHeaders["Content-Type"] = "application/json"
             return httpHeaders
             
-        case .roomData(_),.addNotification(_,_,_,_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.roomArrangment(_),.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getTicket,.getCatData,.getSubCatData(_),.submitTicketData(_):
+        case .roomData(_),.addNotification(_,_,_,_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.roomArrangment(_),.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getTicket,.getCatData,.getSubCatData(_),.submitTicketData(_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
         httpHeaders["Accesstoken"] = "Bearer " + UserDefaults.standard.getAccessToken()
-        httpHeaders["TechnicianKey"] = "B649E3D6-3FBF-45E5-8396-109F325FACCA"
+      httpHeaders["TechnicianKey"] = "D3DE8EE6-B6AE-49C8-98ED-C93D308CB33F"
         httpHeaders["Content-Type"] = "application/json"
         return httpHeaders
         case .download(_):
@@ -232,8 +238,8 @@ extension ResourceType:TargetType {
             return httpHeaders
         case .ticketImageUpload(_,_):
             httpHeaders["Accesstoken"] = "Bearer " + UserDefaults.standard.getAccessToken()
-            httpHeaders["TechnicianKey"] = "B649E3D6-3FBF-45E5-8396-109F325FACCA"
-            httpHeaders["Content-type" ] = "application/json"
+            httpHeaders["TechnicianKey"] = "D3DE8EE6-B6AE-49C8-98ED-C93D308CB33F"
+            //httpHeaders["Content-type" ] = "application/json"
             return httpHeaders
         default:
         

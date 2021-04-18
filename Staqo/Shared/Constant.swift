@@ -46,6 +46,7 @@ class Constant {
     
     
     static let kSiteID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+    
     //static let kSiteID = "f2187b05-698b-4a40-91f6-440903c570af"
 
     
@@ -93,6 +94,7 @@ class Constant {
     static let kSearchBooking = "/api/searchbooking"
     static let kViewBookedRoom = "/api/booking/" + (UserDefaults.standard.getProfile()?.email)! + "/list"//api​/booking​/{email_id}​/list
     static let kFreeRoomBooking = "/api/booking"
+    static let kUpdateRoomStatus = "/api/booking/updatestatus"
     
     
     //Admin Level API
@@ -102,7 +104,7 @@ class Constant {
    
     
     //Notification read unread
-    static let kGetAllNotification = "/lists/Notifications/items?$expand=fields"
+    static let kGetAllNotification = "api/notification/"// "/lists/Notifications/items?$expand=fields"
     static let kNotificationRead = "/api/notification/findByEmail/"
     static let kAddNotification = "/api/notification/add"
     
@@ -123,6 +125,7 @@ class Constant {
     static let kRoomStroyboard = "Room"
     static let kNotification = "Notification"
     static let kHDStroyboard = "HelpDesk"
+    static let kMazzaykomStoryboard = "MazzaykomStoryboard"
     
     
     // MARK:- View Controllers
@@ -153,6 +156,8 @@ class Constant {
     static let kRoomBookMainVC = "RoomBookMainVC"
     static let kApproveCancelVC = "ApproveCancelVC"
     static let kSalmeenVC = "SalmeenViewController"
+    static let kSwipeController = "SwipeUpViewController"
+    static let kMazzayakomViewController = "MazzayakomViewController"
     
     
     
@@ -352,19 +357,16 @@ class Constant {
         //2019-05-03 12:11:15
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         return formatter.string(from: date)
+        
     }
     
     static func isValidEmail(testStr:String) -> Bool {
         // print("validate calendar: \(testStr)")
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
-        
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: testStr)
     }
-    
-  
-   
-    
+
     
 }
 

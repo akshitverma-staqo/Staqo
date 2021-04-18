@@ -10,18 +10,31 @@ import UIKit
 class TicketStatusVC: UIViewController {
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
-    var rowsRequests:[Requests]?
+    var rowsRequests:Requests?
     @IBOutlet weak var closeDateTxt: UITextField!
     @IBOutlet weak var statusTxt: UITextField!
     @IBOutlet weak var taskDetailsTxtv: UITextView!
     @IBOutlet weak var locationtxt: UITextField!
     @IBOutlet weak var creationDateTxt: UITextField!
+    //var viewModel:LogTicketViewModel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
-       
+        
+        print(rowsRequests ?? 0)
         herderView.addSubview(header)
+//        closeDateTxt.text = rowsRequests?.cancel_requested ?? ""
+//        statusTxt.text = rowsRequests?.status ?? ""
+//        taskDetailsTxtv.text =
+//        creationDateTxt.text
+//        locationtxt.text = rowsRequests?.
+        
+        
+        
+        
+        
         
         // Do any additional setup after loading the view.
     }

@@ -15,12 +15,14 @@ protocol RoomBTVCDelegate:class {
 }
 
 class RoomBTVC: UITableViewCell {
+    @IBOutlet weak var recurringMeetingView: UIView!
     var delegate:RoomBTVCDelegate?
     var _delegate:RoomBookingVCDelegate?
     var txtTag:Int = 0
     var vistorType : String = ""
     var recurringDay : String = ""
     var selectedIndex:Int = 0
+    @IBOutlet weak var arrangmentTypeLbl: UILabel!
     @IBOutlet weak var VipCheckTap: UIButton!
     @IBOutlet weak var VisitorCheckTap: UIButton!
     @IBOutlet weak var EmpCheckTap: UIButton!
@@ -33,7 +35,12 @@ class RoomBTVC: UITableViewCell {
     @IBOutlet weak var fromDateTxt: UITextField!
     @IBOutlet weak var locationTxt: UITextField!
     @IBOutlet weak var arrangmentTct: UITextField!
+    @IBOutlet weak var arrangeView: UIView!
+    @IBOutlet weak var arrangeConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var roomLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var arrangeLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var arrangLbl: UILabel!
     @IBOutlet weak var SatCheckTap: UIButton!
     @IBOutlet weak var FriCheckTap: UIButton!
     @IBOutlet weak var ThuCheckTap: UIButton!
@@ -43,6 +50,7 @@ class RoomBTVC: UITableViewCell {
     @IBOutlet weak var SunCheckTap: UIButton!
     @IBOutlet weak var NumberVisitorTxt: UITextField!
   
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     @IBOutlet weak var capacityTxt: UITextField!
     var picker:UIPickerView!
     var viewPicker: UIView!
@@ -54,6 +62,8 @@ class RoomBTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        purposeTxtView.placeholder = "Write your purpose here"
     }
    
     
@@ -96,15 +106,19 @@ class RoomBTVC: UITableViewCell {
         }
         else if (toTimeTxt.text?.count ?? 0) <= 0 {
             delegate?.showMsgValidation(msg: "Please select the To Time  ")
-        }else if (roomTypeTxt.text?.count ?? 0) <= 0 {
-            delegate?.showMsgValidation(msg: "Please select the Room Type  ")
         }
-        else if (arrangmentTct.text?.count ?? 0) <= 0 && roomTypeTxt.text != "Audutorium"{
-            delegate?.showMsgValidation(msg: "Please select the Arrangment Type")
+        else if (purposeTxtView.text.count) <= 0 {
+            delegate?.showMsgValidation(msg: "Please Provide the purpose")
         }
-        else if (roomCodeTxt.text?.count ?? 0) <= 0 {
-            delegate?.showMsgValidation(msg: "Please select the Room Code  ")
-        }
+        //else if (roomTypeTxt.text?.count ?? 0) <= 0 {
+//            delegate?.showMsgValidation(msg: "Please select the Room Type  ")
+//        }
+//        else if (arrangmentTct.text?.count ?? 0) <= 0 && roomTypeTxt.text != "Audutorium"{
+//            delegate?.showMsgValidation(msg: "Please select the Arrangment Type")
+//        }
+//        else if (roomCodeTxt.text?.count ?? 0) <= 0 {
+//            delegate?.showMsgValidation(msg: "Please select the Room Code  ")
+//        }
         else{
             guard  let value = Helper.creatingRoomData(attendents: Int(NumberVisitorTxt.text ?? "0") ?? 0, fromDateTime: (fromDateTxt.text ?? "") + " " + (fromTimeTxt.text ?? ""), toDateTime: (toDateTxt.text ?? "") +  " " + (toTimeTxt.text ?? ""), remarks: purposeTxtView.text ?? "", visitorType: vistorType, roomType: roomTypeTxt.text ?? "", arrangementType: arrangmentTct.text ?? "", roomCode: roomCodeTxt.text ?? "", recurringDay: recurringDay)else {
                     return
@@ -250,15 +264,16 @@ class RoomBTVC: UITableViewCell {
 
           }
     }
+  
    @objc func dataSelection(){
     if txtTag == 3 {
-        fromDateTxt.text = Constant.dateTimeFormatter(format: "MM-dd-yyyy", date: datePicker?.date ?? Date())
+        fromDateTxt.text = Constant.dateTimeFormatter(format: "dd-MM-yyyy", date: datePicker?.date ?? Date())
         
     }else if txtTag == 4 {
         fromTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: datePicker?.date ?? Date())
 
     }else if txtTag == 5 {
-        toDateTxt.text = Constant.dateTimeFormatter(format: "MM-dd-yyyy", date: datePicker?.date ?? Date())
+        toDateTxt.text = Constant.dateTimeFormatter(format: "dd-MM-yyyy", date: datePicker?.date ?? Date())
 
     }else if txtTag == 6 {
         toTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: datePicker?.date ?? Date())
@@ -293,7 +308,10 @@ extension RoomBTVC: UITextFieldDelegate{
             }
             datePicker?.minimumDate = Date()
             datePicker?.maximumDate = Calendar.current.date(byAdding: .month, value: 1, to: Date())
-            fromDateTxt.text = Constant.dateTimeFormatter(format: "MM-dd-yyyy", date: datePicker?.date ?? Date())
+            if (fromDateTxt.text?.count ?? 0) <= 0 {
+                fromDateTxt.text = Constant.dateTimeFormatter(format: "dd-MM-yyyy", date: datePicker?.date ?? Date())
+
+            }
             textField.inputView = datePicker
             
         }else if textField.tag == 4 {
@@ -311,7 +329,10 @@ extension RoomBTVC: UITextFieldDelegate{
             } else {
                 // Fallback on earlier versions
             }
-            fromTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: datePicker?.date ?? Date())
+            if fromTimeTxt.text?.count ?? 0 <= 0 {
+                fromTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: datePicker?.date ?? Date())
+
+            }
             textField.inputView = datePicker
         }else if  textField.tag == 5 {
             datePicker?.isHidden = false
@@ -322,10 +343,13 @@ extension RoomBTVC: UITextFieldDelegate{
                 // Fallback on earlier versions
             }
             
-            let dateValue = Constant.stringToDate(format:"MM-dd-yyyy HH:mm", dateValue:fromDateTxt.text ?? "")
+            let dateValue = Constant.stringToDate(format:"dd-MM-yyyy HH:mm", dateValue:fromDateTxt.text ?? "")
             datePicker?.minimumDate = Calendar.current.date(byAdding: .month, value: -1, to: dateValue ??  Date())
             datePicker?.maximumDate = Calendar.current.date(byAdding: .month, value: 1, to: Date())
-            toDateTxt.text = Constant.dateTimeFormatter(format: "MM-dd-yyyy", date: datePicker?.date ?? Date())
+            if (toDateTxt.text?.count ?? 0) <= 0{
+                toDateTxt.text = Constant.dateTimeFormatter(format: "dd-MM-yyyy", date: datePicker?.date ?? Date())
+
+            }
             textField.inputView = datePicker
             
             
@@ -337,20 +361,25 @@ extension RoomBTVC: UITextFieldDelegate{
         }else if textField.tag == 6 {
             datePicker?.isHidden = false
             datePicker?.datePickerMode = .time
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "HH:mm"
-            let min = dateFormatter.date(from: "9:00")
-            let max = dateFormatter.date(from: "18:00")
-            datePicker?.minimumDate = min
+            var dateComp = Calendar.current.dateComponents([.day, .month , .year], from: Date())
+            dateComp.setValue(9, for: .hour)
+            let min = Calendar.current.date(from: dateComp)
+            dateComp.setValue(18, for: .hour)
+            let max = Calendar.current.date(from: dateComp)
+//            let dateFormatter = DateFormatter()
+//            dateFormatter.dateFormat = "HH:mm"
+//            let min = dateFormatter.date(from: "9:00")
+//            let max = dateFormatter.date(from: "9:00")
+           datePicker?.minimumDate = min
             datePicker?.maximumDate = max
             if #available(iOS 13.4, *) {
                 datePicker?.preferredDatePickerStyle = .wheels
             } else {
                 // Fallback on earlier versions
             }
+            if (toTimeTxt.text?.count ?? 0) <= 0 {
             toTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: datePicker?.date ?? Date())
-
+            }
             textField.inputView = datePicker
             
             
@@ -380,14 +409,14 @@ extension RoomBTVC: UITextFieldDelegate{
                 }
             }
             
-//            else if txtTag == 8 {
-//                if arrangModel?.count ?? 0 == 0{
-//                    delegate?.showMsgValidation(msg: "Data not found")
-//                } else{
-//                    self.delegate?.selectedTxtField(txtField: textField)
-//                }
-//
-//            }
+            else if txtTag == 8 {
+                if arrangModel?.count ?? 0 == 0{
+                    delegate?.showMsgValidation(msg: "Data not found")
+                } else{
+                    self.delegate?.selectedTxtField(txtField: textField)
+                }
+
+            }
             else if txtTag == 9 {
                 if rowsData?.count ?? 0 == 0 {
                     delegate?.showMsgValidation(msg: "Data not found")
@@ -407,17 +436,148 @@ extension RoomBTVC: UITextFieldDelegate{
                 delegate?.getAllRooms(ID: "\(rowsLoc?[selectedIndex].id ?? 0)")
             }
             
-        }else if txtTag == 7 {
-            if roomTypeTxt.text != nil {
-                if  rowsRoom?[selectedIndex].id ?? 0 != 1 {
-                    arrangmentTct.isEnabled = false
+
+            
+        }
+        else if txtTag == 3{
+        
+            
+            toDateTxt.text  = ""
+        
+            
+        }
+        
+        else if txtTag == 5 {
+           print("Check Date")
+
+            
+            if fromDateTxt.text == "" {
+                delegate?.showMsgValidation(msg: "Please select first From Date.")
+
+                
+            }else{
+                
+              
+                let formatter = DateFormatter()
+                formatter.dateFormat = "dd/MM/yyyy"
+                let firstDate = formatter.date(from: fromDateTxt.text ?? "")
+                let secondDate = formatter.date(from: toDateTxt.text ?? "")
+                
+                
+                if firstDate?.compare(secondDate!) == .orderedAscending {
+                    print("First Date is smaller then second date")
+                    //recurringMeetingView.isHidden = false
+                    if let dates = firstDate {
+                        let day = secondDate?.days(from: dates)
+                        print(day ?? 0)
+                        if day ?? 0 <= 7{
+                            print("day less than 7")
+                            recurringMeetingView.isHidden = true
+                            heightConstraint.constant = 0
+                        }else{
+                            recurringMeetingView.isHidden = false
+                            heightConstraint.constant = 110
+                            print("day more than saven and 7")
+                        }
+                            
+                    }
+                   
+
+                }else if firstDate?.compare(secondDate!) == .orderedDescending{
+                    print("First Date is greater then second date")
+                    delegate?.showMsgValidation(msg: "Please select Date in Correct Order")
+                    toDateTxt.text = ""
+                    heightConstraint.constant = 110
                 }else{
-                    arrangmentTct.isEnabled = true
+                    let firstDate = formatter.date(from: fromDateTxt.text ?? "")
+                    let secondDate = formatter.date(from: toDateTxt.text ?? "")
+                    
+                    print("Both dates are same")
+                    heightConstraint.constant = 0
+//                    let day = Calendar.current.component(.weekday, from: Date())
+                  
+                    
+                    recurringMeetingView.isHidden = true
+                    
+                }
+            }
+            
+        }
+        
+        else if txtTag == 4{
+            
+          
+    
+        } else if txtTag == 6{
+        
+               print("Check Time")
+
+                
+                if fromDateTxt.text == "" {
+                    delegate?.showMsgValidation(msg: "Please select first From Time.")
+
+                    
+                }else{
+                    
+                  
+                    let formatter = DateFormatter()
+                    formatter.dateFormat = "HH:mm"
+                    let firstDate = formatter.date(from: fromTimeTxt.text ?? "")
+                    let secondDate = formatter.date(from: toTimeTxt.text ?? "")
+                    
+                    
+                    if firstDate?.compare(secondDate!) == .orderedAscending {
+                        print("First time is smaller then second time")
+ 
+                    }else if firstDate?.compare(secondDate!) == .orderedDescending{
+                        print("First time is greater then second time")
+                        delegate?.showMsgValidation(msg: "Please select Time in Correct Order")
+                        toTimeTxt.text = ""
+                        fromTimeTxt.text = ""
+                     
+
+                    }else{
+//                        let firstDate = formatter.date(from: fromDateTxt.text ?? "")
+//                        let secondDate = formatter.date(from: toDateTxt.text ?? "")
+                        
+                        print("Both dates are same")
+                        delegate?.showMsgValidation(msg: "Both Time are Same Please choose different time SLOT.")
+    //                    let day = Calendar.current.component(.weekday, from: Date())
+                      
+                                            
+                    }
                 }
                
-                delegate?.getArrangement(ID:"\(rowsRoom?[selectedIndex].id ?? 0)")
-                arrangmentTct.text = nil
-                arrangModel = []
+                
+           
+        }
+        
+        
+        else if txtTag == 7 {
+            if roomTypeTxt.text != nil {
+                if  rowsRoom?[selectedIndex].id ?? 0 == 1 {
+                    arrangmentTct.isEnabled = true
+                    arrangeConstraint.constant = 40
+                    arrangeLeadingConstraint.constant = 20
+                    roomLeadingConstraint.constant = 20
+                    arrangeView.isHidden = false
+                    arrangLbl.isHidden = false
+                    arrangLbl.text = "Arrangment Type"
+                    delegate?.getArrangement(ID:"\(rowsRoom?[selectedIndex].id ?? 0)")
+                }else{
+                    arrangeConstraint.constant = 0
+                    arrangeLeadingConstraint.constant = 0
+                    roomLeadingConstraint.constant = 0
+                    arrangLbl.text = nil
+                    arrangeView.isHidden = true
+                    arrangLbl.isHidden = true
+                   
+                    arrangmentTct.text = nil
+                    arrangModel = []
+                    arrangmentTct.isEnabled = false
+                }
+               
+               
             }
         }
     }
@@ -478,7 +638,7 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
         }else if txtTag == 7 {
             selectedIndex = row
             roomTypeTxt.text = rowsRoom?[row].typeName ?? ""
-            disableArrangment()
+        //    disableArrangment()
         }else if txtTag == 8 {
             selectedIndex = row
             arrangmentTct.text = arrangModel?[row].title ?? ""
@@ -493,24 +653,32 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
         }
       
     }
-    
     func disableArrangment()  {
-        
-        
-        if roomTypeTxt.text == "Audutorium"{
+        if rowsRoom?[selectedIndex].id == 1 {
             arrangmentTct.isEnabled = false
             arrangmentTct.text = ""
+            self.delegate?.selectedTxtField(txtField: arrangmentTct)
+            
         }else{
             arrangmentTct.isEnabled = true
 
         }
-        
-        
-        
+   
     }
+
 }
 extension RoomBTVC : RoomBookingVCDelegate{
     func selectIndex() {
         
+    }
+}
+
+extension Calendar {
+   private func numberOfDaysBetween(_ from: Date, and to: Date) -> Int {
+        let fromDate = startOfDay(for: from)
+        let toDate = startOfDay(for: to)
+        let numberOfDays = dateComponents([.day], from: fromDate, to: toDate)
+        
+        return numberOfDays.day! + 1 // <1>
     }
 }

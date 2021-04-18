@@ -35,28 +35,24 @@
 	<array>
 		<string>msauthv2</string>
 		<string>msauthv3</string>
-        <string>intelex</string>
-        <string>signnow-private-cloud://sso_login?</string>
-      
-        
+		<string>intelex</string>
+		<string>signnow</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-        <key>NSAllowsArbitraryLoads</key>
-        <false/>
-        <key>NSExceptionDomains</key>
-        <dict>
-            <key>PAGE_FOR_WHICH_SETTINGS_YOU_WANT_TO_OVERRIDE</key>
-            <dict>
-                <key>NSExceptionAllowsInsecureHTTPLoads</key>
-                <true/>
-            </dict>
-        </dict>
-    </dict>
-    
-    
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>PAGE_FOR_WHICH_SETTINGS_YOU_WANT_TO_OVERRIDE</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>Camera access to scan documents</string>
 	<key>NSContactsUsageDescription</key>

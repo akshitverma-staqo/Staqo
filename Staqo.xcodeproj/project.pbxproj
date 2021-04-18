@@ -67,6 +67,14 @@
 		769706082620B3400063BABA /* Resolution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769706072620B3400063BABA /* Resolution.swift */; };
 		7697060D2620CA5E0063BABA /* Helpdesk_request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697060C2620CA5E0063BABA /* Helpdesk_request.swift */; };
 		769706132620DCD20063BABA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769706122620DCD20063BABA /* ImagePicker.swift */; };
+		7697061C26287F4B0063BABA /* VisitingCardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697061B26287F4A0063BABA /* VisitingCardData.swift */; };
+		76970621262880000063BABA /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76970620262880000063BABA /* UITextViewPlaceholder.swift */; };
+		76970626262AC7040063BABA /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76970625262AC7030063BABA /* SpinnerViewController.swift */; };
+		76970632262AC7830063BABA /* Constant1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697062E262AC7830063BABA /* Constant1.swift */; };
+		76970633262AC7830063BABA /* UIVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697062F262AC7830063BABA /* UIVCExtension.swift */; };
+		76970634262AC7830063BABA /* Extension1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76970630262AC7830063BABA /* Extension1.swift */; };
+		76970635262AC7830063BABA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76970631262AC7830063BABA /* Style.swift */; };
+		76970640262B347D0063BABA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697063F262B347B0063BABA /* Data.swift */; };
 		76A0AF092616CE6D0084E1F8 /* contact us pagehero v2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76A0AF082616CE6C0084E1F8 /* contact us pagehero v2.jpg */; };
 		76A0AF102616DAF50084E1F8 /* BookRoomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */; };
 		76A0AF112616DAF50084E1F8 /* BookRoomTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A0AF0F2616DAF50084E1F8 /* BookRoomTVC.xib */; };
@@ -258,6 +266,14 @@
 		769706072620B3400063BABA /* Resolution.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolution.swift; sourceTree = "<group>"; };
 		7697060C2620CA5E0063BABA /* Helpdesk_request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpdesk_request.swift; sourceTree = "<group>"; };
 		769706122620DCD20063BABA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		7697061B26287F4A0063BABA /* VisitingCardData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitingCardData.swift; sourceTree = "<group>"; };
+		76970620262880000063BABA /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
+		76970625262AC7030063BABA /* SpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
+		7697062E262AC7830063BABA /* Constant1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant1.swift; sourceTree = "<group>"; };
+		7697062F262AC7830063BABA /* UIVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIVCExtension.swift; sourceTree = "<group>"; };
+		76970630262AC7830063BABA /* Extension1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension1.swift; sourceTree = "<group>"; };
+		76970631262AC7830063BABA /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		7697063F262B347B0063BABA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		76A0AF082616CE6C0084E1F8 /* contact us pagehero v2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "contact us pagehero v2.jpg"; sourceTree = "<group>"; };
 		76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomTVC.swift; sourceTree = "<group>"; };
 		76A0AF0F2616DAF50084E1F8 /* BookRoomTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRoomTVC.xib; sourceTree = "<group>"; };
@@ -503,6 +519,7 @@
 		7693C62725F3E1CD001665DF /* Business Card */ = {
 			isa = PBXGroup;
 			children = (
+				7697061A26287EC90063BABA /* BCScannedData */,
 				76A1047326010F6200C536B9 /* BusinessCardView */,
 				76A1047526010FAA00C536B9 /* BusinessController */,
 				76A1047426010F9100C536B9 /* Scan */,
@@ -517,6 +534,26 @@
 				769706122620DCD20063BABA /* ImagePicker.swift */,
 			);
 			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		7697061A26287EC90063BABA /* BCScannedData */ = {
+			isa = PBXGroup;
+			children = (
+				76970620262880000063BABA /* UITextViewPlaceholder.swift */,
+				7697061B26287F4A0063BABA /* VisitingCardData.swift */,
+			);
+			path = BCScannedData;
+			sourceTree = "<group>";
+		};
+		7697062D262AC7830063BABA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7697062E262AC7830063BABA /* Constant1.swift */,
+				7697062F262AC7830063BABA /* UIVCExtension.swift */,
+				76970630262AC7830063BABA /* Extension1.swift */,
+				76970631262AC7830063BABA /* Style.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		76A0AF0D2616DA7F0084E1F8 /* BookRoom */ = {
@@ -601,6 +638,8 @@
 		76A14EFA260FB33400A5E7BF /* Mazzayakom */ = {
 			isa = PBXGroup;
 			children = (
+				7697062D262AC7830063BABA /* Extensions */,
+				76970625262AC7030063BABA /* SpinnerViewController.swift */,
 				76D66EDC261A0C030013E5B4 /* SwiftyJSON */,
 				76D66EC32619F8440013E5B4 /* MazzayakomSubViewController.swift */,
 				76D66EC12619F8440013E5B4 /* MazzayakomViewController.swift */,
@@ -835,6 +874,7 @@
 				76D66ECA2619F9630013E5B4 /* MazzayakomCatListModel.swift */,
 				7660FD822613858B00C43B25 /* RoomModel.swift */,
 				CD5DB49425D5A8E900353084 /* BaseModel.swift */,
+				7697063F262B347B0063BABA /* Data.swift */,
 				76A1039D25F7E61300C536B9 /* Value.swift */,
 				76A103A225F7E69E00C536B9 /* CreatedBy.swift */,
 				76A103AC25F7E6C500C536B9 /* User.swift */,
@@ -1184,6 +1224,7 @@
 			files = (
 				76D66EC52619F8450013E5B4 /* SwipeUpViewController.swift in Sources */,
 				7693C64E25F3E763001665DF /* OCR.swift in Sources */,
+				76970633262AC7830063BABA /* UIVCExtension.swift in Sources */,
 				7667E7DC2615AD9600EB624E /* LogTicketViewModel.swift in Sources */,
 				76D66EDF261A0C030013E5B4 /* SwiftyJSON.swift in Sources */,
 				76A103A325F7E69E00C536B9 /* CreatedBy.swift in Sources */,
@@ -1198,6 +1239,7 @@
 				76C3ACA0261F602700FC6B85 /* Technician.swift in Sources */,
 				CD5DB47125D5A5BD00353084 /* NetworkManager.swift in Sources */,
 				76A0F54C260B4EFE00601483 /* RoomBTVC.swift in Sources */,
+				76970626262AC7040063BABA /* SpinnerViewController.swift in Sources */,
 				7660FD832613858C00C43B25 /* RoomModel.swift in Sources */,
 				769706082620B3400063BABA /* Resolution.swift in Sources */,
 				76D66EA92619B3570013E5B4 /* ApproveCancelVC.swift in Sources */,
@@ -1238,6 +1280,7 @@
 				7667E7AA26159B9C00EB624E /* ViewLogTicketTVC.swift in Sources */,
 				7667E7F8261609AE00EB624E /* TicketStatusVC.swift in Sources */,
 				769705F426201C1E0063BABA /* Subcategories.swift in Sources */,
+				76970632262AC7830063BABA /* Constant1.swift in Sources */,
 				76D66E72261727380013E5B4 /* RoomBookMainVC.swift in Sources */,
 				769706132620DCD20063BABA /* ImagePicker.swift in Sources */,
 				7667E7B32615AC0000EB624E /* ViewLogTicketVC.swift in Sources */,
@@ -1275,10 +1318,12 @@
 				CD5DB49F25D5A9C100353084 /* DashboardNavigationVC.swift in Sources */,
 				76D66E842618A3450013E5B4 /* FreeRoomModel.swift in Sources */,
 				7697060D2620CA5E0063BABA /* Helpdesk_request.swift in Sources */,
+				76970634262AC7830063BABA /* Extension1.swift in Sources */,
 				76A1039E25F7E61300C536B9 /* Value.swift in Sources */,
 				7693C63825F3E370001665DF /* BusinessCardDataSource.swift in Sources */,
 				76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */,
 				76A103A825F7E6B300C536B9 /* Fields.swift in Sources */,
+				76970635262AC7830063BABA /* Style.swift in Sources */,
 				767BEBDA2601264900B6A3C3 /* Documents.swift in Sources */,
 				76C3AC92261F5AE500FC6B85 /* Response_status.swift in Sources */,
 				7693C61C25F3D6E9001665DF /* MenuVC.swift in Sources */,
@@ -1302,8 +1347,10 @@
 				76D66F1B261CA1230013E5B4 /* RoomBookModel.swift in Sources */,
 				CD5DB46225D5A52E00353084 /* LoginVC.swift in Sources */,
 				76656D9A260DAA110080669B /* NotificationTableViewCell.swift in Sources */,
+				76970640262B347D0063BABA /* Data.swift in Sources */,
 				76F1FB3225F2915B00D88F79 /* EmpDataSource.swift in Sources */,
 				76A1045C25FF9AE100C536B9 /* ScanQRViewController.swift in Sources */,
+				7697061C26287F4B0063BABA /* VisitingCardData.swift in Sources */,
 				76F1FB2A25F281F200D88F79 /* EmpViewModal.swift in Sources */,
 				76656D8F260C65B10080669B /* FAQAnswerTableViewCell.swift in Sources */,
 				76C3AC67261DBDF000FC6B85 /* MenuModel.swift in Sources */,
@@ -1312,6 +1359,7 @@
 				CD5DB48925D5A60C00353084 /* Date.swift in Sources */,
 				76656D8D260C65B10080669B /* FAQHeaderTableViewCell.swift in Sources */,
 				76C3ACAD261F61CE00FC6B85 /* Site.swift in Sources */,
+				76970621262880000063BABA /* UITextViewPlaceholder.swift in Sources */,
 				CD5DB46B25D5A56100353084 /* BaseVC.swift in Sources */,
 				76A0AF172616E2750084E1F8 /* BooKRoomVC.swift in Sources */,
 				CD5DB4A925D5AA2800353084 /* DesignableButton.swift in Sources */,

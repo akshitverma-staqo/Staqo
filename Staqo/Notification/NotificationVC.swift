@@ -91,8 +91,8 @@ extension NotificationVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        showErrorMessage(title: viewModel.rows?[indexPath.row].fields?.title ?? "", message: viewModel.rows?[indexPath.row].fields?.Description ?? "") { (action) in
-            self.viewModel.addNotification(ID:  self.viewModel.rows?[indexPath.row].fields?.id ?? "", notifyID:  self.viewModel.rows?[indexPath.row].fields?.id ?? "", email: UserDefaults.standard.getProfile()?.email ?? "", flag: "1")
+        showErrorMessage(title: viewModel.rows?[indexPath.row].title ?? "", message: viewModel.rows?[indexPath.row].description ?? "") { (action) in
+            self.viewModel.addNotification(ID:  self.viewModel.rows?[indexPath.row].id ?? "", notifyID:  self.viewModel.rows?[indexPath.row].id ?? "", email: UserDefaults.standard.getProfile()?.email ?? "", flag: "1")
         }
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

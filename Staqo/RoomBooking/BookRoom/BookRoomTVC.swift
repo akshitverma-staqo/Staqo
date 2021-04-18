@@ -8,6 +8,8 @@
 import UIKit
 protocol BookRoomTVCDelegate:class {
     func bookRoomData(index:Int)
+    func photoView(index:Int)
+
 }
 
 class BookRoomTVC: UITableViewCell {
@@ -19,13 +21,15 @@ class BookRoomTVC: UITableViewCell {
     @IBOutlet weak var roomCodeLbl: UILabel!
     @IBOutlet weak var capacityLbl: UILabel!
     var delegate:BookRoomTVCDelegate?
+    @IBOutlet weak var btnPhoto: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    @IBAction func btnPhotoView(_ sender: Any) {
-        
+    @IBAction func btnPhotoView(_ sender: UIButton) {
+        delegate?.photoView(index: sender.tag)
     }
 
     @IBAction func btBookRoomTap(_ sender: UIButton) {

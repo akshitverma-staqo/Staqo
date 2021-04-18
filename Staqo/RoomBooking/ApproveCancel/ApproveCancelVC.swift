@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ApproveCancelVC: BaseVC, UITableViewDelegate {
+class ApproveCancelVC: BaseVC {
     var viewModel:ACViewModel!
     private let kACViewCell = "ACViewCell"
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
-
+    var segmenStatus : String = ""
     @IBOutlet weak var roomSegment: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
 
@@ -26,8 +26,9 @@ class ApproveCancelVC: BaseVC, UITableViewDelegate {
         
         viewModel = ACViewModel(dataSource: ACDataSource())
         viewModel.delegate = self
+        viewModel._delegate = self
         
-        if UserDefaults.standard.getWebStatus() == "Admin" {
+        if UserDefaults.standard.getWebStatus() == "A" {
             print("Admin")
             roomSegment.setTitle("Approved", forSegmentAt: 0)
             roomSegment.setTitle("Unapproved", forSegmentAt: 1)
@@ -35,7 +36,7 @@ class ApproveCancelVC: BaseVC, UITableViewDelegate {
             
             print("User")
             roomSegment.setTitle("Approved", forSegmentAt: 0)
-            roomSegment.setTitle("Cancel", forSegmentAt: 1)
+            roomSegment.setTitle("Pending", forSegmentAt: 1)
         }
         
         
@@ -55,11 +56,22 @@ class ApproveCancelVC: BaseVC, UITableViewDelegate {
     @IBAction func indexChanged(_ sender: UISegmentedControl) {
         switch roomSegment.selectedSegmentIndex {
         case 0:
-            print("Free Room and Approved")
+            print("Segment 0")
             tableView.reloadData()
+           
+            if viewModel?.rows?.count == 0 {
+                    showErrorMessage(title: "Alert", message: "Data not Found.") { (action) in
+                    }}
+         
+          
         case 1:
             tableView.reloadData()
-            print("Booked Room and unapproved")
+            print("Segment 1")
+            
+            if  viewModel?.rows1?.count == 0 {
+                       showErrorMessage(title: "Alert", message: "Data not Found.") { (action) in
+                       
+                       }  }
         default:
             break;
         }
@@ -71,16 +83,11 @@ class ApproveCancelVC: BaseVC, UITableViewDelegate {
 extension ApproveCancelVC : ViewModelDelegate{
     func willLoadData() {
         startLoader()
-        
-       
     }
     
     func didLoadData() {
         stopLoader()
         tableView.reloadData()
-        
-        
-        
     }
     
     func didFail(error: CustomError) {
@@ -92,30 +99,87 @@ extension ApproveCancelVC : ViewModelDelegate{
     
     
 }
+extension ApproveCancelVC :ACViewModelDelegate{
+    func getBookedData(status: String) {
+        // stopLoader()
+//        if status == "Cancel"{
+//
+//        }
+        showErrorMessage(title: "", message: "Successfully \(status)") { (action) in
+            self.viewModel.bootstrap()
+            self.tableView.reloadData()
+        }
+    }
+  
+}
 // MARK: - Tableview Delegate
 
-extension ApproveCancelVC: UITableViewDataSource{
+extension ApproveCancelVC: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.rows?.count ?? 0
+        
+        if roomSegment.selectedSegmentIndex == 0 {
+            //A
+           
+            
+            return viewModel.rows?.count ?? 0
+        }else{
+            return viewModel.rows1?.count ?? 0
+        }
+       
     }
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kACViewCell, for: indexPath) as! ACViewCell
         
-        cell.dataBind(data: viewModel.rows, index: indexPath)
+        cell.delegate = self
+        
+        
+        
+        if UserDefaults.standard.getWebStatus() == "A" {
+            print("Admin")
+            if roomSegment.selectedSegmentIndex == 0 {
+                //A
+                cell.dataBind(data: viewModel.rows, index: indexPath)
+                cell.approveClick.isHidden = true
+                cell.cancelClick.isHidden = true
+                cell.btnCancel1.isHidden = false
+            }else{
+                //P
+                cell.dataBind(data: viewModel.rows1, index: indexPath)
+                cell.approveClick.isHidden = false
+                cell.cancelClick.isHidden = false
+                cell.btnCancel1.isHidden = true
+            }        }else{
+            
+            print("User")
+                if roomSegment.selectedSegmentIndex == 0 {
+                    //A
+                    cell.dataBind(data: viewModel.rows, index: indexPath)
+                    cell.approveClick.isHidden = true
+                    cell.cancelClick.isHidden = true
+                    cell.btnCancel1.isHidden = false
+                }else{
+                    //P
+                    cell.dataBind(data: viewModel.rows1, index: indexPath)
+                    cell.approveClick.isHidden = true
+                    cell.cancelClick.isHidden = true
+                    cell.btnCancel1.isHidden = false
+                }        }
+        
+        
+        
+        
+        
         
 
-      
         return cell
     }
-    
+   
+        
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-      //  let data = viewModel.rows?[indexPath.row]
-        
-        //var selectedData = 
+
     }
     
 }
@@ -140,4 +204,19 @@ extension ApproveCancelVC: HeaderViewDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+extension ApproveCancelVC: ACViewCellDelegate{
+    
+    func approveCancel(bookingId: Int, roomStatus: String, approvedBy: String, userType: String, cancelBy: String, cancelRemark: String, isCancel: String)
+    {
+        showMessage(title: "", message: "Do you want to \(isCancel) this booking?", btnConfirmTitle: "Yes", btnCancelTitle:"No") { (isYes, action) in
+            if isYes{
+                self.viewModel.approveCancel(bookingId: bookingId, roomStatus: roomStatus, approvedBy: approvedBy, userType: userType, cancelBy: cancelBy, cancelRemark: cancelRemark, status: isCancel)
+            }
+        }
+      
+    }
+    
+    
+  
 }

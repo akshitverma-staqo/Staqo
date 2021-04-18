@@ -16,15 +16,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewLogTicketTVC" rowHeight="206" id="KGk-i7-Jjw" customClass="ViewLogTicketTVC" customModule="Staqo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="357" height="206"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ViewLogTicketTVC" rowHeight="238" id="KGk-i7-Jjw" customClass="ViewLogTicketTVC" customModule="Staqo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="357" height="238"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="357" height="206"/>
+                <rect key="frame" x="0.0" y="0.0" width="357" height="238"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lff-gP-Obc">
-                        <rect key="frame" x="0.0" y="0.0" width="357" height="206"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lff-gP-Obc" customClass="TTCustomView" customModule="Staqo" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="347" height="228"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket No. :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="soM-WZ-Q6h">
                                 <rect key="frame" x="5" y="10" width="80" height="20"/>
@@ -53,14 +53,14 @@
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket No. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kL-MY-Mc4">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Ticket No. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kL-MY-Mc4">
                                 <rect key="frame" x="96" y="90" width="76" height="18.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ticket No. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7K-b4-RKD">
-                                <rect key="frame" x="66" y="128.5" width="76" height="18.5"/>
+                                <rect key="frame" x="66" y="128.5" width="76" height="40.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -72,25 +72,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mA9-iC-LId">
-                                <rect key="frame" x="5" y="90" width="81" height="18.5"/>
+                                <rect key="frame" x="5" y="90" width="81" height="29.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5bi-Wl-auP">
-                                <rect key="frame" x="5" y="128.5" width="51" height="18.5"/>
+                                <rect key="frame" x="5" y="139.5" width="51" height="18.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close Date Time :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmR-PD-3RR">
-                                <rect key="frame" x="5" y="167" width="126" height="18.5"/>
+                                <rect key="frame" x="5" y="189" width="126" height="18.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Close Date Time sdfadb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jmI-gK-l6F">
-                                <rect key="frame" x="141" y="167" width="172.5" height="18.5"/>
+                                <rect key="frame" x="141" y="189" width="172.5" height="18.5"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -116,6 +116,7 @@
                             <constraint firstItem="eDF-Hs-SBX" firstAttribute="leading" secondItem="soM-WZ-Q6h" secondAttribute="trailing" constant="10" id="Vwr-Q9-3O8"/>
                             <constraint firstItem="5bi-Wl-auP" firstAttribute="leading" secondItem="Lff-gP-Obc" secondAttribute="leading" constant="5" id="Ysb-vf-Bfr"/>
                             <constraint firstItem="tmR-PD-3RR" firstAttribute="leading" secondItem="Lff-gP-Obc" secondAttribute="leading" constant="5" id="dXW-Uz-iZL"/>
+                            <constraint firstItem="E7K-b4-RKD" firstAttribute="centerY" secondItem="5bi-Wl-auP" secondAttribute="centerY" id="f0v-mv-myk"/>
                             <constraint firstItem="eDF-Hs-SBX" firstAttribute="height" secondItem="soM-WZ-Q6h" secondAttribute="height" id="gJo-1T-ovT"/>
                             <constraint firstItem="jmI-gK-l6F" firstAttribute="leading" secondItem="tmR-PD-3RR" secondAttribute="trailing" constant="10" id="gOI-es-GKh"/>
                             <constraint firstItem="mA9-iC-LId" firstAttribute="leading" secondItem="Lff-gP-Obc" secondAttribute="leading" constant="5" id="lkV-tk-DUL"/>
@@ -123,13 +124,24 @@
                             <constraint firstItem="E7K-b4-RKD" firstAttribute="top" secondItem="3kL-MY-Mc4" secondAttribute="bottom" constant="20" id="mZ7-yR-y5r"/>
                             <constraint firstItem="5bi-Wl-auP" firstAttribute="top" secondItem="mA9-iC-LId" secondAttribute="bottom" constant="20" id="wlE-Xi-emI"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Lff-gP-Obc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="9VQ-Xq-m6r"/>
-                    <constraint firstAttribute="trailing" secondItem="Lff-gP-Obc" secondAttribute="trailing" id="KQw-fg-Td4"/>
-                    <constraint firstItem="Lff-gP-Obc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SB0-SS-HBn"/>
-                    <constraint firstAttribute="bottom" secondItem="Lff-gP-Obc" secondAttribute="bottom" id="om6-6K-Svv"/>
+                    <constraint firstItem="Lff-gP-Obc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="9VQ-Xq-m6r"/>
+                    <constraint firstAttribute="trailing" secondItem="Lff-gP-Obc" secondAttribute="trailing" constant="5" id="KQw-fg-Td4"/>
+                    <constraint firstItem="Lff-gP-Obc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="SB0-SS-HBn"/>
+                    <constraint firstAttribute="bottom" secondItem="Lff-gP-Obc" secondAttribute="bottom" constant="5" id="om6-6K-Svv"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -140,7 +152,7 @@
                 <outlet property="subjectlbl" destination="Z7v-Ad-Sk1" id="1F7-0U-005"/>
                 <outlet property="ticketLbl" destination="eDF-Hs-SBX" id="tCP-wZ-hhY"/>
             </connections>
-            <point key="canvasLocation" x="125.36231884057972" y="91.071428571428569"/>
+            <point key="canvasLocation" x="125.36231884057972" y="101.78571428571428"/>
         </tableViewCell>
     </objects>
     <resources>

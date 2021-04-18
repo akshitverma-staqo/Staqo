@@ -14,6 +14,7 @@ class RoomBookingVC: BaseVC, UITableViewDelegate {
     var header:HeaderView!
     private let kRoomBTVC = "RoomBTVC"
     var delegate:RoomBookingVCDelegate?
+    var searchValue:String = ""
     @IBOutlet weak var datePicker: UIDatePicker!
     
     @IBOutlet weak var herderView: HeaderView!
@@ -123,6 +124,7 @@ extension RoomBookingVC : RoomBTVCDelegate{
         
     }
     func filledData(value: String) {
+        searchValue = value
         viewModel.searchRoomData(value: value)
     }
     
@@ -152,6 +154,7 @@ extension RoomBookingVC : RoomBookingViewModelDelegate{
     func updatedResult(data: BaseModel?) {
         stopLoader()
         let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kBooKRoomVC, type: BooKRoomVC.self)
+        vc.searchValue = searchValue
         vc.baseModel = data
         self.navigationController?.pushViewController(vc, animated: true)
        

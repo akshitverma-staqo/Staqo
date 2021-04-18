@@ -32,11 +32,16 @@ class NotificationTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func dataBind(data:[Value]? , index:IndexPath){
-        notificationTitle.text = data?[index.row].fields?.title ?? ""
-        notificationSubtitle.text =  data?[index.row].fields?.Description ?? ""
-        NotificationTime.text =  Constant.formatModifiedDate(strDate: data?[index.row].fields?.created ?? "")
-        readUnreadImg.isHidden = data?[index.row].fields?.isRead ?? false
+    func dataBind(data:[ReadNotify]? , index:IndexPath){
+        notificationTitle.text = data?[index.row].title ?? ""
+        notificationSubtitle.text =  data?[index.row].description ?? ""
+        NotificationTime.text =  Constant.formatModifiedDate(strDate: data?[index.row].displayDate ?? "")
+        if (data?[index.row].rflag ?? 0) == 1{
+            readUnreadImg.isHidden = true
+        }else{
+            readUnreadImg.isHidden = false
+        }
+       
         
     }
     

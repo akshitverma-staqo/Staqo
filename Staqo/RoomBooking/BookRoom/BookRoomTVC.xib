@@ -163,6 +163,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bookRoomClick" destination="CnS-Xi-pRG" id="1ae-y9-v11"/>
+                <outlet property="btnPhoto" destination="2Ka-UQ-BEi" id="BfB-f9-Qjp"/>
                 <outlet property="capacityLbl" destination="ntA-p0-et6" id="em3-p1-wrQ"/>
                 <outlet property="roomCodeLbl" destination="vFr-eA-Uix" id="phM-dv-l0Y"/>
                 <outlet property="roomFeatureLbl" destination="iWd-lt-oTT" id="iQI-qM-PKF"/>

@@ -19,6 +19,7 @@ enum UserDefaultsKeys : String {
     case menuStatus
     case webStatus
     case adminStatus
+    case notifyCount
 }
 
 
@@ -26,7 +27,9 @@ extension UserDefaults {
     
     //UserDefaults.standard.string(forKey: "tokenResult1") ?? ""
 
-    
+    func setnotifyCount(value:Int){
+        return set(value , forKey: UserDefaultsKeys.notifyCount.rawValue)
+    }
     func setAccessToken(value: String) {
         return set(value, forKey: UserDefaultsKeys.accessToken.rawValue)
     }
@@ -49,6 +52,10 @@ extension UserDefaults {
         return set(value, forKey: UserDefaultsKeys.adminStatus.rawValue)
         
     }
+    func getNotifyCount() -> Int {
+        return value(forKey: UserDefaultsKeys.notifyCount.rawValue) as! Int
+    }
+    
     func getAdminStatus() -> String {
         return value(forKey: UserDefaultsKeys.adminStatus.rawValue) as! String
     }

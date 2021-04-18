@@ -15,7 +15,7 @@
 //        super.viewDidLoad()
 //        
 //        
-//        //commonNavigationBar(controller: .bottomSwipe)
+//        commonNavigationBar(controller: .bottomSwipe)
 //        self.addPullUpController(animated: true)
 //    }
 //    
@@ -44,7 +44,7 @@
 //        
 //        // for storyboard
 //        //        self.navigationController?.pushViewController(Constant.Controllers.get(.bottomSwipe)(), animated: true)
-//        let viewCont = Constant.Controllers.get(.bottomSwipe)()
+//        let viewCont = Constant1.Controllers.get(.bottomSwipe)()
 //        // for .xib
 //        //        let viewCont =   SwipeUpViewController(nibName: "SwipeUpViewController", bundle: nil)
 //        //        viewCont.initialState = .contracted

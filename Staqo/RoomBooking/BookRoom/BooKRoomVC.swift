@@ -9,12 +9,14 @@ import UIKit
 
 class BooKRoomVC: BaseVC, UITableViewDelegate {
     var viewModel:BookRoomViewModel!
+    var roomViewModel:RoomBookingViewModel!
     var header:HeaderView!
     private let kBookRoomTVC = "BookRoomTVC"
     @IBOutlet weak var roomSegment: UISegmentedControl!
     @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var tableView: UITableView!
     var baseModel:BaseModel?
+    var searchValue:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
@@ -23,6 +25,10 @@ class BooKRoomVC: BaseVC, UITableViewDelegate {
 
         viewModel = BookRoomViewModel(dataSource: BookRoomDataSource())
         viewModel.delegate = self
+        
+        roomViewModel = RoomBookingViewModel(dataSource: RoomDataSource())
+        roomViewModel._delegate = self
+        
         // Do any additional setup after loading the view.
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -37,19 +43,19 @@ class BooKRoomVC: BaseVC, UITableViewDelegate {
         self.navigationController?.isNavigationBarHidden = true
     }
     func checkedData(index:Int){
-        if index == 1 {
+        if index == 0 {
             if baseModel?.freeRoomModel == [] ||  baseModel?.freeRoomModel == nil {
                 showErrorMessage(title: "Alert", message: "Free Room Not Available.") { (action) in
                 
                 }
-        }else{
+        }
+     
+        }else if index == 1 {
             if  baseModel?.bookedRoomModel == [] ||  baseModel?.bookedRoomModel == nil {
                  showErrorMessage(title: "Alert", message: "Booked Room Not Available.") { (action) in
                  
                  }
              }
-        }
-     
         }
     }
     
@@ -90,9 +96,11 @@ extension BooKRoomVC : ViewModelDelegate{
     
     func didLoadData() {
         stopLoader()
+        showErrorMessage(title: "", message: "Room Booked Successfully.") { (action) in
+            self.roomViewModel.searchRoomData(value: self.searchValue)
+
+        }
         tableView.reloadData()
-        
-        
         
     }
     
@@ -124,6 +132,7 @@ extension BooKRoomVC: UITableViewDataSource{
         if roomSegment.selectedSegmentIndex == 0 {
                 cell.dataBind(data: baseModel?.freeRoomModel?[indexPath.row])
                 cell.bookRoomClick.tag = indexPath.row
+            cell.btnPhoto.tag = indexPath.row
             
             }else{
             cell.dataBind1(data:  baseModel?.bookedRoomModel?[indexPath.row])
@@ -160,9 +169,26 @@ extension BooKRoomVC: HeaderViewDelegate{
     
 }
 extension BooKRoomVC : BookRoomTVCDelegate{
+    func photoView(index: Int) {
+        let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kRoomPhotoVC, type: RoomPhotoVC.self)
+     //   vc.urlString =  baseModel?.freeRoomModel?[index].webUrl ?? ""
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     func bookRoomData(index: Int) {
         let free = baseModel?.freeRoomModel?[index]
         let selectedOption = baseModel?.selectedRoomOptionModel
-        viewModel.roomBookService(roomId: Int(free?.id ?? 0), attendents: Int(free?.capacity ?? 0), fromDateTime: selectedOption?.fromDateTime ?? "", toDateTime: selectedOption?.toDateTime  ?? "", roomStatus: selectedOption?.roomStatus  ?? "", purpose: selectedOption?.remarks  ?? "", visitorType: selectedOption?.visitorType  ?? "", roomType: selectedOption?.roomType ?? "", arrangementType: selectedOption?.arrangementType ?? "", notificationId: "\(free?.id ?? 0)", roomCode: selectedOption?.roomCode ?? "", recurringDay: selectedOption?.recurringDay ?? "", bookedBy: selectedOption?.bookedBy ?? "")
+        showMessage(title: "", message: "Do you want to book Room?", btnConfirmTitle: "Yes", btnCancelTitle:"No") { (isYes, action) in
+            if isYes{
+            self.viewModel.roomBookService(roomId: Int(free?.id ?? 0), attendents: Int(free?.capacity ?? 0), fromDateTime: selectedOption?.fromDateTime ?? "", toDateTime: selectedOption?.toDateTime  ?? "", roomStatus: selectedOption?.roomStatus  ?? "", purpose: selectedOption?.remarks  ?? "", visitorType: selectedOption?.visitorType  ?? "", roomType: selectedOption?.roomType ?? "", arrangementType: selectedOption?.arrangementType ?? "", notificationId: "\(free?.id ?? 0)", roomCode: selectedOption?.roomCode ?? "", recurringDay: selectedOption?.recurringDay ?? "", bookedBy: selectedOption?.bookedBy ?? "")
+            }
+        }
+      
+    }
+}
+extension BooKRoomVC:RoomBookingViewModelDelegate{
+    func updatedResult(data: BaseModel?) {
+        baseModel = data
+        tableView.reloadData()
     }
 }

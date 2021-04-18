@@ -153,6 +153,21 @@
                             <action selector="btnCancelTap:" destination="R94-Ol-der" eventType="touchUpInside" id="Fen-C5-K2k"/>
                         </connections>
                     </button>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMJ-ln-07p">
+                        <rect key="frame" x="20" y="226" width="130" height="36"/>
+                        <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="4zu-rs-VHI"/>
+                            <constraint firstAttribute="width" constant="130" id="sib-wi-5Ld"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
+                        <state key="normal" title="Cancel">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="btnCancelTap:" destination="R94-Ol-der" eventType="touchUpInside" id="2j0-uO-Vid"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="MI2-A6-R0J" firstAttribute="leading" secondItem="Ag7-QF-bbG" secondAttribute="leading" constant="5" id="0nP-LC-oRS"/>
@@ -161,13 +176,16 @@
                     <constraint firstItem="aC8-gK-vfg" firstAttribute="leading" secondItem="D8D-9s-N82" secondAttribute="trailing" constant="20" id="C0E-lq-VN2"/>
                     <constraint firstItem="Wxq-jh-uCv" firstAttribute="centerY" secondItem="su2-Hb-zEY" secondAttribute="centerY" id="FyJ-13-HeM"/>
                     <constraint firstItem="M1j-2W-XRF" firstAttribute="top" secondItem="Ag7-QF-bbG" secondAttribute="top" constant="10" id="HAc-RL-lSr"/>
+                    <constraint firstItem="jMJ-ln-07p" firstAttribute="height" secondItem="Q6F-CS-bHX" secondAttribute="height" id="IPQ-lr-S1t"/>
                     <constraint firstAttribute="bottom" secondItem="68T-Kh-Bz4" secondAttribute="bottom" constant="15" id="J9B-Ia-LDz"/>
                     <constraint firstItem="ZmY-5x-Iej" firstAttribute="leading" secondItem="M1j-2W-XRF" secondAttribute="trailing" constant="20" id="JIO-Cd-CzH"/>
                     <constraint firstAttribute="trailing" secondItem="68T-Kh-Bz4" secondAttribute="trailing" constant="20" id="PxM-lf-3Co"/>
                     <constraint firstItem="bpk-b0-wDt" firstAttribute="top" secondItem="0JS-lf-LBp" secondAttribute="bottom" constant="20" id="SE8-29-Iu2"/>
                     <constraint firstItem="Wxq-jh-uCv" firstAttribute="leading" secondItem="su2-Hb-zEY" secondAttribute="trailing" constant="20" id="SeA-H1-CFf"/>
                     <constraint firstItem="su2-Hb-zEY" firstAttribute="top" secondItem="6qJ-GX-rzZ" secondAttribute="bottom" constant="20" id="Ud7-US-uSN"/>
+                    <constraint firstItem="jMJ-ln-07p" firstAttribute="width" secondItem="Q6F-CS-bHX" secondAttribute="width" id="Z6S-td-1MQ"/>
                     <constraint firstItem="MI2-A6-R0J" firstAttribute="top" secondItem="D8D-9s-N82" secondAttribute="bottom" constant="20" id="Z8X-D4-SZ6"/>
+                    <constraint firstItem="jMJ-ln-07p" firstAttribute="centerY" secondItem="Q6F-CS-bHX" secondAttribute="centerY" id="Zjb-7D-aQ1"/>
                     <constraint firstItem="Q6F-CS-bHX" firstAttribute="leading" secondItem="Ag7-QF-bbG" secondAttribute="leading" constant="20" id="a7B-lA-SXs"/>
                     <constraint firstItem="aC8-gK-vfg" firstAttribute="top" secondItem="ZmY-5x-Iej" secondAttribute="bottom" constant="20" id="aBd-Bi-Or3"/>
                     <constraint firstItem="6qJ-GX-rzZ" firstAttribute="leading" secondItem="Ag7-QF-bbG" secondAttribute="leading" constant="5" id="d31-UA-dtS"/>
@@ -184,11 +202,18 @@
                     <constraint firstItem="D8D-9s-N82" firstAttribute="leading" secondItem="Ag7-QF-bbG" secondAttribute="leading" constant="5" id="uD4-3i-JEH"/>
                     <constraint firstItem="68T-Kh-Bz4" firstAttribute="centerY" secondItem="Q6F-CS-bHX" secondAttribute="centerY" id="uDj-Vb-OMX"/>
                     <constraint firstItem="su2-Hb-zEY" firstAttribute="leading" secondItem="Ag7-QF-bbG" secondAttribute="leading" constant="5" id="vSy-7h-0Cb"/>
+                    <constraint firstItem="jMJ-ln-07p" firstAttribute="centerX" secondItem="Q6F-CS-bHX" secondAttribute="centerX" id="vg6-tN-RLj"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="12"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="huc-mQ-mnQ"/>
             <connections>
                 <outlet property="approveClick" destination="Q6F-CS-bHX" id="7b7-iT-M0a"/>
+                <outlet property="btnCancel1" destination="jMJ-ln-07p" id="fiT-eU-shx"/>
                 <outlet property="cancelClick" destination="68T-Kh-Bz4" id="wnB-5u-YCX"/>
                 <outlet property="dateTimeLbl" destination="0JS-lf-LBp" id="ugq-11-O7f"/>
                 <outlet property="nameLbl" destination="ZmY-5x-Iej" id="gii-we-EHR"/>

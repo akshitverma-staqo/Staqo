@@ -18,7 +18,7 @@ class NotificationViewModel: ViewModelType {
     var delegate: ViewModelDelegate?
     var _delegate:NotificationViewModelDelegate?
     var delegateNotify:GetNotifyCountDelegate?
-    var rows:[Value]?
+    var rows:[ReadNotify]?
     private let dataSource: NotificationDataSourceDelegate?
     init(dataSource: NotificationDataSourceDelegate) {
         self.dataSource = dataSource
@@ -26,21 +26,24 @@ class NotificationViewModel: ViewModelType {
     
     
     func bootstrap() {
-        getNotificationData()
+        notificationData(email:UserDefaults.standard.getProfile()?.email ?? "")
         
     }
     
- private func getNotificationData(){
+ private func notificationData(email:String){
           
       delegate?.willLoadData()
-      dataSource?.notificationData(completion: {[weak self] result in
+      dataSource?.notificationData(email:email,completion: {[weak self] result in
           guard let ws = self else{return}
           
           switch result {
           case .success(let baseModel):
               print(baseModel)
-            ws.readNotification(email: UserDefaults.standard.getProfile()?.email ?? "")
-           //   ws.delegate?.didLoadData()
+            UserDefaults.standard.setnotifyCount(value:baseModel.readNotify?.unreadMessages ?? 0 )
+            ws.rows = baseModel.readNotify?.allData
+            //  ws.readNotification(email: UserDefaults.standard.getProfile()?.email ?? "")
+            ws.delegateNotify?.getNotifyCount()
+           ws.delegate?.didLoadData()
           case .failure(let error):
               ws.delegate?.didFail(error: error)
           }
@@ -56,13 +59,13 @@ class NotificationViewModel: ViewModelType {
             
             case .success(let baseModel):
                 ws.delegate?.didLoadData()
-                for notify in 0..<(baseModel.count ) {
-                    for item in 0..<(ws.rows?.count ?? 0) {
-                        if ws.rows?[item].fields?.id ?? "" == baseModel[notify].notificationid ?? ""{
-                            ws.rows?[item].fields?.isRead =  true
-                            }
-                    }
-                }
+//                for notify in 0..<(baseModel.count ) {
+//                    for item in 0..<(ws.rows?.count ?? 0) {
+//                        if ws.rows?[item].fields?.id ?? "" == baseModel[notify].notificationid ?? ""{
+//                            ws.rows?[item].fields?.isRead =  true
+//                            }
+//                    }
+//                }
                 ws.delegateNotify?.getNotifyCount()
                 ws.delegate?.didLoadData()
             case .failure(let error):

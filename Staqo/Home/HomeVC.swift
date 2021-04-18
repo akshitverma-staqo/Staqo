@@ -178,42 +178,43 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
         switch viewModel.rows?[indexPath.row].title ?? "" {
         case "1":
         
-            UserDefaults.standard.setWebStatus(value: "User")
+            UserDefaults.standard.setWebStatus(value: "U")
             UserDefaults.standard.set("oqportal", forKey: "webcheck")
             //UserDefaults.standard.setWebStatus(value: "")
             //            UserDefaults.standard.getWebStatus()
+            
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
 
             self.navigationController?.pushViewController(vc, animated: true)
             
             
         case "2":
-            UserDefaults.standard.setWebStatus(value: "User")
-            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
-            self.navigationController?.pushViewController(vc, animated: true)
+            UserDefaults.standard.setWebStatus(value: "U")
+//            let vc = Constant.getViewController(storyboard: Constant.kMazzaykomStoryboard, identifier: Constant.kMazzayakomViewController, type: mazz.self)
+//            self.navigationController?.pushViewController(vc, animated: true)
             
             
         case "3":
-            UserDefaults.standard.setWebStatus(value: "User")
+            UserDefaults.standard.setWebStatus(value: "U")
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kSalmeenVC, type: SalmeenViewController.self)
             self.navigationController?.pushViewController(vc, animated: true)
             
         case "4":
-            UserDefaults.standard.setWebStatus(value: "User")
+            UserDefaults.standard.setWebStatus(value: "U")
             let vc = Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kBusinessVC, type: BusinessVC.self)
             self.navigationController?.pushViewController(vc, animated: true)
        
         
         case "5":
             print("Helpdesk")
-            UserDefaults.standard.setWebStatus(value: "User")
+            UserDefaults.standard.setWebStatus(value: "U")
             let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kHelpDeskVC, type: HelpDeskVC.self)
             self.navigationController?.pushViewController(vc, animated: true)
            
         case "6":
             
             print("IHSEE")
-            UserDefaults.standard.setWebStatus(value: "User")
+            UserDefaults.standard.setWebStatus(value: "U")
             guard let url = URL(string: "intelex://")else{
                 
                 return
@@ -228,9 +229,9 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
 
         case "7":
             print("ESIGN")
-            UserDefaults.standard.setWebStatus(value: "User")
+            UserDefaults.standard.setWebStatus(value: "U")
             //guard let url = URL(string: "signnow-private-cloud://sso_login?refresh_token=" + (UserDefaults.standard.getAccessToken()) + "&access_token=" + (UserDefaults.standard.getAccessToken()) + "&hostname=" + "esign.oq.com")else{https://esign.oq.com/webapp/login-sso
-            guard let url = URL(string: "signnow-private-cloud://sso_login?")else{
+            guard let url = URL(string: "signnow://")else{
                 
                 return
             }
@@ -248,7 +249,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
      
         case "9":
            print("Majalish")
-            UserDefaults.standard.setWebStatus(value: "User")
+            UserDefaults.standard.setWebStatus(value: "U")
             let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kRoomBookMainVC, type: RoomBookMainVC.self)
             self.navigationController?.isNavigationBarHidden = true
             self.navigationController?.pushViewController(vc, animated: true)
@@ -257,7 +258,7 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
            print("ApproveStatus")
         
             
-                UserDefaults.standard.setWebStatus(value: "Admin")
+                UserDefaults.standard.setWebStatus(value: "A")
             
              let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kApproveCancelVC, type: ApproveCancelVC.self)
              self.navigationController?.isNavigationBarHidden = true
@@ -330,8 +331,8 @@ extension HomeVC: HeaderViewDelegate{
 }
 extension HomeVC : GetNotifyCountDelegate{
     func getNotifyCount() {
-      let value = viewModelNotify.rows?.filter{!($0.fields?.isRead ?? false)}
-        header.btnNotiyCount.setTitle("\(value?.count ?? 0)", for: .normal)
+    
+        header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() ?? 0)", for: .normal)
     }
     
     
