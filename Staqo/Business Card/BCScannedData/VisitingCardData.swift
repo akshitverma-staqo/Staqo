@@ -83,7 +83,7 @@ class VisitingCardData: BaseVC {
     }
     public override func viewDidLoad() {
         super.viewDidLoad()
-        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
         herderView.addSubview(header)
         
@@ -340,26 +340,48 @@ class VisitingCardData: BaseVC {
         
         if !issValidEmail(testStr: emailTxtField.text ?? "")
         {
-               
-        }
-        if (self.nameTextField.text == "") {
+            showErrorMessage(title: "Alert", message: "Email is not Valid") { (action) in
             
+            }
+
+
         }
-        else if (self.phoneTxtField.text == "") {
-           
+        if (self.nameTextField.text?.count ?? 0) <= 0 {
+            showErrorMessage(title: "Alert", message: "Name should not be blank") { (action) in
+            
+            }
+
+        }
+        else if (self.phoneTxtField.text?.count ?? 0) <= 0 {
+            showErrorMessage(title: "Alert", message: "Phone should not be blank") { (action) in
+            
+            }
+
         }
         
-        else if (self.webSiteTextField.text == "") {
-        
+        else if (self.webSiteTextField.text?.count ?? 0) <= 0 {
+            showErrorMessage(title: "Alert", message: "Website should not be blank") { (action) in
+            
+            }
+
         }
-        else if (self.emailTxtField.text == "") {
-    
+        else if (self.emailTxtField.text?.count ?? 0) <= 0 {
+            showErrorMessage(title: "Alert", message: "Email Id should not be blank") { (action) in
+            
+            }
+
         }
-        else if (self.companyText.text == "") {
-         
+        else if (self.companyText.text?.count ?? 0) <= 0 {
+            showErrorMessage(title: "Alert", message: "Company should not be blank") { (action) in
+            
+            }
+
         }
-        else if (self.addressTxtField.text == "") {
-        
+        else if (self.addressTxtField.text?.count ?? 0) <= 0 {
+            showErrorMessage(title: "Alert", message: "Address should not be blank") { (action) in
+            
+            }
+
         }else{
             
             viewModel.visitSaveData(email: emailTxtField.text ?? "", empID: Int( UserDefaults.standard.getEmpID()) ?? 0, name: nameTextField.text ?? "", cmpName: companyText.text ?? "", webSite: webSiteTextField.text ?? "", address: addressTxtField.text ?? "", mobileNo: phoneTxtField.text ?? "", remark: commentTextView.text ?? "", scanBy: scanby)

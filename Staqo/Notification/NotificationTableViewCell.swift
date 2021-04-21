@@ -35,7 +35,7 @@ class NotificationTableViewCell: UITableViewCell {
     func dataBind(data:[ReadNotify]? , index:IndexPath){
         notificationTitle.text = data?[index.row].title ?? ""
         notificationSubtitle.text =  data?[index.row].description ?? ""
-        NotificationTime.text =  Constant.formatModifiedDate(strDate: data?[index.row].displayDate ?? "")
+        NotificationTime.text =  Constant.formatDate(strDate: data?[index.row].displayDate ?? "")
         if (data?[index.row].rflag ?? 0) == 1{
             readUnreadImg.isHidden = true
         }else{

@@ -49,7 +49,7 @@ class ContactViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:100))
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
        
         herderView.addSubview(header)

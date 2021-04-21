@@ -40,7 +40,7 @@ class EmpViewModal: ViewModelType {
                     print(baseModel)
                    
                     if baseModel.value?.count == 0  {
-                        ws.insertEmpData(email: UserDefaults.standard.getProfile()?.email ?? "", orgID: 2, name:UserDefaults.standard.getProfile()?.name ?? "", fcmToken: "", desig: UserDefaults.standard.getProfile()?.jobDesignation ?? "", mobileNo: UserDefaults.standard.getProfile()?.mobileNo1 ?? "")
+                        ws.insertEmpData(email: UserDefaults.standard.getProfile()?.email ?? "", orgID: 2, name:UserDefaults.standard.getProfile()?.name ?? "", fcmToken: UserDefaults.standard.getFCMToken(), desig: UserDefaults.standard.getProfile()?.jobDesignation ?? "", mobileNo: UserDefaults.standard.getProfile()?.mobileNo1 ?? "")
                     }else{
                         baseModel.value?.forEach({data in
                             ws.valueData = data
@@ -67,8 +67,9 @@ class EmpViewModal: ViewModelType {
                 switch result{
                 case .success(let baseModel):
                     print(baseModel)
-                    ws.field = baseModel.fieldsData
-                    ws.delegate?.didLoadData()
+                   ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
+//                    ws.field = baseModel.fieldsData
+//                    ws.delegate?.didLoadData()
                 case .failure(let error):
                     ws.delegate?.didFail(error: error)
                 }

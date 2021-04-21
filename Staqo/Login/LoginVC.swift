@@ -23,8 +23,9 @@ class LoginVC: BaseVC {
         viewModel = LoginViewModel(dataSource: LoginDataSource())
         viewModel.delegate = self
         
-        
-        
+        shadowView.dropShadow()
+        innerView.layer.cornerRadius  = 11
+        innerView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
       //  UserDefaults.standard.setMenuValue(value: true)
         print(Configuration.baseURL)
         self.navigationController?.isNavigationBarHidden = true

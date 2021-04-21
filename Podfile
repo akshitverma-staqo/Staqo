@@ -17,6 +17,11 @@ target 'Staqo' do
 	pod 'PullUpController'
 	pod "ScalingCarousel"
 	pod 'ANActivityIndicator'
+	pod 'Firebase/Core'
+	pod 'Firebase/Messaging'
+	pod 'Alamofire'
+
+
 
 
 

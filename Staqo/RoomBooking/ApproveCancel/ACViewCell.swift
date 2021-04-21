@@ -52,7 +52,7 @@ class ACViewCell: UITableViewCell {
         self.indexpath = index
         roomCapacity.text = "\(data?[index.row].attendents ?? 0)"
         roomCodeLbl.text =  data?[index.row].roomCode ?? ""
-        dateTimeLbl.text =  data?[index.row].fromDateTime ?? ""
+        dateTimeLbl.text =  Constant.formatModifiedDate(strDate:  data?[index.row].createdOn ?? "")
         purposeLbl.text = data?[index.row].purpose ?? ""
         nameLbl.text = data?[index.row].bookedBy ?? ""
         

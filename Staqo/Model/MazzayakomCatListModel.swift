@@ -7,8 +7,8 @@ struct MazzayakomCatListModel {
     var description : String = ""
     var id : String = ""
     
-    var Title : String = ""
-     var Description : String = ""
+//    var Title : String = ""
+//     var Description : String = ""
    
 
    
@@ -19,16 +19,14 @@ struct MazzayakomCatListModel {
     init(json:JSON) {
         //let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        name = json["Title"].stringValue
-        icon_image = json["Image"].stringValue
+        name = json["name"].stringValue
+        icon_image = json["icon_image"].stringValue
        
-        description = json["LinkTitleNoMenu"].stringValue
+        description = json["description"].stringValue
         
         id = json["id"].stringValue
         
-        Title = json["Title"].stringValue
-        
-        Description = json["Caption"].stringValue
+       
        
       
     }

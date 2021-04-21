@@ -75,6 +75,7 @@
 		76970634262AC7830063BABA /* Extension1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76970630262AC7830063BABA /* Extension1.swift */; };
 		76970635262AC7830063BABA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76970631262AC7830063BABA /* Style.swift */; };
 		76970640262B347D0063BABA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697063F262B347B0063BABA /* Data.swift */; };
+		769B1FDC26301C660077B625 /* ImageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B1FDB26301C660077B625 /* ImageIcon.swift */; };
 		76A0AF092616CE6D0084E1F8 /* contact us pagehero v2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76A0AF082616CE6C0084E1F8 /* contact us pagehero v2.jpg */; };
 		76A0AF102616DAF50084E1F8 /* BookRoomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */; };
 		76A0AF112616DAF50084E1F8 /* BookRoomTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A0AF0F2616DAF50084E1F8 /* BookRoomTVC.xib */; };
@@ -100,7 +101,7 @@
 		76A1046125FFA76300C536B9 /* VisitorListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A1046025FFA76300C536B9 /* VisitorListVC.swift */; };
 		76A1046625FFA7F100C536B9 /* VisitorListViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A1046525FFA7F100C536B9 /* VisitorListViewModal.swift */; };
 		76A1046B25FFA81000C536B9 /* VisitorListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A1046A25FFA81000C536B9 /* VisitorListDataSource.swift */; };
-		76A14F05260FB42200A5E7BF /* Mazzayakom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A14F04260FB42200A5E7BF /* Mazzayakom.storyboard */; };
+		76A14F05260FB42200A5E7BF /* Mazzaykom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A14F04260FB42200A5E7BF /* Mazzaykom.storyboard */; };
 		76B2057925DC402D0056FC68 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B2057725DC402D0056FC68 /* AuthenticationManager.swift */; };
 		76B2057A25DC402D0056FC68 /* GraphManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B2057825DC402D0056FC68 /* GraphManager.swift */; };
 		76B2058F25DC49800056FC68 /* AuthSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B2058E25DC49800056FC68 /* AuthSettings.plist */; };
@@ -277,6 +278,7 @@
 		76970630262AC7830063BABA /* Extension1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension1.swift; sourceTree = "<group>"; };
 		76970631262AC7830063BABA /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		7697063F262B347B0063BABA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		769B1FDB26301C660077B625 /* ImageIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIcon.swift; sourceTree = "<group>"; };
 		76A0AF082616CE6C0084E1F8 /* contact us pagehero v2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "contact us pagehero v2.jpg"; sourceTree = "<group>"; };
 		76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomTVC.swift; sourceTree = "<group>"; };
 		76A0AF0F2616DAF50084E1F8 /* BookRoomTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRoomTVC.xib; sourceTree = "<group>"; };
@@ -302,7 +304,7 @@
 		76A1046025FFA76300C536B9 /* VisitorListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorListVC.swift; sourceTree = "<group>"; };
 		76A1046525FFA7F100C536B9 /* VisitorListViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorListViewModal.swift; sourceTree = "<group>"; };
 		76A1046A25FFA81000C536B9 /* VisitorListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorListDataSource.swift; sourceTree = "<group>"; };
-		76A14F04260FB42200A5E7BF /* Mazzayakom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mazzayakom.storyboard; sourceTree = "<group>"; };
+		76A14F04260FB42200A5E7BF /* Mazzaykom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mazzaykom.storyboard; sourceTree = "<group>"; };
 		76B2057725DC402D0056FC68 /* AuthenticationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		76B2057825DC402D0056FC68 /* GraphManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphManager.swift; sourceTree = "<group>"; };
 		76B2058E25DC49800056FC68 /* AuthSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AuthSettings.plist; sourceTree = "<group>"; };
@@ -921,6 +923,7 @@
 				76C3ACAC261F61CE00FC6B85 /* Site.swift */,
 				769705F8262036780063BABA /* Priority.swift */,
 				769705F326201C1E0063BABA /* Subcategories.swift */,
+				769B1FDB26301C660077B625 /* ImageIcon.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -933,7 +936,7 @@
 				76B205B925DED6650056FC68 /* Home.storyboard */,
 				7693C62825F3E26D001665DF /* Business.storyboard */,
 				76A0F545260B435500601483 /* Room.storyboard */,
-				76A14F04260FB42200A5E7BF /* Mazzayakom.storyboard */,
+				76A14F04260FB42200A5E7BF /* Mazzaykom.storyboard */,
 				7667E7D62615AD1300EB624E /* HelpDesk.storyboard */,
 			);
 			path = Storyboard;
@@ -1095,7 +1098,7 @@
 				CD5DB42A25D5A26500353084 /* Assets.xcassets in Resources */,
 				76257D9E25DF70C100F1BD47 /* Century Gothic 400.ttf in Resources */,
 				76656D9B260DAA110080669B /* GoogleService-Info.plist in Resources */,
-				76A14F05260FB42200A5E7BF /* Mazzayakom.storyboard in Resources */,
+				76A14F05260FB42200A5E7BF /* Mazzaykom.storyboard in Resources */,
 				76D66ED2261A008A0013E5B4 /* VisiterListTVC.xib in Resources */,
 				76257D9F25DF70C100F1BD47 /* Century Gothic.ttf in Resources */,
 				76A0F54D260B4EFE00601483 /* RoomBTVC.xib in Resources */,
@@ -1364,6 +1367,7 @@
 				76A1045C25FF9AE100C536B9 /* ScanQRViewController.swift in Sources */,
 				7697061C26287F4B0063BABA /* VisitingCardData.swift in Sources */,
 				76F1FB2A25F281F200D88F79 /* EmpViewModal.swift in Sources */,
+				769B1FDC26301C660077B625 /* ImageIcon.swift in Sources */,
 				76656D8F260C65B10080669B /* FAQAnswerTableViewCell.swift in Sources */,
 				76C3AC67261DBDF000FC6B85 /* MenuModel.swift in Sources */,
 				76D66EC42619F8450013E5B4 /* MazzayakomViewController.swift in Sources */,

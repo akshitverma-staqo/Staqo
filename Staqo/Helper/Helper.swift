@@ -18,8 +18,9 @@ class Helper {
         textReader.documents?.append(document)
         return textReader
     }
-    static func creatingRoomData(attendents:Int ,fromDateTime:String ,toDateTime:String,remarks:String,visitorType:String,roomType:String,arrangementType:String,roomCode:String,recurringDay:String ) -> RoomSearchModel? {
+    static func creatingRoomData(locID:Int, attendents:Int ,fromDateTime:String ,toDateTime:String,remarks:String,visitorType:String,roomType:String,arrangementType:String,roomCode:String,recurringDay:String ) -> RoomSearchModel? {
         var roomData = RoomSearchModel()
+        roomData.locID = locID
         roomData.attendents = attendents
         roomData.fromDateTime = fromDateTime
         roomData.toDateTime = toDateTime

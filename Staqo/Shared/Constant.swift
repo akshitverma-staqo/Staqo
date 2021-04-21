@@ -127,7 +127,7 @@ class Constant {
     static let kRoomStroyboard = "Room"
     static let kNotification = "Notification"
     static let kHDStroyboard = "HelpDesk"
-    static let kMazzaykomStoryboard = "MazzaykomStoryboard"
+    static let kMazzaykomStoryboard = "Mazzaykom"
     
     
     // MARK:- View Controllers
@@ -158,8 +158,8 @@ class Constant {
     static let kRoomBookMainVC = "RoomBookMainVC"
     static let kApproveCancelVC = "ApproveCancelVC"
     static let kSalmeenVC = "SalmeenViewController"
-    static let kSwipeController = "SwipeUpViewController"
-    static let kMazzayakomViewController = "MazzayakomViewController"
+    static let kSwipeControllerVC = "SwipeUpViewController"
+    static let kMazzayakomViewControllerVC = "MazzayakomViewController"
     static let kVisitingCardDataVC = "VisitingCardData"
     
     
@@ -300,8 +300,8 @@ class Constant {
         let formatter = DateFormatter()
         //2019-05-03 12:11:15
         //   formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.s"
-        
+        //2021-04-20T05:49:32.802+00:00
+        formatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
         if let date =  formatter.date(from: strDate) {
             let viewFormatter = DateFormatter()
             viewFormatter.dateFormat = "dd-MMM-yyyy hh:mm a"
@@ -318,9 +318,9 @@ class Constant {
         //2019-05-03 12:11:15
         
         formatter.timeZone = TimeZone.current
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+//    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
         
-        //formatter.dateFormat = "YYYY-MM-DDThh:mm:ss.sssssss"
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         
         if let date =  formatter.date(from: strDate) {
             let viewFormatter = DateFormatter()

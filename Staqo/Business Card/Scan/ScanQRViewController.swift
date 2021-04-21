@@ -91,7 +91,9 @@ class ScanQRViewController: UIViewController, AVCaptureMetadataOutputObjectsDele
     }
     
     @IBAction func backButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        print("backTap")
+        _ = navigationController?.popViewController(animated: true)
+
     }
     func saveVCardContacts (vCard : Data) { // assuming you have alreade permission to acces contacts
         

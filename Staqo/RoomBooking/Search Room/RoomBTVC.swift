@@ -57,6 +57,7 @@ class RoomBTVC: UITableViewCell {
     var rowsData:[RoomModel]?
     var rowsRoom:[RoomType]?
     var rowsLoc:[Location]?
+    var locIndex:Int = 0
     var arrangModel:[ArrangmentModel]?
     var datePicker: UIDatePicker?
     override func awakeFromNib() {
@@ -120,7 +121,7 @@ class RoomBTVC: UITableViewCell {
 //            delegate?.showMsgValidation(msg: "Please select the Room Code  ")
 //        }
         else{
-            guard  let value = Helper.creatingRoomData(attendents: Int(NumberVisitorTxt.text ?? "0") ?? 0, fromDateTime: (fromDateTxt.text ?? "") + " " + (fromTimeTxt.text ?? ""), toDateTime: (toDateTxt.text ?? "") +  " " + (toTimeTxt.text ?? ""), remarks: purposeTxtView.text ?? "", visitorType: vistorType, roomType: roomTypeTxt.text ?? "", arrangementType: arrangmentTct.text ?? "", roomCode: roomCodeTxt.text ?? "", recurringDay: recurringDay)else {
+            guard  let value = Helper.creatingRoomData(locID:rowsLoc?[locIndex].id ?? 0 , attendents: Int(NumberVisitorTxt.text ?? "0") ?? 0, fromDateTime: (fromDateTxt.text ?? "") + " " + (fromTimeTxt.text ?? ""), toDateTime: (toDateTxt.text ?? "") +  " " + (toTimeTxt.text ?? ""), remarks: purposeTxtView.text ?? "", visitorType: vistorType, roomType: roomTypeTxt.text ?? "", arrangementType: arrangmentTct.text ?? "", roomCode: roomCodeTxt.text ?? "", recurringDay: recurringDay)else {
                     return
                 }
                 do {
@@ -608,7 +609,7 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if txtTag == 1{
-            selectedIndex = row
+            locIndex = row
             locationTxt.text = rowsLoc?[row].locationName ?? ""
             return  rowsLoc?[row].locationName ?? ""
         }else if txtTag == 7 {
@@ -618,8 +619,8 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
         }
         else if txtTag == 8 {
             selectedIndex = row
-            arrangmentTct.text = arrangModel?[row].title ?? ""
-            return arrangModel?[row].title ?? ""
+            arrangmentTct.text = arrangModel?[row].pattern_x002f_Design ?? ""
+            return arrangModel?[row].pattern_x002f_Design ?? ""
         }
         else if txtTag == 9 {
             selectedIndex = row
@@ -633,7 +634,7 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if txtTag == 1{
-            selectedIndex = row
+            locIndex = row
             locationTxt.text = rowsLoc?[row].locationName ?? ""
         }else if txtTag == 7 {
             selectedIndex = row
@@ -641,7 +642,7 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
         //    disableArrangment()
         }else if txtTag == 8 {
             selectedIndex = row
-            arrangmentTct.text = arrangModel?[row].title ?? ""
+            arrangmentTct.text = arrangModel?[row].pattern_x002f_Design ?? ""
         }
         else if txtTag == 9 {
             selectedIndex = row

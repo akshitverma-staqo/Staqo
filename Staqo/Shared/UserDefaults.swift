@@ -21,6 +21,7 @@ enum UserDefaultsKeys : String {
     case adminStatus
     case notifyCount
     case empID
+    case FCMToken
 }
 
 
@@ -53,6 +54,12 @@ extension UserDefaults {
         return value(forKey: UserDefaultsKeys.webStatus.rawValue) as! String
     }
     
+    func setFCMToken(value:String) {
+        return set(value, forKey: UserDefaultsKeys.FCMToken.rawValue)
+    }
+    func getFCMToken() -> String {
+        return value(forKey: UserDefaultsKeys.FCMToken.rawValue) as! String
+    }
     
     func setAdminStatus(value: String) {
         return set(value, forKey: UserDefaultsKeys.adminStatus.rawValue)
@@ -75,6 +82,8 @@ extension UserDefaults {
         set(value, forKey: UserDefaultsKeys.menuStatus.rawValue)
         
     }
+    
+    
     
     
     

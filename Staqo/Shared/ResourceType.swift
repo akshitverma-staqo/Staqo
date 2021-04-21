@@ -27,7 +27,7 @@ enum ResourceType {
     case searchRoom(value :String)
     case getVisiterListData(ID: String)
     case bookedRoom
-    case bookRoom(roomId: Int, attendents: Int, fromDateTime: String, toDateTime: String, roomStatus: String, purpose: String, visitorType: String, roomType: String, arrangementType: String, notificationId: String, roomCode: String, recurringDay: String, bookedBy: String)
+    case bookRoom(roomId: Int, attendents: Int, fromDateTime: String, toDateTime: String, roomStatus: String, purpose: String, visitorType: String, roomType: String, arrangementType: String, notificationId: String, roomCode: String, recurringDay: String, bookedBy: String, roomfeatures: String)
     case getCatData
     case getTicket
     case getSubCatData(ID:String)
@@ -70,7 +70,7 @@ extension ResourceType:TargetType {
         switch self {
         case .download(_):
             return URL(string: Configuration.authURL)!
-        case.roomData(_) , .readNotification(_),.addNotification(_,_,_,_),.roomLocation,.roomType,.roomArrangment(_),.dashboardMeneData,.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getCatData,.getTicket,.getSubCatData(_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
+        case.roomData(_) , .readNotification(_),.addNotification(_,_,_,_),.roomLocation,.roomType,.roomArrangment(_),.dashboardMeneData,.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_),.getCatData,.getTicket,.getSubCatData(_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
             return URL(string: Configuration.ftpURL)!
         case .getTextReader(_):
             return URL(string: Configuration.BNSUrl)!
@@ -119,7 +119,7 @@ extension ResourceType:TargetType {
             //return Constant.kViewBookedRoom + (UserDefaults.standard.getProfile()?.email ?? "") + "/list"
             //return "http://182.73.254.13/oq/api​/booking​/oqtest1@staqo.com/list"
             return Constant.kViewBookedRoom
-        case .bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_):
+        case .bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_):
         return Constant.kFreeRoomBooking
         case .getCatData:
             return Constant.kHelpCategory
@@ -146,7 +146,7 @@ extension ResourceType:TargetType {
             return Moya.Method.get
         case .updateByEmpID(_,_):
             return Moya.Method.patch
-        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_),.insertEmpData(_,_,_,_,_,_):
+        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_),.insertEmpData(_,_,_,_,_,_):
             return Moya.Method.post
         
         }
@@ -159,14 +159,14 @@ extension ResourceType:TargetType {
         case .addNotification(let ID, let notifyID, let email, let flag):
             return ["id":ID , "notificationid": notifyID , "employeeemail":email , "rflag": flag]
        
-        case .bookRoom(let roomId, let attendents, let fromDateTime, let toDateTime, let roomStatus, let purpose, let visitorType, let roomType, let arrangementType, let notificationId, let roomCode, let recurringDay, let bookedBy):
-        return ["roomId": roomId, "attendents": attendents,"fromDateTime": fromDateTime,"toDateTime": toDateTime,"roomStatus": roomStatus,"purpose": purpose,"visitorType": visitorType,"roomType": roomType,"arrangementType": arrangementType,"notificationId": notificationId,"roomCode": roomCode,"recurringDay": recurringDay,"bookedBy": bookedBy]
+        case .bookRoom(let roomId, let attendents, let fromDateTime, let toDateTime, let roomStatus, let purpose, let visitorType, let roomType, let arrangementType, let notificationId, let roomCode, let recurringDay, let bookedBy, let roomfeatures):
+            return ["roomId": roomId, "attendents": attendents,"fromDateTime": fromDateTime,"toDateTime": toDateTime,"roomStatus": roomStatus,"purpose": purpose,"visitorType": visitorType,"roomType": roomType,"arrangementType": arrangementType,"notificationId": notificationId,"roomCode": roomCode,"recurringDay": recurringDay,"bookedBy": bookedBy,"roomfeatures":roomfeatures]
             
         case .ticketImageUpload(let file, let ID):
             return ["file":file , "request_id":ID]
             
         case .approveCancel(let bookingId,let roomStatus,let approvedBy,let userType,let cancelBy,let cancelRemark):
-        return ["bookingId":bookingId, "roomStatus":roomStatus, "approvedBy":approvedBy, "userType":userType, "cancelBy":cancelBy,"cancelRemark":cancelRemark]
+            return ["bookingId":bookingId, "roomStatus":roomStatus, "approvedBy":approvedBy, "userType":userType, "cancelBy":cancelBy,"cancelRemark":cancelRemark]
         case .insertEmpData(let email, let orgID, let name, let fcmToken, let desig, let mobileNo):
             return
                 ["fields": ["Title":"oqtest@staqo.com","organizationidLookupId":"5","name":"Vishnu","ipaddress":"","designation":"hello","department":"IT","emailid":"oqtest@staqo.com","mobileno1":"9911933243"]]
@@ -209,7 +209,7 @@ extension ResourceType:TargetType {
             return .requestPlain
         case .download(_):
             return .downloadDestination(downloadDestination)
-        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_),.getTextReader(_):
+        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_),.getTextReader(_):
             return .requestParameters(parameters: parameters!, encoding: JSONEncoding.default)
 //        case .getTextReader(_):
 //            let data = Data(para!.utf8)
@@ -244,7 +244,7 @@ extension ResourceType:TargetType {
         httpHeaders["Content-Type"] = "application/json"
             return httpHeaders
             
-        case .roomData(_),.addNotification(_,_,_,_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.roomArrangment(_),.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_),.getTicket,.getCatData,.getSubCatData(_),.submitTicketData(_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
+        case .roomData(_),.addNotification(_,_,_,_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.roomArrangment(_),.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_),.getTicket,.getCatData,.getSubCatData(_),.submitTicketData(_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
         httpHeaders["Accesstoken"] = "Bearer " + UserDefaults.standard.getAccessToken()
       httpHeaders["TechnicianKey"] = "D3DE8EE6-B6AE-49C8-98ED-C93D308CB33F"
         httpHeaders["Content-Type"] = "application/json"

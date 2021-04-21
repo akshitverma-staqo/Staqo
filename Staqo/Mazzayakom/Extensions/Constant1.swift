@@ -26,6 +26,7 @@ class Constant1: NSObject {
             switch self {
                 
             case .dashboard:
+              
                 return Storyboards.main.instantiateViewController(withIdentifier: "WelcomeViewController")
                 
             case .listing:
@@ -35,9 +36,11 @@ class Constant1: NSObject {
                 return Storyboards.main.instantiateViewController(withIdentifier: "BottomViewController")
                 
             case .bottomSwipe:
-                return Storyboards.main.instantiateViewController(withIdentifier: "SwipeUpViewController")
+                let vc = Constant.getViewController(storyboard: Constant.kMazzaykomStoryboard, identifier:Constant.kSwipeControllerVC, type:SwipeUpViewController.self )
+                return vc
                 
             case .saveContact:
+                
                 return Storyboards.main.instantiateViewController(withIdentifier: "SaveContactViewController")
            
             }

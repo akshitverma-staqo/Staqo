@@ -26,6 +26,7 @@ struct BookedRoomModel : Codable,Equatable {
     let approvedDate : String?
     let createdOn : String?
     let modifiedOn : String?
+    let roomfeatures: String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -47,6 +48,8 @@ struct BookedRoomModel : Codable,Equatable {
         case approvedDate = "approvedDate"
         case createdOn = "createdOn"
         case modifiedOn = "modifiedOn"
+        case roomfeatures = "roomfeatures"
+
     }
 
     init(from decoder: Decoder) throws {
@@ -69,5 +72,7 @@ struct BookedRoomModel : Codable,Equatable {
         approvedDate = try values.decodeIfPresent(String.self, forKey: .approvedDate)
         createdOn = try values.decodeIfPresent(String.self, forKey: .createdOn)
         modifiedOn = try values.decodeIfPresent(String.self, forKey: .modifiedOn)
+        roomfeatures = try values.decodeIfPresent(String.self, forKey: .roomfeatures)
+
     }
 }

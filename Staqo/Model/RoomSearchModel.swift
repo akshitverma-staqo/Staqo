@@ -7,6 +7,7 @@
 
 import Foundation
 struct RoomSearchModel : Codable {
+    var locID:Int?
     var roomId : Int?
     var attendents : Int?
     var fromDateTime : String?
@@ -36,6 +37,7 @@ struct RoomSearchModel : Codable {
         case notificationId = "notificationId"
         case recurringDay = "recurringDay"
         case bookedBy = "bookedBy"
+        case locID = "locationid"
     }
     init() {
     }
@@ -54,6 +56,7 @@ struct RoomSearchModel : Codable {
         notificationId = try values.decodeIfPresent(String.self, forKey: .notificationId)
         recurringDay = try values.decodeIfPresent(String.self, forKey: .recurringDay)
         bookedBy = try values.decodeIfPresent(String.self, forKey: .bookedBy)
+        locID = try values.decodeIfPresent(Int.self, forKey: .locID)
     }
 
 }

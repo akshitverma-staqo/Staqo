@@ -29,7 +29,7 @@ class HomeVC: BaseVC {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
-       
+        somemazaycomAPI()
         herderView.addSubview(header)
         viewModel = HomeViewModal(dataSource: HomeDataSource())
         viewModel.delegate = self
@@ -144,6 +144,137 @@ class HomeVC: BaseVC {
         
         
     }
+    
+    
+    func somemazaycomAPI(){
+        ////////
+        
+        let BASE_URL = "https://graph.microsoft.com/v1.0/sites/"
+        UserDefaults.standard.set(BASE_URL, forKey: "BASE_URL")
+        
+        let NOTIFICATION_URL = "/lists/Notifications/items?$expand=fields"
+        UserDefaults.standard.set(NOTIFICATION_URL, forKey: "NOTIFICATION_URL")
+        
+          
+        
+        let VISITOR_LIST = "/lists/Visitor%20Master/items/?$expand=fields&$filter=fields/employeeidLookupId%20eq%20'**empid**'%20or%20fields/scanby%20eq%20'1'%20"
+        UserDefaults.standard.set(VISITOR_LIST, forKey: "VISITOR_LIST")
+        
+        let VISITOR_REGISTER = "/lists/Visitor%20Master/items"
+        UserDefaults.standard.set(VISITOR_REGISTER, forKey: "VISITOR_REGISTER")
+        
+        let SALMEEN_POINT1 = URL(string:"https://thisisoq.sharepoint.com/Pages/Salmeen.aspx")
+        UserDefaults.standard.set(SALMEEN_POINT1, forKey: "SALMEEN_POINT1")
+        
+        let SALMEEN_POINT2 = URL(string:"https://oq.com/en/covid-19/declaration-employees")
+        UserDefaults.standard.set(SALMEEN_POINT2, forKey: "SALMEEN_POINT2")
+        
+        let USER_PIC_FROMAD = "https://graph.microsoft.com/v1.0/users/**useremail**/photo/$value"
+        UserDefaults.standard.set(USER_PIC_FROMAD, forKey: "USER_PIC_FROMAD")
+        
+        let EMPLOYEE_FOR_ID = "/lists/Employee%20Master/items/?$expand=fields&$filter=fields/emailid%20eq%20'"
+        UserDefaults.standard.set(EMPLOYEE_FOR_ID, forKey: "EMPLOYEE_FOR_ID")
+        
+        let EMPLOYEE_FIND_BY_ID = "/lists/Employee%20Master/items/"
+        UserDefaults.standard.set(EMPLOYEE_FIND_BY_ID, forKey: "EMPLOYEE_FIND_BY_ID")
+        
+        let EMPLOYEE_REGISTER =  "/lists/Employee%20Master/items"
+        UserDefaults.standard.set(EMPLOYEE_REGISTER, forKey: "EMPLOYEE_REGISTER")
+        
+      //  let MAZZAYAKOM_MAIN_URL = "/lists/Category_Master/items?expand=fields"
+      //  UserDefaults.standard.set(MAZZAYAKOM_MAIN_URL, forKey: "MAZZAYAKOM_MAIN_URL")
+        
+        let MAZZAYAKOM_SUB_CATEGORY_URL =  "/lists/Corporate_Offers/items/?$expand=fields&$filter=fields/CategoryLookupId%20eq%20'"
+        UserDefaults.standard.set(MAZZAYAKOM_SUB_CATEGORY_URL, forKey: "MAZZAYAKOM_SUB_CATEGORY_URL")
+        
+        let VISITOR_DUPLICATE =  "/lists/Visitor%20Master/items?$expand=fields&$filter=fields/emailid%20eq%20'**email**'%20and%20fields/scanby%20eq%20'1'%20"
+        UserDefaults.standard.set(VISITOR_DUPLICATE, forKey: "VISITOR_DUPLICATE")
+
+            //Live Credentials
+        let OQPORTAL_LINK = URL(string:"https://thisisoq.sharepoint.com")
+        //let OQPORTAL_LINK = "https://thisisoq.sharepoint.com"
+        UserDefaults.standard.set(OQPORTAL_LINK, forKey: "OQPORTAL_LINK")
+        
+        
+        
+        
+        
+        let MAZZAYACOM_LINK =  "/lists/**OC_LIST_ID**/items?expand=fields"
+        UserDefaults.standard.set(MAZZAYACOM_LINK, forKey: "MAZZAYACOM_LINK")
+        
+        let MAZZAYACOM_SUB_LINK =  "/lists/**C_list_id**/items?expand=fields(select=CategoryLookupId,Title,Caption)&$filter=fields/CategoryLookupId%20eq%20'"
+        UserDefaults.standard.set(MAZZAYACOM_SUB_LINK, forKey: "MAZZAYACOM_SUB_LINK")
+        
+        let MAZZAYACOM_IMAGE_LINK =  "/drives/**Assests_ID**/root:/lists/**A_list_ID**/"
+        UserDefaults.standard.set(MAZZAYACOM_IMAGE_LINK, forKey: "MAZZAYACOM_IMAGE_LINK")
+        
+        
+   //  Local
+        
+                let SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+                UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
+
+                let MAZZAYACOM_C_LIST_ID =  "a9aa5be4-4b8d-487d-ae72-839a1de9ba13"
+                UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
+
+                let MAZZAYACOM_ASSET_ID =  "b!yl5NVBxnZU-dvn1LULArnLdQ9qy4h6RMivIbCnyeHmVmO87f0Pt3SaG3WIEXWwfC"
+                UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
+
+//                let MAZZAYACOM_C_SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+//                UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
+
+
+                let MAZZAYACOM_A_LIST_ID = "2fecd167-6659-4906-b8cc-8d06047056de"
+                UserDefaults.standard.set(MAZZAYACOM_A_LIST_ID, forKey: "MAZZAYACOM_A_LIST_ID")
+       
+        
+      //  Live
+//        let MAZZAYACOM_C_SITE_ID = "9267b16d-b59f-4aaa-998c-c81bdea24279"
+//        UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
+//
+//        let MAZZAYACOM_C_LIST_ID =  "35eec527-6587-458c-a35f-dd06e8e79487"
+//        UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
+//
+//
+//
+//        let MAZZAYACOM_ASSET_ID =  "b!bbFnkp-1qkqZjMgb3qJCeTz4E1V1WUFLoF8xgKa1gCLpyFwaggbeRIZdZ0UUm0sz"
+//        UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
+//
+//        let SITE_ID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
+//        UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
+
+
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
  
 
 }
@@ -189,9 +320,8 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
             
         case "2":
             UserDefaults.standard.setWebStatus(value: "U")
-//            let vc = Constant.getViewController(storyboard: Constant.kMazzaykomStoryboard, identifier: Constant.kMazzayakomViewController, type: mazz.self)
-//            self.navigationController?.pushViewController(vc, animated: true)
-            
+            let vc = Constant.getViewController(storyboard: Constant.kMazzaykomStoryboard, identifier: Constant.kMazzayakomViewControllerVC, type: MazzayakomViewController.self)
+            self.navigationController?.pushViewController(vc, animated: true)
             
         case "3":
             UserDefaults.standard.setWebStatus(value: "U")
@@ -280,6 +410,10 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
             return CGSize(width: gridCollectionView.bounds.size.width/3.2, height: gridCollectionView.bounds.size.height/4)
         }
     }
+    
+ 
+    
+    
 }
 extension HomeVC: ViewModelDelegate{
     func willLoadData() {

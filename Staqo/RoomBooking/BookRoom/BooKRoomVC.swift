@@ -19,7 +19,7 @@ class BooKRoomVC: BaseVC, UITableViewDelegate {
     var searchValue:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:80))
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
         herderView.addSubview(header)
 
@@ -173,7 +173,7 @@ extension BooKRoomVC: HeaderViewDelegate{
 extension BooKRoomVC : BookRoomTVCDelegate{
     func photoView(index: Int) {
         let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kRoomPhotoVC, type: RoomPhotoVC.self)
-     //   vc.urlString =  baseModel?.freeRoomModel?[index].webUrl ?? ""
+      vc.urlString =  baseModel?.freeRoomModel?[index].webUrl ?? ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -182,7 +182,7 @@ extension BooKRoomVC : BookRoomTVCDelegate{
         let selectedOption = baseModel?.selectedRoomOptionModel
         showMessage(title: "", message: "Do you want to book Room?", btnConfirmTitle: "Yes", btnCancelTitle:"No") { (isYes, action) in
             if isYes{
-            self.viewModel.roomBookService(roomId: Int(free?.id ?? 0), attendents: Int(free?.capacity ?? 0), fromDateTime: selectedOption?.fromDateTime ?? "", toDateTime: selectedOption?.toDateTime  ?? "", roomStatus: selectedOption?.roomStatus  ?? "", purpose: selectedOption?.remarks  ?? "", visitorType: selectedOption?.visitorType  ?? "", roomType: selectedOption?.roomType ?? "", arrangementType: selectedOption?.arrangementType ?? "", notificationId: "\(free?.id ?? 0)", roomCode: selectedOption?.roomCode ?? "", recurringDay: selectedOption?.recurringDay ?? "", bookedBy: selectedOption?.bookedBy ?? "")
+                self.viewModel.roomBookService(roomId: Int(free?.id ?? 0), attendents: Int(free?.capacity ?? 0), fromDateTime: selectedOption?.fromDateTime ?? "", toDateTime: selectedOption?.toDateTime  ?? "", roomStatus: selectedOption?.roomStatus  ?? "", purpose: selectedOption?.remarks  ?? "", visitorType: selectedOption?.visitorType  ?? "", roomType: selectedOption?.roomType ?? "", arrangementType: selectedOption?.arrangementType ?? "", notificationId: "\(free?.id ?? 0)", roomCode: free?.roomCode ?? "", recurringDay: selectedOption?.recurringDay ?? "", bookedBy: selectedOption?.bookedBy ?? "", roomfeatures: free?.roomfeatures ?? "")
             }
         }
       

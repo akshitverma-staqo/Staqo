@@ -41,7 +41,7 @@ class EmpVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:100))
+        header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
        
         herderView.addSubview(header)
@@ -85,7 +85,8 @@ class EmpVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
-        
+        header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() )", for: .normal)
+
         header.btnProfile .isHidden = true
         self.navigationController?.isNavigationBarHidden = true
     }
@@ -100,6 +101,8 @@ class EmpVC: BaseVC {
     }
     
     @IBAction func btnDeleteTapped(_ sender: UIButton) {
+        
+        
     }
     
 }
@@ -171,4 +174,17 @@ extension EmpVC: HeaderViewDelegate{
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+}
+extension EmpVC : UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let textString = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        if textField == secNumber {
+        let set = NSCharacterSet(charactersIn: "0123456789").inverted
+        let saparate = string.components(separatedBy: set)
+        let numberFilter = saparate.joined(separator: "")
+        return ((string == numberFilter ) && ((textString.count) <= 10))
+        }
+        return true
+    }
 }
