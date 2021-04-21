@@ -82,9 +82,9 @@ extension LoginVC : ViewModelDelegate{
     }
     
     func didFail(error: CustomError) {
-        showErrorMessage(title: "Error", error: error) { (action) in
-            
-        }
+//        showErrorMessage(title: "Error", error: error) { (action) in
+//            
+//        }
         stopLoader()
     }
     

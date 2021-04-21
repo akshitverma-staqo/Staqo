@@ -7,8 +7,8 @@ struct MazzayakomCatListModel {
     var description : String = ""
     var id : String = ""
     
-//    var Title : String = ""
-//     var Description : String = ""
+    var Title : String = ""
+     var Description : String = ""
    
 
    
@@ -25,6 +25,10 @@ struct MazzayakomCatListModel {
         description = json["description"].stringValue
         
         id = json["id"].stringValue
+        
+        Title = json["Title"].stringValue
+        
+        Description = json["Description"].stringValue
         
        
        

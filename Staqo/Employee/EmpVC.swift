@@ -101,7 +101,20 @@ class EmpVC: BaseVC {
     }
     
     @IBAction func btnDeleteTapped(_ sender: UIButton) {
-        
+
+        if (secNumber.text?.count ?? 0) <= 0 {
+            showErrorMessage(title: "Error..", message: "Number already Deleted") { (action) in
+                
+            }
+        }else{
+            showMessage(title: "", message: "Do you want to delete number?", btnConfirmTitle: "Yes", btnCancelTitle: "No") { (isYes, action) in
+                if isYes{
+                    self.viewModal.deleteEmp(ID: self.viewModal.field?.id ?? "")
+                }
+            }
+           
+        }
+       
         
     }
     
@@ -113,7 +126,9 @@ extension EmpVC : ViewModelDelegate{
     
     func didLoadData() {
         stopLoader()
-         nameLabel.text = viewModal.field?.name ?? ""
+
+        view.endEditing(true)
+        nameLabel.text = viewModal.field?.name ?? ""
          empIdLabel.text = (viewModal.field?.emailid ?? "").replacingOccurrences(of: "@oq.com", with: "")
         mobile1Label.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
         telephoneLabel.text = UserDefaults.standard.getProfile()?.businessPhone ?? ""

@@ -18,6 +18,7 @@ struct SelectedRoomOptionModel : Codable {
     let fromDateTime : String?
     let visitorType : String?
     let bookedBy : String?
+    let roomtypeid: String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -32,6 +33,7 @@ struct SelectedRoomOptionModel : Codable {
         case fromDateTime = "fromDateTime"
         case visitorType = "visitorType"
         case bookedBy = "bookedBy"
+        case roomtypeid = "roomtypeid"
     }
 
     init(from decoder: Decoder) throws {
@@ -47,6 +49,8 @@ struct SelectedRoomOptionModel : Codable {
         fromDateTime = try values.decodeIfPresent(String.self, forKey: .fromDateTime)
         visitorType = try values.decodeIfPresent(String.self, forKey: .visitorType)
         bookedBy = try values.decodeIfPresent(String.self, forKey: .bookedBy)
+        roomtypeid = try values.decodeIfPresent(String.self, forKey: .roomtypeid)
+
     }
 
 }

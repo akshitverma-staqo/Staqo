@@ -182,7 +182,7 @@ extension BooKRoomVC : BookRoomTVCDelegate{
         let selectedOption = baseModel?.selectedRoomOptionModel
         showMessage(title: "", message: "Do you want to book Room?", btnConfirmTitle: "Yes", btnCancelTitle:"No") { (isYes, action) in
             if isYes{
-                self.viewModel.roomBookService(roomId: Int(free?.id ?? 0), attendents: Int(free?.capacity ?? 0), fromDateTime: selectedOption?.fromDateTime ?? "", toDateTime: selectedOption?.toDateTime  ?? "", roomStatus: selectedOption?.roomStatus  ?? "", purpose: selectedOption?.remarks  ?? "", visitorType: selectedOption?.visitorType  ?? "", roomType: selectedOption?.roomType ?? "", arrangementType: selectedOption?.arrangementType ?? "", notificationId: "\(free?.id ?? 0)", roomCode: free?.roomCode ?? "", recurringDay: selectedOption?.recurringDay ?? "", bookedBy: selectedOption?.bookedBy ?? "", roomfeatures: free?.roomfeatures ?? "")
+                self.viewModel.roomBookService(roomId: Int(free?.id ?? 0), attendents: Int(free?.capacity ?? 0), fromDateTime: selectedOption?.fromDateTime ?? "", toDateTime: selectedOption?.toDateTime  ?? "", roomStatus: selectedOption?.roomStatus  ?? "", purpose: selectedOption?.remarks  ?? "", visitorType: selectedOption?.visitorType  ?? "", roomType: selectedOption?.roomType ?? "", arrangementType: selectedOption?.arrangementType ?? "", notificationId: "\(free?.id ?? 0)", roomCode: free?.roomCode ?? "", recurringDay: selectedOption?.recurringDay ?? "", bookedBy: selectedOption?.bookedBy ?? "", roomfeatures: free?.roomfeatures ?? "", roomtypeid: selectedOption?.roomtypeid ?? "")
             }
         }
       

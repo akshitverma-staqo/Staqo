@@ -251,7 +251,7 @@ extension SwipeUpViewController : UITableViewDelegate, UITableViewDataSource
                             
                         ]
                         let urlMazz = UserDefaults.standard.string(forKey: "MAZZAYACOM_IMAGE_LINK")
-                        let replaced = urlMazz!.replacingOccurrences(of: "**Assests_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_ASSET_ID") ?? "").replacingOccurrences(of: "**A_list_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_LIST_ID") ?? "")
+                        let replaced = urlMazz!.replacingOccurrences(of: "**Assests_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_ASSET_ID") ?? "").replacingOccurrences(of: "**A_list_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_A_LIST_ID") ?? "")
                         
                         print(UserDefaults.standard.string(forKey: "MAZZAYACOM_C_LIST_ID") ?? "")
                         

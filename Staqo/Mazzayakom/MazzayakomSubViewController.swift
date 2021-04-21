@@ -50,9 +50,10 @@
             ]
             let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYAKOM_SUB_CATEGORY_URL")!))\(catId)'"
             //  NetworkClient.request(url: urlStr, method: .get, parameters: nil, encoder: JSONEncoding.default, headers: headers)
+            print(urlStr)
             Alamofire.request(urlStr, encoding: JSONEncoding.default, headers: headers)
                 .responseJSON { response in
-                    
+                    print(response)     
                     
                     if let data = response.data {
                         do{
@@ -135,9 +136,9 @@
             if checkTableViewCount == 0 {
                 
             }else{
-                titleLbl.text = arrDara[indexPath.row].name
+                titleLbl.text = arrDara[indexPath.row].Title
                 
-                let subtitleDes = arrDara[indexPath.row].description.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil).replacingOccurrences(of: "&[^;]+;", with: "", options: String.CompareOptions.regularExpression, range: nil)
+                let subtitleDes = arrDara[indexPath.row].Description.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil).replacingOccurrences(of: "&[^;]+;", with: "", options: String.CompareOptions.regularExpression, range: nil)
                 subTitleLbl.text = subtitleDes
             }
             return cell

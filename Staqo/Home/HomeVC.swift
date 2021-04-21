@@ -360,8 +360,8 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
             print("ESIGN")
             UserDefaults.standard.setWebStatus(value: "U")
             //guard let url = URL(string: "signnow-private-cloud://sso_login?refresh_token=" + (UserDefaults.standard.getAccessToken()) + "&access_token=" + (UserDefaults.standard.getAccessToken()) + "&hostname=" + "esign.oq.com")else{https://esign.oq.com/webapp/login-sso
-            guard let url = URL(string: "signnow://")else{
-                
+            //guard let url = URL(string: "signnow://")else{
+            guard let url = URL(string: "signnow-private-cloud://sso_login?access_token="+UserDefaults.standard.getAccessToken() + "&hostname=esign.oq.com")else{
                 return
             }
             if UIApplication.shared.canOpenURL(url) {

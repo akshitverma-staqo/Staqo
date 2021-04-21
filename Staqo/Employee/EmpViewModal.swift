@@ -96,4 +96,18 @@ class EmpViewModal: ViewModelType {
             
         })
     }
+    
+    
+    func deleteEmp(ID:String){
+        delegate?.willLoadData()
+        dataSource?.deleteEmp(ID: ID, completion: { [weak self] result in
+            guard let ws = self else{return}
+            switch result {
+            case .success(let baseModel):
+                ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
+            case .failure(let error):
+                ws.delegate?.didFail(error: error)
+            }
+        })
+    }
 }

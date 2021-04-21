@@ -21,9 +21,9 @@ func bootstrap() {
     
         
         
-    func roomBookService(roomId: Int, attendents: Int, fromDateTime: String, toDateTime: String, roomStatus: String, purpose: String, visitorType: String, roomType: String, arrangementType: String, notificationId: String, roomCode: String, recurringDay: String, bookedBy: String, roomfeatures: String ){
+    func roomBookService(roomId: Int, attendents: Int, fromDateTime: String, toDateTime: String, roomStatus: String, purpose: String, visitorType: String, roomType: String, arrangementType: String, notificationId: String, roomCode: String, recurringDay: String, bookedBy: String, roomfeatures: String, roomtypeid:String ){
             delegate?.willLoadData()
-            dataSource?.bookRoom(roomId: roomId, attendents: attendents, fromDateTime: fromDateTime, toDateTime: toDateTime, roomStatus: roomStatus, purpose: purpose, visitorType: visitorType, roomType: roomType, arrangementType: arrangementType, notificationId: notificationId, roomCode: roomCode, recurringDay: recurringDay, bookedBy: bookedBy, roomfeatures:roomfeatures, completion: { [weak self] result in
+        dataSource?.bookRoom(roomId: roomId, attendents: attendents, fromDateTime: fromDateTime, toDateTime: toDateTime, roomStatus: roomStatus, purpose: purpose, visitorType: visitorType, roomType: roomType, arrangementType: arrangementType, notificationId: notificationId, roomCode: roomCode, recurringDay: recurringDay, bookedBy: bookedBy, roomfeatures:roomfeatures,roomtypeid :roomtypeid, completion: { [weak self] result in
                 guard let ws = self else{return}
                 switch result {
                 

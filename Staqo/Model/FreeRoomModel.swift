@@ -18,6 +18,7 @@ struct FreeRoomModel : Codable,Equatable {
     let webUrl:String?
     let roomtype: String?
     let roomfeatures: String?
+    let roomtypeid: String?
     enum CodingKeys: String, CodingKey {
 
         case id = "id"
@@ -31,6 +32,7 @@ struct FreeRoomModel : Codable,Equatable {
         case webUrl = "webUrl"
         case roomtype = "roomtype"
         case roomfeatures = "roomfeatures"
+        case roomtypeid = "roomtypeid"
     }
 
     init(from decoder: Decoder) throws {
@@ -46,6 +48,7 @@ struct FreeRoomModel : Codable,Equatable {
         webUrl = try values.decodeIfPresent(String.self, forKey: .webUrl)
         roomtype = try values.decodeIfPresent(String.self, forKey: .roomtype)
         roomfeatures = try values.decodeIfPresent(String.self, forKey: .roomfeatures)
+        roomtypeid = try values.decodeIfPresent(String.self, forKey: .roomtypeid)
 
 
     }

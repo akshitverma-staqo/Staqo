@@ -10,10 +10,23 @@ protocol EmpDataSourceDeleate {
     func getEmployeeDataWithID(emailID: String, completion: @escaping(StaoqResult<BaseModel>) -> Void)
     func updateByEmpID(mobileNo:String, ID:String, completion:@escaping(StaoqResult<BaseModel>)-> Void)
     func insertEmpData(email:String , orgID:Int, name:String , fcmToken:String , desig:String,mobileNo:String, completion:@escaping(StaoqResult<BaseModel>)-> Void)
+    func deleteEmp(ID:String,completion:@escaping(StaoqResult<BaseModel>)-> Void)
     
 }
 
 class EmpDataSource: EmpDataSourceDeleate{
+    func deleteEmp(ID:String,completion: @escaping (StaoqResult<BaseModel>) -> Void) {
+        let jsonreq: [String: Any]   = ["mobileno2":""]
+        let url = Configuration.baseURL + Constant.kSiteID + Constant.kEMPLOYEE_FIND_BY_ID + "\(ID)" + "/fields"
+        NetworkClient.requestAlmofire(passToUrl: url, passToMethod: .patch, passToParameter: jsonreq, passToHeader: ["Authorization":"Bearer " + UserDefaults.standard.getAccessToken(), "Content-Type":"application/json"]) { result in
+            completion(result as StaoqResult<BaseModel>)
+        } error: { (error) in
+            completion(StaoqResult.failure(error))
+        } failure: { (failure) in
+            print(failure)
+        }
+    }
+    
     func insertEmpData(email: String, orgID: Int, name: String, fcmToken: String, desig: String, mobileNo: String, completion: @escaping (StaoqResult<BaseModel>) -> Void) {
 //        NetworkClient.request(target: ResourceType.insertEmpData(email: email, orgID: orgID, name: name, fcmToken: fcmToken, desig: desig, mobileNo: mobileNo), success: { result in
 //            completion(result as StaoqResult<BaseModel>)
