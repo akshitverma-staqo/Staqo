@@ -19,7 +19,7 @@ enum StaoqResult<T> {
 
 enum DownloadResult {
     case progress(Double)
-    case success(String)
+    case success(Data)
     case failure(CustomError)
 }
 
@@ -76,13 +76,13 @@ class NetworkClient {
         return provider.request(target, progress: progress) { result in
             switch result {
             case .success(let response):
-                        let data = response.data
-                        let strJson = String(data: data, encoding: .utf8)
-                        print("DOWNLOAD RESPONSE JSON: \(strJson ?? "NO JSON STRING")")
-                completion(DownloadResult.success(strJson ?? ""))
+            let data = response.data
+            let strJson = String(data: data, encoding: .utf8)
+            print("DOWNLOAD RESPONSE JSON: \(strJson ?? "NO JSON STRING")")
+                completion(DownloadResult.success(data))
             case .failure(_):
                 completion(.failure(CustomError.DownloadFailed))
-            }
+            } 
         }
         
     }

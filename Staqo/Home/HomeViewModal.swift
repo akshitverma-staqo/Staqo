@@ -10,11 +10,16 @@ import MSGraphClientModels
 import MSAL
 import MSGraphClientSDK
 
+
+protocol HomeViewModalDelegate:class {
+func callImage()
+}
 class HomeViewModal:ViewModelType{
 
     var rows : [MenuModel]? // (imageArr:[String], curveArr:[String], TopLabArray:[String])?
     private let dataSource: HomeDataSourceDelegate?
     var delegate: ViewModelDelegate?
+    var _delegate:HomeViewModalDelegate?
     var imgValue:Bool = true
     init(dataSource: HomeDataSourceDelegate) {
         self.dataSource = dataSource
@@ -94,11 +99,21 @@ class HomeViewModal:ViewModelType{
         
     }
     func getImage()  {
-        
+     
         dataSource?.profile(fileName:"profile", completion: { [weak self] result in
             guard let ws = self else{return}
-            if  result {
-                
+            switch result {
+            
+            case .progress(_):
+                print("Downloading")
+            case .success(let baseModel):
+                UserDefaults.standard.setProfileImage(value: baseModel)
+                ws._delegate?.callImage()
+            
+            case .failure(let error):
+                UserDefaults.standard.setProfileImage(value: Data())
+                ws._delegate?.callImage()
+                //ws.delegate?.didFail(error: error)
             }
         })
     }

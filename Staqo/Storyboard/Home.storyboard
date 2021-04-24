@@ -312,7 +312,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQo-5u-zov" userLabel="imageView">
                                                 <rect key="frame" x="30" y="20" width="45" height="45"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vYg-EK-gCV">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profiled" translatesAutoresizingMaskIntoConstraints="NO" id="vYg-EK-gCV">
                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                                     </imageView>
                                                 </subviews>
@@ -3136,7 +3136,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salmeenicon" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-oq-ZMT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="Hdc-oq-ZMT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="400" id="XHH-09-xod"/>
@@ -3300,6 +3300,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
         </scene>
     </scenes>
     <resources>
+        <image name="3" width="409" height="429"/>
         <image name="backArrow" width="32" height="32"/>
         <image name="call" width="20" height="20"/>
         <image name="contact us pagehero v2.jpg" width="1920" height="540"/>
@@ -3309,7 +3310,7 @@ When you enroll a device, you give OQ permission to view certain pieces of infor
         <image name="logo" width="102" height="64.5"/>
         <image name="menu_icon" width="20" height="19"/>
         <image name="notification" width="18.5" height="21.5"/>
-        <image name="salmeenicon" width="409" height="429"/>
+        <image name="profiled" width="500" height="540"/>
         <image name="star" width="12" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

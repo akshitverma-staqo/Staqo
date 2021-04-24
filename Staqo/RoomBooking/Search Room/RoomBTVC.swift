@@ -6,6 +6,15 @@
 //
 
 import UIKit
+enum WeekDays:Int {
+    case Sun = 1
+    case Mon
+    case Tue
+    case Wed
+    case Thu
+    case Fri
+    case Sat
+}
 protocol RoomBTVCDelegate:class {
     func selectedTxtField(txtField:UITextField)
     func filledData(value:String)
@@ -22,6 +31,10 @@ class RoomBTVC: UITableViewCell {
     var vistorType : String = ""
     var recurringDay : String = ""
     var selectedIndex:Int = 0
+    @IBOutlet weak var arrangmentImageView: UIImageView!
+    @IBOutlet weak var arrangeViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var arrangmentView: UIView!
+    @IBOutlet weak var searchBtn: UIButton!
     @IBOutlet weak var arrangmentTypeLbl: UILabel!
     @IBOutlet weak var VipCheckTap: UIButton!
     @IBOutlet weak var VisitorCheckTap: UIButton!
@@ -50,7 +63,7 @@ class RoomBTVC: UITableViewCell {
     @IBOutlet weak var SunCheckTap: UIButton!
     @IBOutlet weak var NumberVisitorTxt: UITextField!
   
-    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
+   
     @IBOutlet weak var capacityTxt: UITextField!
     var picker:UIPickerView!
     var viewPicker: UIView!
@@ -63,8 +76,9 @@ class RoomBTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
+        purposeTxtView.layer.cornerRadius = 8
         purposeTxtView.placeholder = "Write your purpose here"
+        arrangeViewHeight.constant = 0
     }
    
     
@@ -160,6 +174,59 @@ class RoomBTVC: UITableViewCell {
         VisitorCheckTap.setImage(UIImage(named: "uncheckIcon.png"), for: .normal)
         VipCheckTap.setImage(UIImage(named: "check.png"), for: .normal)
         vistorType = "I"
+    }
+    
+    func checkWeekStatus(index:Int , value:Bool){
+        switch WeekDays(rawValue: index) {
+        case .Sun:
+            recurringDay = recurringDay + "7,"
+            SunCheckTap.isEnabled = value
+            SunCheckTap.isSelected = value
+        case .Mon:
+            recurringDay = recurringDay + "1,"
+            MonCheckTap.isEnabled = value
+            MonCheckTap.isSelected = value
+        case .Tue:
+            recurringDay = recurringDay + "2,"
+            TueCheckTap.isEnabled = value
+            TueCheckTap.isSelected = value
+        case .Wed:
+            recurringDay = recurringDay + "3,"
+            WedCheckTap.isEnabled = value
+            WedCheckTap.isSelected = value
+        case .Thu:
+            recurringDay = recurringDay + "4,"
+            ThuCheckTap.isEnabled = value
+            ThuCheckTap.isSelected = value
+        case .Fri:
+            recurringDay = recurringDay + "5,"
+            FriCheckTap.isEnabled = value
+            FriCheckTap.isSelected = value
+        case .Sat:
+            recurringDay = recurringDay + "6,"
+            SatCheckTap.isEnabled = value
+            SatCheckTap.isSelected = value
+        default:
+            break
+        }
+    }
+    func btnEnable(enable:Bool, select:Bool){
+        SunCheckTap.isEnabled = enable
+        SunCheckTap.isSelected = select
+        MonCheckTap.isEnabled = enable
+        MonCheckTap.isSelected = select
+        TueCheckTap.isEnabled = enable
+        TueCheckTap.isSelected = select
+        WedCheckTap.isEnabled = enable
+        WedCheckTap.isSelected = select
+        ThuCheckTap.isEnabled = enable
+        ThuCheckTap.isSelected = select
+        FriCheckTap.isEnabled = enable
+        FriCheckTap.isSelected = select
+        SatCheckTap.isEnabled = enable
+        SatCheckTap.isSelected = select
+        recurringDay = ""
+
     }
     
     @IBAction func BtnSunCheck(_ sender: Any) {
@@ -463,21 +530,39 @@ extension RoomBTVC: UITextFieldDelegate{
                 formatter.dateFormat = "dd/MM/yyyy"
                 let firstDate = formatter.date(from: fromDateTxt.text ?? "")
                 let secondDate = formatter.date(from: toDateTxt.text ?? "")
+                var dayComp = DateComponents()
+
                 
-                
-                if firstDate?.compare(secondDate!) == .orderedAscending {
+                if firstDate?.compare(secondDate!) == .orderedAscending || firstDate?.compare(secondDate!) == .orderedSame {
                     print("First Date is smaller then second date")
                     //recurringMeetingView.isHidden = false
                     if let dates = firstDate {
                         let day = secondDate?.days(from: dates)
                         print(day ?? 0)
                         if day ?? 0 <= 7{
+                           btnEnable(enable: false, select: false)
+                            let weekCounter = (day ?? 0) + 1
+                           
+                            for item in 0..<weekCounter {
+                                dayComp.day = item
+                                let nextDate = Calendar.current.date(byAdding: dayComp, to: firstDate ?? Date())
+                                let weekDaysStart = Calendar.current.component(.weekday, from: nextDate ?? Date())
+                                print(weekDaysStart)
+                                checkWeekStatus(index: weekDaysStart, value: true)
+                                
+                            }
+                           // btnEnable(value: false)
                             print("day less than 7")
-                            recurringMeetingView.isHidden = true
-                            heightConstraint.constant = 0
+                            
+//
+//                            let weekDaysEnd = Calendar.current.component(.weekday, from: secondDate ?? Date())
+//print("\(weekDaysStart) ====== \(weekDaysEnd)")
+                            //   recurringMeetingView.isHidden = true
+                         
                         }else{
-                            recurringMeetingView.isHidden = false
-                            heightConstraint.constant = 110
+                        //    recurringMeetingView.isHidden = false
+                            
+                            btnEnable(enable: true, select: false)
                             print("day more than saven and 7")
                         }
                             
@@ -488,19 +573,21 @@ extension RoomBTVC: UITextFieldDelegate{
                     print("First Date is greater then second date")
                     delegate?.showMsgValidation(msg: "Please select Date in Correct Order")
                     toDateTxt.text = ""
-                    heightConstraint.constant = 110
-                }else{
-                    let firstDate = formatter.date(from: fromDateTxt.text ?? "")
-                    let secondDate = formatter.date(from: toDateTxt.text ?? "")
-                    
-                    print("Both dates are same")
-                    heightConstraint.constant = 0
-//                    let day = Calendar.current.component(.weekday, from: Date())
-                  
-                    
-                    recurringMeetingView.isHidden = true
+                 
                     
                 }
+//                else{
+//                    let firstDate = formatter.date(from: fromDateTxt.text ?? "")
+//                    let secondDate = formatter.date(from: toDateTxt.text ?? "")
+//
+//                    print("Both dates are same")
+//
+////                    let day = Calendar.current.component(.weekday, from: Date())
+//
+//
+//                  //  recurringMeetingView.isHidden = true
+//
+//                }
             }
             
         }
@@ -542,7 +629,10 @@ extension RoomBTVC: UITextFieldDelegate{
 //                        let secondDate = formatter.date(from: toDateTxt.text ?? "")
                         
                         print("Both dates are same")
+                        toTimeTxt.text = ""
+                        fromTimeTxt.text = ""
                         delegate?.showMsgValidation(msg: "Both Time are Same Please choose different time SLOT.")
+                        
     //                    let day = Calendar.current.component(.weekday, from: Date())
                       
                                             
@@ -564,6 +654,7 @@ extension RoomBTVC: UITextFieldDelegate{
                     arrangeView.isHidden = false
                     arrangLbl.isHidden = false
                     arrangLbl.text = "Arrangment Type"
+                    arrangeViewHeight.constant = 0
                     delegate?.getArrangement(ID:"\(rowsRoom?[selectedIndex].id ?? 0)")
                 }else{
                     arrangeConstraint.constant = 0
@@ -572,13 +663,17 @@ extension RoomBTVC: UITextFieldDelegate{
                     arrangLbl.text = nil
                     arrangeView.isHidden = true
                     arrangLbl.isHidden = true
-                   
+                    arrangeViewHeight.constant = 0
                     arrangmentTct.text = nil
                     arrangModel = []
                     arrangmentTct.isEnabled = false
                 }
                
                
+            }
+        }else if txtTag == 8 {
+            if  arrangModel != nil {
+            arrangeViewHeight.constant = 124
             }
         }
     }

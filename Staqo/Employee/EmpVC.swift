@@ -78,6 +78,7 @@ class EmpVC: BaseVC {
         
         self.profileImage.layer.cornerRadius = self.profileImage.frame.size.width / 2;
         self.profileImage.clipsToBounds = true;
+        self.getImage()
         // Do any additional setup after loading the view.
         
     }
@@ -89,6 +90,17 @@ class EmpVC: BaseVC {
 
         header.btnProfile .isHidden = true
         self.navigationController?.isNavigationBarHidden = true
+    }
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                profileImage.image = imageView
+             //   header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     @IBAction func btnSubmitTapped(_ sender: UIButton) {
         if (secNumber.text?.count) ?? 0 <= 9 {

@@ -95,7 +95,7 @@ extension ViewLogTicketVC : ViewModelDelegate{
     
     func didFail(error: CustomError) {
         showErrorMessage(title: "Error", error: error) { (action) in
-            
+            self.navigationController?.popViewController(animated: true)
         }
         stopLoader()
     }

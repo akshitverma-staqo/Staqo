@@ -225,14 +225,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92z-cS-lEM" userLabel="NavigationView" customClass="HeaderView" customModule="Staqo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="fpe-eQ-V8X"/>
+                                    <constraint firstAttribute="height" constant="64" id="fpe-eQ-V8X"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3g-YM-yMB">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ti8-IR-ZoX" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="591.5"/>
@@ -645,14 +645,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gty-3q-Xca" userLabel="NavigationView" customClass="HeaderView" customModule="Staqo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="eJp-pm-ye1"/>
+                                    <constraint firstAttribute="height" constant="64" id="eJp-pm-ye1"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xQz-6q-a4c">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR6-Bm-6Np" userLabel="ContentView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1194.5"/>
@@ -1411,7 +1411,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-Bh-4uc">
-                                <rect key="frame" x="0.0" y="136" width="375" height="531"/>
+                                <rect key="frame" x="0.0" y="131" width="375" height="536"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" text="" id="XhR-bt-M2Z">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -1424,10 +1424,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9N-i0-7yy" customClass="HeaderView" customModule="Staqo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQc-rM-UWX">
-                                        <rect key="frame" x="187.5" y="18" width="0.0" height="33"/>
+                                        <rect key="frame" x="187.5" y="18" width="0.0" height="28"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -1436,13 +1436,13 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="vQc-rM-UWX" firstAttribute="centerX" secondItem="c9N-i0-7yy" secondAttribute="centerX" id="UwC-ct-OGY"/>
-                                    <constraint firstAttribute="height" constant="69" id="WhG-0g-3iO"/>
+                                    <constraint firstAttribute="height" constant="64" id="WhG-0g-3iO"/>
                                     <constraint firstItem="vQc-rM-UWX" firstAttribute="centerY" secondItem="c9N-i0-7yy" secondAttribute="centerY" id="cgH-Ek-jVB"/>
                                     <constraint firstItem="vQc-rM-UWX" firstAttribute="top" secondItem="c9N-i0-7yy" secondAttribute="top" constant="18" id="zZl-Ub-UOU"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tGr-l8-vBA">
-                                <rect key="frame" x="20" y="72" width="96" height="21"/>
+                                <rect key="frame" x="20" y="67" width="96" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="B31-Up-bMf"/>
                                     <constraint firstAttribute="width" constant="96" id="e8P-2K-69E"/>
@@ -1452,7 +1452,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directory" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pP-Py-myv">
-                                <rect key="frame" x="20" y="101" width="96" height="21"/>
+                                <rect key="frame" x="20" y="96" width="96" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="O7L-l8-Syv"/>
                                     <constraint firstAttribute="height" constant="21" id="k3x-a0-QMo"/>

@@ -142,13 +142,15 @@ extension ResourceType:TargetType {
 
     var method: Moya.Method {
         switch self {
-        case .getEmployeeDataWithID(_),.download(_),.roomData(_),.notificationData(_),.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
+        case .getEmployeeDataWithID(_),.roomData(_),.notificationData(_),.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return Moya.Method.get
         case .updateByEmpID(_,_):
             return Moya.Method.patch
         case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_),.insertEmpData(_,_,_,_,_,_):
             return Moya.Method.post
         
+        case .download(_):
+            return Moya.Method.get
         }
     }
     
@@ -188,8 +190,8 @@ extension ResourceType:TargetType {
 //            return value
         case.searchRoom(let value):
             return value
-        case .download(let fileName):
-            return fileName
+//        case .download(let fileName):
+//            return fileName
         case .submitTicketData(let Value):
             return Value
         
@@ -208,7 +210,7 @@ extension ResourceType:TargetType {
         case .getEmployeeDataWithID(_),.roomData(_),.notificationData(_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return .requestPlain
         case .download(_):
-            return .downloadDestination(downloadDestination)
+            return .requestPlain
         case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_),.getTextReader(_):
             return .requestParameters(parameters: parameters!, encoding: JSONEncoding.default)
 //        case .getTextReader(_):
@@ -251,7 +253,7 @@ extension ResourceType:TargetType {
         return httpHeaders
         case .download(_):
             httpHeaders["Authorization"] = "Bearer " + UserDefaults.standard.getAccessToken()
-            httpHeaders["Content-Type"] = "application/json"
+           // httpHeaders["Content-Type"] = "application/json"
             return httpHeaders
         case .ticketImageUpload(_,_):
             httpHeaders["Accesstoken"] = "Bearer " + UserDefaults.standard.getAccessToken()

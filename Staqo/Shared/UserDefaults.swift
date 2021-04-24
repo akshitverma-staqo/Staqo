@@ -22,13 +22,32 @@ enum UserDefaultsKeys : String {
     case notifyCount
     case empID
     case FCMToken
+    case profileImage
 }
 
 
 extension UserDefaults {
     
     //UserDefaults.standard.string(forKey: "tokenResult1") ?? ""
-
+    
+    func setProfileImage(value:Data)  {
+        
+        let encoder = JSONEncoder()
+        if let encodedUser = try? encoder.encode(value) {
+        print(encodedUser)
+            set(encodedUser ,forKey: UserDefaultsKeys.profileImage.rawValue)
+        }
+       
+    }
+    func getProfileImage() -> Data? {
+        var valueData:Data? = nil
+        let data = value(forKey: UserDefaultsKeys.profileImage.rawValue)
+        if let decoded = try? JSONDecoder().decode(Data.self, from: data as? Data ?? Data()) {
+                   valueData = decoded
+                    return valueData
+                }
+        return valueData
+    }
     func setnotifyCount(value:Int){
         return set(value , forKey: UserDefaultsKeys.notifyCount.rawValue)
     }

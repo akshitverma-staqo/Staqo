@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Alamofire
 class HomeVC: BaseVC {
     
     @IBOutlet weak var herderView: HeaderView!
@@ -33,6 +33,7 @@ class HomeVC: BaseVC {
         herderView.addSubview(header)
         viewModel = HomeViewModal(dataSource: HomeDataSource())
         viewModel.delegate = self
+        viewModel._delegate = self
         viewModel.bootstrap()
         empViewModel = EmpViewModal(dataSource: EmpDataSource())
         empViewModel.empDelegate = self
@@ -57,19 +58,63 @@ class HomeVC: BaseVC {
         }
         
     
-        self.getImage()
+       
+      //  self.getProfileImg()
         // Do any additional setup after loading the view.
     }
     func getImage(){
-        var downloadPath = FileSystem.downloadDirectory
-        downloadPath.appendPathComponent("profile")
-        if FileManager().fileExists(atPath: downloadPath.path){
-            if let image = UIImage(contentsOfFile: downloadPath.path) {
-                herderView.btnProfile.setImage(image, for: .normal)
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                header.btnProfile.setImage(imageView, for: .normal)
             }
+        }else{
+            header.btnProfile.setImage(UIImage(named:"profiled"), for: .normal)
         }
+      
+//        var downloadPath = FileSystem.downloadDirectory
+//        downloadPath.appendPathComponent("profile")
+//        if FileManager().fileExists(atPath: downloadPath.path){
+//            if let image = UIImage(contentsOfFile: downloadPath.path) {
+//                herderView.btnProfile.setImage(image, for: .normal)
+//            }
+//        }
        
     }
+    
+    
+    func getProfileImg(){
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer "+UserDefaults.standard.getAccessToken()+""
+            
+        ]
+
+        let urlStr = "https://graph.microsoft.com/v1.0/me/photo/$value"
+        //NetworkClient.request(url: urlStr, method: .post, parameters: nil, headers: headers)
+        Alamofire.request(urlStr, headers: headers)
+            .response { [self] response in
+                if let data = response.data {
+                    do{
+
+                        if let imageView = UIImage(data: data) {
+                            print("data contains image data")
+                     //       herderView.btnProfile.imageView?.image = imageview
+                            header.btnProfile.setImage(imageView, for: .normal)
+                         //   self.profileImage.image = UIImage(data: data)
+                        } else {
+                            print("data does not contain image data")
+                           // self.profileImage.image = UIImage(named:"profiled.png")
+                        }
+                          
+                    }
+                }
+            }
+    }
+    
+    
     func getCarousalView() {
         let floawLayout = UPCarouselFlowLayout()
         floawLayout.itemSize = CGSize(width: UIScreen.main.bounds.size.width - 60.0, height: homeCollectionView.frame.size.height - 50.0)
@@ -244,36 +289,6 @@ class HomeVC: BaseVC {
 //        UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
 
 
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     }
  
 
@@ -360,8 +375,8 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
             print("ESIGN")
             UserDefaults.standard.setWebStatus(value: "U")
             //guard let url = URL(string: "signnow-private-cloud://sso_login?refresh_token=" + (UserDefaults.standard.getAccessToken()) + "&access_token=" + (UserDefaults.standard.getAccessToken()) + "&hostname=" + "esign.oq.com")else{https://esign.oq.com/webapp/login-sso
-            //guard let url = URL(string: "signnow://")else{
-            guard let url = URL(string: "signnow-private-cloud://sso_login?access_token="+UserDefaults.standard.getAccessToken() + "&hostname=esign.oq.com")else{
+            guard let url = URL(string: "signnow://")else{
+            //guard let url = URL(string: "signnow-private-cloud://sso_login?access_token="+UserDefaults.standard.getAccessToken() + "&hostname=esign.oq.com")else{
                 return
             }
             if UIApplication.shared.canOpenURL(url) {
@@ -476,4 +491,9 @@ extension HomeVC:EmpRefreshDelegate{
         stopLoader()
     }
     
+}
+extension HomeVC : HomeViewModalDelegate{
+    func callImage() {
+        self.getImage()
+    }
 }

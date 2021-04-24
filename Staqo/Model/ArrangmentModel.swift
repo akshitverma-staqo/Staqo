@@ -7,7 +7,7 @@
 
 
 import Foundation
-struct ArrangmentModel : Codable {
+struct ArrangmentModel : Codable,Equatable {
    
     let id : String?
     let contentType : String?

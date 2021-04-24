@@ -118,7 +118,7 @@ class Constant {
     
     
     static let kLoginAuth = "customer/SendOTP"
-    static let kDownloadPath = "me/photo/$value"
+    static let kDownloadPath = "/me/photo/$value"
     
     // MARK:-   StoryBoard
     static let kMainStoryboard = "Main"

@@ -18,7 +18,8 @@ class RoomPhotoVC: UIViewController {
         header.delegate = self
         herderView.addSubview(header)
         if let url = urlString {
-            imageView.image = UIImage(contentsOfFile:url)
+            let urlImage = URL(string: url)
+            imageView.sd_setImage(with: urlImage, placeholderImage: UIImage(named: "")) //image = UIImage(contentsOfFile:url)
         }
        
         // Do any additional setup after loading the view.
