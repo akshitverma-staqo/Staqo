@@ -33,13 +33,12 @@ class BusinessVC: BaseVC {
         businessBtnOutlet.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
         searchBtnOutlet.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
         scanBtnOutlet.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        
         self.navigationController?.isNavigationBarHidden = true
         viewModal = BusinessViewModal(dataSource: BusinessDataSource())
         viewModal.delegate = self
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func btnSVTapped(_ sender: UIButton) {
         let vc = Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kBusinessCardVC, type: BusinessCardVC.self)
         self.navigationController?.pushViewController(vc, animated: true)

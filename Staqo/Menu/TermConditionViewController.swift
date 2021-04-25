@@ -24,10 +24,20 @@ class TermConditionViewController: UIViewController, UIWebViewDelegate {
         
         // Do any additional setup after loading the view.
         
-        
+        getImage()
         
     }
-    
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
+    }
    
     
     override func viewWillAppear(_ animated: Bool) {

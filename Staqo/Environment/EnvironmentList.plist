@@ -16,7 +16,7 @@
 	<key>PROD</key>
 	<dict>
 		<key>FTP_URL</key>
-		<string>FTP_URL</string>
+		<string>FTPURL</string>
 		<key>AuthURL</key>
 		<string>PROD AuthURL</string>
 		<key>BaseURL</key>

@@ -21,6 +21,7 @@ class HomeViewModal:ViewModelType{
     var delegate: ViewModelDelegate?
     var _delegate:HomeViewModalDelegate?
     var imgValue:Bool = true
+    var errorLog:ErrorLog?
     init(dataSource: HomeDataSourceDelegate) {
         self.dataSource = dataSource
     }
@@ -56,6 +57,7 @@ class HomeViewModal:ViewModelType{
             
               ws.delegate?.didLoadData()
           case .failure(let error):
+           // ws.errorLog = error
               ws.delegate?.didFail(error: error)
           }
           
@@ -89,7 +91,7 @@ class HomeViewModal:ViewModelType{
                     delegate?.didFail(error: CustomError.OtherError(error: error!))
                     return
                 }
-                let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "" , businessPhone: currentUser.businessPhones.first  as? String ?? "")
+                let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "" , businessPhone: currentUser.businessPhones.first  as? String ?? "", givenName: currentUser.givenName ?? "" )
 
                 UserDefaults.standard.setProfile(value: data)
                 delegate?.didLoadData()

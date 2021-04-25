@@ -26,7 +26,7 @@ class AboutUsController: UIViewController {
         header.delegate = self
        
         herderView.addSubview(header)
-       
+       getImage()
         
         let  organizationSettingString = NSMutableAttributedString(string: descriptionStringTwo, attributes: [
             .foregroundColor: UIColor(red: 36 / 255, green: 77 / 255, blue: 96 / 255, alpha: 1.0),
@@ -38,7 +38,17 @@ class AboutUsController: UIViewController {
         ], range: NSRange(location: 0, length: 59))
         firstLabel.attributedText = organizationSettingString
     }
-    
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

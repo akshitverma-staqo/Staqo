@@ -22,8 +22,7 @@ struct BaseModel : Codable {
     var allrequests : Allrequests?
     var subcategories : [Subcategories]?
     var documentsData : [Documents]?
-  
-    
+    var error : ErrorLog?
     
     
     enum CodingKeys: String, CodingKey {
@@ -41,6 +40,7 @@ struct BaseModel : Codable {
         case allrequests = "allrequests"
         case subcategories = "subcategories"
         case documentsData = "documents"
+        case error = "error"
     }
     init() {
         
@@ -60,6 +60,7 @@ struct BaseModel : Codable {
         allrequests = try values.decodeIfPresent(Allrequests.self, forKey: .allrequests)
         subcategories = try values.decodeIfPresent([Subcategories].self, forKey: .subcategories)
         documentsData = try values.decodeIfPresent([Documents].self, forKey: .documentsData)
+        error = try values.decodeIfPresent(ErrorLog.self, forKey: .error)
        
 }
 

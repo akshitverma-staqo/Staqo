@@ -9,8 +9,9 @@ import Foundation
 
 class BookRoomViewModel: ViewModelType {
    
-var delegate: ViewModelDelegate?
-private let dataSource:BookRoomDataSourceDelegate?
+  var delegate: ViewModelDelegate?
+  private let dataSource:BookRoomDataSourceDelegate?
+    var imgData:Data?
 init(dataSource: BookRoomDataSourceDelegate) {
     self.dataSource = dataSource
 }
@@ -38,7 +39,22 @@ func bootstrap() {
         }
         
      
-   
+    func roomImages(url: String){
+        delegate?.willLoadData()
+        dataSource?.roomImages(url: url, completion: { [weak self] result in
+            guard let ws = self else{return}
+            switch result {
+            
+            case .progress(_):
+                print("Downloading")
+            case .success(let baseModel):
+                ws.imgData = baseModel
+                ws.delegate?.didLoadData()
+            case .failure(let error):
+                ws.delegate?.didFail(error: error)
+            }
+        })
+    }
         
     
     

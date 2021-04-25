@@ -119,7 +119,7 @@ class VisitingCardData: BaseVC {
         noShadowView.dropShadow()
         noImageView.layer.cornerRadius = 5
         noImageView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
-        
+        getImage()
         submitShadowView.dropShadow()
         submitBtnOutlet.layer.cornerRadius = 10
         submitBtnOutlet.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
@@ -235,6 +235,17 @@ class VisitingCardData: BaseVC {
         
         
         
+    }
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     
     public override func viewWillAppear(_ animated: Bool) {

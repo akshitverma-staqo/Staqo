@@ -674,6 +674,15 @@ extension RoomBTVC: UITextFieldDelegate{
         }else if txtTag == 8 {
             if  arrangModel != nil {
             arrangeViewHeight.constant = 124
+                // Create URL
+                let url = URL(string: arrangModel?[selectedIndex].webUrl ?? "")!
+
+                   // Fetch Image Data
+                   if let data = try? Data(contentsOf: url) {
+                       // Create Image and Update Image View
+                    arrangmentImageView.image = UIImage(data: data)
+                   }
+                
             }
         }
     }

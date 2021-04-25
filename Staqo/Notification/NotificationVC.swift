@@ -39,7 +39,18 @@ class NotificationVC: BaseVC, UITableViewDelegate {
 //        self.tblView.delegate = self
 //        self.tblView.dataSource = self
         tblView.register(UINib(nibName: "NotificationTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationTableViewCell")
-       
+       getImage()
+    }
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

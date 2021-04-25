@@ -45,6 +45,7 @@
 		7667E7E62615ADC500EB624E /* LogTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7667E7E52615ADC500EB624E /* LogTicketVC.swift */; };
 		7667E7F02615D93800EB624E /* HelpDeskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7667E7EF2615D93800EB624E /* HelpDeskVC.swift */; };
 		7667E7F8261609AE00EB624E /* TicketStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7667E7F7261609AE00EB624E /* TicketStatusVC.swift */; };
+		767BBC832635B95500693B63 /* ErrorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BBC822635B95400693B63 /* ErrorLog.swift */; };
 		767BEBD52601261B00B6A3C3 /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBD42601261B00B6A3C3 /* TextReader.swift */; };
 		767BEBDA2601264900B6A3C3 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBD92601264900B6A3C3 /* Documents.swift */; };
 		767BEBE0260126B400B6A3C3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBDF260126B400B6A3C3 /* Helper.swift */; };
@@ -248,6 +249,7 @@
 		7667E7E52615ADC500EB624E /* LogTicketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTicketVC.swift; sourceTree = "<group>"; };
 		7667E7EF2615D93800EB624E /* HelpDeskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskVC.swift; sourceTree = "<group>"; };
 		7667E7F7261609AE00EB624E /* TicketStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusVC.swift; sourceTree = "<group>"; };
+		767BBC822635B95400693B63 /* ErrorLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorLog.swift; sourceTree = "<group>"; };
 		767BEBD42601261B00B6A3C3 /* TextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReader.swift; sourceTree = "<group>"; };
 		767BEBD92601264900B6A3C3 /* Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
 		767BEBDF260126B400B6A3C3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -790,7 +792,6 @@
 				CD5DB46025D5A50600353084 /* Login */,
 				CD5DB49325D5A8D700353084 /* Model */,
 				76A14EFA260FB33400A5E7BF /* Mazzayakom */,
-				CD5DB47D25D5A5EC00353084 /* Shared */,
 				CD5DB47525D5A5C100353084 /* Environment */,
 				CD5DB46F25D5A5A200353084 /* Network */,
 				CD5DB46625D5A54C00353084 /* BaseVC */,
@@ -798,6 +799,7 @@
 				CD5DB49D25D5A9B300353084 /* Navigation */,
 				76257D9B25DF709B00F1BD47 /* Font */,
 				CD5DB49925D5A93D00353084 /* Storyboard */,
+				CD5DB47D25D5A5EC00353084 /* Shared */,
 				CD5DB42025D5A26300353084 /* AppDelegate.swift */,
 				CD5DB42225D5A26300353084 /* SceneDelegate.swift */,
 				CD5DB42925D5A26500353084 /* Assets.xcassets */,
@@ -886,6 +888,7 @@
 				CD5DB49425D5A8E900353084 /* BaseModel.swift */,
 				7697063F262B347B0063BABA /* Data.swift */,
 				76A1039D25F7E61300C536B9 /* Value.swift */,
+				767BBC822635B95400693B63 /* ErrorLog.swift */,
 				76A103A225F7E69E00C536B9 /* CreatedBy.swift */,
 				76A103AC25F7E6C500C536B9 /* User.swift */,
 				76A103A725F7E6B300C536B9 /* Fields.swift */,
@@ -1266,6 +1269,7 @@
 				7667E7E12615ADA900EB624E /* LogTicketDataSource.swift in Sources */,
 				76C3AC8C261F5AE500FC6B85 /* List_info.swift in Sources */,
 				76B205C025DEDBD70056FC68 /* HomeCollectionViewCell.swift in Sources */,
+				767BBC832635B95500693B63 /* ErrorLog.swift in Sources */,
 				26CD070625E41EE7001C6D60 /* UPCarouselFlowLayout.swift in Sources */,
 				76A0F552260B7B2E00601483 /* RoomBookingViewModel.swift in Sources */,
 				CD5DB48B25D5A60C00353084 /* Extension.swift in Sources */,

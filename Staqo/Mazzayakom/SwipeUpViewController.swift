@@ -61,6 +61,7 @@ class SwipeUpViewController: PullUpController {
         swipeUp.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
     }
     
+    
     override var pullUpControllerPreferredSize: CGSize {
         
         var height = CGFloat((arrDara.count )) * 400.0

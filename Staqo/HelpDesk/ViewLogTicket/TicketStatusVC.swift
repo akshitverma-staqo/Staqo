@@ -31,12 +31,23 @@ class TicketStatusVC: UIViewController {
 //        creationDateTxt.text
 //        locationtxt.text = rowsRequests?.
         
-        
+        getImage()
         
         
         
         
         // Do any additional setup after loading the view.
+    }
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

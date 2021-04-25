@@ -9,9 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Century Gothic 400.ttf">
-            <string>CenturyGothic</string>
-        </array>
         <array key="Century Gothic.ttf">
             <string>CenturyGothic-Bold</string>
         </array>
@@ -49,7 +46,7 @@
                                 </connections>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="eYS-Sw-l81" secondAttribute="trailing" constant="5" id="2rK-zo-s1s"/>
                             <constraint firstItem="eYS-Sw-l81" firstAttribute="leading" secondItem="Nws-Aq-7Ve" secondAttribute="leading" constant="2" id="5eZ-ZY-HXd"/>
@@ -90,7 +87,6 @@
                                 <state key="normal" image="down"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="So2-sn-CSQ" secondAttribute="bottom" constant="5" id="8Ed-9N-nzJ"/>
                             <constraint firstAttribute="trailing" secondItem="So2-sn-CSQ" secondAttribute="trailing" constant="30" id="GBU-4y-Llb"/>
@@ -143,7 +139,6 @@
                                 <state key="normal" image="down"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="7VF-J4-HZZ" firstAttribute="leading" secondItem="yhz-Sy-9mg" secondAttribute="leading" constant="2" id="4x2-jk-8cm"/>
                             <constraint firstAttribute="width" constant="287" id="88R-MM-8tj"/>
@@ -166,9 +161,9 @@
                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Write your purpose  here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EyH-qG-5b9">
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EyH-qG-5b9">
                         <rect key="frame" x="20" y="320" width="287" height="80"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="80" id="HSu-Ia-LQF"/>
                             <constraint firstAttribute="width" constant="287" id="LcW-Gc-Zkw"/>
@@ -182,7 +177,7 @@
                         </connections>
                     </textView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-SY-Mnl">
-                        <rect key="frame" x="20" y="510" width="90.5" height="32"/>
+                        <rect key="frame" x="20" y="510" width="80" height="32"/>
                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -212,7 +207,6 @@
                                 <state key="normal" image="down"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="21U-IV-S2I" firstAttribute="leading" secondItem="6ot-Uu-Slb" secondAttribute="leading" constant="2" id="6pc-QX-67M"/>
                             <constraint firstItem="6i9-yr-HHK" firstAttribute="leading" secondItem="21U-IV-S2I" secondAttribute="trailing" id="CPF-md-B55"/>
@@ -267,7 +261,6 @@
                                 <state key="normal" image="down"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="1jP-gy-dSM"/>
                             <constraint firstAttribute="width" constant="287" id="3DB-SJ-sKz"/>
@@ -282,7 +275,7 @@
                             <constraint firstItem="UuW-VR-eCd" firstAttribute="leading" secondItem="Gab-kW-0az" secondAttribute="trailing" constant="2" id="pWb-tX-3Yk"/>
                         </constraints>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Qr-ddX">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wih-Qr-ddX" customClass="DesignableButton" customModule="Staqo" customModuleProvider="target">
                         <rect key="frame" x="85" y="750" width="157" height="50"/>
                         <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -293,6 +286,11 @@
                         <state key="normal" title="Submit">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="btnSubmitTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="rWk-yr-54K"/>
                         </connections>
@@ -307,10 +305,10 @@
                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-vt-DPg">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fi7-vt-DPg" customClass="TTCustomView" customModule="Staqo" customModuleProvider="target">
                         <rect key="frame" x="20" y="450" width="287" height="40"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUR-eg-MPv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUR-eg-MPv" customClass="DesignableButton" customModule="Staqo" customModuleProvider="target">
                                 <rect key="frame" x="207" y="5" width="80" height="30"/>
                                 <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -318,18 +316,23 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
                                 <state key="normal" title="Attach"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="attachmentTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Dxc-cG-VHc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxu-P1-Gle">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxu-P1-Gle">
                                 <rect key="frame" x="2" y="5" width="197" height="30"/>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eUR-eg-MPv" firstAttribute="leading" secondItem="Zxu-P1-Gle" secondAttribute="trailing" constant="8" id="5ZK-uN-QAH"/>
                             <constraint firstAttribute="bottom" secondItem="eUR-eg-MPv" secondAttribute="bottom" constant="5" id="6X2-Lp-cRW"/>
@@ -340,6 +343,20 @@
                             <constraint firstAttribute="bottom" secondItem="Zxu-P1-Gle" secondAttribute="bottom" constant="5" id="aIy-eC-Skh"/>
                             <constraint firstItem="Zxu-P1-Gle" firstAttribute="leading" secondItem="Fi7-vt-DPg" secondAttribute="leading" constant="2" id="y9B-n9-I78"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" systemColor="systemGrayColor"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
@@ -404,13 +421,24 @@
             <point key="canvasLocation" x="76.811594202898561" y="243.08035714285714"/>
         </tableViewCell>
     </objects>
+    <designables>
+        <designable name="eUR-eg-MPv">
+            <size key="intrinsicContentSize" width="50" height="32"/>
+        </designable>
+        <designable name="wih-Qr-ddX">
+            <size key="intrinsicContentSize" width="55" height="32"/>
+        </designable>
+    </designables>
     <resources>
         <image name="down" width="20" height="20"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

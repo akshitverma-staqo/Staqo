@@ -70,11 +70,5 @@ class RoomDataSource: RoomDataSourceDelegate {
             completion(StaoqResult.failure(moyaError))
             }
     }
-    
- 
-    
-    
-   
-    
    
 }

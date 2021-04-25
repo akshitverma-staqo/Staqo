@@ -42,9 +42,11 @@ class LogTicketTVC: UITableViewCell, UIImagePickerControllerDelegate & UINavigat
         picker.translatesAutoresizingMaskIntoConstraints = false
         imagePicker.delegate = self
        // self.addSubview(picker)
-
-        
-
+        attachmentLbl.layer.cornerRadius = 8
+        attachmentLbl.layer.masksToBounds = true
+       
+        descriptionTxt.layer.cornerRadius = 8
+        descriptionTxt.placeholder = "Write your purpose here"
         
     }
     @IBAction func attachmentTap(_ sender: UIButton) {

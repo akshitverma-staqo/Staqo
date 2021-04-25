@@ -50,12 +50,22 @@ class FAQViewController: UIViewController,UIWebViewDelegate {
         
      
         
-        
+        getImage()
         tableView.register(UINib(nibName: "FAQHeaderTableViewCell", bundle: nil), forCellReuseIdentifier: "FAQHeaderTableViewCell")
         tableView.register(UINib(nibName: "FAQAnswerTableViewCell", bundle: nil), forCellReuseIdentifier: "FAQAnswerTableViewCell")
         
     }
-    
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)

@@ -79,13 +79,13 @@ class Constant {
     static let kHelpSubCat1 = "/api/helpdesk/"
     static let kHelpSubCat2 = "/subcategories"
     static let kHelpSubmitReq = "/api/helpdesk/request" //Post to submit
-    static let kHelpViewTicket = "/api/helpdesk/request" // Get to view Ticket
+    static let kHelpViewTicket = "/api/helpdesk/" + (UserDefaults.standard.getProfile()?.email)! + "/request" // Get to view Ticket
     static let kHelpAttach1 = "/api/helpdesk/"
     static let kHelpAttach2 = "/attachment"
  
     
     //Room API
-    static let kGET_ROOM = "/api/room/"
+    static let kGET_ROOM = "/api/roombyid"//"/api/room/"
     static let kAllRoomType = "/api/getAllRoomType"
     static let kAllRoomFeature = "/api/getAllRoomFeature"
     static let kAllRoomAuthority = "/api/getAllRoomAuthority"

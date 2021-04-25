@@ -56,11 +56,22 @@ class BusinessCardVC: BaseVC {
         qrCodeView.layer.cornerRadius = 20
         qrCodeView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
         qrCodeBtnOutlet.layer.cornerRadius = qrCodeBtnOutlet.frame.height / 2
-        
+        getImage()
         viewModal = EmpViewModal(dataSource: EmpDataSource())
         viewModal.delegate = self
         viewModal.bootstrap()
         // Do any additional setup after loading the view.
+    }
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -177,7 +188,7 @@ extension BusinessCardVC: ViewModelDelegate{
     func didLoadData() {
         
         stopLoader()
-        nameLabel.text = viewModal.field?.name ?? ""
+        nameLabel.text = UserDefaults.standard.getProfile()?.givenName ?? ""
         mobileLbl.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
         businessPhoneLbl.text = UserDefaults.standard.getProfile()?.businessPhone ?? ""
         addressTextView.text = viewModal.field?.emailid ?? ""

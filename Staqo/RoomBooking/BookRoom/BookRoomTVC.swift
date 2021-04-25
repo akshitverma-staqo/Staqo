@@ -42,18 +42,18 @@ class BookRoomTVC: UITableViewCell {
     }
     
     func dataBind(data:FreeRoomModel?) {
-        roomCodeLbl.text = data?.roomCode ?? ""
-        roomTypeLbl.text = data?.roomtype ?? ""
-        capacityLbl.text = "\(data?.capacity ?? 0)"
-        roomFeatureLbl.text = data?.roomfeatures ?? ""
+        roomCodeLbl.text = ": " + (data?.roomCode ?? "")
+        roomTypeLbl.text = ": " + (data?.roomtype ?? "")
+        capacityLbl.text = ": " + "\(data?.capacity ?? 0)"
+        roomFeatureLbl.text = ": " + (data?.roomfeatures ?? "")
         bookRoomClick.isHidden = false
         btnPhoto.isHidden = false
     }
     func dataBind1(data:BookedRoomModel?) {
-        roomCodeLbl.text = data?.roomCode ?? ""
-        roomTypeLbl.text = data?.roomType ?? ""
-        capacityLbl.text = "\(data?.attendents ?? 0)"
-        roomFeatureLbl.text = data?.roomfeatures ?? ""
+        roomCodeLbl.text = ": " + (data?.roomCode ?? "")
+        roomTypeLbl.text = ": " + (data?.roomType ?? "")
+        capacityLbl.text = ": " + "\(data?.attendents ?? 0)"
+        roomFeatureLbl.text = ": " + (data?.roomfeatures ?? "")
         bookRoomClick.isHidden = true
         btnPhoto.isHidden = true
 

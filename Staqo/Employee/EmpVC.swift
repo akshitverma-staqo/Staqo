@@ -140,8 +140,8 @@ extension EmpVC : ViewModelDelegate{
         stopLoader()
 
         view.endEditing(true)
-        nameLabel.text = viewModal.field?.name ?? ""
-         empIdLabel.text = (viewModal.field?.emailid ?? "").replacingOccurrences(of: "@oq.com", with: "")
+        nameLabel.text = UserDefaults.standard.getProfile()?.givenName ?? ""
+        empIdLabel.text = (viewModal.field?.emailid ?? "").replacingOccurrences(of: "@oq.com", with: "")
         mobile1Label.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
         telephoneLabel.text = UserDefaults.standard.getProfile()?.businessPhone ?? ""
         addressLabel.text = viewModal.field?.emailid ?? ""

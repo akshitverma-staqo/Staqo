@@ -35,7 +35,7 @@ enum ResourceType {
     case ticketImageUpload(file: Data, ID:String)
     case approveCancel(bookingId: Int, roomStatus: String, approvedBy: String, userType: String,cancelBy: String, cancelRemark: String)
     case insertEmpData(email:String , orgID:Int, name:String , fcmToken:String , desig:String,mobileNo:String)
-   
+    case roomImages(url:String)
     var localLocation: URL? {
 
         switch self {
@@ -74,6 +74,8 @@ extension ResourceType:TargetType {
             return URL(string: Configuration.ftpURL)!
         case .getTextReader(_):
             return URL(string: Configuration.BNSUrl)!
+        case .roomImages(let url):
+        return URL(string: url)!
         default:
             return URL(string:Configuration.baseURL)!
         }
@@ -90,8 +92,8 @@ extension ResourceType:TargetType {
             return Constant.kSiteID + Constant.kEMPLOYEE_FIND_BY_ID + ID + "/fields"
         case .getTextReader(_):
             return Constant.kBusinessData2
-        case .roomData(let ID):
-            return Constant.kGET_ROOM + ID
+        case .roomData(_):
+            return Constant.kGET_ROOM
         case .notificationData(let email):
             return Constant.kGetAllNotification + email
         case .readNotification(let email):
@@ -135,6 +137,9 @@ extension ResourceType:TargetType {
             return Constant.kUpdateRoomStatus
         case .insertEmpData:
             return Constant.kSiteID + Constant.kEMPLOYEE_REGISTER
+            
+        case .roomImages(_):
+            return ""
         }
         
         
@@ -142,14 +147,14 @@ extension ResourceType:TargetType {
 
     var method: Moya.Method {
         switch self {
-        case .getEmployeeDataWithID(_),.roomData(_),.notificationData(_),.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
+        case .getEmployeeDataWithID(_),.notificationData(_),.readNotification(_),.roomType,.roomLocation,.dashboardMeneData,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return Moya.Method.get
         case .updateByEmpID(_,_):
             return Moya.Method.patch
-        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_),.insertEmpData(_,_,_,_,_,_):
+        case .getTextReader(_),.addNotification(_,_,_,_),.searchRoom(_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_),.submitTicketData(_),.ticketImageUpload(_,_),.approveCancel(_, _, _, _, _,_),.insertEmpData(_,_,_,_,_,_),.roomData(_):
             return Moya.Method.post
         
-        case .download(_):
+        case .download(_),.roomImages(_):
             return Moya.Method.get
         }
     }
@@ -178,6 +183,9 @@ extension ResourceType:TargetType {
                 ["language":"","id":"5","text":value]
 ]
 ]
+            
+        case .roomData(let ID):
+            return ["locationid":ID]
         default:
             return nil
         }
@@ -207,11 +215,11 @@ extension ResourceType:TargetType {
     
     var task: Task {
         switch self {
-        case .getEmployeeDataWithID(_),.roomData(_),.notificationData(_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
+        case .getEmployeeDataWithID(_),.notificationData(_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.profile,.roomArrangment(_),.getVisiterListData(_),.bookedRoom,.getCatData,.getTicket,.getSubCatData(_):
             return .requestPlain
-        case .download(_):
+        case .download(_),.roomImages(_):
             return .requestPlain
-        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_),.getTextReader(_):
+        case .updateByEmpID(_,_),.addNotification(_,_,_,_),.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_),.approveCancel(_,_,_,_,_,_),.getTextReader(_),.roomData(_):
             return .requestParameters(parameters: parameters!, encoding: JSONEncoding.default)
 //        case .getTextReader(_):
 //            let data = Data(para!.utf8)
@@ -248,7 +256,7 @@ extension ResourceType:TargetType {
             
         case .roomData(_),.addNotification(_,_,_,_),.readNotification(_),.dashboardMeneData,.roomType,.roomLocation,.roomArrangment(_),.searchRoom(_),.bookedRoom,.bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_),.getTicket,.getCatData,.getSubCatData(_),.submitTicketData(_),.approveCancel(_,_,_,_,_,_),.notificationData(_):
         httpHeaders["Accesstoken"] = "Bearer " + UserDefaults.standard.getAccessToken()
-      httpHeaders["TechnicianKey"] = "D3DE8EE6-B6AE-49C8-98ED-C93D308CB33F"
+     // httpHeaders["TechnicianKey"] = "D3DE8EE6-B6AE-49C8-98ED-C93D308CB33F"
         httpHeaders["Content-Type"] = "application/json"
         return httpHeaders
         case .download(_):

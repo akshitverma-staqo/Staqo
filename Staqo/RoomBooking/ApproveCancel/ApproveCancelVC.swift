@@ -41,11 +41,23 @@ class ApproveCancelVC: BaseVC {
         
         
         
-        
+        getImage()
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.register(UINib(nibName: kACViewCell, bundle: nil), forCellReuseIdentifier: kACViewCell)
         viewModel.bootstrap()
+    }
+    
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

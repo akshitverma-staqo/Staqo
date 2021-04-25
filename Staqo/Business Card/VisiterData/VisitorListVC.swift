@@ -28,10 +28,21 @@ class VisitorListVC:  BaseVC {
         viewModalEmp.bootstrap()
         viewModal = VisiterListViewModal(dataSource: VisitorListDataSource())
         viewModal.delegate = self
-      
+      getImage()
         tblView.register(UINib(nibName: kVisiterListTVC, bundle: nil), forCellReuseIdentifier: kVisiterListTVC)
         
         // Do any additional setup after loading the view.
+    }
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

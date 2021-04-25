@@ -26,7 +26,7 @@ class RoomBookingVC: BaseVC, UITableViewDelegate {
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
         herderView.addSubview(header)
-
+        getImage()
         viewModel = RoomBookingViewModel(dataSource: RoomDataSource())
         viewModel.delegate = self
         viewModel._delegate = self
@@ -35,6 +35,17 @@ class RoomBookingVC: BaseVC, UITableViewDelegate {
         self.tblView.dataSource = self
         tblView.register(UINib(nibName: kRoomBTVC, bundle: nil), forCellReuseIdentifier: kRoomBTVC)
         viewModel.bootstrap()
+    }
+    func getImage(){
+        
+        if  let imageString = UserDefaults.standard.getProfileImage() {
+      
+            if let imageView = UIImage(data: imageString) {
+                print("data contains image data")
+                //profileImage.image = imageView
+                header.btnProfile.setImage(imageView, for: .normal)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

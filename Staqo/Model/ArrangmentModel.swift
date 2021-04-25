@@ -31,6 +31,7 @@ struct ArrangmentModel : Codable,Equatable {
     let room_Type_x003a_IDLookupId : String?
     let pattern_x002f_Design : String?
     let sequence_Number : Double?
+    let webUrl: String?
 
     enum CodingKeys: String, CodingKey {
 
@@ -57,6 +58,7 @@ struct ArrangmentModel : Codable,Equatable {
         case room_Type_x003a_IDLookupId = "Room_Type_x003a_IDLookupId"
         case pattern_x002f_Design = "Pattern_x002f_Design"
         case sequence_Number = "Sequence_Number"
+        case webUrl = "webUrl"
     }
 
     init(from decoder: Decoder) throws {
@@ -84,6 +86,8 @@ struct ArrangmentModel : Codable,Equatable {
         room_Type_x003a_IDLookupId = try values.decodeIfPresent(String.self, forKey: .room_Type_x003a_IDLookupId)
         pattern_x002f_Design = try values.decodeIfPresent(String.self, forKey: .pattern_x002f_Design)
         sequence_Number = try values.decodeIfPresent(Double.self, forKey: .sequence_Number)
+        webUrl = try values.decodeIfPresent(String.self, forKey: .webUrl)
+
     }
 
 }
