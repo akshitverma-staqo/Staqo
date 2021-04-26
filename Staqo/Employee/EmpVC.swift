@@ -142,7 +142,13 @@ extension EmpVC : ViewModelDelegate{
         view.endEditing(true)
         nameLabel.text = UserDefaults.standard.getProfile()?.givenName ?? ""
         empIdLabel.text = (viewModal.field?.emailid ?? "").replacingOccurrences(of: "@oq.com", with: "")
-        mobile1Label.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
+        if ((UserDefaults.standard.getProfile()?.mobileNo1 ?? "") == "") || ((viewModal.field?.mobileno2 ?? "") == "") {
+           
+            mobile1Label.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
+
+        }else{
+            mobile1Label.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "")" + ", " + "\( viewModal.field?.mobileno2 ?? "" )"
+        }
         telephoneLabel.text = UserDefaults.standard.getProfile()?.businessPhone ?? ""
         addressLabel.text = viewModal.field?.emailid ?? ""
         secNumber.text = viewModal.field?.mobileno2 ?? ""

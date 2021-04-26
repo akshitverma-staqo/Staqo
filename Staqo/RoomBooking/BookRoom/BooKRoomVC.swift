@@ -109,7 +109,7 @@ extension BooKRoomVC : ViewModelDelegate{
     }
     
     func didLoadData() {
-        stopLoader()
+       // stopLoader()
         showErrorMessage(title: "", message: "Room Booked Successfully.") { (action) in
             self.roomViewModel.searchRoomData(value: self.searchValue)
 
@@ -202,6 +202,7 @@ extension BooKRoomVC : BookRoomTVCDelegate{
 }
 extension BooKRoomVC:RoomBookingViewModelDelegate{
     func updatedResult(data: BaseModel?) {
+        stopLoader()
         baseModel = data
         tableView.reloadData()
     }

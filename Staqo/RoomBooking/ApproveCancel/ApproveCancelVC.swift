@@ -38,9 +38,6 @@ class ApproveCancelVC: BaseVC {
             roomSegment.setTitle("Approved", forSegmentAt: 0)
             roomSegment.setTitle("Pending", forSegmentAt: 1)
         }
-        
-        
-        
         getImage()
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -102,6 +99,14 @@ extension ApproveCancelVC : ViewModelDelegate{
     
     func didLoadData() {
         stopLoader()
+        if viewModel?.rows?.count == 0 && viewModel?.rows1?.count == 0 {
+            showErrorMessage(title: "Alert", message: "Data not Found.") { (action) in
+                self.navigationController?.popViewController(animated: true)
+            }
+        }else if viewModel?.rows?.count == 0 {
+            roomSegment.selectedSegmentIndex = 1
+        }
+
         tableView.reloadData()
     }
     

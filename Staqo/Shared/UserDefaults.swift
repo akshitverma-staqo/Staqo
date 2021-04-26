@@ -85,7 +85,7 @@ extension UserDefaults {
         
     }
     func getNotifyCount() -> Int {
-        return value(forKey: UserDefaultsKeys.notifyCount.rawValue) as! Int
+        return value(forKey: UserDefaultsKeys.notifyCount.rawValue) as? Int ?? 0
     }
     
     func getAdminStatus() -> String {

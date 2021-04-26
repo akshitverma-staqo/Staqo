@@ -21,7 +21,7 @@ struct RoomModel : Codable {
 	let capacity : Int?
 	let status : String?
 	let sequenceNumber : Int?
-
+    let roomtypeid:String?
 	enum CodingKeys: String, CodingKey {
 
 		case id = "id"
@@ -32,6 +32,7 @@ struct RoomModel : Codable {
 		case capacity = "capacity"
 		case status = "status"
 		case sequenceNumber = "sequenceNumber"
+        case roomtypeid = "roomtypeid"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -44,6 +45,7 @@ struct RoomModel : Codable {
 		capacity = try values.decodeIfPresent(Int.self, forKey: .capacity)
 		status = try values.decodeIfPresent(String.self, forKey: .status)
 		sequenceNumber = try values.decodeIfPresent(Int.self, forKey: .sequenceNumber)
+        roomtypeid = try values.decodeIfPresent(String.self, forKey: .roomtypeid)
 	}
 
 }

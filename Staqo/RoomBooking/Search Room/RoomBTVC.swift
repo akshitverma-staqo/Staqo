@@ -68,6 +68,7 @@ class RoomBTVC: UITableViewCell {
     var picker:UIPickerView!
     var viewPicker: UIView!
     var rowsData:[RoomModel]?
+    var roomDataFilter:[RoomModel]?
     var rowsRoom:[RoomType]?
     var rowsLoc:[Location]?
     var locIndex:Int = 0
@@ -78,7 +79,26 @@ class RoomBTVC: UITableViewCell {
         // Initialization code
         purposeTxtView.layer.cornerRadius = 8
         purposeTxtView.placeholder = "Write your purpose here"
-        arrangeViewHeight.constant = 0
+       arrangeViewHeight.constant = 0
+        
+        if (fromDateTxt.text?.count ?? 0) <= 0 {
+            fromDateTxt.text = Constant.dateTimeFormatter(format: "dd-MM-yyyy", date: datePicker?.date ?? Date())
+
+        }
+        if fromTimeTxt.text?.count ?? 0 <= 0 {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            let min = dateFormatter.date(from: "9:00")
+            fromTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: min ?? Date())
+            
+        }
+        if toTimeTxt.text?.count ?? 0 <= 0 {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "HH:mm"
+            let min = dateFormatter.date(from: "18:00")
+            toTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: min ?? Date())
+            
+        }
     }
    
     
@@ -93,11 +113,14 @@ class RoomBTVC: UITableViewCell {
         self.picker.delegate = self
         self.picker.dataSource = self
         rowsData = data
+        
         self.rowsLoc = locData
         self.rowsRoom = roomData
+        self.roomDataFilter = rowsData
         self.arrangModel = arrangData
        _delegate = delegateVC
         _delegate = self
+       
     }
   
     
@@ -399,7 +422,7 @@ extension RoomBTVC: UITextFieldDelegate{
             }
             if fromTimeTxt.text?.count ?? 0 <= 0 {
                 fromTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: datePicker?.date ?? Date())
-
+                
             }
             textField.inputView = datePicker
         }else if  textField.tag == 5 {
@@ -503,26 +526,15 @@ extension RoomBTVC: UITextFieldDelegate{
             if locationTxt.text != nil {
                 delegate?.getAllRooms(ID: "\(rowsLoc?[selectedIndex].id ?? 0)")
             }
-            
-
-            
         }
         else if txtTag == 3{
-        
-            
-            toDateTxt.text  = ""
-        
-            
+            toDateTxt.text  = nil
         }
         
         else if txtTag == 5 {
            print("Check Date")
-
-            
             if fromDateTxt.text == "" {
                 delegate?.showMsgValidation(msg: "Please select first From Date.")
-
-                
             }else{
                 
               
@@ -553,11 +565,7 @@ extension RoomBTVC: UITextFieldDelegate{
                             }
                            // btnEnable(value: false)
                             print("day less than 7")
-                            
-//
-//                            let weekDaysEnd = Calendar.current.component(.weekday, from: secondDate ?? Date())
-//print("\(weekDaysStart) ====== \(weekDaysEnd)")
-                            //   recurringMeetingView.isHidden = true
+ 
                          
                         }else{
                         //    recurringMeetingView.isHidden = false
@@ -576,26 +584,12 @@ extension RoomBTVC: UITextFieldDelegate{
                  
                     
                 }
-//                else{
-//                    let firstDate = formatter.date(from: fromDateTxt.text ?? "")
-//                    let secondDate = formatter.date(from: toDateTxt.text ?? "")
-//
-//                    print("Both dates are same")
-//
-////                    let day = Calendar.current.component(.weekday, from: Date())
-//
-//
-//                  //  recurringMeetingView.isHidden = true
-//
-//                }
             }
             
         }
         
         else if txtTag == 4{
-            
-          
-    
+      
         } else if txtTag == 6{
         
                print("Check Time")
@@ -654,7 +648,11 @@ extension RoomBTVC: UITextFieldDelegate{
                     arrangeView.isHidden = false
                     arrangLbl.isHidden = false
                     arrangLbl.text = "Arrangment Type"
+                    roomCodeTxt.text = nil
                     arrangeViewHeight.constant = 0
+                    arrangmentView.isHidden = true
+                //    let data = self.rowsData?.filter{$0.roomtypeid == "\(rowsRoom?[selectedIndex].id ?? 0)"}
+                  //  self.rowsData = data
                     delegate?.getArrangement(ID:"\(rowsRoom?[selectedIndex].id ?? 0)")
                 }else{
                     arrangeConstraint.constant = 0
@@ -664,17 +662,23 @@ extension RoomBTVC: UITextFieldDelegate{
                     arrangeView.isHidden = true
                     arrangLbl.isHidden = true
                     arrangeViewHeight.constant = 0
+                    arrangmentView.isHidden = true
                     arrangmentTct.text = nil
                     arrangModel = []
+                    self.rowsData = roomDataFilter
                     arrangmentTct.isEnabled = false
                 }
                
                
             }
         }else if txtTag == 8 {
-            if  arrangModel != nil {
+            arrangmentView.isHidden = false
             arrangeViewHeight.constant = 124
-                // Create URL
+            if  arrangModel != nil {
+                arrangmentView.isHidden = false
+                arrangeViewHeight.constant = 124
+               // contentView.needsUpdateConstraints()
+              //  contentView.setNeedsLayout()
                 let url = URL(string: arrangModel?[selectedIndex].webUrl ?? "")!
 
                    // Fetch Image Data
@@ -682,8 +686,9 @@ extension RoomBTVC: UITextFieldDelegate{
                        // Create Image and Update Image View
                     arrangmentImageView.image = UIImage(data: data)
                    }
-                
+
             }
+           
         }
     }
 }

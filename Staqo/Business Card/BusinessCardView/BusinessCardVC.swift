@@ -189,7 +189,13 @@ extension BusinessCardVC: ViewModelDelegate{
         
         stopLoader()
         nameLabel.text = UserDefaults.standard.getProfile()?.givenName ?? ""
-        mobileLbl.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
+        if ((UserDefaults.standard.getProfile()?.mobileNo1 ?? "") == "") || ((viewModal.field?.mobileno2 ?? "") == "") {
+           
+            mobileLbl.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
+
+        }else{
+            mobileLbl.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "")" + ", " + "\( viewModal.field?.mobileno2 ?? "" )"
+        }
         businessPhoneLbl.text = UserDefaults.standard.getProfile()?.businessPhone ?? ""
         addressTextView.text = viewModal.field?.emailid ?? ""
         

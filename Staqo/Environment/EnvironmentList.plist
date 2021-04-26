@@ -5,7 +5,7 @@
 	<key>DEV</key>
 	<dict>
 		<key>FTP_URL</key>
-		<string>http://182.73.254.13/oq</string>
+		<string>http://111.93.124.117:9088/oq</string>
 		<key>AuthURL</key>
 		<string>https://graph.microsoft.com/v1.0</string>
 		<key>BaseURL</key>
