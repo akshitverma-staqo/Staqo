@@ -118,9 +118,15 @@ extension ResourceType:TargetType {
         case .getVisiterListData(let ID):
             return  Constant.kSiteID + Constant.kVISITOR_LIST + ID + Constant.kVisiterList1
         case .bookedRoom:
-            //return Constant.kViewBookedRoom + (UserDefaults.standard.getProfile()?.email ?? "") + "/list"
-            //return "http://182.73.254.13/oq/api​/booking​/oqtest1@staqo.com/list"
-            return Constant.kViewBookedRoom
+            if UserDefaults.standard.getWebStatus() == "A" {
+                print("Admin")
+                return Constant.kBookingAdmin
+            }else{
+
+                print("User")
+                return Constant.kViewBookedRoom
+            }
+            //return Constant.kViewBookedRoom
         case .bookRoom(_,_,_,_,_,_,_,_,_,_,_,_,_,_,_):
         return Constant.kFreeRoomBooking
         case .getCatData:

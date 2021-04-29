@@ -14,12 +14,16 @@ protocol ACViewCellDelegate:class {
 }
 class ACViewCell: UITableViewCell {
 
+    @IBOutlet weak var roomTypeLbl: UILabel!
+    @IBOutlet weak var visitorsTypeLbl: UILabel!
     @IBOutlet weak var btnCancel1: UIButton!
     @IBOutlet weak var cancelClick: UIButton!
     @IBOutlet weak var approveClick: UIButton!
     @IBOutlet weak var roomCapacity: UILabel!
     @IBOutlet weak var roomCodeLbl: UILabel!
     @IBOutlet weak var dateTimeLbl: UILabel!
+    @IBOutlet weak var dayLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var purposeLbl: UILabel!
     @IBOutlet weak var nameLbl: UILabel!
     var delegate: ACViewCellDelegate?
@@ -50,11 +54,21 @@ class ACViewCell: UITableViewCell {
     func dataBind(data:[BRVModel]? , index:IndexPath){
         cancelData = data
         self.indexpath = index
-        roomCapacity.text = "\(data?[index.row].attendents ?? 0)"
+        if data?[index.row].visitorType ?? "" == "v" || data?[index.row].visitorType ?? "" == "V"{
+            visitorsTypeLbl.text = "Visitors"
+        }else if data?[index.row].visitorType ?? "" == "e" || data?[index.row].visitorType ?? "" == "E" {
+            visitorsTypeLbl.text = "Employees"
+        }else{
+            visitorsTypeLbl.text = "VIP"
+        }
+        roomTypeLbl.text = data?[index.row].roomType ?? ""
         roomCodeLbl.text =  data?[index.row].roomCode ?? ""
-        dateTimeLbl.text =  Constant.formatModifiedDate(strDate:  data?[index.row].createdOn ?? "")
+        dateTimeLbl.text =  Constant.formatModifiedDate(strDate:  data?[index.row].fromDate ?? "") + " to " + Constant.formatModifiedDate(strDate:  data?[index.row].toDate ?? "")
+        timeLbl.text = Constant.formatModifiedTime(strDate:  data?[index.row].fromTime ?? "") + " to " + Constant.formatModifiedTime(strDate:  data?[index.row].toTime ?? "")
+        dayLbl.text = data?[index.row].rday ?? ""
         purposeLbl.text = data?[index.row].purpose ?? ""
         nameLbl.text = data?[index.row].bookedBy ?? ""
+       // visitorsTypeLbl.text = data?[index.row].visitorType ?? ""
         
     }
     

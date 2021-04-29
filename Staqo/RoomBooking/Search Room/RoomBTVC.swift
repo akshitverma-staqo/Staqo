@@ -21,6 +21,7 @@ protocol RoomBTVCDelegate:class {
     func showMsgValidation(msg:String)
     func getAllRooms(ID:String)
     func getArrangement(ID:String)
+    func reloadTableData()
 }
 
 class RoomBTVC: UITableViewCell {
@@ -77,6 +78,7 @@ class RoomBTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         purposeTxtView.layer.cornerRadius = 8
         purposeTxtView.placeholder = "Write your purpose here"
        arrangeViewHeight.constant = 0
@@ -112,11 +114,11 @@ class RoomBTVC: UITableViewCell {
         self.viewPicker = viewDataPicker
         self.picker.delegate = self
         self.picker.dataSource = self
-        rowsData = data
+        self.rowsData = data
         
         self.rowsLoc = locData
         self.rowsRoom = roomData
-        self.roomDataFilter = rowsData
+      
         self.arrangModel = arrangData
        _delegate = delegateVC
         _delegate = self
@@ -371,6 +373,31 @@ class RoomBTVC: UITableViewCell {
     }
     
     }
+    
+    func getLtype(){
+       
+//DispatchQueue.main.async {
+            if  self.arrangModel != nil {
+                self.arrangeViewHeight.constant = 124
+                self.arrangmentView.isHidden = false
+                arrangmentImageView.isHidden = false
+                self.contentView.needsUpdateConstraints()
+                self.contentView.setNeedsLayout()
+                let url = URL(string: self.arrangModel?[self.selectedIndex].webUrl ?? "")!
+
+               // Fetch Image Data
+               if let data = try? Data(contentsOf: url) {
+                   // Create Image and Update Image View
+                self.arrangmentImageView.image = UIImage(data: data)
+
+               }
+                self.delegate?.reloadTableData()
+        }
+
+  //      }
+        
+
+    }
 }
 //MARK:- Textfield Delegats
 extension RoomBTVC: UITextFieldDelegate{
@@ -509,9 +536,18 @@ extension RoomBTVC: UITextFieldDelegate{
 
             }
             else if txtTag == 9 {
-                if rowsData?.count ?? 0 == 0 {
+                if roomTypeTxt.text?.count ?? 0 <= 0{
+                   roomDataFilter =  rowsData
+                    if roomDataFilter?.count ?? 0 == 0 {
+                       delegate?.showMsgValidation(msg: "Data not found")
+                   }else{
+                    
+                    self.delegate?.selectedTxtField(txtField: textField)
+                }
+                }else if roomDataFilter?.count ?? 0 == 0 {
                     delegate?.showMsgValidation(msg: "Data not found")
                 } else{
+                   
                     self.delegate?.selectedTxtField(txtField: textField)
                 }
             }
@@ -640,19 +676,20 @@ extension RoomBTVC: UITextFieldDelegate{
         
         else if txtTag == 7 {
             if roomTypeTxt.text != nil {
+                
+                self.roomDataFilter  = self.rowsData?.filter{$0.roomtypeid == "\(rowsRoom?[selectedIndex].id ?? 0)"}
+                roomCodeTxt.text = nil
                 if  rowsRoom?[selectedIndex].id ?? 0 == 1 {
                     arrangmentTct.isEnabled = true
                     arrangeConstraint.constant = 40
                     arrangeLeadingConstraint.constant = 20
                     roomLeadingConstraint.constant = 20
-                    arrangeView.isHidden = false
                     arrangLbl.isHidden = false
                     arrangLbl.text = "Arrangment Type"
-                    roomCodeTxt.text = nil
-                    arrangeViewHeight.constant = 0
-                    arrangmentView.isHidden = true
-                //    let data = self.rowsData?.filter{$0.roomtypeid == "\(rowsRoom?[selectedIndex].id ?? 0)"}
-                  //  self.rowsData = data
+                    arrangeView.isHidden = false
+                    self.arrangeViewHeight.constant = 0
+                    arrangmentImageView.isHidden = true
+                  
                     delegate?.getArrangement(ID:"\(rowsRoom?[selectedIndex].id ?? 0)")
                 }else{
                     arrangeConstraint.constant = 0
@@ -660,37 +697,31 @@ extension RoomBTVC: UITextFieldDelegate{
                     roomLeadingConstraint.constant = 0
                     arrangLbl.text = nil
                     arrangeView.isHidden = true
+                    //arrangmentTypeLable.isHidden = true
+                    arrangmentImageView.isHidden = true
+
                     arrangLbl.isHidden = true
                     arrangeViewHeight.constant = 0
                     arrangmentView.isHidden = true
                     arrangmentTct.text = nil
                     arrangModel = []
-                    self.rowsData = roomDataFilter
+                   
                     arrangmentTct.isEnabled = false
+                    delegate?.reloadTableData()
                 }
                
                
+            }else{
+                self.roomDataFilter = self.rowsData
             }
         }else if txtTag == 8 {
-            arrangmentView.isHidden = false
-            arrangeViewHeight.constant = 124
-            if  arrangModel != nil {
-                arrangmentView.isHidden = false
-                arrangeViewHeight.constant = 124
-               // contentView.needsUpdateConstraints()
-              //  contentView.setNeedsLayout()
-                let url = URL(string: arrangModel?[selectedIndex].webUrl ?? "")!
-
-                   // Fetch Image Data
-                   if let data = try? Data(contentsOf: url) {
-                       // Create Image and Update Image View
-                    arrangmentImageView.image = UIImage(data: data)
-                   }
-
-            }
-           
+        self.getLtype()
+            
         }
     }
+
+
+    
 }
 //MARK:- Picker view Delegats
 extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
@@ -708,7 +739,7 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
             return arrangModel?.count ?? 0
         }
         else if txtTag == 9 {
-             return rowsData?.count ?? 0
+             return roomDataFilter?.count ?? 0
         }
         
         else{
@@ -733,8 +764,8 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
         }
         else if txtTag == 9 {
             selectedIndex = row
-            roomCodeTxt.text = rowsData?[row].roomCode ?? ""
-            return rowsData?[row].roomCode ?? ""
+            roomCodeTxt.text = roomDataFilter?[row].roomCode ?? ""
+            return roomDataFilter?[row].roomCode ?? ""
             
         }
         else{
@@ -752,14 +783,15 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
         }else if txtTag == 8 {
             selectedIndex = row
             arrangmentTct.text = arrangModel?[row].pattern_x002f_Design ?? ""
+          
         }
         else if txtTag == 9 {
             selectedIndex = row
-            roomCodeTxt.text = rowsData?[row].roomCode ?? ""
+            roomCodeTxt.text = roomDataFilter?[row].roomCode ?? ""
         }
         else{
-            selectedIndex = row
-            roomTypeTxt.text = "\(rowsData?[row].capacity ?? 0)"
+//            selectedIndex = row
+//            roomTypeTxt.text = "\(rowsData?[row].capacity ?? 0)"
         }
       
     }

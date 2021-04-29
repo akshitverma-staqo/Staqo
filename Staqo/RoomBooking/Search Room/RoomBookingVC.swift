@@ -115,6 +115,10 @@ extension RoomBookingVC: UITableViewDataSource{
     
 }
 extension RoomBookingVC : RoomBTVCDelegate{
+    func reloadTableData() {
+        tblView.reloadData()
+    }
+    
     func getArrangement(ID: String) {
         viewModel.getArrangmentType(ID: ID)
     }

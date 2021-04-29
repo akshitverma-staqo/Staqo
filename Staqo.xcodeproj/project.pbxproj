@@ -50,6 +50,7 @@
 		767BEBDA2601264900B6A3C3 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBD92601264900B6A3C3 /* Documents.swift */; };
 		767BEBE0260126B400B6A3C3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBDF260126B400B6A3C3 /* Helper.swift */; };
 		767BEBE526012CCC00B6A3C3 /* BusinessDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBE426012CCC00B6A3C3 /* BusinessDataSource.swift */; };
+		7692359D26396CC7008FF3BE /* DemoArrangeType copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7692359C26396CC7008FF3BE /* DemoArrangeType copy.jpg */; };
 		7693C61725F3D695001665DF /* MenuViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C61625F3D694001665DF /* MenuViewModal.swift */; };
 		7693C61C25F3D6E9001665DF /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C61B25F3D6E9001665DF /* MenuVC.swift */; };
 		7693C62925F3E26D001665DF /* Business.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7693C62825F3E26D001665DF /* Business.storyboard */; };
@@ -254,6 +255,7 @@
 		767BEBD92601264900B6A3C3 /* Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
 		767BEBDF260126B400B6A3C3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		767BEBE426012CCC00B6A3C3 /* BusinessDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDataSource.swift; sourceTree = "<group>"; };
+		7692359C26396CC7008FF3BE /* DemoArrangeType copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DemoArrangeType copy.jpg"; sourceTree = "<group>"; };
 		7693C61625F3D694001665DF /* MenuViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModal.swift; sourceTree = "<group>"; };
 		7693C61B25F3D6E9001665DF /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		7693C62825F3E26D001665DF /* Business.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Business.storyboard; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 				76A0F551260B7B2E00601483 /* RoomBookingViewModel.swift */,
 				76A0F556260B7B4600601483 /* RoomDataSource.swift */,
 				76A0F54A260B4EFE00601483 /* RoomBTVC.swift */,
+				7692359C26396CC7008FF3BE /* DemoArrangeType copy.jpg */,
 				76A0F54B260B4EFE00601483 /* RoomBTVC.xib */,
 			);
 			path = "Search Room";
@@ -1089,6 +1092,7 @@
 				76B2058F25DC49800056FC68 /* AuthSettings.plist in Resources */,
 				76A0AF092616CE6D0084E1F8 /* contact us pagehero v2.jpg in Resources */,
 				7693C62925F3E26D001665DF /* Business.storyboard in Resources */,
+				7692359D26396CC7008FF3BE /* DemoArrangeType copy.jpg in Resources */,
 				CD5DB42D25D5A26500353084 /* LaunchScreen.storyboard in Resources */,
 				76B42532260869C000895BDE /* HomeMenuCollectionViewCell.xib in Resources */,
 				76D66EBD2619BAC50013E5B4 /* ACViewCell.xib in Resources */,

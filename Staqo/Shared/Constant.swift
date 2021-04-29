@@ -93,13 +93,15 @@ class Constant {
     static let kAllLocationMaster = "/api/getAllLocationMaster"
     static let kAllArrangementType = "/api/arrangementtype"
     static let kSearchBooking = "/api/searchbooking"
+    
+    //user 
     static let kViewBookedRoom = "/api/booking/" + (UserDefaults.standard.getProfile()?.email)! + "/list"//api​/booking​/{email_id}​/list
     static let kFreeRoomBooking = "/api/booking"
     static let kUpdateRoomStatus = "/api/booking/updatestatus"
     
     
     //Admin Level API
-    static let kBookingAdmin = "/api/booking/admin"
+    static let kBookingAdmin = "/api/booking/admin/\((UserDefaults.standard.getProfile()?.email)!)"
     
     
    
@@ -318,13 +320,36 @@ class Constant {
         //2019-05-03 12:11:15
         
         formatter.timeZone = TimeZone.current
-//    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+  //  formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
         
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        formatter.dateFormat = "dd-MM-yyyy"
         
         if let date =  formatter.date(from: strDate) {
             let viewFormatter = DateFormatter()
-            viewFormatter.dateFormat = "dd,MMM - h:mm a"
+            //viewFormatter.dateFormat = "dd,MMM - h:mm a"
+            viewFormatter.dateFormat = "dd-MM"
+            
+            return viewFormatter.string(from: date)
+        }
+        return "-"
+    }
+    
+    static func formatModifiedTime(strDate: String?) -> String {
+        
+        guard let strDate = strDate else { return "-"}
+        
+        let formatter = DateFormatter()
+        //2019-05-03 12:11:15
+        
+        formatter.timeZone = TimeZone.current
+//    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+        
+        formatter.dateFormat = "HH:mm:ss"
+        
+        if let date =  formatter.date(from: strDate) {
+            let viewFormatter = DateFormatter()
+            //viewFormatter.dateFormat = "dd,MMM - h:mm a"
+            viewFormatter.dateFormat = "HH:mm"
             
             return viewFormatter.string(from: date)
         }

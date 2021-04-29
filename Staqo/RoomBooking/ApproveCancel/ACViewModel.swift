@@ -33,10 +33,10 @@ func bootstrap() {
             switch result {
             case .success(let baseModel):
                 print(baseModel)
-            //    ws.rows = baseModel
+                //    ws.rows = baseModel
               //  ws.rows1 = baseModel
-                let filterData = baseModel.filter{$0.roomStatus == "A"}
-                let filterData1 = baseModel.filter{$0.roomStatus == "P"}
+                let filterData = baseModel.filter{$0.roomStatus == "a" || $0.roomStatus == "A" }
+                let filterData1 = baseModel.filter{$0.roomStatus == "p" || $0.roomStatus == "P"}
                 ws.rows = filterData
                 ws.rows1 = filterData1
                
