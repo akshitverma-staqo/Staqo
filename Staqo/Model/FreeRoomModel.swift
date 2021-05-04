@@ -19,6 +19,10 @@ struct FreeRoomModel : Codable,Equatable {
     let roomtype: String?
     let roomfeatures: String?
     let roomtypeid: String?
+    let fdate: String?
+    let ftime: String?
+    let rday: String?
+    
     enum CodingKeys: String, CodingKey {
 
         case id = "id"
@@ -33,6 +37,9 @@ struct FreeRoomModel : Codable,Equatable {
         case roomtype = "roomtype"
         case roomfeatures = "roomfeatures"
         case roomtypeid = "roomtypeid"
+        case fdate = "fdate"
+        case ftime = "ftime"
+        case rday = "rday"
     }
 
     init(from decoder: Decoder) throws {
@@ -49,6 +56,10 @@ struct FreeRoomModel : Codable,Equatable {
         roomtype = try values.decodeIfPresent(String.self, forKey: .roomtype)
         roomfeatures = try values.decodeIfPresent(String.self, forKey: .roomfeatures)
         roomtypeid = try values.decodeIfPresent(String.self, forKey: .roomtypeid)
+        fdate = try values.decodeIfPresent(String.self, forKey: .fdate)
+        ftime = try values.decodeIfPresent(String.self, forKey: .ftime)
+        rday = try values.decodeIfPresent(String.self, forKey: .rday)
+
 
 
     }

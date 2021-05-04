@@ -16,6 +16,7 @@ class HomeVC: BaseVC {
     var viewModelNotify: NotificationViewModel!
     var empViewModel:EmpViewModal!
     var menuFlag:Bool = true
+    @IBOutlet weak var menuBtnTap: UIButton!
     @IBOutlet weak var userLbl: UILabel!
     @IBOutlet var currentPage: UIPageControl!
     @IBOutlet weak var homeCollectionView: UICollectionView!
@@ -35,6 +36,7 @@ class HomeVC: BaseVC {
         viewModel.delegate = self
         viewModel._delegate = self
         viewModel.bootstrap()
+       
         empViewModel = EmpViewModal(dataSource: EmpDataSource())
         empViewModel.empDelegate = self
         
@@ -48,20 +50,20 @@ class HomeVC: BaseVC {
         if value {
             menuFlag = true
             gridView.isHidden = true
+            menuBtnTap.setImage(UIImage(named: "dashmenu.png"), for: .normal)
+
             self.getCarousalView()
             UserDefaults.standard.setMenuValue(value: menuFlag)
         }else{
             menuFlag = false
             gridView.isHidden = false
+            menuBtnTap.setImage(UIImage(named: "dashmenuflip.png"), for: .normal)
             UserDefaults.standard.setMenuValue(value: menuFlag)
             gridCollectionView.reloadData()
         }
         
+}
     
-       
-      //  self.getProfileImg()
-        // Do any additional setup after loading the view.
-    }
     func getImage(){
         
         if  let imageString = UserDefaults.standard.getProfileImage() {
@@ -161,12 +163,15 @@ class HomeVC: BaseVC {
         if menuFlag {
             menuFlag = false
             gridView.isHidden = false
+            menuBtnTap.setImage(UIImage(named: "dashmenuflip.png"), for: .normal)
+
             UserDefaults.standard.setMenuValue(value: menuFlag)
             gridCollectionView.reloadData()
             
         }else{
             menuFlag = true
             gridView.isHidden = true
+            menuBtnTap.setImage(UIImage(named: "dashmenu.png"), for: .normal)
             homeCollectionView.reloadData()
             self.getCarousalView()
             currentPage.currentPage = 0
@@ -256,8 +261,8 @@ class HomeVC: BaseVC {
         
    //  Local
         
-                let SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
-                UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
+       //         let SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+        //        UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
 
                 let MAZZAYACOM_C_LIST_ID =  "a9aa5be4-4b8d-487d-ae72-839a1de9ba13"
                 UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
@@ -265,8 +270,8 @@ class HomeVC: BaseVC {
                 let MAZZAYACOM_ASSET_ID =  "b!yl5NVBxnZU-dvn1LULArnLdQ9qy4h6RMivIbCnyeHmVmO87f0Pt3SaG3WIEXWwfC"
                 UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
 
-//                let MAZZAYACOM_C_SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
-//                UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
+                let MAZZAYACOM_C_SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+                UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
 
 
                 let MAZZAYACOM_A_LIST_ID = "2fecd167-6659-4906-b8cc-8d06047056de"

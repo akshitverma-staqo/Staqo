@@ -16,6 +16,7 @@ class VisitorListVC:  BaseVC {
     private let kVisiterListTVC = "VisiterListTVC"
     var viewModal: VisiterListViewModal!
     var viewModalEmp: EmpViewModal!
+    var filteredData:[Value]?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,14 +56,14 @@ class VisitorListVC:  BaseVC {
 
 }
 
-extension VisitorListVC : UITableViewDelegate , UITableViewDataSource {
+extension VisitorListVC : UITableViewDelegate , UITableViewDataSource, UISearchBarDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModal.valueData?.count ?? 0
+        return filteredData?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: kVisiterListTVC, for: indexPath) as! VisiterListTVC
-        cell.dataBind(data: viewModal.valueData?[indexPath.row].fields)
+        cell.dataBind(data: filteredData?[indexPath.row].fields)
         //cell.dataBind(data: baseModel?.freeRoomModel?[indexPath.row])
         cell.callBtn.tag = indexPath.row
         cell.callBtn.addTarget(self, action: #selector(self.callBtnTap(_:)), for: .touchUpInside);
@@ -71,18 +72,64 @@ extension VisitorListVC : UITableViewDelegate , UITableViewDataSource {
         return cell
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+       
+        
+        
+        if searchText.isEmpty == false {
+            
+            filteredData = viewModal.valueData?.filter {
+                return ($0.fields?.name?.contains(searchText) ?? false || $0.fields?.mobileno1?.contains(searchText) ?? false)
+            }
+             print(filteredData)
+//            if let data = filteredData {
+//                viewModal.valueData? = data
+//            }
+          // check karo
+
+        }else{
+            filteredData = viewModal.valueData
+        }
+      
+        
+        
+
+
+        tblView.reloadData()
+    }
+
+    
     //Code Cell Selected
     
     @objc func callBtnTap(_ sender : UIButton){
         
-        guard let number = URL(string: "tel://" + (viewModal.valueData?[sender.tag].fields?.mobileno2)! ) else { return }
-        //guard let number = URL(string: "tel://" + viewModelUser.arrVisiterList[sender.tag].mobileno1) else { return }
-        UIApplication.shared.open(number)
+        if viewModal.valueData?[sender.tag].fields?.mobileno1 != nil{
+                    guard let number = URL(string: "tel://" + (viewModal.valueData?[sender.tag].fields?.mobileno1)! ) else { return }
+                    //guard let number = URL(string: "tel://" + viewModelUser.arrVisiterList[sender.tag].mobileno1) else { return }
+                    UIApplication.shared.open(number)
+        }else{
+            showErrorMessage(title: "Alert", message: "Mobile no. is blank.") { (action) in
+               
+            }
+        }
+//        guard let number = URL(string: "tel://" + (viewModal.valueData?[sender.tag].fields?.mobileno2)! ) else { return }
+//        //guard let number = URL(string: "tel://" + viewModelUser.arrVisiterList[sender.tag].mobileno1) else { return }
+//        UIApplication.shared.open(number)
     }
     
     @objc func emailBtnTap(_ sender : UIButton){
-        guard let number = URL(string: "mailto:" + (viewModal.valueData?[sender.tag].fields?.emailid)! ) else { return }
-        UIApplication.shared.open(number)
+        
+        if viewModal.valueData?[sender.tag].fields?.emailid != nil{
+            guard let number = URL(string: "mailto:" + (viewModal.valueData?[sender.tag].fields?.emailid)! ) else { return }
+                UIApplication.shared.open(number)
+        }else{
+            showErrorMessage(title: "Alert", message: "Email ID is blank.") { (action) in
+               
+            }
+        }
+       
+       
+        
     }
     
     
@@ -101,6 +148,7 @@ extension VisitorListVC: ViewModelDelegate{
     func didLoadData() {
         
         stopLoader()
+        filteredData = viewModal.valueData 
         self.tblView.reloadData()
     }
     

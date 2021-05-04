@@ -92,7 +92,7 @@ class RoomBTVC: UITableViewCell {
             dateFormatter.dateFormat = "HH:mm"
             let min = dateFormatter.date(from: "9:00")
             fromTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: min ?? Date())
-            
+            //fromTimeTxt.text = Constant.dateTimeFormatter(format: "HH:mm", date: datePicker?.date ?? Date())
         }
         if toTimeTxt.text?.count ?? 0 <= 0 {
             let dateFormatter = DateFormatter()
@@ -166,7 +166,7 @@ class RoomBTVC: UITableViewCell {
                 do {
                 let data = try JSONEncoder().encode(value)
                     let str = String(data: data, encoding:.utf8)
-                    print(str)
+                    print(str ?? "")
                     delegate?.filledData(value: str ?? "")
                    
                 }catch{

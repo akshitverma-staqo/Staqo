@@ -48,6 +48,8 @@ class EmpVC: BaseVC {
         shadowView.dropShadow()
         viewModal = EmpViewModal(dataSource: EmpDataSource())
         viewModal.delegate = self
+        viewModal.empDelegate = self
+        viewModal.empUpdateDelegate = self
         viewModal.bootstrap()
         innerView.layer.cornerRadius = 20
         innerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
@@ -116,7 +118,6 @@ class EmpVC: BaseVC {
 
         if (secNumber.text?.count ?? 0) <= 0 {
             showErrorMessage(title: "Error..", message: "Number already Deleted") { (action) in
-                
             }
         }else{
             showMessage(title: "", message: "Do you want to delete number?", btnConfirmTitle: "Yes", btnCancelTitle: "No") { (isYes, action) in
@@ -220,4 +221,19 @@ extension EmpVC : UITextFieldDelegate {
         }
         return true
     }
+}
+extension EmpVC : EmpRefreshDelegate{
+    func getRefresh() {
+        showErrorMessage(title: "", message: "Phone Number deleted successfully") { (action) in
+            self.viewModal.bootstrap()
+        }
+    }
+}
+extension EmpVC : EmpNoUpdateDelegate{
+    func updateNo() {
+        showErrorMessage(title: "", message: "Phone Number Submitted Successfully") { (action) in
+            self.viewModal.bootstrap()
+        }
+    }
+
 }

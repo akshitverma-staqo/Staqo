@@ -26,7 +26,7 @@ class VisiterListTVC: UITableViewCell {
     
     func dataBind(data:Fields?) {
         nameLbl.text = data?.name ?? ""
-        mobileLbl.text = data?.mobileno2 ?? ""
+        mobileLbl.text = data?.mobileno1 ?? ""
         addressLbl.text = data?.addressline1
         emailLbl.text = data?.emailid ?? ""
     

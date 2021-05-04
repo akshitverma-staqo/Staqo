@@ -44,6 +44,7 @@ class SwipeUpViewController: PullUpController {
         getAllUsreDataAF()
         self.tableView.attach(to: self)
         
+        
     }
     var initialPointOffset: CGFloat {
         switch initialState {
@@ -151,10 +152,10 @@ class SwipeUpViewController: PullUpController {
         ]
         spinner.start(container: self)
         let maazycomlist = UserDefaults.standard.string(forKey: "MAZZAYACOM_LINK")
-        
+    
         let replaced = maazycomlist!.replacingOccurrences(of: "**OC_LIST_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_A_LIST_ID") ?? "")
         
-        let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID")!))\(String(describing: replaced))"
+        let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL") ?? ""))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_IDshaily") ?? ""))\(String(describing: replaced))"
         print(urlStr)
         Alamofire.request(urlStr, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
@@ -189,7 +190,10 @@ extension SwipeUpViewController : UITableViewDelegate, UITableViewDataSource
     {
         if isExpanded == false{
             return 1;
+        }else{
+            print(arrDara.count)
         }
+        
         return arrDara.count
     }
     

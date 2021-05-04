@@ -7,12 +7,14 @@
 
 import UIKit
 
-class RoomPhotoVC: BaseVC {
+class RoomPhotoVC: BaseVC
+{
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var imageView: UIImageView!
     var viewModel:BookRoomViewModel!
     var urlString:String? = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
@@ -20,6 +22,14 @@ class RoomPhotoVC: BaseVC {
         herderView.addSubview(header)
         viewModel = BookRoomViewModel(dataSource: BookRoomDataSource())
         viewModel.delegate = self
+        
+      
+        
+        
+        
+        
+        
+        
         getImage()
         if let url = urlString {
             let urlImage = URL(string: url)!
@@ -36,6 +46,9 @@ class RoomPhotoVC: BaseVC {
       
         
         // Do any additional setup after loading the view.
+    }
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return self.imageView
     }
     
     func getImage(){

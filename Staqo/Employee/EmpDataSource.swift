@@ -19,7 +19,9 @@ class EmpDataSource: EmpDataSourceDeleate{
         let jsonreq: [String: Any]   = ["mobileno2":""]
         let url = Configuration.baseURL + Constant.kSiteID + Constant.kEMPLOYEE_FIND_BY_ID + "\(ID)" + "/fields"
         NetworkClient.requestAlmofire(passToUrl: url, passToMethod: .patch, passToParameter: jsonreq, passToHeader: ["Authorization":"Bearer " + UserDefaults.standard.getAccessToken(), "Content-Type":"application/json"]) { result in
+            
             completion(result as StaoqResult<BaseModel>)
+            
         } error: { (error) in
             completion(StaoqResult.failure(error))
         } failure: { (failure) in

@@ -122,12 +122,16 @@ extension ApproveCancelVC : ViewModelDelegate{
 extension ApproveCancelVC :ACViewModelDelegate{
     func getBookedData(status: String) {
         // stopLoader()
-//        if status == "Cancel"{
-//
-//        }
-        showErrorMessage(title: "", message: "Successfully \(status)") { (action) in
+        if status == "Cancel"{
+            showErrorMessage(title: "", message: "Successfully Cancelled") { (action) in
+                self.viewModel.bootstrap()
+                self.tableView.reloadData()
+            }
+        }else if status == "Approve"{
+        showErrorMessage(title: "", message: "Successfully Approved") { (action) in
             self.viewModel.bootstrap()
             self.tableView.reloadData()
+        }
         }
     }
   

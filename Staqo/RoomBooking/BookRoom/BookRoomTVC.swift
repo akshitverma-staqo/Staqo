@@ -20,6 +20,9 @@ class BookRoomTVC: UITableViewCell {
     @IBOutlet weak var roomTypeLbl: UILabel!
     @IBOutlet weak var roomCodeLbl: UILabel!
     @IBOutlet weak var capacityLbl: UILabel!
+    @IBOutlet weak var dayLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
+    @IBOutlet weak var dateLbl: UILabel!
     var delegate:BookRoomTVCDelegate?
     @IBOutlet weak var btnPhoto: UIButton!
     
@@ -46,6 +49,9 @@ class BookRoomTVC: UITableViewCell {
         roomTypeLbl.text = ": " + (data?.roomtype ?? "")
         capacityLbl.text = ": " + "\(data?.capacity ?? 0)"
         roomFeatureLbl.text = ": " + (data?.roomfeatures ?? "")
+        dateLbl.text = ": " + (data?.fdate ?? "")
+        dayLbl.text = ": " + (data?.rday ?? "")
+        timeLbl.text = ": " + (data?.ftime ?? "")
         bookRoomClick.isHidden = false
         btnPhoto.isHidden = false
     }
@@ -54,6 +60,9 @@ class BookRoomTVC: UITableViewCell {
         roomTypeLbl.text = ": " + (data?.roomType ?? "")
         capacityLbl.text = ": " + "\(data?.attendents ?? 0)"
         roomFeatureLbl.text = ": " + (data?.roomfeatures ?? "")
+        dateLbl.text = ": " + Constant.formatModifiedDate(strDate:  data?.fromDate ?? "") + " to " + Constant.formatModifiedDate(strDate:  data?.toDate ?? "")
+        dayLbl.text = ": " + (data?.rday ?? "")
+        timeLbl.text = ": " + Constant.formatModifiedTime(strDate:  data?.fromTime ?? "") + " to " + Constant.formatModifiedTime(strDate:  data?.toTime ?? "")
         bookRoomClick.isHidden = true
         btnPhoto.isHidden = true
 

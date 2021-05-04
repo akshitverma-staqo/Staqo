@@ -64,19 +64,6 @@ class HomeViewModal:ViewModelType{
       })
 
 }
-
-    
-    
-//    private func scrollImage(){
-//
-//        rows = (["set1","set2","salmeenicon","bcimage","dashboard6","dashboard7","dashboard8","dashboard9","dashboard10"],["blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png","blob2.png","blob1.png"],["OQ Portal","Mazzayacom","Salmeen","Business Card","Helpdesk","IHSSE","E-SIGN","Travel & Leave Request","Majalis"])
-//
-//
-//
-//
-//
-//        delegate?.didLoadData()
-//    }
     
     func getGraphData() {
         delegate?.willLoadData()

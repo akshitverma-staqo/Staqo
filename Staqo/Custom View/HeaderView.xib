@@ -40,11 +40,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lIm-Jq-E9k">
-                    <rect key="frame" x="340" y="28" width="25" height="25"/>
+                    <rect key="frame" x="335" y="25.5" width="30" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="9bE-Mm-g4V"/>
-                        <constraint firstAttribute="height" constant="25" id="r9A-nc-sOn"/>
+                        <constraint firstAttribute="width" constant="30" id="9bE-Mm-g4V"/>
+                        <constraint firstAttribute="height" constant="30" id="r9A-nc-sOn"/>
                     </constraints>
                     <state key="normal" title="Button" image="notification"/>
                     <connections>
@@ -52,11 +52,11 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEy-5s-Su7">
-                    <rect key="frame" x="305" y="28" width="25" height="25"/>
+                    <rect key="frame" x="295" y="25.5" width="30" height="30"/>
                     <color key="backgroundColor" red="0.98039215686274506" green="0.92549019607843142" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="25" id="F8G-bM-klF"/>
-                        <constraint firstAttribute="width" constant="25" id="td3-BL-myU"/>
+                        <constraint firstAttribute="height" constant="30" id="F8G-bM-klF"/>
+                        <constraint firstAttribute="width" constant="30" id="td3-BL-myU"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal">
@@ -64,11 +64,11 @@
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-GQ-gCm">
-                    <rect key="frame" x="275" y="28" width="25" height="25"/>
+                    <rect key="frame" x="260" y="25.5" width="30" height="30"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="25" id="g3F-Fe-Cth"/>
-                        <constraint firstAttribute="height" constant="25" id="s58-jz-cPz"/>
+                        <constraint firstAttribute="width" constant="30" id="g3F-Fe-Cth"/>
+                        <constraint firstAttribute="height" constant="30" id="s58-jz-cPz"/>
                     </constraints>
                     <state key="normal" image="profiled"/>
                     <connections>
@@ -76,7 +76,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OIz-MI-Inp">
-                    <rect key="frame" x="80" y="27.5" width="215" height="26.5"/>
+                    <rect key="frame" x="80" y="27.5" width="205" height="26.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -101,7 +101,7 @@
                 <constraint firstItem="lIm-Jq-E9k" firstAttribute="centerY" secondItem="Y4b-4i-MvW" secondAttribute="centerY" id="zrP-sI-uyu"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="52" y="-761"/>
+            <point key="canvasLocation" x="51.953125" y="-761.42578125"/>
         </view>
     </objects>
     <resources>

@@ -12,10 +12,14 @@ protocol EmpViewModalDelegate:class {
 protocol EmpRefreshDelegate:class {
     func getRefresh()
 }
+protocol EmpNoUpdateDelegate:class {
+    func updateNo()
+}
 class EmpViewModal: ViewModelType {
    var delegate: ViewModelDelegate?
     var empDelegate:EmpRefreshDelegate?
     var _delegate:EmpViewModalDelegate?
+    var empUpdateDelegate:EmpNoUpdateDelegate?
     var field: Fields?
     var valueData:Value?
     private let dataSource:EmpDataSourceDeleate?
@@ -67,7 +71,8 @@ class EmpViewModal: ViewModelType {
                 switch result{
                 case .success(let baseModel):
                     print(baseModel)
-                   ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
+                    ws.empUpdateDelegate?.updateNo()
+              //     ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
 //                    ws.field = baseModel.fieldsData
 //                    ws.delegate?.didLoadData()
                 case .failure(let error):
@@ -104,7 +109,8 @@ class EmpViewModal: ViewModelType {
             guard let ws = self else{return}
             switch result {
             case .success(let baseModel):
-                ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
+                ws.empDelegate?.getRefresh()
+            //  ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
             case .failure(let error):
                 ws.delegate?.didFail(error: error)
             }

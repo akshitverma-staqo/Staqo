@@ -43,6 +43,7 @@ struct Fields : Codable {
     let Description: String?
     var isRead:Bool?
     let addressline1: String?
+    let mobileno1: String?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -76,6 +77,7 @@ struct Fields : Codable {
         case Description = "Description"
         case isRead = "isRead"
         case addressline1 = "addressline1"
+        case mobileno1 = "mobileno1"
 	}
 
 	init(from decoder: Decoder) throws {
@@ -110,6 +112,8 @@ struct Fields : Codable {
         Description = try values.decodeIfPresent(String.self, forKey: .Description)
         addressline1 = try values.decodeIfPresent(String.self, forKey: .addressline1)
         isRead = try values.decodeIfPresent(Bool.self, forKey: .isRead)
+        mobileno1 = try values.decodeIfPresent(String.self, forKey: .mobileno1)
+
 	}
 
 }

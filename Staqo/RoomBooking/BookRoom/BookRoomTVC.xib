@@ -15,15 +15,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookRoomTVC" rowHeight="312" id="KGk-i7-Jjw" customClass="BookRoomTVC" customModule="Staqo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="361" height="312"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookRoomTVC" rowHeight="479" id="KGk-i7-Jjw" customClass="BookRoomTVC" customModule="Staqo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="479"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="361" height="312"/>
+                <rect key="frame" x="0.0" y="0.0" width="361" height="479"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hiE-P2-5Oa" customClass="TTCustomView" customModule="Staqo" customModuleProvider="target">
-                        <rect key="frame" x="5" y="5" width="351" height="302"/>
+                        <rect key="frame" x="5" y="5" width="351" height="469"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Room Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8S5-A4-aEO">
                                 <rect key="frame" x="5" y="15" width="110" height="20"/>
@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Room Features" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQ3-id-Pdw">
-                                <rect key="frame" x="5" y="120" width="110" height="20"/>
+                                <rect key="frame" x="5" y="225" width="110" height="20"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -71,15 +71,14 @@
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-lt-oTT">
-                                <rect key="frame" x="120" y="120" width="226" height="128"/>
-                                <string key="text">asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd asdfasdf hh  bsdfasd </string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="jhjh hhh" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWd-lt-oTT">
+                                <rect key="frame" x="120" y="225" width="226" height="190"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ka-UQ-BEi" customClass="DesignableButton" customModule="Staqo" customModuleProvider="target">
-                                <rect key="frame" x="15" y="258" width="145.5" height="35"/>
+                                <rect key="frame" x="15" y="425" width="145.5" height="35"/>
                                 <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Ps4-Lv-vke"/>
@@ -98,7 +97,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnS-Xi-pRG" customClass="DesignableButton" customModule="Staqo" customModuleProvider="target">
-                                <rect key="frame" x="190.5" y="258" width="145.5" height="35"/>
+                                <rect key="frame" x="190.5" y="425" width="145.5" height="35"/>
                                 <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="Tcr-Xx-cvs"/>
@@ -125,43 +124,109 @@
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjq-5R-9xo">
+                                <rect key="frame" x="5" y="120" width="110" height="20"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="sdfasdf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8p-UW-oQZ">
+                                <rect key="frame" x="120" y="120" width="226" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Y5D-5e-wW2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VsX-mL-fZb">
+                                <rect key="frame" x="5" y="155" width="110" height="20"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="sdfasdf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqk-Ai-Zf5">
+                                <rect key="frame" x="120" y="155" width="226" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1hk-VA-S4g"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqp-el-x6M">
+                                <rect key="frame" x="5" y="190" width="110" height="20"/>
+                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="252" text="sdfasdf" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zw4-Fq-nqg">
+                                <rect key="frame" x="120" y="190" width="226" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Vn2-Xv-3ly"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="15"/>
+                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qjm-bk-HjT" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="5" id="0Mw-xj-741"/>
                             <constraint firstAttribute="trailing" secondItem="CnS-Xi-pRG" secondAttribute="trailing" constant="15" id="21j-FE-aAV"/>
                             <constraint firstAttribute="trailing" secondItem="vFr-eA-Uix" secondAttribute="trailing" constant="5" id="2BA-KG-qDQ"/>
+                            <constraint firstItem="Rqp-el-x6M" firstAttribute="width" secondItem="8S5-A4-aEO" secondAttribute="width" id="2Jm-GZ-Vbk"/>
                             <constraint firstItem="39U-oS-IXv" firstAttribute="centerY" secondItem="ntA-p0-et6" secondAttribute="centerY" id="2Wk-O0-eHG"/>
                             <constraint firstItem="ntA-p0-et6" firstAttribute="top" secondItem="vFr-eA-Uix" secondAttribute="bottom" constant="15" id="2e3-Zz-CRg"/>
                             <constraint firstItem="AQ3-id-Pdw" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="5" id="56g-Rv-EOM"/>
+                            <constraint firstItem="rjq-5R-9xo" firstAttribute="height" secondItem="qjm-bk-HjT" secondAttribute="height" id="8cA-Lb-Ssu"/>
                             <constraint firstItem="vFr-eA-Uix" firstAttribute="top" secondItem="hiE-P2-5Oa" secondAttribute="top" constant="15" id="97T-jk-au0"/>
+                            <constraint firstItem="S8p-UW-oQZ" firstAttribute="top" secondItem="Jny-WC-h4V" secondAttribute="bottom" constant="15" id="AOh-ke-A3W"/>
                             <constraint firstItem="8S5-A4-aEO" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="5" id="Dai-JW-o2B"/>
                             <constraint firstItem="Jny-WC-h4V" firstAttribute="top" secondItem="ntA-p0-et6" secondAttribute="bottom" constant="15" id="FcK-uP-Cbv"/>
                             <constraint firstItem="AQ3-id-Pdw" firstAttribute="width" secondItem="qjm-bk-HjT" secondAttribute="width" id="H9h-Sc-bIh"/>
+                            <constraint firstItem="Aqk-Ai-Zf5" firstAttribute="top" secondItem="S8p-UW-oQZ" secondAttribute="bottom" constant="15" id="HMy-bw-CZU"/>
                             <constraint firstItem="CnS-Xi-pRG" firstAttribute="height" secondItem="2Ka-UQ-BEi" secondAttribute="height" id="IN6-il-UiQ"/>
+                            <constraint firstItem="Rqp-el-x6M" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="5" id="IYv-Ms-FfI"/>
                             <constraint firstItem="CnS-Xi-pRG" firstAttribute="leading" secondItem="2Ka-UQ-BEi" secondAttribute="trailing" constant="30" id="JBB-IM-jts"/>
                             <constraint firstItem="Jny-WC-h4V" firstAttribute="leading" secondItem="qjm-bk-HjT" secondAttribute="trailing" constant="5" id="LGs-vx-cvq"/>
                             <constraint firstItem="CnS-Xi-pRG" firstAttribute="centerY" secondItem="2Ka-UQ-BEi" secondAttribute="centerY" id="LJb-pZ-TXu"/>
+                            <constraint firstItem="Rqp-el-x6M" firstAttribute="height" secondItem="VsX-mL-fZb" secondAttribute="height" id="Liy-U7-iKV"/>
                             <constraint firstAttribute="trailing" secondItem="Jny-WC-h4V" secondAttribute="trailing" constant="5" id="LtA-o7-Nyc"/>
+                            <constraint firstItem="rjq-5R-9xo" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="5" id="MMV-5v-b4p"/>
+                            <constraint firstItem="rjq-5R-9xo" firstAttribute="centerY" secondItem="S8p-UW-oQZ" secondAttribute="centerY" id="Mso-8c-iIU"/>
                             <constraint firstItem="qjm-bk-HjT" firstAttribute="width" secondItem="39U-oS-IXv" secondAttribute="width" id="NDh-f7-Ei1"/>
-                            <constraint firstItem="iWd-lt-oTT" firstAttribute="top" secondItem="Jny-WC-h4V" secondAttribute="bottom" constant="15" id="Peh-Si-xRv"/>
+                            <constraint firstAttribute="trailing" secondItem="S8p-UW-oQZ" secondAttribute="trailing" constant="5" id="Ng1-om-Kd2"/>
+                            <constraint firstItem="rjq-5R-9xo" firstAttribute="width" secondItem="qjm-bk-HjT" secondAttribute="width" id="P1J-UW-gDr"/>
                             <constraint firstItem="ntA-p0-et6" firstAttribute="leading" secondItem="39U-oS-IXv" secondAttribute="trailing" constant="5" id="QAt-6s-H1r"/>
+                            <constraint firstItem="VsX-mL-fZb" firstAttribute="height" secondItem="rjq-5R-9xo" secondAttribute="height" id="RBX-PB-YAP"/>
+                            <constraint firstItem="zw4-Fq-nqg" firstAttribute="top" secondItem="Aqk-Ai-Zf5" secondAttribute="bottom" constant="15" id="RcG-im-dmx"/>
                             <constraint firstItem="AQ3-id-Pdw" firstAttribute="top" secondItem="iWd-lt-oTT" secondAttribute="top" id="Sc2-ZF-edL"/>
                             <constraint firstAttribute="trailing" secondItem="ntA-p0-et6" secondAttribute="trailing" constant="5" id="TG7-sX-XYZ"/>
                             <constraint firstItem="2Ka-UQ-BEi" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="15" id="U8s-CD-Xtm"/>
+                            <constraint firstAttribute="trailing" secondItem="Aqk-Ai-Zf5" secondAttribute="trailing" constant="5" id="Unp-fC-KhV"/>
                             <constraint firstItem="8S5-A4-aEO" firstAttribute="centerY" secondItem="vFr-eA-Uix" secondAttribute="centerY" id="W5V-67-nnR"/>
                             <constraint firstItem="39U-oS-IXv" firstAttribute="width" secondItem="8S5-A4-aEO" secondAttribute="width" id="Y1a-Ik-OOJ"/>
                             <constraint firstItem="qjm-bk-HjT" firstAttribute="height" secondItem="39U-oS-IXv" secondAttribute="height" id="YMy-jD-x3z"/>
                             <constraint firstItem="CnS-Xi-pRG" firstAttribute="top" secondItem="iWd-lt-oTT" secondAttribute="bottom" constant="10" id="Z62-rc-dn3"/>
                             <constraint firstItem="39U-oS-IXv" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="5" id="bCE-vN-GgE"/>
                             <constraint firstItem="CnS-Xi-pRG" firstAttribute="width" secondItem="2Ka-UQ-BEi" secondAttribute="width" id="beE-LE-7M5"/>
+                            <constraint firstItem="Rqp-el-x6M" firstAttribute="centerY" secondItem="zw4-Fq-nqg" secondAttribute="centerY" id="cOG-Ki-gf4"/>
                             <constraint firstItem="39U-oS-IXv" firstAttribute="height" secondItem="8S5-A4-aEO" secondAttribute="height" id="ck7-ik-yGM"/>
                             <constraint firstAttribute="trailing" secondItem="iWd-lt-oTT" secondAttribute="trailing" constant="5" id="eDj-D1-Om4"/>
                             <constraint firstItem="iWd-lt-oTT" firstAttribute="leading" secondItem="AQ3-id-Pdw" secondAttribute="trailing" constant="5" id="f5X-Oa-dtv"/>
                             <constraint firstAttribute="bottom" secondItem="CnS-Xi-pRG" secondAttribute="bottom" constant="9" id="hah-n6-neb"/>
                             <constraint firstItem="qjm-bk-HjT" firstAttribute="centerY" secondItem="Jny-WC-h4V" secondAttribute="centerY" id="iJJ-OV-2kj"/>
+                            <constraint firstAttribute="trailing" secondItem="zw4-Fq-nqg" secondAttribute="trailing" constant="5" id="iwh-JY-Rjz"/>
+                            <constraint firstItem="VsX-mL-fZb" firstAttribute="leading" secondItem="hiE-P2-5Oa" secondAttribute="leading" constant="5" id="oG0-JH-dI3"/>
+                            <constraint firstItem="VsX-mL-fZb" firstAttribute="centerY" secondItem="Aqk-Ai-Zf5" secondAttribute="centerY" id="php-su-Cod"/>
+                            <constraint firstItem="S8p-UW-oQZ" firstAttribute="leading" secondItem="rjq-5R-9xo" secondAttribute="trailing" constant="5" id="qBd-Eo-Rdg"/>
+                            <constraint firstItem="AQ3-id-Pdw" firstAttribute="top" secondItem="zw4-Fq-nqg" secondAttribute="bottom" constant="15" id="r84-o1-die"/>
                             <constraint firstItem="vFr-eA-Uix" firstAttribute="leading" secondItem="8S5-A4-aEO" secondAttribute="trailing" constant="5" id="tBB-vs-ids"/>
+                            <constraint firstItem="VsX-mL-fZb" firstAttribute="width" secondItem="rjq-5R-9xo" secondAttribute="width" id="vcH-3l-8KE"/>
+                            <constraint firstItem="zw4-Fq-nqg" firstAttribute="leading" secondItem="Rqp-el-x6M" secondAttribute="trailing" constant="5" id="xpr-BQ-ymB"/>
                             <constraint firstItem="AQ3-id-Pdw" firstAttribute="height" secondItem="qjm-bk-HjT" secondAttribute="height" id="yPE-Lu-u0g"/>
+                            <constraint firstItem="Aqk-Ai-Zf5" firstAttribute="leading" secondItem="VsX-mL-fZb" secondAttribute="trailing" constant="5" id="yX7-nd-n7z"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -190,11 +255,14 @@
                 <outlet property="bookRoomClick" destination="CnS-Xi-pRG" id="1ae-y9-v11"/>
                 <outlet property="btnPhoto" destination="2Ka-UQ-BEi" id="BfB-f9-Qjp"/>
                 <outlet property="capacityLbl" destination="ntA-p0-et6" id="em3-p1-wrQ"/>
+                <outlet property="dateLbl" destination="S8p-UW-oQZ" id="3iU-wc-cvq"/>
+                <outlet property="dayLbl" destination="zw4-Fq-nqg" id="PdM-dJ-cFI"/>
                 <outlet property="roomCodeLbl" destination="vFr-eA-Uix" id="phM-dv-l0Y"/>
                 <outlet property="roomFeatureLbl" destination="iWd-lt-oTT" id="iQI-qM-PKF"/>
                 <outlet property="roomTypeLbl" destination="Jny-WC-h4V" id="JUj-T1-wQQ"/>
+                <outlet property="timeLbl" destination="Aqk-Ai-Zf5" id="jJ3-2l-O3W"/>
             </connections>
-            <point key="canvasLocation" x="188" y="70"/>
+            <point key="canvasLocation" x="177.536231884058" y="172.43303571428569"/>
         </tableViewCell>
     </objects>
     <designables>

@@ -286,7 +286,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Booking" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qx7-yw-1sU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Majalis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qx7-yw-1sU">
                                         <rect key="frame" x="30" y="55" width="225" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="l0r-Oz-xdM"/>
@@ -309,7 +309,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
                                                 <color key="backgroundColor" red="0.10980392160000001" green="0.72941176470000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
-                                                <state key="normal" title="Room Search">
+                                                <state key="normal" title="Room Booking">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -333,7 +333,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
-                                                <state key="normal" title="Approve / Cancel">
+                                                <state key="normal" title="View Booked Room">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -501,7 +501,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="9" width="472.5" height="497.5"/>
+        <image name="9" width="409" height="429"/>
         <image name="backArrow" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

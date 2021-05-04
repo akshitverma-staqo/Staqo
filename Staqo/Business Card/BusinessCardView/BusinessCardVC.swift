@@ -29,8 +29,8 @@ class BusinessCardVC: BaseVC {
     
     @IBOutlet weak var mobileLbl: UITextField!
     @IBOutlet weak var businessPhoneLbl: UITextField!
-    @IBOutlet weak var addressTextView: UITextView!
 
+    @IBOutlet weak var addressTextView: UITextField!
     @IBOutlet weak var jobTitleLabel: UILabel!
     @IBOutlet weak var emailIDText: UITextField!
     var viewModal: EmpViewModal!
