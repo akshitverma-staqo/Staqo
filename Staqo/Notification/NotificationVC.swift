@@ -31,15 +31,17 @@ class NotificationVC: BaseVC, UITableViewDelegate {
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
        herderView.addSubview(header)
+        header.btnLogout.layer.cornerRadius = header.btnLogout.frame.width/2
+        header.btnLogout.clipsToBounds = true
         viewModel = NotificationViewModel(dataSource: NotificationDataSource())
         viewModel.delegate = self
         viewModel._delegate = self
         viewModel.bootstrap()
-        
+        getImage()
 //        self.tblView.delegate = self
 //        self.tblView.dataSource = self
         tblView.register(UINib(nibName: "NotificationTableViewCell", bundle: nil), forCellReuseIdentifier: "NotificationTableViewCell")
-       getImage()
+       
     }
     func getImage(){
         
@@ -48,7 +50,8 @@ class NotificationVC: BaseVC, UITableViewDelegate {
             if let imageView = UIImage(data: imageString) {
                 print("data contains image data")
                 //profileImage.image = imageView
-                header.btnProfile.setImage(imageView, for: .normal)
+               
+                header.btnLogout.setImage(imageView, for: .normal)
             }
         }
     }
@@ -56,8 +59,10 @@ class NotificationVC: BaseVC, UITableViewDelegate {
         super.viewWillAppear(true)
        header.btnProfile.isHidden = true
        header.btnNotiyCount.isHidden = true
+       
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
         header.btnLogout.setImage(UIImage(named: "profiled"), for: .normal)
+        getImage()
         self.navigationController?.isNavigationBarHidden = true
     }
 

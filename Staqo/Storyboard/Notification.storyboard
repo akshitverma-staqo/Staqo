@@ -29,9 +29,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="AEV-XB-rRK"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="Tvt-YI-1mS"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="aiR-Qm-MIF"/>
                                     <constraint firstAttribute="height" constant="64" id="nQs-cw-WRF"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>

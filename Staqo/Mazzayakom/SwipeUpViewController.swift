@@ -155,7 +155,7 @@ class SwipeUpViewController: PullUpController {
     
         let replaced = maazycomlist!.replacingOccurrences(of: "**OC_LIST_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_A_LIST_ID") ?? "")
         
-        let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL") ?? ""))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_IDshaily") ?? ""))\(String(describing: replaced))"
+        let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL") ?? ""))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID") ?? ""))\(String(describing: replaced))"
         print(urlStr)
         Alamofire.request(urlStr, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in

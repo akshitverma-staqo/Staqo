@@ -373,13 +373,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e3G-0G-a2q">
-                                                <rect key="frame" x="280" y="134.5" width="65" height="200"/>
+                                                <rect key="frame" x="30" y="134.5" width="315" height="200"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hLI-J5-Mt4">
-                                                        <rect key="frame" x="0.0" y="0.0" width="65" height="200"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="315" height="200"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="76A-Ej-b3n">
-                                                                <rect key="frame" x="-17.5" y="50" width="100" height="100"/>
+                                                                <rect key="frame" x="107.5" y="50" width="100" height="100"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="100" id="Dru-xW-zxn"/>
                                                                     <constraint firstAttribute="width" constant="100" id="t9E-5r-qmm"/>
@@ -571,7 +571,7 @@
                                             <constraint firstItem="dVQ-N0-Mcg" firstAttribute="leading" secondItem="Ti8-IR-ZoX" secondAttribute="leading" constant="30" id="HX2-76-dry"/>
                                             <constraint firstItem="ZVh-Op-2pa" firstAttribute="centerX" secondItem="rX6-nV-B2U" secondAttribute="centerX" constant="50" id="Hqd-lS-n3i"/>
                                             <constraint firstItem="e3G-0G-a2q" firstAttribute="trailing" secondItem="dVQ-N0-Mcg" secondAttribute="trailing" id="Lsq-Kk-fG3"/>
-                                            <constraint firstItem="e3G-0G-a2q" firstAttribute="leading" secondItem="dVQ-N0-Mcg" secondAttribute="leading" constant="250" id="PVz-NK-YZs"/>
+                                            <constraint firstItem="e3G-0G-a2q" firstAttribute="leading" secondItem="dVQ-N0-Mcg" secondAttribute="leading" id="PVz-NK-YZs"/>
                                             <constraint firstAttribute="bottom" secondItem="ZVh-Op-2pa" secondAttribute="bottom" constant="50" id="Rjq-TO-BW6"/>
                                             <constraint firstItem="ZVh-Op-2pa" firstAttribute="top" secondItem="rX6-nV-B2U" secondAttribute="bottom" constant="35" id="VXT-Mg-wXC"/>
                                             <constraint firstItem="qbB-iM-CKF" firstAttribute="centerX" secondItem="dVQ-N0-Mcg" secondAttribute="centerX" id="Wgi-cZ-FM5"/>
@@ -1408,16 +1408,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LO2-Bh-4uc">
-                                <rect key="frame" x="0.0" y="131" width="375" height="536"/>
+                                <rect key="frame" x="0.0" y="188" width="375" height="479"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" text="" id="XhR-bt-M2Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="h7m-ZZ-doe" id="Sqq-Xf-qfh"/>
-                                    </connections>
-                                </searchBar>
                                 <connections>
                                     <outlet property="dataSource" destination="h7m-ZZ-doe" id="KsM-qS-3nC"/>
                                     <outlet property="delegate" destination="h7m-ZZ-doe" id="zKC-Cu-hNL"/>
@@ -1461,21 +1453,31 @@
                                 <color key="textColor" red="0.073083855210000007" green="0.30496299269999999" blue="0.38455867770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="XhR-bt-M2Z">
+                                <rect key="frame" x="20" y="122" width="335" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="h7m-ZZ-doe" id="Azy-8p-faz"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3pp-KV-QWa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3pp-KV-QWa" firstAttribute="trailing" secondItem="XhR-bt-M2Z" secondAttribute="trailing" constant="20" id="1GS-IE-Z1r"/>
+                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="bottom" secondItem="3pp-KV-QWa" secondAttribute="bottom" id="5WW-5h-HL3"/>
                             <constraint firstAttribute="trailing" secondItem="c9N-i0-7yy" secondAttribute="trailing" id="9aK-5J-tNR"/>
+                            <constraint firstItem="XhR-bt-M2Z" firstAttribute="top" secondItem="2pP-Py-myv" secondAttribute="bottom" constant="5" id="BaU-5s-P97"/>
                             <constraint firstItem="2pP-Py-myv" firstAttribute="leading" secondItem="3pp-KV-QWa" secondAttribute="leading" constant="20" id="F5g-Hf-e3G"/>
                             <constraint firstItem="2pP-Py-myv" firstAttribute="top" secondItem="tGr-l8-vBA" secondAttribute="bottom" constant="8" id="FMZ-hD-c9a"/>
+                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="top" secondItem="XhR-bt-M2Z" secondAttribute="bottom" constant="10" id="Ll8-Xs-H64"/>
+                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="leading" secondItem="3pp-KV-QWa" secondAttribute="leading" id="M7B-ii-tnB"/>
                             <constraint firstItem="tGr-l8-vBA" firstAttribute="top" secondItem="c9N-i0-7yy" secondAttribute="bottom" constant="3" id="WZk-K3-WmM"/>
                             <constraint firstItem="tGr-l8-vBA" firstAttribute="leading" secondItem="3pp-KV-QWa" secondAttribute="leading" constant="20" id="XOo-9b-4qH"/>
+                            <constraint firstItem="XhR-bt-M2Z" firstAttribute="leading" secondItem="3pp-KV-QWa" secondAttribute="leading" constant="20" id="XjI-KG-W07"/>
                             <constraint firstItem="c9N-i0-7yy" firstAttribute="leading" secondItem="3pp-KV-QWa" secondAttribute="leading" id="aNQ-ik-Gdd"/>
-                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="trailing" secondItem="3pp-KV-QWa" secondAttribute="trailing" id="n9A-Qd-Obh"/>
-                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="bottom" secondItem="3pp-KV-QWa" secondAttribute="bottom" id="nRP-AX-tAZ"/>
-                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="top" secondItem="c9N-i0-7yy" secondAttribute="bottom" constant="67" id="nko-oN-P2c"/>
                             <constraint firstItem="c9N-i0-7yy" firstAttribute="top" secondItem="3pp-KV-QWa" secondAttribute="top" id="r6K-fv-8rm"/>
-                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="leading" secondItem="3pp-KV-QWa" secondAttribute="leading" id="xhu-NG-3y0"/>
+                            <constraint firstItem="LO2-Bh-4uc" firstAttribute="trailing" secondItem="3pp-KV-QWa" secondAttribute="trailing" id="vMk-LH-qpi"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
@@ -1487,7 +1489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4yo-gj-qUZ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4726" y="-2159"/>
+            <point key="canvasLocation" x="4725.6000000000004" y="-2159.3703148425789"/>
         </scene>
         <!--ScanQR View Controller-->
         <scene sceneID="oYj-mN-wcl">
