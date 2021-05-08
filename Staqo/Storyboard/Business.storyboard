@@ -92,7 +92,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
                                                 <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
-                                                <state key="normal" title="Scan visiter card">
+                                                <state key="normal" title="Scan visitor card">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -119,7 +119,7 @@
                                                     <constraint firstAttribute="height" constant="67" id="J6n-Q4-7gL"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
-                                                <state key="normal" title="Search visitor">
+                                                <state key="normal" title="Search visitors">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>

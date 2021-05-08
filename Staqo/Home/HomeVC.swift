@@ -32,6 +32,11 @@ class HomeVC: BaseVC {
         header.delegate = self
         somemazaycomAPI()
         herderView.addSubview(header)
+        viewModelNotify = NotificationViewModel(dataSource: NotificationDataSource())
+        viewModelNotify.delegateNotify = self
+       
+        
+        
         viewModel = HomeViewModal(dataSource: HomeDataSource())
         viewModel.delegate = self
         viewModel._delegate = self
@@ -43,9 +48,7 @@ class HomeVC: BaseVC {
             homeCollectionView.register(UINib(nibName: kHomeCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeCollectionViewCell)
             gridCollectionView.register(UINib(nibName: kHomeMenuCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: kHomeMenuCollectionViewCell)
         
-        viewModelNotify = NotificationViewModel(dataSource: NotificationDataSource())
-        viewModelNotify.delegateNotify = self
-        
+     
        let value =  UserDefaults.standard.setMenuStatus()
         if value {
             menuFlag = true
@@ -129,7 +132,10 @@ class HomeVC: BaseVC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         //header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
-        viewModelNotify.bootstrap()
+        if (UserDefaults.standard.getProfile()?.email) != nil {
+            viewModelNotify.bootstrap()
+        }
+        self.empViewModel.bootstrap()
         self.navigationController?.isNavigationBarHidden = true
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -444,10 +450,14 @@ extension HomeVC: ViewModelDelegate{
     func didLoadData() {
         
         stopLoader()
+        if (UserDefaults.standard.getProfile()?.email) != nil {
+            viewModelNotify.bootstrap()
+        }
+        
        
-        empViewModel.bootstrap()
         currentPage.numberOfPages = viewModel.rows?.count ?? 0
-        userLbl.text = UserDefaults.standard.getProfile()?.name
+        userLbl.text = UserDefaults.standard.getProfile()?.givenName
+        
         homeCollectionView.reloadData()
         gridCollectionView.reloadData()
         //currentPage.currentPage = viewModel.rows?.imageArr.count ?? 0
@@ -485,7 +495,7 @@ extension HomeVC: HeaderViewDelegate{
 }
 extension HomeVC : GetNotifyCountDelegate{
     func getNotifyCount() {
-    stopLoader()
+    // stopLoader()
         header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() )", for: .normal)
     }
     
@@ -493,7 +503,7 @@ extension HomeVC : GetNotifyCountDelegate{
 }
 extension HomeVC:EmpRefreshDelegate{
     func getRefresh() {
-        stopLoader()
+    //    stopLoader()
     }
     
 }

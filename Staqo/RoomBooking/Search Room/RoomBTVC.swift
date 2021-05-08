@@ -131,9 +131,9 @@ class RoomBTVC: UITableViewCell {
         if (locationTxt.text?.count ?? 0) <= 0 {
             delegate?.showMsgValidation(msg: "Please select the location")
         }else if( NumberVisitorTxt.text?.count ?? 0) <= 0 {
-            delegate?.showMsgValidation(msg: "Please provide no of visitors ")
+            delegate?.showMsgValidation(msg: "Please provide no of Attendees ")
         }else if vistorType ==  "" {
-            delegate?.showMsgValidation(msg: "Please select the Visitor Type")
+            delegate?.showMsgValidation(msg: "Please select the Attendees Type")
         }
         else if (fromDateTxt.text?.count ?? 0) <= 0 {
             delegate?.showMsgValidation(msg: "Please select the From Date ")

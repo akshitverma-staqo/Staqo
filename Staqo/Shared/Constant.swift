@@ -44,10 +44,9 @@ class Constant {
     static let kMAZZAYACOM_IMAGE_LINK = "/drives/**Assests_ID**/root:/lists/**A_list_ID**/"
     
     //Local
-    
-    
-    static let kSiteID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
-    
+    //static let kSiteID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+   //Live
+    static let kSiteID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
     //static let kSiteID = "f2187b05-698b-4a40-91f6-440903c570af"
 
     

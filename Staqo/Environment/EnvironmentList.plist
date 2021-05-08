@@ -16,13 +16,13 @@
 	<key>PROD</key>
 	<dict>
 		<key>FTP_URL</key>
-		<string>FTPURL</string>
+		<string>http://20.74.178.86/oq</string>
 		<key>AuthURL</key>
-		<string>PROD AuthURL</string>
+		<string>https://graph.microsoft.com/v1.0</string>
 		<key>BaseURL</key>
-		<string>BaseURl</string>
+		<string>https://graph.microsoft.com/v1.0/sites/</string>
 		<key>BNSUrl</key>
-		<string>https://textmobile.cognitiveservices.azure.com//</string>
+		<string>https://textmobile.cognitiveservices.azure.com/</string>
 	</dict>
 </dict>
 </plist>

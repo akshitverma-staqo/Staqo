@@ -29,7 +29,7 @@ class HomeViewModal:ViewModelType{
      //   self.scrollImage()
         self.getGraphData()
         self.getImage()
-        self.dashboardData()
+       
     }
     
     func dashboardData(){
@@ -81,7 +81,8 @@ class HomeViewModal:ViewModelType{
                 let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "" , businessPhone: currentUser.businessPhones.first  as? String ?? "", givenName: currentUser.givenName ?? "" )
 
                 UserDefaults.standard.setProfile(value: data)
-                delegate?.didLoadData()
+                self.dashboardData()
+               // delegate?.didLoadData()
                 
             }
         }

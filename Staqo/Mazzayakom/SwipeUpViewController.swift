@@ -8,7 +8,7 @@
 import UIKit
 import PullUpController
 import Alamofire
-
+import Reachability
 class SwipeUpViewController: PullUpController {
     
     @IBOutlet weak var tblTop: NSLayoutConstraint!
@@ -28,7 +28,8 @@ class SwipeUpViewController: PullUpController {
     var imgURL = [""]
     var isExpanded = false
     var previousPoint : CGFloat = 400.0
-    
+    let reachability = try! Reachability()
+
     enum InitialState {
         case contracted
         case expanded
@@ -40,12 +41,62 @@ class SwipeUpViewController: PullUpController {
     var initialState: InitialState = .contracted
     override func viewDidLoad() {
         super.viewDidLoad()
+        let alert = UIAlertController(title: "Alert",
+                                      message: "No Items.",
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true)
         setUI()
         getAllUsreDataAF()
         self.tableView.attach(to: self)
-        
-        
+       
     }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged(note:)), name: .reachabilityChanged, object: reachability)
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+    }
+
+    @objc func reachabilityChanged(note: Notification) {
+        let reachability = note.object as! Reachability
+
+        switch reachability.connection {
+        case .wifi:
+            print("Wifi Connection")
+        case .cellular:
+            print("Cellular Connection")
+        case .unavailable:
+            let alert = UIAlertController(title: "Alert",
+                                          message: "A data connection is not currently allowed.",
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kHomeVC, type: HomeVC.self)
+                self.navigationController?.isNavigationBarHidden = false
+                self.navigationController?.pushViewController(vc, animated: true)
+            }))
+            self.present(alert, animated: true)
+        case .none:
+            let alert = UIAlertController(title: "Alert",
+                                          message: "A data connection is not currently allowed.",
+                                          preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kHomeVC, type: HomeVC.self)
+                self.navigationController?.isNavigationBarHidden = false
+                self.navigationController?.pushViewController(vc, animated: true)
+            }))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    
     var initialPointOffset: CGFloat {
         switch initialState {
         case .contracted:

@@ -372,6 +372,7 @@ open class PullUpController: UIViewController {
             
         case .ended:
             goToNearestStickyPoint(verticalVelocity: gestureRecognizer.velocity(in: view).y)
+         
             
         default:
             break
