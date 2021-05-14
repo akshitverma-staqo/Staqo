@@ -184,9 +184,17 @@ extension BooKRoomVC: HeaderViewDelegate{
 }
 extension BooKRoomVC : BookRoomTVCDelegate{
     func photoView(index: Int) {
-        let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kRoomPhotoVC, type: RoomPhotoVC.self)
-      vc.urlString =  baseModel?.freeRoomModel?[index].webUrl ?? ""
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        if (baseModel?.freeRoomModel?[index].webUrl ?? "") == "" || baseModel?.freeRoomModel?[index].webUrl  == nil {
+            showErrorMessage(title: "", message: "No Image Available") { (action) in
+                
+            }
+        }else{
+            let vc = Constant.getViewController(storyboard: Constant.kRoomStroyboard, identifier: Constant.kRoomPhotoVC, type: RoomPhotoVC.self)
+          vc.urlString =  baseModel?.freeRoomModel?[index].webUrl ?? ""
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+      
     }
     
     func bookRoomData(index: Int) {

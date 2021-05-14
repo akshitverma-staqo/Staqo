@@ -54,6 +54,7 @@ class EmpViewModal: ViewModelType {
                         ws._delegate?.getEmpID(ID:ws.field?.id ?? "" )
                         UserDefaults.standard.setEmpID(value:ws.field?.id ?? "" )
                         ws.delegate?.didLoadData()
+                        ws.empDelegate?.getRefresh()
                     }
                     
                 case .failure(let error):
@@ -87,17 +88,18 @@ class EmpViewModal: ViewModelType {
         delegate?.willLoadData()
         dataSource?.insertEmpData(email: email, orgID: orgID, name: name, fcmToken: fcmToken, desig: desig, mobileNo: mobileNo, completion: { [weak self] result in
             guard let ws = self else{return}
-            DispatchQueue.main.async {
+         //   DispatchQueue.main.async {
                 switch result{
                 case .success(let baseModel):
                     print(baseModel)
+                    print(UserDefaults.standard.setEmpID(value:ws.field?.id ?? "" ))
                     UserDefaults.standard.setEmpID(value:ws.field?.id ?? "" )
                     ws.empDelegate?.getRefresh()
                     ws.delegate?.didLoadData()
                 case .failure(let error):
                     ws.delegate?.didFail(error: error)
                 }
-            }
+          //  }
             
         })
     }

@@ -16,7 +16,7 @@
 	<key>PROD</key>
 	<dict>
 		<key>FTP_URL</key>
-		<string>http://20.74.178.86/oq</string>
+		<string>https://oqmobileapp.oq.com/oq</string>
 		<key>AuthURL</key>
 		<string>https://graph.microsoft.com/v1.0</string>
 		<key>BaseURL</key>

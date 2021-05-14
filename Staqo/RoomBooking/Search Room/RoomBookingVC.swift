@@ -12,12 +12,13 @@ protocol RoomBookingVCDelegate:class {
 class RoomBookingVC: BaseVC, UITableViewDelegate {
     var viewModel:RoomBookingViewModel!
     var header:HeaderView!
+    @IBOutlet weak var herderView: HeaderView!
+
     private let kRoomBTVC = "RoomBTVC"
     var delegate:RoomBookingVCDelegate?
     var searchValue:String = ""
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet var viewPicker: UIView!
     @IBOutlet weak var tblView: UITableView!

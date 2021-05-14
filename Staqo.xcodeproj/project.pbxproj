@@ -50,6 +50,9 @@
 		767BEBDA2601264900B6A3C3 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBD92601264900B6A3C3 /* Documents.swift */; };
 		767BEBE0260126B400B6A3C3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBDF260126B400B6A3C3 /* Helper.swift */; };
 		767BEBE526012CCC00B6A3C3 /* BusinessDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBE426012CCC00B6A3C3 /* BusinessDataSource.swift */; };
+		7691069C264811E600A0B3E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7691069B264811E600A0B3E9 /* LoginVC.swift */; };
+		7691069D264811E600A0B3E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7691069B264811E600A0B3E9 /* LoginVC.swift */; };
+		7691069E264811E600A0B3E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7691069B264811E600A0B3E9 /* LoginVC.swift */; };
 		7692359D26396CC7008FF3BE /* DemoArrangeType copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7692359C26396CC7008FF3BE /* DemoArrangeType copy.jpg */; };
 		7693C61725F3D695001665DF /* MenuViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C61625F3D694001665DF /* MenuViewModal.swift */; };
 		7693C61C25F3D6E9001665DF /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7693C61B25F3D6E9001665DF /* MenuVC.swift */; };
@@ -169,7 +172,6 @@
 		CD5DB42D25D5A26500353084 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD5DB42B25D5A26500353084 /* LaunchScreen.storyboard */; };
 		CD5DB43825D5A26500353084 /* StaqoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB43725D5A26500353084 /* StaqoTests.swift */; };
 		CD5DB44325D5A26500353084 /* StaqoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB44225D5A26500353084 /* StaqoUITests.swift */; };
-		CD5DB46225D5A52E00353084 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB46125D5A52E00353084 /* LoginVC.swift */; };
 		CD5DB46B25D5A56100353084 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB46A25D5A56100353084 /* BaseVC.swift */; };
 		CD5DB47125D5A5BD00353084 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB47025D5A5BD00353084 /* NetworkManager.swift */; };
 		CD5DB47825D5A5E500353084 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5DB47625D5A5E500353084 /* Configuration.swift */; };
@@ -263,6 +265,7 @@
 		767BEBD92601264900B6A3C3 /* Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
 		767BEBDF260126B400B6A3C3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		767BEBE426012CCC00B6A3C3 /* BusinessDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDataSource.swift; sourceTree = "<group>"; };
+		7691069B264811E600A0B3E9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7692359C26396CC7008FF3BE /* DemoArrangeType copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DemoArrangeType copy.jpg"; sourceTree = "<group>"; };
 		7693C61625F3D694001665DF /* MenuViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModal.swift; sourceTree = "<group>"; };
 		7693C61B25F3D6E9001665DF /* MenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
@@ -401,7 +404,6 @@
 		CD5DB43E25D5A26500353084 /* StaqoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StaqoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD5DB44225D5A26500353084 /* StaqoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaqoUITests.swift; sourceTree = "<group>"; };
 		CD5DB44425D5A26500353084 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD5DB46125D5A52E00353084 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CD5DB46A25D5A56100353084 /* BaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		CD5DB47025D5A5BD00353084 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		CD5DB47625D5A5E500353084 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -871,7 +873,7 @@
 		CD5DB46025D5A50600353084 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				CD5DB46125D5A52E00353084 /* LoginVC.swift */,
+				7691069B264811E600A0B3E9 /* LoginVC.swift */,
 				CD5DB4AE25D5AA4C00353084 /* LoginViewModel.swift */,
 				CD5DB4B325D5AA5B00353084 /* LoginDataSource.swift */,
 			);
@@ -1284,6 +1286,7 @@
 				76D66EDF261A0C030013E5B4 /* SwiftyJSON.swift in Sources */,
 				76A103A325F7E69E00C536B9 /* CreatedBy.swift in Sources */,
 				76A0AF242616E37C0084E1F8 /* BookRoomDataSource.swift in Sources */,
+				7691069C264811E600A0B3E9 /* LoginVC.swift in Sources */,
 				7667E7A326158D0300EB624E /* LogTicketTVC.swift in Sources */,
 				CD5DB47825D5A5E500353084 /* Configuration.swift in Sources */,
 				76A1046125FFA76300C536B9 /* VisitorListVC.swift in Sources */,
@@ -1404,7 +1407,6 @@
 				76A0AF102616DAF50084E1F8 /* BookRoomTVC.swift in Sources */,
 				76B2057A25DC402D0056FC68 /* GraphManager.swift in Sources */,
 				76D66F1B261CA1230013E5B4 /* RoomBookModel.swift in Sources */,
-				CD5DB46225D5A52E00353084 /* LoginVC.swift in Sources */,
 				76656D9A260DAA110080669B /* NotificationTableViewCell.swift in Sources */,
 				76970640262B347D0063BABA /* Data.swift in Sources */,
 				76F1FB3225F2915B00D88F79 /* EmpDataSource.swift in Sources */,
@@ -1432,6 +1434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7691069D264811E600A0B3E9 /* LoginVC.swift in Sources */,
 				CD5DB43825D5A26500353084 /* StaqoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1440,6 +1443,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7691069E264811E600A0B3E9 /* LoginVC.swift in Sources */,
 				CD5DB44325D5A26500353084 /* StaqoUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

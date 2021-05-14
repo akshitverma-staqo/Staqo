@@ -203,10 +203,8 @@ class SwipeUpViewController: PullUpController {
         ]
         spinner.start(container: self)
         let maazycomlist = UserDefaults.standard.string(forKey: "MAZZAYACOM_LINK")
-    
-        let replaced = maazycomlist!.replacingOccurrences(of: "**OC_LIST_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_A_LIST_ID") ?? "")
-        
-        let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL") ?? ""))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID") ?? ""))\(String(describing: replaced))"
+        let replaced = maazycomlist!.replacingOccurrences(of: "**OC_LIST_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_LIST_ID") ?? "")
+        let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID")!))\(String(describing: replaced))"
         print(urlStr)
         Alamofire.request(urlStr, encoding: JSONEncoding.default, headers: headers)
             .responseJSON { response in
@@ -307,11 +305,12 @@ extension SwipeUpViewController : UITableViewDelegate, UITableViewDataSource
                             
                         ]
                         let urlMazz = UserDefaults.standard.string(forKey: "MAZZAYACOM_IMAGE_LINK")
-                        let replaced = urlMazz!.replacingOccurrences(of: "**Assests_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_ASSET_ID") ?? "").replacingOccurrences(of: "**A_list_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_A_LIST_ID") ?? "")
+                        let replaced = urlMazz!.replacingOccurrences(of: "**Assests_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_ASSET_ID") ?? "").replacingOccurrences(of: "**A_list_ID**", with: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_LIST_ID") ?? "")
                         
                         print(UserDefaults.standard.string(forKey: "MAZZAYACOM_C_LIST_ID") ?? "")
                         
                         let urlStr = "\(String(describing: UserDefaults.standard.string(forKey: "BASE_URL")!))\(String(describing: UserDefaults.standard.string(forKey: "MAZZAYACOM_C_SITE_ID")!))\(String(describing: replaced))\(imagStrUrl)"
+                        
                         print(urlStr)
                         Alamofire.request(urlStr, encoding: JSONEncoding.default, headers: headers)
                             .responseJSON { response in

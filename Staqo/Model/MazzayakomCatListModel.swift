@@ -19,10 +19,10 @@ struct MazzayakomCatListModel {
     init(json:JSON) {
         //let values = try decoder.container(keyedBy: CodingKeys.self)
         
-        name = json["name"].stringValue
-        icon_image = json["icon_image"].stringValue
+        name = json["LinkTitle"].stringValue
+        icon_image = json["Image"].stringValue
        
-        description = json["description"].stringValue
+        description = json["LinkTitleNoMenu"].stringValue
         
         id = json["id"].stringValue
         

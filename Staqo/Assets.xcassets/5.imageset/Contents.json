@@ -1,16 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "hd1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "dashboard6.png",
+      "filename" : "hd2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dashboard6-1.png",
+      "filename" : "hd3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

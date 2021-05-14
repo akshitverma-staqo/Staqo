@@ -378,23 +378,32 @@ class RoomBTVC: UITableViewCell {
        
 //DispatchQueue.main.async {
             if  self.arrangModel != nil {
-                self.arrangeViewHeight.constant = 124
-                self.arrangmentView.isHidden = false
-                arrangmentImageView.isHidden = false
-                self.contentView.needsUpdateConstraints()
-                self.contentView.setNeedsLayout()
-                let url = URL(string: self.arrangModel?[self.selectedIndex].webUrl ?? "")!
-
-               // Fetch Image Data
-               if let data = try? Data(contentsOf: url) {
-                   // Create Image and Update Image View
-                self.arrangmentImageView.image = UIImage(data: data)
-
-               }
+               
+//                if (arrangModel?[self.selectedIndex].webUrl) == nil || (arrangModel?[self.selectedIndex].webUrl) == ""{
+//                    print("web url is nil")
+//
+//                }else{
+                   
+                    
+                  if let url = URL(string: (self.arrangModel?[self.selectedIndex].webUrl) ?? ""){
+                    if let data = try? Data(contentsOf: url) {
+                        // Create Image and Update Image View
+                     self.arrangmentImageView.image = UIImage(data: data)
+                    }
+                    self.arrangeViewHeight.constant = 124
+                    self.arrangmentView.isHidden = false
+                    arrangmentImageView.isHidden = false
+                    self.contentView.needsUpdateConstraints()
+                    self.contentView.setNeedsLayout()
+                    }
+                   
+                   // Fetch Image Data
+                  
+               // }
                 self.delegate?.reloadTableData()
         }
 
-  //      }
+  // }
         
 
     }
@@ -679,7 +688,7 @@ extension RoomBTVC: UITextFieldDelegate{
                 
                 self.roomDataFilter  = self.rowsData?.filter{$0.roomtypeid == "\(rowsRoom?[selectedIndex].id ?? 0)"}
                 roomCodeTxt.text = nil
-                if  rowsRoom?[selectedIndex].id ?? 0 == 1 {
+                if  rowsRoom?[selectedIndex].id ?? 0 == 3 {
                     arrangmentTct.isEnabled = true
                     arrangeConstraint.constant = 40
                     arrangeLeadingConstraint.constant = 20

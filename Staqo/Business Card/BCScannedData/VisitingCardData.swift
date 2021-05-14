@@ -363,9 +363,8 @@ class VisitingCardData: BaseVC {
             }
 
         }
-        else if (self.phoneTxtField.text?.count ?? 0) <= 0 {
-            showErrorMessage(title: "Alert", message: "Phone should not be blank") { (action) in
-            
+        else if (self.phoneTxtField.text?.count ?? 0) <= 9 {
+            showErrorMessage(title: "Error..", error: CustomError.InValidNoLength) { (action) in
             }
 
         }

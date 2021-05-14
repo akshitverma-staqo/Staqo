@@ -74,10 +74,15 @@ extension LoginVC : ViewModelDelegate{
     func didLoadData() {
         stopLoader()
         
-        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kHomeVC, type: HomeVC.self)
-        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+        if UserDefaults.standard.string(forKey: "notify") ?? "" == "Notification"{
+            let vc = Constant.getViewController(storyboard:Constant.kNotification, identifier: Constant.kNotificationVC,type: NotificationVC.self)
+            //UserDefaults.standard.setWebStatus(value: "NotificationDone")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kHomeVC, type: HomeVC.self)
+            self.navigationController?.isNavigationBarHidden = false
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
         
     }
     

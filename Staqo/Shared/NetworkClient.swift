@@ -169,7 +169,7 @@ class NetworkClient {
                         print("RESPONSE JSON: \(strJson ?? "NO JSON STRING")")
                         let decoder = JSONDecoder()
                         let object = try decoder.decode(BaseModel.self, from: response.data)
-                        let error = NSError(domain: Constant.kDomain, code: 0, userInfo: [NSLocalizedDescriptionKey: object.message ?? "Unable to connect"])
+                        let error = NSError(domain: Constant.kDomain, code: 0, userInfo: [NSLocalizedDescriptionKey: object.error ?? "Unable to connect"])
                                 errorCallBack(CustomError.HTTPError(err: error))
                         }
                     catch {

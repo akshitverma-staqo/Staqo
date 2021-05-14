@@ -23,6 +23,7 @@ enum UserDefaultsKeys : String {
     case empID
     case FCMToken
     case profileImage
+    case notifyStatus
 }
 
 
@@ -100,6 +101,13 @@ extension UserDefaults {
     func setMenuValue(value:Bool){
         set(value, forKey: UserDefaultsKeys.menuStatus.rawValue)
         
+    }
+    
+    func setNotifyStatus() -> Bool {
+        return bool(forKey: UserDefaultsKeys.notifyStatus.rawValue)
+    }
+    func getNotifyStatus() -> String {
+        return value(forKey: UserDefaultsKeys.notifyStatus.rawValue) as! String
     }
     
     

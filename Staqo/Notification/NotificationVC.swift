@@ -125,7 +125,15 @@ extension NotificationVC : NotificationViewModelDelegate {
 extension NotificationVC: HeaderViewDelegate{
     func btnMenuTapped(sender: UIButton) {
         
-        _ = navigationController?.popViewController(animated: true)
+        
+        if UserDefaults.standard.string(forKey: "notify") ?? "" == "Notification"{
+            UserDefaults.standard.set("NotificationDone", forKey: "notify")
+            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kHomeVC, type: HomeVC.self)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else{
+            _ = navigationController?.popViewController(animated: true)
+
+        }
 
     }
     

@@ -34,9 +34,7 @@ class HomeVC: BaseVC {
         herderView.addSubview(header)
         viewModelNotify = NotificationViewModel(dataSource: NotificationDataSource())
         viewModelNotify.delegateNotify = self
-       
-        
-        
+               
         viewModel = HomeViewModal(dataSource: HomeDataSource())
         viewModel.delegate = self
         viewModel._delegate = self
@@ -134,8 +132,10 @@ class HomeVC: BaseVC {
         //header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
         if (UserDefaults.standard.getProfile()?.email) != nil {
             viewModelNotify.bootstrap()
+            self.empViewModel.bootstrap()
+         //   self.empViewModel.bootstrap()
         }
-        self.empViewModel.bootstrap()
+        
         self.navigationController?.isNavigationBarHidden = true
     }
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
@@ -270,33 +270,55 @@ class HomeVC: BaseVC {
        //         let SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
         //        UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
 
-                let MAZZAYACOM_C_LIST_ID =  "a9aa5be4-4b8d-487d-ae72-839a1de9ba13"
-                UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
-
-                let MAZZAYACOM_ASSET_ID =  "b!yl5NVBxnZU-dvn1LULArnLdQ9qy4h6RMivIbCnyeHmVmO87f0Pt3SaG3WIEXWwfC"
-                UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
-
-                let MAZZAYACOM_C_SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
-                UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
-
-
-                let MAZZAYACOM_A_LIST_ID = "2fecd167-6659-4906-b8cc-8d06047056de"
-                UserDefaults.standard.set(MAZZAYACOM_A_LIST_ID, forKey: "MAZZAYACOM_A_LIST_ID")
+//                let MAZZAYACOM_C_LIST_ID =  "a9aa5be4-4b8d-487d-ae72-839a1de9ba13"
+//                UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
+//
+//                let MAZZAYACOM_ASSET_ID =  "b!yl5NVBxnZU-dvn1LULArnLdQ9qy4h6RMivIbCnyeHmVmO87f0Pt3SaG3WIEXWwfC"
+//                UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
+//
+//                let MAZZAYACOM_C_SITE_ID = "544d5eca-671c-4f65-9dbe-7d4b50b02b9c"
+//                UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
+//
+//
+//                let MAZZAYACOM_A_LIST_ID = "2fecd167-6659-4906-b8cc-8d06047056de"
+//                UserDefaults.standard.set(MAZZAYACOM_A_LIST_ID, forKey: "MAZZAYACOM_A_LIST_ID")
        
         
-      //  Live
-//        let MAZZAYACOM_C_SITE_ID = "9267b16d-b59f-4aaa-998c-c81bdea24279"
-//        UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
+        //  Live
+        let MAZZAYACOM_C_SITE_ID = "9267b16d-b59f-4aaa-998c-c81bdea24279"
+        UserDefaults.standard.set(MAZZAYACOM_C_SITE_ID, forKey: "MAZZAYACOM_C_SITE_ID")
+        
+        let MAZZAYACOM_C_LIST_ID =  "35eec527-6587-458c-a35f-dd06e8e79487"
+        UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
+
+        
+        let MAZZAYACOM_ASSET_ID =  "b!bbFnkp-1qkqZjMgb3qJCeTz4E1V1WUFLoF8xgKa1gCLpyFwaggbeRIZdZ0UUm0sz"
+        UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
+        
+        let SITE_ID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
+        UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
+        
+        //https://graph.microsoft.com/v1.0/sites/9267b16d-b59f-4aaa-998c-c81bdea24279/lists/35eec527-6587-458c-a35f-dd06e8e79487/items?expand=fields";
+       // ApplicationConstant.BASE_URL+
+//                                ApplicationConstant.MAZZAYACOM_C_SITE_ID +
+//                                ApplicationConstant.MAZZAYACOM_LINK
+//                                        .replace("*OC_LIST_ID*",ApplicationConstant.MAZZAYACOM_OC_LIST_ID),
+//        
+        //Live Credentials
+//          public static final String OQPORTAL_LINK = "https://thisisoq.sharepoint.com";
+//          public static final String MAZZAYACOM_LINK = "/lists/**OC_LIST_ID**/items?expand=fields";
+//          public static final String MAZZAYACOM_SUB_LINK = "/lists/**C_list_id**/items?expand=fields(select=CategoryLookupId,Title,Caption)&$filter=fields/CategoryLookupId eq '";
+//          public static final String MAZZAYACOM_IMAGE_LINK = "/drives/**Assests_ID**/root:/lists/**A_list_ID**/";
+//          public static final String SITE_ID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb";
+//          public static final String MAZZAYACOM_C_LIST_ID = "a9aa5be4-4b8d-487d-ae72-839a1de9ba13";
+//          public static final String MAZZAYACOM_C_SITE_ID = "9267b16d-b59f-4aaa-998c-c81bdea24279";
+//          public static final String MAZZAYACOM_OC_LIST_ID = "35eec527-6587-458c-a35f-dd06e8e79487";
+//          public static final String MAZZAYACOM_ASSET_ID = "b!bbFnkp-1qkqZjMgb3qJCeTz4E1V1WUFLoF8xgKa1gCLpyFwaggbeRIZdZ0UUm0sz";
+//          public static final String MAZZAYACOM_A_LIST_ID = "35eec527-6587-458c-a35f-dd06e8e79487";
 //
-//        let MAZZAYACOM_C_LIST_ID =  "35eec527-6587-458c-a35f-dd06e8e79487"
-//        UserDefaults.standard.set(MAZZAYACOM_C_LIST_ID, forKey: "MAZZAYACOM_C_LIST_ID")
-//
-//
-//
-//        let MAZZAYACOM_ASSET_ID =  "b!bbFnkp-1qkqZjMgb3qJCeTz4E1V1WUFLoF8xgKa1gCLpyFwaggbeRIZdZ0UUm0sz"
-//        UserDefaults.standard.set(MAZZAYACOM_ASSET_ID, forKey: "MAZZAYACOM_ASSET_ID")
-//
-//        let SITE_ID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
+        
+
+//        let MAZZAYACOM_C_SITE_ID = "347d2bb7-7c8d-4d31-8d34-783763ab8ccb"
 //        UserDefaults.standard.set(SITE_ID, forKey: "SITE_ID")
 
 
@@ -456,6 +478,7 @@ extension HomeVC: ViewModelDelegate{
         
        
         currentPage.numberOfPages = viewModel.rows?.count ?? 0
+        
         userLbl.text = UserDefaults.standard.getProfile()?.givenName
         
         homeCollectionView.reloadData()
@@ -466,8 +489,18 @@ extension HomeVC: ViewModelDelegate{
     }
     
     func didFail(error: CustomError) {
+        
         showErrorMessage(title: "Error", error: error) { (action) in
-            
+            if error.localizedDescription.contains("401 Unauthorized") {
+                print("401")
+                self.showMessage(title: "", message: CustomError.Logout.localizedDescription, btnConfirmTitle:"YES", btnCancelTitle: "NO") { (isYes, action) in
+                    if isYes {
+                        let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+           
         }
         stopLoader()
     }
@@ -504,6 +537,7 @@ extension HomeVC : GetNotifyCountDelegate{
 extension HomeVC:EmpRefreshDelegate{
     func getRefresh() {
     //    stopLoader()
+        self.viewModel.dashboardData()
     }
     
 }

@@ -40,7 +40,8 @@ class EmpDataSource: EmpDataSourceDeleate{
         
         let jsonreq: [String: Any]   = ["fields": ["Title":email,"organizationidLookupId":orgID,"name":name,"ipaddress":fcmToken,"designation":desig,"department":"IT","emailid":email,"mobileno1":mobileNo]]
 //
-        let url = "https://graph.microsoft.com/v1.0/sites/544d5eca-671c-4f65-9dbe-7d4b50b02b9c/lists/Employee%20Master/items"
+       // let url = Constant.kBaseUrl + Constant.kSiteID + Constant.kEMPLOYEE_REGISTER
+        let url =  "https://graph.microsoft.com/v1.0/sites/347d2bb7-7c8d-4d31-8d34-783763ab8ccb/lists/Employee%20Master/items"
         NetworkClient.requestAlmofire(passToUrl: url, passToMethod: .post, passToParameter:jsonreq  , passToHeader: ["Authorization":"Bearer " + UserDefaults.standard.getAccessToken(), "Content-Type":"application/json"]) { result in
             completion(result as StaoqResult<BaseModel>)
         } error: { (error) in

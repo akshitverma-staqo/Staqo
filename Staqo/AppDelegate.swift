@@ -18,6 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        UserDefaults.standard.removeObject(forKey: "notify")
+        //UserDefaults.standard.set("Notification", forKey: "notify")
+
         window = UIWindow(frame: UIScreen.main.bounds)
         IQKeyboardManager.shared.enable = true
         
@@ -77,6 +80,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if let messageID = userInfo[gcmMessageIDKey] {
         print("Message ID: \(messageID)")
       }
+        //UserDefaults.standard.setWebStatus(value: "notify")
         UserDefaults.standard.set("Notification", forKey: "notify")
       // Print full message.
         print("Message Print here...444")
@@ -97,9 +101,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       if let messageID = userInfo[gcmMessageIDKey] {
         print("Message ID: \(messageID)")
       }
+        //UserDefaults.standard.setWebStatus(value: "notify")
         UserDefaults.standard.set("Notification", forKey: "notify")
       // Print full message.
         print("Message Print here...33")
+      
+        
+        
       print(userInfo)
 
       completionHandler(UIBackgroundFetchResult.newData)
@@ -145,7 +153,8 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
    }
 
    
-   
+    UserDefaults.standard.set("Notification", forKey: "notify")
+
   
    
    
@@ -171,9 +180,12 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
      print("Message ID: \(messageID)")
    }
   
-   print("Tap on push,,,...")
+    print("Tap on push,,,...")
    
-
+    let vc = Constant.getViewController(storyboard:Constant.kNotification, identifier: Constant.kNotificationVC,type: NotificationVC.self)
+    self.window?.rootViewController = vc
+    self.window?.makeKeyAndVisible()
+    
     //let vc = Constant.getViewController(storyboard: Constant.kNotification, identifier: Constant.kNotificationVC, type: NotificationVC.self)
     //self.navigationController?.pushViewController(vc, animated: true)
   

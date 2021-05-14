@@ -94,8 +94,22 @@ extension ViewLogTicketVC : ViewModelDelegate{
     }
     
     func didFail(error: CustomError) {
+        
         showErrorMessage(title: "Error", error: error) { (action) in
-            self.navigationController?.popViewController(animated: true)
+            if error.localizedDescription.contains("401 Unauthorized") {
+                print("401")
+                self.showMessage(title: "", message: CustomError.Logout.localizedDescription, btnConfirmTitle:"YES", btnCancelTitle: "NO") { (isYes, action) in
+                    if isYes {
+                        let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }else{
+                self.navigationController?.popViewController(animated: true)
+                
+            }
+
+           
         }
         stopLoader()
     }
