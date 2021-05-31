@@ -77,10 +77,12 @@ class Constant {
     static let kHelpCategory = "/api/helpdesk/categories"
     static let kHelpSubCat1 = "/api/helpdesk/"
     static let kHelpSubCat2 = "/subcategories"
-    static let kHelpSubmitReq = "/api/helpdesk/request" //Post to submit
+    static let kHelpSubmitReq = "api/helpdesk/request" ///api/helpdesk/request" //Post to submit
     static let kHelpViewTicket = "/api/helpdesk/" + (UserDefaults.standard.getProfile()?.email)! + "/request" // Get to view Ticket
     static let kHelpAttach1 = "/api/helpdesk/"
     static let kHelpAttach2 = "/attachment"
+    static let kProjectApi = "/api/helpdesk/project"
+
  
     
     //Room API
@@ -162,6 +164,9 @@ class Constant {
     static let kSwipeControllerVC = "SwipeUpViewController"
     static let kMazzayakomViewControllerVC = "MazzayakomViewController"
     static let kVisitingCardDataVC = "VisitingCardData"
+    static let kupdatefcmidAPI = "/api/updatefcmid"
+    
+    
     
     
     
@@ -394,6 +399,13 @@ class Constant {
         return emailTest.evaluate(with: testStr)
     }
 
+    static func isValidWenUrl(url:String) -> Bool {
+        // print("validate calendar: \(testStr)")
+        let urlRegEx = "^(https?://)?(www\\.)?([-a-z0-9]{1,63}\\.)*?[a-z0-9][-a-z0-9]{0,61}[a-z0-9]\\.[a-z]{2,6}(/[-\\w@\\+\\.~#\\?&/=%]*)?$"
+            let urlTest = NSPredicate(format:"SELF MATCHES %@", urlRegEx)
+            let result = urlTest.evaluate(with: url)
+            return result
+    }
     
 }
 

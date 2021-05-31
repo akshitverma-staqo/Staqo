@@ -22,16 +22,16 @@ class ViewLogTicketVC: BaseVC{
 
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
-
         herderView.addSubview(header)
+        
         // Do any additional setup after loading the view.
         viewModel = ViewLogTicketViewModel(dataSource:ViewLogTicketDataSource())
         viewModel.delegate = self
-
+        viewModel.bootstrap()
         tableView.register(UINib(nibName: kViewLogTicketTVC, bundle: nil), forCellReuseIdentifier: kViewLogTicketTVC)
         self.navigationController?.isNavigationBarHidden = true
 
-        viewModel.bootstrap()
+       
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
@@ -70,10 +70,10 @@ extension ViewLogTicketVC: UITableViewDataSource , UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kTicketStatusVC, type: TicketStatusVC.self)
-        vc.rowsRequests = viewModel.rowsRequests?[indexPath.row]
-        //vc.viewModel.rowsRequests?[indexPath.row] = data
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let vc = Constant.getViewController(storyboard: Constant.kHDStroyboard, identifier: Constant.kTicketStatusVC, type: TicketStatusVC.self)
+//        vc.rowsRequests = viewModel.rowsRequests?[indexPath.row]
+//        //vc.viewModel.rowsRequests?[indexPath.row] = data
+//        self.navigationController?.pushViewController(vc, animated: true)
         
     }
     

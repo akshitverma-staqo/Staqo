@@ -13,7 +13,7 @@ protocol EmpRefreshDelegate:class {
     func getRefresh()
 }
 protocol EmpNoUpdateDelegate:class {
-    func updateNo()
+    func updateNo(status:String)
 }
 class EmpViewModal: ViewModelType {
    var delegate: ViewModelDelegate?
@@ -72,7 +72,7 @@ class EmpViewModal: ViewModelType {
                 switch result{
                 case .success(let baseModel):
                     print(baseModel)
-                    ws.empUpdateDelegate?.updateNo()
+                    ws.empUpdateDelegate?.updateNo(status: "mobileupdate")
               //     ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
 //                    ws.field = baseModel.fieldsData
 //                    ws.delegate?.didLoadData()
@@ -111,7 +111,7 @@ class EmpViewModal: ViewModelType {
             guard let ws = self else{return}
             switch result {
             case .success(let baseModel):
-                ws.empDelegate?.getRefresh()
+                ws.empUpdateDelegate?.updateNo(status: "mobiledeleted")
             //  ws.getEmployeeDataWithID(emailID: UserDefaults.standard.getProfile()?.email ?? "")
             case .failure(let error):
                 ws.delegate?.didFail(error: error)

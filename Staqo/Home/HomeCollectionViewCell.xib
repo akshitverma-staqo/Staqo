@@ -28,7 +28,7 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVu-Ww-IlZ">
                         <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bcimage" translatesAutoresizingMaskIntoConstraints="NO" id="L57-CA-jQM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L57-CA-jQM">
                                 <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blob1" translatesAutoresizingMaskIntoConstraints="NO" id="ink-F0-5ia">
@@ -90,7 +90,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="bcimage" width="409" height="429"/>
         <image name="blob1" width="315" height="331"/>
         <image name="spiral1" width="315" height="331"/>
     </resources>

@@ -142,7 +142,7 @@ class NetworkClient {
     static func request<K:Codable>(target: ResourceType, success successCallBack: @escaping (StaoqResult<K>) -> Void, error errorCallBack: @escaping (CustomError) -> Void, failure failureCallBack: @escaping (CustomError) -> Void) {
         
         provider.request(target) { (result) in
-            
+            print("result ========== \(result)")
             switch result {
             case .success(let response):
                 

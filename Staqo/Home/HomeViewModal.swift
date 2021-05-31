@@ -10,12 +10,10 @@ import MSGraphClientModels
 import MSAL
 import MSGraphClientSDK
 
-
 protocol HomeViewModalDelegate:class {
 func callImage()
 }
 class HomeViewModal:ViewModelType{
-
     var rows : [MenuModel]? // (imageArr:[String], curveArr:[String], TopLabArray:[String])?
     private let dataSource: HomeDataSourceDelegate?
     var delegate: ViewModelDelegate?
@@ -29,8 +27,30 @@ class HomeViewModal:ViewModelType{
      //   self.scrollImage()
         self.getGraphData()
         self.getImage()
+        self.fcmUpdateData(ID: UserDefaults.standard.getProfile()?.email ?? "", fcmID: UserDefaults.standard.getFCMToken())
        
     }
+    
+    func fcmUpdateData(ID:String, fcmID:String){
+          
+      delegate?.willLoadData()
+      dataSource?.fcmUpdateData(ID: ID, fcmID: fcmID,completion: {[weak self] result in
+          guard let ws = self else{return}
+          
+          switch result {
+          case .success(let baseModel):
+              print(baseModel)
+            
+             // ws.delegate?.didLoadData()
+          case .failure(let error):
+                print(error)
+            ws.delegate?.didFail(error: error)
+          }
+          
+      })
+
+}
+    
     
     func dashboardData(){
           
@@ -78,7 +98,7 @@ class HomeViewModal:ViewModelType{
                     delegate?.didFail(error: CustomError.OtherError(error: error!))
                     return
                 }
-                let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "" , businessPhone: currentUser.businessPhones.first  as? String ?? "", givenName: currentUser.givenName ?? "" )
+                let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "" , businessPhone: currentUser.businessPhones.first  as? String ?? "", givenName: currentUser.givenName ?? "", employeeId: currentUser.employeeId ?? "",jobTitle: currentUser.jobTitle ?? "")
 
                 UserDefaults.standard.setProfile(value: data)
                // self.dashboardData()

@@ -123,7 +123,7 @@
                 <outlet property="readUnreadImg" destination="YJ5-pO-P16" id="AHe-Pm-Z40"/>
                 <outlet property="sadowView" destination="yVw-FE-OMP" id="zsA-Xc-hS3"/>
             </connections>
-            <point key="canvasLocation" x="15.942028985507248" y="77.678571428571431"/>
+            <point key="canvasLocation" x="103" y="78"/>
         </tableViewCell>
     </objects>
     <resources>

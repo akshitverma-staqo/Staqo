@@ -37,7 +37,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nws-Aq-7Ve" userLabel="Capacity">
                         <rect key="frame" x="20" y="50" width="287" height="40"/>
                         <subviews>
-                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to Select" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYS-Sw-l81">
+                            <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYS-Sw-l81">
                                 <rect key="frame" x="2" y="5" width="280" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -176,8 +176,8 @@
                             <outlet property="delegate" destination="KGk-i7-Jjw" id="WuD-IC-GbD"/>
                         </connections>
                     </textView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-SY-Mnl">
-                        <rect key="frame" x="20" y="510" width="80" height="32"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Project*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mk5-SY-Mnl">
+                        <rect key="frame" x="10" y="510" width="60" height="42"/>
                         <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
                         <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
@@ -386,7 +386,7 @@
                     <constraint firstAttribute="trailing" secondItem="3dw-q1-P0M" secondAttribute="trailing" constant="20" id="aS1-zN-AP8"/>
                     <constraint firstAttribute="trailing" secondItem="51E-m7-lGh" secondAttribute="trailing" constant="20" id="ah6-Wh-pXp"/>
                     <constraint firstItem="fzt-wQ-Vlz" firstAttribute="top" secondItem="51E-m7-lGh" secondAttribute="bottom" constant="10" id="g6J-AR-e0R"/>
-                    <constraint firstItem="mk5-SY-Mnl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="gFm-Qs-HvW"/>
+                    <constraint firstItem="mk5-SY-Mnl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="gFm-Qs-HvW"/>
                     <constraint firstItem="yhz-Sy-9mg" firstAttribute="top" secondItem="mmE-vJ-7R4" secondAttribute="bottom" constant="10" id="gPK-yW-KmE"/>
                     <constraint firstItem="EyH-qG-5b9" firstAttribute="top" secondItem="uU0-oJ-Thr" secondAttribute="bottom" constant="10" id="gXn-dS-CjN"/>
                     <constraint firstItem="Nws-Aq-7Ve" firstAttribute="top" secondItem="nbf-G3-rs7" secondAttribute="bottom" constant="10" id="h2Z-XG-maG"/>
@@ -394,7 +394,7 @@
                     <constraint firstItem="6ot-Uu-Slb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="hr3-Pu-mkj"/>
                     <constraint firstItem="mk5-SY-Mnl" firstAttribute="top" secondItem="Fi7-vt-DPg" secondAttribute="bottom" constant="20" id="j5g-ID-WDD"/>
                     <constraint firstItem="yhz-Sy-9mg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="jcc-yQ-4XH"/>
-                    <constraint firstItem="6ot-Uu-Slb" firstAttribute="top" secondItem="mk5-SY-Mnl" secondAttribute="bottom" constant="20" id="nUq-0P-mrt"/>
+                    <constraint firstItem="6ot-Uu-Slb" firstAttribute="top" secondItem="mk5-SY-Mnl" secondAttribute="bottom" constant="10" id="nUq-0P-mrt"/>
                     <constraint firstItem="3dw-q1-P0M" firstAttribute="top" secondItem="A6J-jn-7VL" secondAttribute="bottom" constant="10" id="nvA-PB-H0m"/>
                     <constraint firstAttribute="trailing" secondItem="yhz-Sy-9mg" secondAttribute="trailing" constant="20" id="oO5-BO-IDH"/>
                     <constraint firstItem="mmE-vJ-7R4" firstAttribute="top" secondItem="fzt-wQ-Vlz" secondAttribute="bottom" constant="20" id="ogu-W3-aUT"/>

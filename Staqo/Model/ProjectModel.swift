@@ -12,23 +12,25 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Allrequests : Codable {
-	let response_status : [Response_status]?
-	let list_info : List_info?
-	let requests : [Requests]?
+struct ProjectModel : Codable {
+	var id : Int?
+	var title : String?
+	var projectname : String?
 
 	enum CodingKeys: String, CodingKey {
 
-		case response_status = "response_status"
-		case list_info = "list_info"
-		case requests = "requests"
+		case id = "id"
+		case title = "title"
+		case projectname = "projectname"
 	}
-
+    init() {
+        
+    }
 	init(from decoder: Decoder) throws {
 		let values = try decoder.container(keyedBy: CodingKeys.self)
-		response_status = try values.decodeIfPresent([Response_status].self, forKey: .response_status)
-		list_info = try values.decodeIfPresent(List_info.self, forKey: .list_info)
-		requests = try values.decodeIfPresent([Requests].self, forKey: .requests)
+		id = try values.decodeIfPresent(Int.self, forKey: .id)
+		title = try values.decodeIfPresent(String.self, forKey: .title)
+		projectname = try values.decodeIfPresent(String.self, forKey: .projectname)
 	}
 
 }

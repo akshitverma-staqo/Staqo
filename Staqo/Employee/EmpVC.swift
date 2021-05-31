@@ -48,7 +48,7 @@ class EmpVC: BaseVC {
         shadowView.dropShadow()
         viewModal = EmpViewModal(dataSource: EmpDataSource())
         viewModal.delegate = self
-        viewModal.empDelegate = self
+        //viewModal.empDelegate = self
         viewModal.empUpdateDelegate = self
         viewModal.bootstrap()
         innerView.layer.cornerRadius = 20
@@ -142,7 +142,8 @@ extension EmpVC : ViewModelDelegate{
 
         view.endEditing(true)
         nameLabel.text = UserDefaults.standard.getProfile()?.givenName ?? ""
-        empIdLabel.text = (viewModal.field?.emailid ?? "").replacingOccurrences(of: "@oq.com", with: "")
+        jobTitleLabel.text = UserDefaults.standard.getProfile()?.jobTitle ?? ""
+        empIdLabel.text = UserDefaults.standard.getProfile()?.employeeId ?? ""
         if ((UserDefaults.standard.getProfile()?.mobileNo1 ?? "") == "") || ((viewModal.field?.mobileno2 ?? "") == "") {
            
             mobile1Label.text = "\(UserDefaults.standard.getProfile()?.mobileNo1 ?? "") \( viewModal.field?.mobileno2 ?? "" )"
@@ -222,18 +223,28 @@ extension EmpVC : UITextFieldDelegate {
         return true
     }
 }
-extension EmpVC : EmpRefreshDelegate{
-    func getRefresh() {
-        showErrorMessage(title: "", message: "Phone Number deleted successfully") { (action) in
-            self.viewModal.bootstrap()
-        }
-    }
-}
+//extension EmpVC : EmpRefreshDelegate{
+//    func getRefresh() {
+//        showErrorMessage(title: "", message: "Phone Number deleted successfully") { (action) in
+//            self.viewModal.bootstrap()
+//        }
+//    }
+//}
 extension EmpVC : EmpNoUpdateDelegate{
-    func updateNo() {
-        showErrorMessage(title: "", message: "Phone Number Submitted Successfully") { (action) in
-            self.viewModal.bootstrap()
+    func updateNo(status: String) {
+        
+        if status == "mobileupdate"{
+            showErrorMessage(title: "", message: "Phone Number Submitted Successfully") { (action) in
+                self.viewModal.bootstrap()
+            }
+        }else if status == "mobiledeleted"{
+            showErrorMessage(title: "", message: "Phone Number deleted successfully") { (action) in
+                        self.viewModal.bootstrap()
+                    }
         }
+        
+        
+      
     }
 
 }

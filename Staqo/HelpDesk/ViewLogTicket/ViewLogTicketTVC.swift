@@ -14,6 +14,8 @@ class ViewLogTicketTVC: UITableViewCell {
     @IBOutlet weak var dateTimeLbl: UILabel!
     @IBOutlet weak var subjectlbl: UILabel!
     @IBOutlet weak var ticketLbl: UILabel!
+    var requestData:[Requests]?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,12 +31,13 @@ class ViewLogTicketTVC: UITableViewCell {
 
     func dataBind(data:Requests?) {
   
-        ticketLbl.text = data?.id ?? ""
+        ticketLbl.text = data?.requestid ?? ""
         subjectlbl.text = data?.subject ?? ""
-        dateTimeLbl.text = data?.created_time?.display_value ?? ""
-        statusLbl.text = data?.status?.name ?? ""
-        closeDateTimeLbl.text = data?.created_time?.display_value ?? ""
+        dateTimeLbl.text = data?.created_time ?? ""
+        statusLbl.text = data?.status ?? ""
+        closeDateTimeLbl.text = data?.due_by_time ?? ""
 
+        
     }
     
 }

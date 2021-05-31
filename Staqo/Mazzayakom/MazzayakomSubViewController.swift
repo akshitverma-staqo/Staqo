@@ -20,6 +20,7 @@
         
         var accessToken = ""
         var arrDara = [MazzayakomCatListModel]()
+       // var arrDara1 = [MazzayakomCatURLModel]()
         var array = [""]
         var catId = ""
         var checkTableViewCount = 0
@@ -81,6 +82,10 @@
                                 self.arrDara.removeAll()
                                 for array in fieldsValue.arrayValue{
                                     self.arrDara.append(MazzayakomCatListModel(json: array["fields"]))
+                                   // self.arrDara1.append(MazzayakomCatURLModel(json: array["fields"]["Link"]))
+                                    print(array["fields"]["Link"])
+                                    print(self.arrDara)
+                                   // print(self.arrDara1)
                                     DispatchQueue.main.async{
                                         self.tableView.reloadData()
                                     }

@@ -17,6 +17,7 @@ class LoginViewModel: ViewModelType {
     }
     func bootstrap() {
         self.getTokenSilently()
+        
     }
      func signInAthentication(view:UIViewController){
         delegate?.willLoadData()

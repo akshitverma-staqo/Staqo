@@ -54,7 +54,7 @@ class Helper {
        return bookingdata
     }
     
-    static func createTicket(desc:String , subj:String , catID:String , prioName:String , subID:String) -> ReqHelper?  {
+    static func createTicket(desc:String , subj:String , catID:String , prioName:String , subID:String, email_ID:String, projName:String) -> ReqHelper?  {
         var reqHelper = ReqHelper()
         var request = Request()
         request.description = desc

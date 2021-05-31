@@ -12,23 +12,22 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct Allrequests : Codable {
-	let response_status : [Response_status]?
-	let list_info : List_info?
-	let requests : [Requests]?
+struct Request1 : Codable {
+	
+	let id : String?
+	
 
 	enum CodingKeys: String, CodingKey {
 
-		case response_status = "response_status"
-		case list_info = "list_info"
-		case requests = "requests"
+		
+		case id = "id"
+		
 	}
 
 	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
-		response_status = try values.decodeIfPresent([Response_status].self, forKey: .response_status)
-		list_info = try values.decodeIfPresent(List_info.self, forKey: .list_info)
-		requests = try values.decodeIfPresent([Requests].self, forKey: .requests)
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+		id = try values.decodeIfPresent(String.self, forKey: .id)
+		
 	}
 
 }

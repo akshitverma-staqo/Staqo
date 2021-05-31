@@ -9,8 +9,8 @@ import Foundation
 
 class ViewLogTicketViewModel: ViewModelType {
    
-    
     var rowsRequests:[Requests]?
+   
 //    var statusRows: Status?
   //  var createdTimeRows: Created_time?
     var delegate: ViewModelDelegate?
@@ -32,7 +32,7 @@ class ViewLogTicketViewModel: ViewModelType {
           switch result {
           case .success(let baseModel):
               print(baseModel)
-            ws.rowsRequests = baseModel.allrequests?.requests
+            ws.rowsRequests = baseModel.allrequests
 //            baseModel.allrequests?.requests?.forEach({ value in
 //                ws.statusRows = value.status
 //            })

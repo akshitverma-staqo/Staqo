@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R5f-UK-tU9">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -23,7 +23,7 @@
                 <navigationController storyboardIdentifier="DashboardNavigationVC" automaticallyAdjustsScrollViewInsets="NO" id="R5f-UK-tU9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="D0I-6g-VIT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -40,18 +40,18 @@
             <objects>
                 <viewController storyboardIdentifier="LoginVC" modalPresentationStyle="fullScreen" id="gAz-T9-YJH" customClass="LoginVC" customModule="Staqo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FJK-r3-vBw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bvB-WH-Fom">
-                                <rect key="frame" x="132" y="682" width="150" height="95"/>
+                                <rect key="frame" x="112.5" y="487" width="150" height="95"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="4JQ-gB-5z9"/>
                                     <constraint firstAttribute="height" constant="95" id="Tbu-Ho-3kY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2021 OQ SAOC. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fq-1I-ydY">
-                                <rect key="frame" x="154.5" y="817" width="105" height="15"/>
+                                <rect key="frame" x="135" y="622" width="105" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Cb4-rG-dtP"/>
                                 </constraints>
@@ -60,7 +60,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gpo-PE-akm">
-                                <rect key="frame" x="77" y="440" width="260" height="70"/>
+                                <rect key="frame" x="57.5" y="320.5" width="260" height="70"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-HM-gAf">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="70"/>
@@ -107,7 +107,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiral" translatesAutoresizingMaskIntoConstraints="NO" id="nPj-XY-Ty7">
-                                <rect key="frame" x="292" y="168" width="217" height="224"/>
+                                <rect key="frame" x="253" y="124" width="217" height="224"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="217" id="XBC-JE-jqr"/>
                                     <constraint firstAttribute="height" constant="224" id="f5H-DA-La4"/>

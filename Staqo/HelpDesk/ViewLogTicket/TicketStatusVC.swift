@@ -10,7 +10,7 @@ import UIKit
 class TicketStatusVC: UIViewController {
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
-    var rowsRequests:Requests?
+    var rowsRequests: Requests?
     @IBOutlet weak var closeDateTxt: UITextField!
     @IBOutlet weak var statusTxt: UITextField!
     @IBOutlet weak var taskDetailsTxtv: UITextView!
@@ -25,11 +25,11 @@ class TicketStatusVC: UIViewController {
         
         print(rowsRequests ?? 0)
         herderView.addSubview(header)
-//        closeDateTxt.text = rowsRequests?.cancel_requested ?? ""
-//        statusTxt.text = rowsRequests?.status ?? ""
-//        taskDetailsTxtv.text =
-//        creationDateTxt.text
-//        locationtxt.text = rowsRequests?.
+      //  closeDateTxt.text = rowsRequests?.
+        statusTxt.text = rowsRequests?.status ?? ""
+    //    taskDetailsTxtv.text =
+      //  creationDateTxt.text
+      //  locationtxt.text = rowsRequests?.
         
         getImage()
         

@@ -1,16 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "lapy2x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "dashboard8.png",
+      "filename" : "lazy1x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dashboard8-1.png",
+      "filename" : "AnnualLeave3x1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

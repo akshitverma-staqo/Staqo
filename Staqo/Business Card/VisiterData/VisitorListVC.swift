@@ -11,6 +11,7 @@ class VisitorListVC:  BaseVC {
     
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
+    @IBOutlet weak var hideBtn: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tblView: UITableView!
     private let kVisiterListTVC = "VisiterListTVC"
@@ -30,10 +31,18 @@ class VisitorListVC:  BaseVC {
         viewModal = VisiterListViewModal(dataSource: VisitorListDataSource())
         viewModal.delegate = self
       getImage()
+        hideBtn.setTitleColor(UIColor.gray, for: UIControl.State.normal)
+        searchBar.resignFirstResponder()
+      //  searchBar.returnKeyType = .done
         tblView.register(UINib(nibName: kVisiterListTVC, bundle: nil), forCellReuseIdentifier: kVisiterListTVC)
-        
+     //   searchBar.searchTextField.keyboardToolbar.doneBarButton.setTarget(self, action: #selector(doneBtnClicked))
         // Do any additional setup after loading the view.
     }
+    @objc func doneBtnClicked() {
+        
+    }
+  
+    
     func getImage(){
         
         if  let imageString = UserDefaults.standard.getProfileImage() {
@@ -45,6 +54,10 @@ class VisitorListVC:  BaseVC {
             }
         }
     }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//          view.endEditing(true)
+//          return true
+//       }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
@@ -53,10 +66,55 @@ class VisitorListVC:  BaseVC {
         self.navigationController?.isNavigationBarHidden = true
     }
    
+    @IBAction func hidekeyboard(_ sender: Any) {
+        
+        searchBar.text = nil
+        hideBtn.setTitleColor(UIColor.gray, for: UIControl.State.normal)
+        searchBar.resignFirstResponder()
+        filteredData = viewModal.valueData
+        tblView.reloadData()
 
+    }
+    
+}
+extension VisitorListVC:UISearchBarDelegate{
+   
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+       
+       
+
+        if searchText.isEmpty == false {
+            
+
+            filteredData = viewModal.valueData?.filter {
+                return ($0.fields?.name?.localizedCaseInsensitiveContains(searchText) ?? false || $0.fields?.mobileno1?.contains(searchText) ?? false)
+            }
+             print(filteredData)
+//            if let data = filteredData {
+//                viewModal.valueData? = data
+//            }
+          // check karo
+
+        }else{
+            filteredData = viewModal.valueData
+        }
+        
+        tblView.reloadData()
+    }
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        tblView.resignFirstResponder()
+        hideBtn.setTitleColor(UIColor.systemBlue, for: UIControl.State.normal)
+    }
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
 }
 
-extension VisitorListVC : UITableViewDelegate , UITableViewDataSource, UISearchBarDelegate {
+extension VisitorListVC : UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredData?.count ?? 0
     }
@@ -72,33 +130,9 @@ extension VisitorListVC : UITableViewDelegate , UITableViewDataSource, UISearchB
         return cell
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       
-        
-        
-        if searchText.isEmpty == false {
-            
-            filteredData = viewModal.valueData?.filter {
-                return ($0.fields?.name?.contains(searchText) ?? false || $0.fields?.mobileno1?.contains(searchText) ?? false)
-            }
-             print(filteredData)
-//            if let data = filteredData {
-//                viewModal.valueData? = data
-//            }
-          // check karo
+ 
+   
 
-        }else{
-            filteredData = viewModal.valueData
-        }
-      
-        
-        
-
-
-        tblView.reloadData()
-    }
-
-    
     //Code Cell Selected
     
     @objc func callBtnTap(_ sender : UIButton){

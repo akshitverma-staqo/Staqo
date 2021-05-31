@@ -19,9 +19,11 @@ struct BaseModel : Codable {
     var bookedRoomModel:[BookedRoomModel]?
     var selectedRoomOptionModel:SelectedRoomOptionModel?
     var categories : [Categories]?
-    var allrequests : Allrequests?
+    var projectmodel : [ProjectModel]?
+    var allrequests : [Requests]?
     var subcategories : [Subcategories]?
     var documentsData : [Documents]?
+    var HelpModelData : [HelpdeskModel]?
     var error : ErrorLog?
     
     
@@ -37,7 +39,7 @@ struct BaseModel : Codable {
         case bookedRoomModel = "booked"
         case selectedRoomOptionModel = "selectedOptions"
         case categories = "categories"
-        case allrequests = "allrequests"
+        case allrequests = "requests"
         case subcategories = "subcategories"
         case documentsData = "documents"
         case error = "error"
@@ -57,7 +59,7 @@ struct BaseModel : Codable {
         bookedRoomModel = try values.decodeIfPresent([BookedRoomModel].self, forKey: .bookedRoomModel)
         selectedRoomOptionModel = try values.decodeIfPresent(SelectedRoomOptionModel.self, forKey: .selectedRoomOptionModel)
         categories = try values.decodeIfPresent([Categories].self, forKey: .categories)
-        allrequests = try values.decodeIfPresent(Allrequests.self, forKey: .allrequests)
+        allrequests = try values.decodeIfPresent([Requests].self, forKey: .allrequests)
         subcategories = try values.decodeIfPresent([Subcategories].self, forKey: .subcategories)
         documentsData = try values.decodeIfPresent([Documents].self, forKey: .documentsData)
         error = try values.decodeIfPresent(ErrorLog.self, forKey: .error)

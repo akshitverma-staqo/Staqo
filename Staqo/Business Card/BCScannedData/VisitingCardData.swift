@@ -354,10 +354,7 @@ class VisitingCardData: BaseVC {
             showErrorMessage(title: "Alert", message: "Email is not Valid") { (action) in
             
             }
-
-
-        }
-        if (self.nameTextField.text?.count ?? 0) <= 0 {
+        }else if (self.nameTextField.text?.count ?? 0) <= 0 {
             showErrorMessage(title: "Alert", message: "Name should not be blank") { (action) in
             
             }
@@ -369,8 +366,8 @@ class VisitingCardData: BaseVC {
 
         }
         
-        else if (self.webSiteTextField.text?.count ?? 0) <= 0 {
-            showErrorMessage(title: "Alert", message: "Website should not be blank") { (action) in
+        else if !Constant.isValidWenUrl(url: self.webSiteTextField.text ?? "") {
+            showErrorMessage(title: "Alert", message: "Please enter the valid Website") { (action) in
             
             }
 

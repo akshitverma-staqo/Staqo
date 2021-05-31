@@ -29,6 +29,8 @@ struct MazzayakomCatListModel {
         Title = json["Title"].stringValue
         
         Description = json["Description"].stringValue
+      
+        
         
        
        

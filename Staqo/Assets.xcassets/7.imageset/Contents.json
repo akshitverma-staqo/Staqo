@@ -1,16 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "sign1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "dashboard9.png",
+      "filename" : "sign2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dashboard9-1.png",
+      "filename" : "Sign3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

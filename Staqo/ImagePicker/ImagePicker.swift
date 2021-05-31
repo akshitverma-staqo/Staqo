@@ -18,7 +18,7 @@ protocol ImagePickerDelegate: class {
 }
 
 class ImagePicker: NSObject {
-    
+
     private weak var controller: UIImagePickerController?
     weak var delegate: ImagePickerDelegate? = nil
     var btn:UIButton!

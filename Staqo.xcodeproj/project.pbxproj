@@ -13,6 +13,10 @@
 		76257D9E25DF70C100F1BD47 /* Century Gothic 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */; };
 		76257D9F25DF70C100F1BD47 /* Century Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */; };
 		7660FD832613858C00C43B25 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660FD822613858B00C43B25 /* RoomModel.swift */; };
+		7661890A2654E9D00019B49D /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766189092654E9D00019B49D /* ProjectModel.swift */; };
+		7661891226554B810019B49D /* HelpdeskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661891126554B800019B49D /* HelpdeskModel.swift */; };
+		7661891A26554BB80019B49D /* Helpdesk_request1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661891926554BB80019B49D /* Helpdesk_request1.swift */; };
+		7661892D265561CA0019B49D /* Request1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661892C265561CA0019B49D /* Request1.swift */; };
 		76656D88260C65B10080669B /* FAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656D7F260C65B00080669B /* FAQViewController.swift */; };
 		76656D89260C65B10080669B /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656D80260C65B00080669B /* AboutUsController.swift */; };
 		76656D8A260C65B10080669B /* TermConditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76656D81260C65B00080669B /* TermConditionViewController.swift */; };
@@ -50,6 +54,7 @@
 		767BEBDA2601264900B6A3C3 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBD92601264900B6A3C3 /* Documents.swift */; };
 		767BEBE0260126B400B6A3C3 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBDF260126B400B6A3C3 /* Helper.swift */; };
 		767BEBE526012CCC00B6A3C3 /* BusinessDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBE426012CCC00B6A3C3 /* BusinessDataSource.swift */; };
+		768815F52663FBC20087061F /* MazzayakomCatURLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768815F42663FBC20087061F /* MazzayakomCatURLModel.swift */; };
 		7691069C264811E600A0B3E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7691069B264811E600A0B3E9 /* LoginVC.swift */; };
 		7691069D264811E600A0B3E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7691069B264811E600A0B3E9 /* LoginVC.swift */; };
 		7691069E264811E600A0B3E9 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7691069B264811E600A0B3E9 /* LoginVC.swift */; };
@@ -228,6 +233,10 @@
 		76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic 400.ttf"; sourceTree = "<group>"; };
 		76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic.ttf"; sourceTree = "<group>"; };
 		7660FD822613858B00C43B25 /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
+		766189092654E9D00019B49D /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		7661891126554B800019B49D /* HelpdeskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpdeskModel.swift; sourceTree = "<group>"; };
+		7661891926554BB80019B49D /* Helpdesk_request1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpdesk_request1.swift; sourceTree = "<group>"; };
+		7661892C265561CA0019B49D /* Request1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request1.swift; sourceTree = "<group>"; };
 		76656D7F260C65B00080669B /* FAQViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQViewController.swift; sourceTree = "<group>"; };
 		76656D80260C65B00080669B /* AboutUsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
 		76656D81260C65B00080669B /* TermConditionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermConditionViewController.swift; sourceTree = "<group>"; };
@@ -265,6 +274,7 @@
 		767BEBD92601264900B6A3C3 /* Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
 		767BEBDF260126B400B6A3C3 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		767BEBE426012CCC00B6A3C3 /* BusinessDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessDataSource.swift; sourceTree = "<group>"; };
+		768815F42663FBC20087061F /* MazzayakomCatURLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MazzayakomCatURLModel.swift; sourceTree = "<group>"; };
 		7691069B264811E600A0B3E9 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7692359C26396CC7008FF3BE /* DemoArrangeType copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DemoArrangeType copy.jpg"; sourceTree = "<group>"; };
 		7693C61625F3D694001665DF /* MenuViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModal.swift; sourceTree = "<group>"; };
@@ -924,7 +934,9 @@
 		CD5DB49325D5A8D700353084 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				766189092654E9D00019B49D /* ProjectModel.swift */,
 				76D66ECA2619F9630013E5B4 /* MazzayakomCatListModel.swift */,
+				768815F42663FBC20087061F /* MazzayakomCatURLModel.swift */,
 				7660FD822613858B00C43B25 /* RoomModel.swift */,
 				CD5DB49425D5A8E900353084 /* BaseModel.swift */,
 				7697063F262B347B0063BABA /* Data.swift */,
@@ -968,6 +980,9 @@
 				769705F8262036780063BABA /* Priority.swift */,
 				769705F326201C1E0063BABA /* Subcategories.swift */,
 				769B1FDB26301C660077B625 /* ImageIcon.swift */,
+				7661891126554B800019B49D /* HelpdeskModel.swift */,
+				7661891926554BB80019B49D /* Helpdesk_request1.swift */,
+				7661892C265561CA0019B49D /* Request1.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1302,6 +1317,7 @@
 				7660FD832613858C00C43B25 /* RoomModel.swift in Sources */,
 				769706082620B3400063BABA /* Resolution.swift in Sources */,
 				76D66EA92619B3570013E5B4 /* ApproveCancelVC.swift in Sources */,
+				7661891226554B810019B49D /* HelpdeskModel.swift in Sources */,
 				7693C63D25F3E5A6001665DF /* BusinessVC.swift in Sources */,
 				76C3AC70261F1E0900FC6B85 /* Categories.swift in Sources */,
 				76656DAB260DAB280080669B /* NotificationViewModel.swift in Sources */,
@@ -1314,6 +1330,7 @@
 				76B205C025DEDBD70056FC68 /* HomeCollectionViewCell.swift in Sources */,
 				767BBC832635B95500693B63 /* ErrorLog.swift in Sources */,
 				26CD070625E41EE7001C6D60 /* UPCarouselFlowLayout.swift in Sources */,
+				7661890A2654E9D00019B49D /* ProjectModel.swift in Sources */,
 				76A0F552260B7B2E00601483 /* RoomBookingViewModel.swift in Sources */,
 				CD5DB48B25D5A60C00353084 /* Extension.swift in Sources */,
 				CD5DB48F25D5A60C00353084 /* ResourceType.swift in Sources */,
@@ -1324,6 +1341,7 @@
 				76B205A825DED5370056FC68 /* HomeVC.swift in Sources */,
 				769706032620B2C30063BABA /* Request.swift in Sources */,
 				76D66E8E2618A3890013E5B4 /* SelectedRoomOptionModel.swift in Sources */,
+				7661891A26554BB80019B49D /* Helpdesk_request1.swift in Sources */,
 				76656D8B260C65B10080669B /* PrivacyViewController.swift in Sources */,
 				76D66EB62619B3850013E5B4 /* ACDataSource.swift in Sources */,
 				76A103C225F7E72D00C536B9 /* ContentType.swift in Sources */,
@@ -1412,6 +1430,7 @@
 				76F1FB3225F2915B00D88F79 /* EmpDataSource.swift in Sources */,
 				76A1045C25FF9AE100C536B9 /* ScanQRViewController.swift in Sources */,
 				7697061C26287F4B0063BABA /* VisitingCardData.swift in Sources */,
+				768815F52663FBC20087061F /* MazzayakomCatURLModel.swift in Sources */,
 				76F1FB2A25F281F200D88F79 /* EmpViewModal.swift in Sources */,
 				769B1FDC26301C660077B625 /* ImageIcon.swift in Sources */,
 				76656D8F260C65B10080669B /* FAQAnswerTableViewCell.swift in Sources */,
@@ -1421,6 +1440,7 @@
 				CD5DB48925D5A60C00353084 /* Date.swift in Sources */,
 				76656D8D260C65B10080669B /* FAQHeaderTableViewCell.swift in Sources */,
 				76C3ACAD261F61CE00FC6B85 /* Site.swift in Sources */,
+				7661892D265561CA0019B49D /* Request1.swift in Sources */,
 				76970621262880000063BABA /* UITextViewPlaceholder.swift in Sources */,
 				CD5DB46B25D5A56100353084 /* BaseVC.swift in Sources */,
 				76A0AF172616E2750084E1F8 /* BooKRoomVC.swift in Sources */,

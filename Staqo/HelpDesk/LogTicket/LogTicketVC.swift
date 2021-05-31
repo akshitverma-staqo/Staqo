@@ -20,11 +20,13 @@ class LogTicketVC: BaseVC, UITableViewDelegate {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
-       
         herderView.addSubview(header)
         // Do any additional setup after loading the view.
         viewModel = LogTicketViewModel(dataSource: LogTicketDataSource())
         viewModel.delegate = self
+        viewModel._delegate = self
+
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         tableView.register(UINib(nibName: kLogTicketTVC, bundle: nil), forCellReuseIdentifier: kLogTicketTVC)
@@ -76,6 +78,7 @@ extension LogTicketVC: UITableViewDataSource{
         cell.delegate = self
         cell.dataBind(data: viewModel.rows, index: indexPath, vc: self)
         cell.dataBind1(dataSubCat: viewModel.rowsSubCat, index: indexPath)
+        cell.dataBind2(dataprject: viewModel.prjectrows, index: indexPath)
         return cell
     }
     
@@ -84,6 +87,19 @@ extension LogTicketVC: UITableViewDataSource{
         
     }
     
+}
+
+extension LogTicketVC :TSModelDelegate{
+    
+    func ticketUploadStatus() {
+        stopLoader()
+        showErrorMessage(title: "", message: "Successfully Submited") { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+  
+  
 }
 
 extension LogTicketVC : ViewModelDelegate{
@@ -132,22 +148,36 @@ extension LogTicketVC: HeaderViewDelegate{
 
 
 extension LogTicketVC : LogTicketTCVDelegate{
-    func uploadImage(file: Data, ID: String) {
-        viewModel.ticketImageUpload(file: file, ID: ID)
+    func loaderrun() {
+        startLoader()
     }
     
-    func submitRequest(desc: String, subj: String, catID: String, prioName: String, subID: String) {
-        guard  let value = Helper.createTicket(desc: desc, subj: subj, catID: catID, prioName: prioName, subID: subID) else {
-                return
-            }
-            do {
-            let data = try JSONEncoder().encode(value)
-                let str = String(data: data, encoding:.utf8)
-                print(str)
-                viewModel.submitTicketData(value: str!)
-            }catch{
+    func loaderstop() {
+        stopLoader()
+    }
+    
+  
+    
+ 
+    func uploadImage(file: String, ID: String, fileName:String) {
+        viewModel.file = file
+        viewModel.fileName = fileName
+        
+    }
+   
+    func submitRequest(desc: String, subj: String, catID: String, prioName: String, subID: String, email_ID:String, projName:String) {
+//        guard  let value = Helper.createTicket(desc: desc, subj: subj, catID: catID, prioName: prioName, subID: subID, email_ID: email_ID, projName: projName) else {
+//                return
+//            }
+//            do {
+//            let data = try JSONEncoder().encode(value)
+//                let str = String(data: data, encoding:.utf8)
+//                print(str)
                 
-            }
+                viewModel.submitTicketData(desc: desc, subj: subj, catID: catID, prioName: prioName, subID: subID, email_ID: email_ID, projName: projName)
+//            }catch{
+//
+//            }
         
     }
     func getSubCat(ID: String) {
@@ -161,3 +191,5 @@ extension LogTicketVC : LogTicketTCVDelegate{
     }
 
 }
+
+
