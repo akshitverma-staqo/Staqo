@@ -12,7 +12,7 @@ struct FreeRoomModel : Codable,Equatable {
     let roomCode : String?
     let name : String?
     let floor : Double?
-    let capacity : Double?
+    let capacity : Int?
     let status : String?
     let sequenceNumber : Int?
     let webUrl:String?
@@ -49,7 +49,7 @@ struct FreeRoomModel : Codable,Equatable {
         roomCode = try values.decodeIfPresent(String.self, forKey: .roomCode)
         name = try values.decodeIfPresent(String.self, forKey: .name)
         floor = try values.decodeIfPresent(Double.self, forKey: .floor)
-        capacity = try values.decodeIfPresent(Double.self, forKey: .capacity)
+        capacity = try values.decodeIfPresent(Int.self, forKey: .capacity)
         status = try values.decodeIfPresent(String.self, forKey: .status)
         sequenceNumber = try values.decodeIfPresent(Int.self, forKey: .sequenceNumber)
         webUrl = try values.decodeIfPresent(String.self, forKey: .webUrl)

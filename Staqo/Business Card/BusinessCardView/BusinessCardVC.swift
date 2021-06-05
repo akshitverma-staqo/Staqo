@@ -161,8 +161,6 @@ class BusinessCardVC: BaseVC {
         
     }
     
-    
-    
     func generateQRCode(mobileNo:String) {
         self.QRCodeImg.image = self.generateQRCodef(from: "BEGIN:VCARD \n" +
                                                         "VERSION:3.0 \n" +
@@ -188,7 +186,7 @@ extension BusinessCardVC: ViewModelDelegate{
     func didLoadData() {
         
         stopLoader()
-        nameLabel.text = UserDefaults.standard.getProfile()?.givenName ?? ""
+        nameLabel.text = UserDefaults.standard.getProfile()?.name ?? ""
         jobTitleLabel.text = UserDefaults.standard.getProfile()?.jobTitle ?? ""
         
         if ((UserDefaults.standard.getProfile()?.mobileNo1 ?? "") == "") || ((viewModal.field?.mobileno2 ?? "") == "") {

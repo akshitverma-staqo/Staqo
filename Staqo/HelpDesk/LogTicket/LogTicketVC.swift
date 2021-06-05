@@ -31,6 +31,7 @@ class LogTicketVC: BaseVC, UITableViewDelegate {
         self.tableView.dataSource = self
         tableView.register(UINib(nibName: kLogTicketTVC, bundle: nil), forCellReuseIdentifier: kLogTicketTVC)
         self.navigationController?.isNavigationBarHidden = true
+        
         getImage()
         viewModel.bootstrap()
     }

@@ -74,9 +74,9 @@ class LogTicketTVC: UITableViewCell, UIImagePickerControllerDelegate & UINavigat
 //        else if (attachmentLbl.text?.count ?? 0) <= 0 {
 //            delegate?.showMsgValidation(msg: "Please select the Attachment")
 //        }
-        else if (companyTxt.text?.count ?? 0) <= 0 {
-            delegate?.showMsgValidation(msg: "Please select the Project")
-        }
+//        else if (companyTxt.text?.count ?? 0) <= 0 {
+//            delegate?.showMsgValidation(msg: "Please select the Project")
+//        }
         else if (priorityTxt.text?.count ?? 0) <= 0 {
             delegate?.showMsgValidation(msg: "Please select the Priority")
         }
@@ -84,11 +84,9 @@ class LogTicketTVC: UITableViewCell, UIImagePickerControllerDelegate & UINavigat
         else{
            
   //          print(subCatData?[selectedIndex].id ?? "")
-            delegate?.submitRequest(desc: descriptionTxt.text ?? "", subj: subjectTxt.text ?? "", catID: catIDData , prioName: priorityTxt.text ?? "", subID: subCatIDData, email_ID: (UserDefaults.standard.getProfile()?.email)!, projName: companyTxt.text ?? "")
-            
-            
+            delegate?.submitRequest(desc: descriptionTxt.text ?? "", subj: subjectTxt.text ?? "", catID: catIDData , prioName: priorityTxt.text ?? "", subID: subCatIDData, email_ID: (UserDefaults.standard.getProfile()?.email)!, projName: "null")
             print("Category:" + "\(catData?[selectedIndex].id)" + "SubcatID:" + "\(subCatData?[selectedIndex].id)")
-            
+        
         }
         
       
@@ -122,6 +120,7 @@ extension LogTicketTVC : UIPickerViewDataSource, UIPickerViewDelegate {
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+
         if txtTag == 1{
 
             return 0
@@ -200,12 +199,12 @@ extension LogTicketTVC : UIPickerViewDataSource, UIPickerViewDelegate {
            
         }
         else if txtTag == 4 {
-          //  selectedIndex = row
             selectedIndex = row
-            categoryTxt.text = prjectData?[row].projectname ?? ""
+            print(selectedIndex)
+            companyTxt.text = prjectData?[row].projectname ?? ""
         }
         else if txtTag == 5{
-         //   selectedIndex = row
+            selectedIndex = row
             priorityTxt.text = priorityArray[row]
         }else {
             
@@ -238,10 +237,14 @@ extension LogTicketTVC : UITextFieldDelegate{
 //            }else{
 //                picker.selectRow(subCount, inComponent: 0, animated: false)
 //            }
-            
+            if categoryTxt.text == ""{
+                delegate?.showMsgValidation(msg: "Please select Category")
+            }else{
+                subCatTxt.inputView = picker
+                picker.reloadAllComponents()
+            }
 
-            subCatTxt.inputView = picker
-            picker.reloadAllComponents()
+           
         }
         else if txtTag == 4{
             companyTxt.inputView = picker
@@ -277,6 +280,7 @@ extension LogTicketTVC : UITextFieldDelegate{
                  
              }
          }
+        
     }
 }
        

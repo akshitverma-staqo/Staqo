@@ -29,7 +29,7 @@ class LogTicketViewModel: ViewModelType {
     
     func bootstrap() {
         getCatergoryData()
-        getCompanyyData()
+        //getCompanyyData()
     }
     
     func ticketImageUpload(file: String, ID:String, fileName:String){

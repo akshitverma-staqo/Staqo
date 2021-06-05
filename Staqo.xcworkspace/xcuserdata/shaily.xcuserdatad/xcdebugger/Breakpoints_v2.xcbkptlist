@@ -46,8 +46,8 @@
             filePath = "Staqo/HelpDesk/LogTicket/LogTicketVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "ticketUploadStatus()"
             landmarkType = "7">
          </BreakpointContent>
@@ -65,22 +65,6 @@
             startingLineNumber = "84"
             endingLineNumber = "84"
             landmarkName = "request(target:progress:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1221C903-22B9-4D87-8CE6-1F0B35B8C1DB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Staqo/Shared/NetworkClient.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "requestAlmofire(passToUrl:passToMethod:passToParameter:passToHeader:success:error:failure:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,21 +89,6 @@
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "generic specialization &lt;Staqo.BaseModel&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static Staqo.NetworkClient.request&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(target: Staqo.ResourceType, success: (Staqo.StaoqResult&lt;A&gt;) -&gt; (), error: (Staqo.CustomError) -&gt; (), failure: (Staqo.CustomError) -&gt; ()) -&gt; ()"
-                  moduleName = "Staqo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shaily/Documents/OQ_Ios/Staqo/Staqo/Shared/NetworkClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "207"
-                  endingLineNumber = "207"
-                  offsetFromSymbolStart = "498">
-               </Location>
-               <Location
-                  uuid = "32AB3431-3FBE-45B6-9DF8-F9E8C4660A30 - f9e27b530a7bba5d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "generic specialization &lt;Swift.Array&lt;Staqo.ProjectModel&gt;&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static Staqo.NetworkClient.request&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(target: Staqo.ResourceType, success: (Staqo.StaoqResult&lt;A&gt;) -&gt; (), error: (Staqo.CustomError) -&gt; (), failure: (Staqo.CustomError) -&gt; ()) -&gt; ()"
                   moduleName = "Staqo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shaily/Documents/OQ_Ios/Staqo/Staqo/Shared/NetworkClient.swift"
@@ -175,21 +144,6 @@
                   offsetFromSymbolStart = "498">
                </Location>
                <Location
-                  uuid = "32AB3431-3FBE-45B6-9DF8-F9E8C4660A30 - a3a2a9257e05cefb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "generic specialization &lt;Swift.Array&lt;Staqo.RoomModel&gt;&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static Staqo.NetworkClient.request&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(target: Staqo.ResourceType, success: (Staqo.StaoqResult&lt;A&gt;) -&gt; (), error: (Staqo.CustomError) -&gt; (), failure: (Staqo.CustomError) -&gt; ()) -&gt; ()"
-                  moduleName = "Staqo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/shaily/Documents/OQ_Ios/Staqo/Staqo/Shared/NetworkClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "207"
-                  endingLineNumber = "207"
-                  offsetFromSymbolStart = "498">
-               </Location>
-               <Location
                   uuid = "32AB3431-3FBE-45B6-9DF8-F9E8C4660A30 - ad5ecaa6fe7d88a4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -205,11 +159,11 @@
                   offsetFromSymbolStart = "498">
                </Location>
                <Location
-                  uuid = "32AB3431-3FBE-45B6-9DF8-F9E8C4660A30 - 17554b6f4610d68d"
+                  uuid = "32AB3431-3FBE-45B6-9DF8-F9E8C4660A30 - a3a2a9257e05cefb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "generic specialization &lt;Swift.Array&lt;Staqo.Location&gt;&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static Staqo.NetworkClient.request&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(target: Staqo.ResourceType, success: (Staqo.StaoqResult&lt;A&gt;) -&gt; (), error: (Staqo.CustomError) -&gt; (), failure: (Staqo.CustomError) -&gt; ()) -&gt; ()"
+                  symbolName = "generic specialization &lt;Swift.Array&lt;Staqo.RoomModel&gt;&gt; of closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static Staqo.NetworkClient.request&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(target: Staqo.ResourceType, success: (Staqo.StaoqResult&lt;A&gt;) -&gt; (), error: (Staqo.CustomError) -&gt; (), failure: (Staqo.CustomError) -&gt; ()) -&gt; ()"
                   moduleName = "Staqo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/shaily/Documents/OQ_Ios/Staqo/Staqo/Shared/NetworkClient.swift"

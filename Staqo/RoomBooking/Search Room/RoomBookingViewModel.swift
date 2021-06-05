@@ -24,8 +24,10 @@ class RoomBookingViewModel: ViewModelType {
     
     func bootstrap() {
         
-        self.getRoomLocation()
+        //self.getRoomLocation()
+        self.getAllRoomData(ID: "2")
         self.getRoomType()
+        
     }
     
     func getAllRoomData(ID:String){

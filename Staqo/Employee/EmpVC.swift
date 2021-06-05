@@ -141,7 +141,7 @@ extension EmpVC : ViewModelDelegate{
         stopLoader()
 
         view.endEditing(true)
-        nameLabel.text = UserDefaults.standard.getProfile()?.givenName ?? ""
+        nameLabel.text = UserDefaults.standard.getProfile()?.name ?? ""
         jobTitleLabel.text = UserDefaults.standard.getProfile()?.jobTitle ?? ""
         empIdLabel.text = UserDefaults.standard.getProfile()?.employeeId ?? ""
         if ((UserDefaults.standard.getProfile()?.mobileNo1 ?? "") == "") || ((viewModal.field?.mobileno2 ?? "") == "") {

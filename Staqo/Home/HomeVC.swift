@@ -479,7 +479,7 @@ extension HomeVC: ViewModelDelegate{
        
         currentPage.numberOfPages = viewModel.rows?.count ?? 0
         
-        userLbl.text = UserDefaults.standard.getProfile()?.givenName
+        userLbl.text = UserDefaults.standard.getProfile()?.name
         
         homeCollectionView.reloadData()
         gridCollectionView.reloadData()

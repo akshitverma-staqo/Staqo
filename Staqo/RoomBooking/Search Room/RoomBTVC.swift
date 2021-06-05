@@ -128,9 +128,10 @@ class RoomBTVC: UITableViewCell {
     
     @IBAction func roomSearchBtn(_ sender: Any) {
         
-        if (locationTxt.text?.count ?? 0) <= 0 {
-            delegate?.showMsgValidation(msg: "Please select the location")
-        }else if( NumberVisitorTxt.text?.count ?? 0) <= 0 {
+//        if (locationTxt.text?.count ?? 0) <= 0 {
+//            delegate?.showMsgValidation(msg: "Please select the location")
+//        }else
+        if( NumberVisitorTxt.text?.count ?? 0) <= 0 {
             delegate?.showMsgValidation(msg: "Please provide no of Attendees ")
         }else if vistorType ==  "" {
             delegate?.showMsgValidation(msg: "Please select the Attendees Type")
@@ -160,7 +161,7 @@ class RoomBTVC: UITableViewCell {
 //            delegate?.showMsgValidation(msg: "Please select the Room Code  ")
 //        }
         else{
-            guard  let value = Helper.creatingRoomData(locID:rowsLoc?[locIndex].id ?? 0 , attendents: Int(NumberVisitorTxt.text ?? "0") ?? 0, fromDateTime: (fromDateTxt.text ?? "") + " " + (fromTimeTxt.text ?? ""), toDateTime: (toDateTxt.text ?? "") +  " " + (toTimeTxt.text ?? ""), remarks: purposeTxtView.text ?? "", visitorType: vistorType, roomType: roomTypeTxt.text ?? "", arrangementType: arrangmentTct.text ?? "", roomCode: roomCodeTxt.text ?? "", recurringDay: recurringDay)else {
+            guard  let value = Helper.creatingRoomData(locID: 2 , attendents: Int(NumberVisitorTxt.text ?? "0") ?? 0, fromDateTime: (fromDateTxt.text ?? "") + " " + (fromTimeTxt.text ?? ""), toDateTime: (toDateTxt.text ?? "") +  " " + (toTimeTxt.text ?? ""), remarks: purposeTxtView.text ?? "", visitorType: vistorType, roomType: roomTypeTxt.text ?? "", arrangementType: arrangmentTct.text ?? "", roomCode: roomCodeTxt.text ?? "", recurringDay: recurringDay)else {
                     return
                 }
                 do {
@@ -517,9 +518,10 @@ extension RoomBTVC: UITextFieldDelegate{
         }
         else{
             
-            if locationTxt.text == "" && txtTag == 9 {
-                delegate?.showMsgValidation(msg: "Please select the location")
-            }else if roomTypeTxt.text == "" && txtTag == 8{
+//            if locationTxt.text == "" && txtTag == 9 {
+//                delegate?.showMsgValidation(msg: "Please select the location")
+//            }
+             if roomTypeTxt.text == "" && txtTag == 8{
                 delegate?.showMsgValidation(msg: "Please select the Room Type  ")
             }
             else if txtTag == 1 {
@@ -567,12 +569,12 @@ extension RoomBTVC: UITextFieldDelegate{
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if txtTag == 1 {
-            if locationTxt.text != nil {
-                delegate?.getAllRooms(ID: "\(rowsLoc?[selectedIndex].id ?? 0)")
-            }
-        }
-        else if txtTag == 3{
+//        if txtTag == 1 {
+//            if locationTxt.text != nil {
+//                delegate?.getAllRooms(ID: "2")
+//            }
+//        }
+         if txtTag == 3{
             toDateTxt.text  = nil
         }
         
@@ -739,10 +741,11 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if txtTag == 1{
-        return rowsLoc?.count ?? 0
-        }
-        else if txtTag == 7 {
+//        if txtTag == 1{
+//        return rowsLoc?.count ?? 0
+//        }
+//        else
+        if txtTag == 7 {
             return rowsRoom?.count ?? 0
         }else if txtTag == 8 {
             return arrangModel?.count ?? 0
@@ -757,11 +760,12 @@ extension RoomBTVC:UIPickerViewDelegate , UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if txtTag == 1{
-            locIndex = row
-            locationTxt.text = rowsLoc?[row].locationName ?? ""
-            return  rowsLoc?[row].locationName ?? ""
-        }else if txtTag == 7 {
+//        if txtTag == 1{
+//            locIndex = row
+//            locationTxt.text = rowsLoc?[row].locationName ?? ""
+//            return  rowsLoc?[row].locationName ?? ""
+//        }else
+        if txtTag == 7 {
             selectedIndex = row
             roomTypeTxt.text = rowsRoom?[row].typeName ?? ""
             return rowsRoom?[row].typeName ?? ""
