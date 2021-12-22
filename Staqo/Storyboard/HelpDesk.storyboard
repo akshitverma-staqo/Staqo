@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Century Gothic 400.ttf">
-            <string>CenturyGothic</string>
+        <array key="AktivGroteskCorp-Bold.ttf">
+            <string>AktivGroteskCorp-Bold</string>
         </array>
-        <array key="Century Gothic.ttf">
-            <string>CenturyGothic-Bold</string>
+        <array key="AktivGroteskCorp-Regular.ttf">
+            <string>AktivGroteskCorp-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -33,8 +33,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="eoW-Hv-mrh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="18"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="18"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aLj-Ig-GzK">
@@ -103,20 +103,21 @@
                                 <rect key="frame" x="10" y="135" width="355" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f9X-cD-z0H">
-                                        <rect key="frame" x="2" y="5" width="78.5" height="20"/>
+                                        <rect key="frame" x="2" y="5" width="78" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="LQD-4Y-iPh"/>
                                             <constraint firstAttribute="height" constant="20" id="puc-Zl-HzZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to Select" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-jo-gAV">
-                                        <rect key="frame" x="2" y="30" width="84.5" height="30"/>
+                                        <rect key="frame" x="2" y="30" width="348" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="1e7-mt-enU"/>
                                         </constraints>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -125,6 +126,7 @@
                                 <constraints>
                                     <constraint firstItem="f9X-cD-z0H" firstAttribute="top" secondItem="wL6-A7-26L" secondAttribute="top" constant="5" id="S7u-A9-D4V"/>
                                     <constraint firstItem="f9X-cD-z0H" firstAttribute="leading" secondItem="wL6-A7-26L" secondAttribute="leading" constant="2" id="Tj3-lB-KED"/>
+                                    <constraint firstAttribute="trailing" secondItem="tyt-jo-gAV" secondAttribute="trailing" constant="5" id="VNi-dq-2wn"/>
                                     <constraint firstItem="tyt-jo-gAV" firstAttribute="top" secondItem="f9X-cD-z0H" secondAttribute="bottom" constant="5" id="aBp-BK-rrE"/>
                                     <constraint firstItem="tyt-jo-gAV" firstAttribute="leading" secondItem="wL6-A7-26L" secondAttribute="leading" constant="2" id="cbB-7v-sRY"/>
                                     <constraint firstAttribute="height" constant="70" id="sZS-cH-t4l"/>
@@ -136,20 +138,20 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="dZ9-Oe-H46"/>
                                     <constraint firstAttribute="height" constant="20" id="uYX-T4-i73"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zAW-5L-6Ni" userLabel="subject">
                                 <rect key="frame" x="10" y="210" width="357" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Details*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOk-3O-6S1">
-                                        <rect key="frame" x="2" y="5" width="103" height="20"/>
+                                        <rect key="frame" x="2" y="5" width="105" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="XNp-mq-seh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Type here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gRU-us-cX2">
@@ -158,8 +160,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="85" id="Sf8-ff-xGg"/>
                                         </constraints>
-                                        <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -177,14 +179,14 @@
                                 <rect key="frame" x="10" y="345" width="355" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IB5-qM-F3B">
-                                        <rect key="frame" x="2" y="5" width="55.5" height="20"/>
+                                        <rect key="frame" x="2" y="5" width="60" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="7N7-7z-ZHe"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="KJS-li-YW7"/>
                                             <constraint firstAttribute="height" constant="20" id="bpn-5C-xwb"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to Select" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aax-3i-ldK">
@@ -192,7 +194,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="b0u-5C-ayo"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -210,14 +213,14 @@
                                 <rect key="frame" x="10" y="420" width="355" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Creation Date*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iez-so-kUh">
-                                        <rect key="frame" x="2" y="5" width="122.5" height="20"/>
+                                        <rect key="frame" x="2" y="5" width="119" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="0f3-1P-vNG"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="EhC-mx-IiD"/>
                                             <constraint firstAttribute="height" constant="20" id="rzu-sL-HFk"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to Select" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhZ-Rb-6ub">
@@ -225,7 +228,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="unl-XC-eVZ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -244,14 +248,14 @@
                                 <rect key="frame" x="10" y="495" width="355" height="70"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Closed Date*" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hzl-gV-ec6">
-                                        <rect key="frame" x="2" y="5" width="109.5" height="20"/>
+                                        <rect key="frame" x="2" y="5" width="105.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="RXd-O8-dOv"/>
                                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="Sb9-A9-7Wm"/>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="bc2-OV-KOw"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tap to Select" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z9r-w6-BFj">
@@ -259,7 +263,8 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="mQI-Fh-Nh4"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -276,12 +281,12 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tTn-Qv-0Nb" userLabel="business card Outlet">
                                 <rect key="frame" x="106" y="591" width="162" height="53"/>
-                                <color key="backgroundColor" red="0.10980392160000001" green="0.72941176470000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="162" id="Cm8-Uy-qtm"/>
                                     <constraint firstAttribute="height" constant="53" id="KeP-Lb-oug"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="20"/>
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -360,12 +365,12 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TechCare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hg-fg-1Wy">
-                                <rect key="frame" x="10" y="84" width="80" height="20"/>
+                                <rect key="frame" x="10" y="84" width="77" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="3b1-Iz-70O"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------TechCare Details------" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXS-kp-TKQ">
@@ -373,8 +378,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="JJp-B6-nVG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sQS-Co-p1e">
@@ -460,24 +465,24 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="xjy-ao-J7M"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="24"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="24"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ER-R2-cDI">
-                                        <rect key="frame" x="41.5" y="99" width="287.5" height="69"/>
+                                        <rect key="frame" x="24.5" y="99" width="304.5" height="64.5"/>
                                         <string key="text">TechCare provides all IT technical support from IDS Service Desk.  An extended and convenient IT support hub provided with ease and a happy smile.</string>
-                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="14"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCO-IW-tZq" userLabel="Business  card">
-                                        <rect key="frame" x="60" y="186" width="255" height="67"/>
+                                        <rect key="frame" x="60" y="181.5" width="255" height="67"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORr-8W-JOR" userLabel="business card Outlet">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
-                                                <color key="backgroundColor" red="0.10980392160000001" green="0.72941176470000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                                <color key="backgroundColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="20"/>
                                                 <state key="normal" title="Request Support">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -496,12 +501,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eEV-vv-b1F" userLabel="Scan Visiting card">
-                                        <rect key="frame" x="60" y="269" width="255" height="67"/>
+                                        <rect key="frame" x="60" y="264.5" width="255" height="67"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yc-3U-Aeu" userLabel="Scan Btn Outlet">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
-                                                <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                                <color key="backgroundColor" red="0.97254901959999995" green="0.50980392159999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="20"/>
                                                 <state key="normal" title="View Request">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -544,7 +549,8 @@
                                     <constraint firstAttribute="height" constant="30" id="Gut-KH-K5h"/>
                                     <constraint firstAttribute="width" constant="30" id="tZc-kP-lwp"/>
                                 </constraints>
-                                <state key="normal" image="backArrow"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.backward" catalog="system"/>
                                 <connections>
                                     <action selector="backButton:" destination="SzV-DF-Vno" eventType="touchUpInside" id="g5W-gJ-46a"/>
                                 </connections>
@@ -597,10 +603,7 @@
     </scenes>
     <resources>
         <image name="5" width="409" height="429"/>
-        <image name="backArrow" width="32" height="32"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

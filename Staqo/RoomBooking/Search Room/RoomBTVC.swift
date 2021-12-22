@@ -82,7 +82,13 @@ class RoomBTVC: UITableViewCell {
         purposeTxtView.layer.cornerRadius = 8
         purposeTxtView.placeholder = "Write your purpose here"
        arrangeViewHeight.constant = 0
-        
+        fromDateTxt.tintColor = .white
+        toDateTxt.tintColor = .white
+        fromTimeTxt.tintColor = .white
+        toTimeTxt.tintColor = .white
+        roomTypeTxt.tintColor = .white
+        roomCodeTxt.tintColor = .white
+
         if (fromDateTxt.text?.count ?? 0) <= 0 {
             fromDateTxt.text = Constant.dateTimeFormatter(format: "dd-MM-yyyy", date: datePicker?.date ?? Date())
 
@@ -132,7 +138,7 @@ class RoomBTVC: UITableViewCell {
 //            delegate?.showMsgValidation(msg: "Please select the location")
 //        }else
         if( NumberVisitorTxt.text?.count ?? 0) <= 0 {
-            delegate?.showMsgValidation(msg: "Please provide no of Attendees ")
+            delegate?.showMsgValidation(msg: "Please provide no. of Attendees ")
         }else if vistorType ==  "" {
             delegate?.showMsgValidation(msg: "Please select the Attendees Type")
         }
@@ -532,7 +538,7 @@ extension RoomBTVC: UITextFieldDelegate{
                 }
             } else if txtTag == 7 {
                 if rowsRoom?.count ?? 0 == 0 {
-                    delegate?.showMsgValidation(msg: "Data not found")
+                    delegate?.showMsgValidation(msg: "Please add Room Type")
                 } else{
                     self.delegate?.selectedTxtField(txtField: textField)
                 }
@@ -626,7 +632,7 @@ extension RoomBTVC: UITextFieldDelegate{
 
                 }else if firstDate?.compare(secondDate!) == .orderedDescending{
                     print("First Date is greater then second date")
-                    delegate?.showMsgValidation(msg: "Please select Date in Correct Order")
+                    delegate?.showMsgValidation(msg: "Please select To Date more than or equal to From Date")
                     toDateTxt.text = ""
                  
                     

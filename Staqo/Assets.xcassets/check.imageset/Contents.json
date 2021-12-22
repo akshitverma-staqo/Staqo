@@ -1,16 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "black-check-box-with-white-check (1) copy-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "black-check-box-with-white-check.png",
+      "filename" : "black-check-box-with-white-check (1) copy-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "black-check-box-with-white-check (1).png",
+      "filename" : "black-check-box-with-white-check (1) copy.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

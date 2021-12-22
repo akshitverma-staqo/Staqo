@@ -1,12 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "dashMenu21x.png",
+      "filename" : "dashMenu23x-2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "dashMenu22x.png",
+      "filename" : "dashMenu23x-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Century Gothic 400.ttf">
-            <string>CenturyGothic</string>
+        <array key="AktivGroteskCorp-Bold.ttf">
+            <string>AktivGroteskCorp-Bold</string>
         </array>
-        <array key="Century Gothic.ttf">
-            <string>CenturyGothic-Bold</string>
+        <array key="AktivGroteskCorp-Regular.ttf">
+            <string>AktivGroteskCorp-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -44,18 +44,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bvB-WH-Fom">
-                                <rect key="frame" x="112.5" y="487" width="150" height="95"/>
+                                <rect key="frame" x="141.5" y="556" width="92" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="4JQ-gB-5z9"/>
-                                    <constraint firstAttribute="height" constant="95" id="Tbu-Ho-3kY"/>
+                                    <constraint firstAttribute="width" constant="92" id="4JQ-gB-5z9"/>
+                                    <constraint firstAttribute="height" constant="41" id="Tbu-Ho-3kY"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2021 OQ SAOC. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fq-1I-ydY">
-                                <rect key="frame" x="135" y="622" width="105" height="15"/>
+                                <rect key="frame" x="137.5" y="622" width="100" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Cb4-rG-dtP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="12"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -78,9 +78,9 @@
                                                     <constraint firstAttribute="width" constant="185" id="LWi-IQ-L5A"/>
                                                     <constraint firstAttribute="height" constant="30" id="dyD-gJ-vbP"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
+                                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="16"/>
                                                 <state key="normal" title="Login with Microsoft">
-                                                    <color key="titleColor" red="0.073083855210000007" green="0.30496299269999999" blue="0.38455867770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.035294117647058823" green="0.12156862745098039" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="singInTapped:" destination="gAz-T9-YJH" eventType="touchUpInside" id="fi7-36-hOs"/>
@@ -107,10 +107,10 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiral" translatesAutoresizingMaskIntoConstraints="NO" id="nPj-XY-Ty7">
-                                <rect key="frame" x="253" y="124" width="217" height="224"/>
+                                <rect key="frame" x="304" y="124" width="166" height="160"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="217" id="XBC-JE-jqr"/>
-                                    <constraint firstAttribute="height" constant="224" id="f5H-DA-La4"/>
+                                    <constraint firstAttribute="width" constant="166" id="XBC-JE-jqr"/>
+                                    <constraint firstAttribute="height" constant="160" id="f5H-DA-La4"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -121,7 +121,7 @@
                             <constraint firstItem="nPj-XY-Ty7" firstAttribute="top" secondItem="4Vv-Rs-xQu" secondAttribute="top" constant="80" id="X99-1L-qyC"/>
                             <constraint firstItem="4Vv-Rs-xQu" firstAttribute="bottom" secondItem="0Fq-1I-ydY" secondAttribute="bottom" constant="30" id="axA-Yo-dHR"/>
                             <constraint firstItem="Gpo-PE-akm" firstAttribute="centerY" secondItem="4Vv-Rs-xQu" secondAttribute="centerY" id="dfr-x3-vF8"/>
-                            <constraint firstItem="0Fq-1I-ydY" firstAttribute="top" secondItem="bvB-WH-Fom" secondAttribute="bottom" constant="40" id="gfS-F1-SAU"/>
+                            <constraint firstItem="0Fq-1I-ydY" firstAttribute="top" secondItem="bvB-WH-Fom" secondAttribute="bottom" constant="25" id="gfS-F1-SAU"/>
                             <constraint firstItem="Gpo-PE-akm" firstAttribute="centerX" secondItem="4Vv-Rs-xQu" secondAttribute="centerX" id="pmj-DQ-Av9"/>
                             <constraint firstItem="0Fq-1I-ydY" firstAttribute="centerX" secondItem="4Vv-Rs-xQu" secondAttribute="centerX" id="qTn-be-cex"/>
                             <constraint firstItem="4Vv-Rs-xQu" firstAttribute="trailing" secondItem="nPj-XY-Ty7" secondAttribute="trailing" constant="-95" id="yt9-q6-pEp"/>
@@ -143,9 +143,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="102" height="64.5"/>
-        <image name="spiral" width="217" height="225"/>
-        <image name="windowicon" width="30" height="30"/>
+        <image name="logo" width="149.52999877929688" height="67.183998107910156"/>
+        <image name="spiral" width="161" height="166.5"/>
+        <image name="windowicon" width="45" height="45"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

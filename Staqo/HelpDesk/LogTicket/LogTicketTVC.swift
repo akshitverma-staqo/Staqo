@@ -227,8 +227,16 @@ extension LogTicketTVC : UITextFieldDelegate{
             //subjectTxt.inputView = keyboardToolbar
         }
         if txtTag == 2{
-            categoryTxt.inputView = picker
-            picker.reloadAllComponents()
+            if catData?.count == 0{
+                print(catData?.count)
+                print(catData)
+                delegate?.showMsgValidation(msg: "No data Found")
+                
+            }else{
+                categoryTxt.inputView = picker
+                picker.reloadAllComponents()
+            }
+           
         }else if txtTag == 3{
 //            if subCount == 0{
 //                subCount = +1
@@ -264,11 +272,15 @@ extension LogTicketTVC : UITextFieldDelegate{
        
        if txtTag == 2{
             if categoryTxt.text != nil {
-                
-                catIDData = catData?[selectedIndex].id ?? ""
-                print("Print Cat ID:" + "\(catIDData)")
-                delegate?.getSubCat(ID: catData?[selectedIndex].id ?? "")
-                
+                if catData?.count == nil{
+                    print("catID null")
+                }else{
+                    catIDData = catData?[selectedIndex].id ?? ""
+                    print("Print Cat ID:" + "\(catIDData)")
+                    subCatTxt.text = nil
+                    delegate?.getSubCat(ID: catData?[selectedIndex].id ?? "")
+                    
+                }
             }
         }
         if txtTag == 3{
@@ -276,7 +288,7 @@ extension LogTicketTVC : UITextFieldDelegate{
                  
                 subCatIDData = subCatData?[selectedIndex].id ?? ""
                 print("Print Subcat ID:" + "\(subCatIDData)")
-                 delegate?.getSubCat(ID: catData?[selectedIndex].id ?? "")
+                 //delegate?.getSubCat(ID: catData?[selectedIndex].id ?? "")
                  
              }
          }

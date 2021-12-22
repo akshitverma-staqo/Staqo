@@ -22,6 +22,8 @@
         var arrDara = [MazzayakomCatListModel]()
        // var arrDara1 = [MazzayakomCatURLModel]()
         var array = [""]
+        var myarray = [""]
+        var catIdList = [""]
         var catId = ""
         var checkTableViewCount = 0
         // let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
@@ -35,6 +37,16 @@
             let itemcount = (catId as NSString).integerValue
             selectedIndex = itemcount-1
             print(selectedIndex)
+            print(catId)
+            
+            let defaults = UserDefaults.standard
+            myarray = defaults.stringArray(forKey: "catItems") ?? [String]()
+            print(myarray)
+            
+            catIdList  = defaults.stringArray(forKey: "catIdList") ?? [String]()
+            print(catIdList)
+            
+            
             self.collectionView.scrollToItem(at:IndexPath(item: selectedIndex, section: 0), at: .centeredHorizontally, animated: true)
             collectionView.layoutIfNeeded()
             DispatchQueue.main.async {
@@ -154,7 +166,22 @@
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            self.navigationController?.pushViewController(Constant1.Controllers.get(.backBottom)(), animated: true)
+            //self.navigationController?.pushViewController(Constant1.Controllers.get(.backBottom)(), animated: true)
+            let subtitleDes = arrDara[indexPath.row].Description.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil).replacingOccurrences(of: "&[^;]+;", with: "", options: String.CompareOptions.regularExpression, range: nil)
+            let alert = UIAlertController(title: arrDara[indexPath.row].Title, message: subtitleDes, preferredStyle: UIAlertController.Style.alert)
+            
+            // add an action (button)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+                
+                //self.dismiss(animated: true)
+                
+            }))
+            
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+            
+            
+            
         }
         
         
@@ -180,12 +207,9 @@
             let mainLbl = cell.viewWithTag(1) as! UILabel
             mainLbl.layer.cornerRadius = 16.5
             mainLbl.clipsToBounds = true
-            let defaults = UserDefaults.standard
-            let myarray = defaults.stringArray(forKey: "catItems") ?? [String]()
             mainLbl.text = myarray[indexPath.item]
-            let catIdList  = defaults.stringArray(forKey: "catIdList") ?? [String]()
             print("You selected cell #\(indexPath.item)!")
-            catId = catIdList[indexPath.row]
+            
             if indexPath.item == selectedIndex {
                 mainLbl.backgroundColor = .darkGreen
                 mainLbl.textColor = .white
@@ -200,7 +224,8 @@
         }
         
         func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            
+            catId = catIdList[indexPath.row]
+            print(catId)
             selectedIndex = indexPath.item
             collectionView.reloadData()
         }

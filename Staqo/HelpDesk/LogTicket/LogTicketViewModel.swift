@@ -10,6 +10,7 @@ import Foundation
 
 protocol TSModelDelegate:class {
     func ticketUploadStatus()
+    func didStopLoader()
 }
 class LogTicketViewModel: ViewModelType {
     var _delegate:TSModelDelegate?
@@ -86,7 +87,7 @@ class LogTicketViewModel: ViewModelType {
           case .success(let baseModel):
               print(baseModel)
             ws.rowsSubCat = baseModel.subcategories
-            ws.delegate?.didLoadData()
+            ws._delegate?.didStopLoader()
           case .failure(let error):
               ws.delegate?.didFail(error: error)
           }
@@ -107,8 +108,13 @@ class LogTicketViewModel: ViewModelType {
           switch result {
           case .success(let baseModel):
               print(baseModel)
-            ws.rows = baseModel.categories
-            ws.delegate?.didLoadData()
+            if baseModel.status == "fail" {
+                ws.delegate?.didLoadData()
+            }else{
+                ws.rows = baseModel.categories
+                ws.delegate?.didLoadData()
+            }
+            
              
           case .failure(let error):
               ws.delegate?.didFail(error: error)

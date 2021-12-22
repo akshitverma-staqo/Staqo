@@ -63,7 +63,7 @@ class EmpVC: BaseVC {
         profileImageBackView.layer.cornerRadius = 10
         profileImageBackView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner]
         
-        
+        self.submitBtnOutlet.isEnabled = false
         
         
         submitBtnbackView.dropShadow()
@@ -105,11 +105,20 @@ class EmpVC: BaseVC {
         }
     }
     @IBAction func btnSubmitTapped(_ sender: UIButton) {
+        secNumber.resignFirstResponder()
         if (secNumber.text?.count) ?? 0 <= 9 {
             showErrorMessage(title: "Error..", error: CustomError.InValidNoLength) { (action) in
             }
         }else{
-            viewModal.updateByEmpID(mobileNo:secNumber.text! , ID: viewModal.valueData?.id ?? "")
+//            if viewModal.field?.mobileno2 ?? "" == secNumber.text{
+//                showErrorMessage(title: "Alert", message: "Please update mobile number first.") { (action) in
+//
+//            }
+//            }else{
+                viewModal.updateByEmpID(mobileNo:secNumber.text! , ID: viewModal.valueData?.id ?? "")
+           // }
+           
+            
         }
         
     }
@@ -158,12 +167,22 @@ extension EmpVC : ViewModelDelegate{
     }
     
     func didFail(error: CustomError) {
-        stopLoader()
+        
         showErrorMessage(title: "Error", error: error) { (action) in
-            
+            if error.localizedDescription.contains("401 Unauthorized") {
+                print("401")
+                self.showMessage(title: "", message: CustomError.Logout.localizedDescription, btnConfirmTitle:"YES", btnCancelTitle: "NO") { (isYes, action) in
+                    if isYes {
+                        let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+           
         }
-      
+        stopLoader()
     }
+    
     
     
 }
@@ -222,6 +241,13 @@ extension EmpVC : UITextFieldDelegate {
         }
         return true
     }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == secNumber {
+                self.viewModal.deleteEditEmp(ID: self.viewModal.field?.id ?? "")
+                self.submitBtnOutlet.isEnabled = true
+        }
+        
+    }
 }
 //extension EmpVC : EmpRefreshDelegate{
 //    func getRefresh() {
@@ -236,11 +262,15 @@ extension EmpVC : EmpNoUpdateDelegate{
         if status == "mobileupdate"{
             showErrorMessage(title: "", message: "Phone Number Submitted Successfully") { (action) in
                 self.viewModal.bootstrap()
+                self.submitBtnOutlet.isEnabled = false
             }
         }else if status == "mobiledeleted"{
             showErrorMessage(title: "", message: "Phone Number deleted successfully") { (action) in
                         self.viewModal.bootstrap()
+                self.submitBtnOutlet.isEnabled = true
                     }
+        }else if status == "mobiledeletedEdit"{
+            print("mobile delete from backend")
         }
         
         

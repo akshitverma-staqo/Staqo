@@ -14,14 +14,17 @@ extension UIColor {
     static var darkGreen : UIColor {
         
          
-        return UIColor(red: 39/255, green: 173/255, blue: 183/255, alpha: 1)
+        return UIColor(red: 0.04, green: 0.12, blue: 0.23, alpha: 1.00)
+        
 
     }
     
     static var lightGreen : UIColor {
         
          
-        return UIColor(red: 211/255, green: 239/255, blue: 241/255, alpha: 1)
+        return UIColor(red: 0.85, green: 0.85, blue: 0.87, alpha: 1.00)
+        
+
 
     }
     
@@ -37,7 +40,6 @@ extension UIColor {
 
 struct AppFontName {
   static let bold = "Century Gothic 400"
-  
     static let regular = "Century Gothic"
    
     

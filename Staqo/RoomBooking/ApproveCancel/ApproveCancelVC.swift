@@ -27,7 +27,10 @@ class ApproveCancelVC: BaseVC {
         viewModel = ACViewModel(dataSource: ACDataSource())
         viewModel.delegate = self
         viewModel._delegate = self
-        
+        // selected option color
+        roomSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.darkGray], for: .selected)
+        // color of other options
+        roomSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         if UserDefaults.standard.getWebStatus() == "A" {
             print("Admin")
             roomSegment.setTitle("Approved", forSegmentAt: 0)
@@ -71,7 +74,7 @@ class ApproveCancelVC: BaseVC {
             tableView.reloadData()
            
             if viewModel?.rows?.count == 0 {
-                    showErrorMessage(title: "Alert", message: "Data not Found.") { (action) in
+                    showErrorMessage(title: "Alert", message: "No data Found.") { (action) in
                        
                     }}
          
@@ -81,7 +84,7 @@ class ApproveCancelVC: BaseVC {
             print("Segment 1")
             
             if  viewModel?.rows1?.count == 0 {
-                       showErrorMessage(title: "Alert", message: "Data not Found.") { (action) in
+                       showErrorMessage(title: "Alert", message: "No data Found.") { (action) in
                        
                        }  }
         default:
@@ -111,12 +114,21 @@ extension ApproveCancelVC : ViewModelDelegate{
     }
     
     func didFail(error: CustomError) {
+        
         showErrorMessage(title: "Error", error: error) { (action) in
-            
+            if error.localizedDescription.contains("401 Unauthorized") {
+                print("401")
+                self.showMessage(title: "", message: CustomError.Logout.localizedDescription, btnConfirmTitle:"YES", btnCancelTitle: "NO") { (isYes, action) in
+                    if isYes {
+                        let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+           
         }
         stopLoader()
     }
-    
     
 }
 extension ApproveCancelVC :ACViewModelDelegate{

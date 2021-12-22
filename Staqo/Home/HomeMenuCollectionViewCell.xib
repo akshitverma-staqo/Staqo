@@ -8,8 +8,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Century Gothic.ttf">
-            <string>CenturyGothic-Bold</string>
+        <array key="AktivGroteskCorp-Bold.ttf">
+            <string>AktivGroteskCorp-Bold</string>
         </array>
     </customFonts>
     <objects>
@@ -32,17 +32,17 @@
                         <rect key="frame" x="2" y="2" width="242" height="211"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Portal sfas " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keg-Rm-B0N">
-                        <rect key="frame" x="3" y="185.5" width="150" height="12.5"/>
+                        <rect key="frame" x="3" y="187" width="150" height="11.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="150" id="ziB-bb-Emn"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="10"/>
+                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="10"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to know more" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM5-2N-lmp">
-                        <rect key="frame" x="3" y="200" width="69.5" height="10"/>
-                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="8"/>
+                        <rect key="frame" x="3" y="200.5" width="67" height="9.5"/>
+                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="8"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>

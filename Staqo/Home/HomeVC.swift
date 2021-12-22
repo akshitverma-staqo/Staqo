@@ -441,6 +441,12 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
              self.navigationController?.isNavigationBarHidden = true
              self.navigationController?.pushViewController(vc, animated: true)
 
+        case "11":
+           print("OQ Roadshow")
+            UserDefaults.standard.set("roadshow", forKey: "webcheck")
+            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+            self.navigationController?.pushViewController(vc, animated: true)
+
         default:
             print("Nothing")
         }
@@ -537,7 +543,7 @@ extension HomeVC : GetNotifyCountDelegate{
 extension HomeVC:EmpRefreshDelegate{
     func getRefresh() {
     //    stopLoader()
-        self.viewModel.dashboardData()
+        //self.viewModel.dashboardData()
     }
     
 }
@@ -546,3 +552,4 @@ extension HomeVC : HomeViewModalDelegate{
         self.getImage()
     }
 }
+

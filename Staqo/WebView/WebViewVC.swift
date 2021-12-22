@@ -42,6 +42,10 @@ class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate, WKUI
         case "salmeen2":
             url = URL(string:Constant.kSALMEEN_POINT2)
             
+        case "roadshow":
+            //url = URL(string:"http://dx.oq.com")
+            url = URL(string:Constant.kOqRoadshow)
+            
         default:
             url = URL(string:Constant.OQPORTAL_LINK)
             

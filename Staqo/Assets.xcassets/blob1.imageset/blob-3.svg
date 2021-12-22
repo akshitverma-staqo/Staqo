@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="315" height="331" viewBox="0 0 315 331">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="blob" width="315" height="331" rx="20" fill="#fff"/>
+    </clipPath>
+    <filter id="blob-2" x="-83.293" y="122.858" width="465.848" height="395.473" filterUnits="userSpaceOnUse">
+      <feOffset dy="-10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feFlood flood-color="#fff" flood-opacity="0.302"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="blob-3" data-name="blob" clip-path="url(#clip-path)">
+    <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#blob-2)">
+      <path id="blob-4" data-name="blob" d="M291.639,5.032c20.628,6.02,19.5,51.922,12.377,86.16-7.126,34.615-19.878,57.566-28.879,80.517s-14.627,45.9-29.254,50.417c-14.252,4.891-37.881-8.654-66.385-1.5-28.5,7.525-62.634,35.367-83.262,32.733s-28.129-36.12-60.759-76c-33-39.506-91.889-85.408-101.265-133.944-9.376-48.16,30.38-98.577,80.262-95.19C64.355-48.019,124.739,9.547,176.122,21.21,227.879,33.25,270.636-.612,291.639,5.032Z" transform="translate(28.87 229.8)" fill="#0b1e3b"/>
+    </g>
+  </g>
+</svg>

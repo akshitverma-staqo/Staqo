@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "refin1x.png",
+      "filename" : "image 4.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "refinery2x.png",
+      "filename" : "image 4-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Refinery3x.png",
+      "filename" : "image 4@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

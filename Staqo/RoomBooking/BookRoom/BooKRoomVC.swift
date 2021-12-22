@@ -34,6 +34,10 @@ class BooKRoomVC: BaseVC, UITableViewDelegate {
         self.tableView.dataSource = self
         tableView.register(UINib(nibName: kBookRoomTVC, bundle: nil), forCellReuseIdentifier: kBookRoomTVC)
         self.checkedData(index:  roomSegment.selectedSegmentIndex)
+        // selected option color
+        roomSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.darkGray], for: .selected)
+        // color of other options
+        roomSegment.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: .normal)
         
     }
     
@@ -119,8 +123,18 @@ extension BooKRoomVC : ViewModelDelegate{
     }
     
     func didFail(error: CustomError) {
+        
         showErrorMessage(title: "Error", error: error) { (action) in
-            
+            if error.localizedDescription.contains("401 Unauthorized") {
+                print("401")
+                self.showMessage(title: "", message: CustomError.Logout.localizedDescription, btnConfirmTitle:"YES", btnCancelTitle: "NO") { (isYes, action) in
+                    if isYes {
+                        let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+           
         }
         stopLoader()
     }

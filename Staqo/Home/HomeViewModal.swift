@@ -28,7 +28,7 @@ class HomeViewModal:ViewModelType{
         self.getGraphData()
         self.getImage()
         self.fcmUpdateData(ID: UserDefaults.standard.getProfile()?.email ?? "", fcmID: UserDefaults.standard.getFCMToken())
-       
+        //dashboardData()
     }
     
     func fcmUpdateData(ID:String, fcmID:String){
@@ -44,7 +44,7 @@ class HomeViewModal:ViewModelType{
              // ws.delegate?.didLoadData()
           case .failure(let error):
                 print(error)
-            ws.delegate?.didFail(error: error)
+            //ws.delegate?.didFail(error: error)
           }
           
       })
@@ -101,7 +101,7 @@ class HomeViewModal:ViewModelType{
                 let data = MSGraphData(email: currentUser.mail ?? "", name: currentUser.displayName ?? "", mobileNo1: currentUser.mobilePhone ?? "", jobDesignation: currentUser.jobTitle ?? "" , businessPhone: currentUser.businessPhones.first  as? String ?? "", givenName: currentUser.givenName ?? "", employeeId: currentUser.employeeId ?? "",jobTitle: currentUser.jobTitle ?? "")
 
                 UserDefaults.standard.setProfile(value: data)
-               // self.dashboardData()
+                self.dashboardData()
                // delegate?.didLoadData()
                 
             }

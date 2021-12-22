@@ -133,7 +133,7 @@ class VisitingCardData: BaseVC {
         self.addressTxtField?.delegate = self
         var addressString:String = ""
         docData?.forEach({ (value) in
-            if value.category == "Phone Number"{
+            if value.category == "PhoneNumber"{
                 self.phoneTxtField.text = value.text
             }else if value.category == "URL"{
                 self.webSiteTextField.text = value.text
@@ -148,10 +148,10 @@ class VisitingCardData: BaseVC {
                 self.nameTextField.text = value.text
 
             }else if value.category == "Address"{
-                addressString =  addressString +  (value.text ?? "")
+                addressString =  addressString + " " + (value.text ?? "")
 
             }else if value.category == "Location"{
-                addressString = addressString +  (value.text ?? "")
+                addressString = addressString +  " " + (value.text ?? "")
 
             }
     
@@ -485,17 +485,28 @@ extension VisitingCardData : ViewModelDelegate{
     func didLoadData() {
         stopLoader()
         showErrorMessage(title: "", error: CustomError.Saved) { (action) in
-            let vc =  Constant.getViewController(storyboard: Constant.kBusinessStoryboard, identifier: Constant.kBusinessVC, type: BusinessVC.self)
+            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kHomeVC, type: HomeVC.self)
+            self.navigationController?.isNavigationBarHidden = false
             self.navigationController?.pushViewController(vc, animated: true)
         }
        
     }
     
     func didFail(error: CustomError) {
-        stopLoader()
-        showErrorMessage(title: "Error...", error: error) { (action) in
-            
+        
+        showErrorMessage(title: "Error", error: error) { (action) in
+            if error.localizedDescription.contains("401 Unauthorized") {
+                print("401")
+                self.showMessage(title: "", message: CustomError.Logout.localizedDescription, btnConfirmTitle:"YES", btnCancelTitle: "NO") { (isYes, action) in
+                    if isYes {
+                        let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+           
         }
+        stopLoader()
     }
     
     

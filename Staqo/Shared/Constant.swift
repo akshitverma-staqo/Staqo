@@ -26,6 +26,7 @@ class Constant {
     static let kVISITOR_REGISTER = "/lists/Visitor%20Master/items"
     static let kSALMEEN_POINT1 = "https://thisisoq.sharepoint.com/Pages/Salmeen.aspx"
     static let kSALMEEN_POINT2 = "https://oq.com/en/covid-19/declaration-employees"
+    static let kOqRoadshow = "https://dx.oq.com"
     static let kUSER_PIC_FROMAD = "https://graph.microsoft.com/v1.0/users/**useremail**/photo/$value"
     static let kEMPLOYEE_FOR_ID = "/lists/Employee%20Master/items/?$expand=fields&$filter=fields/emailid%20eq%20'"
     static let kEMPLOYEE_FIND_BY_ID = "/lists/Employee%20Master/items/"

@@ -12,6 +12,8 @@
 		26CD070625E41EE7001C6D60 /* UPCarouselFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CD070525E41EDD001C6D60 /* UPCarouselFlowLayout.swift */; };
 		76257D9E25DF70C100F1BD47 /* Century Gothic 400.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */; };
 		76257D9F25DF70C100F1BD47 /* Century Gothic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */; };
+		762F6C7E27324BF400EC426D /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762F6C7D27324BF400EC426D /* Requests.swift */; };
+		762F6C8627324CE700EC426D /* DemoArrangeType copy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 762F6C8527324CE700EC426D /* DemoArrangeType copy.jpg */; };
 		7660FD832613858C00C43B25 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7660FD822613858B00C43B25 /* RoomModel.swift */; };
 		7661890A2654E9D00019B49D /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766189092654E9D00019B49D /* ProjectModel.swift */; };
 		7661891226554B810019B49D /* HelpdeskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7661891126554B800019B49D /* HelpdeskModel.swift */; };
@@ -49,6 +51,8 @@
 		7667E7E62615ADC500EB624E /* LogTicketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7667E7E52615ADC500EB624E /* LogTicketVC.swift */; };
 		7667E7F02615D93800EB624E /* HelpDeskVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7667E7EF2615D93800EB624E /* HelpDeskVC.swift */; };
 		7667E7F8261609AE00EB624E /* TicketStatusVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7667E7F7261609AE00EB624E /* TicketStatusVC.swift */; };
+		766A1BCA2747A64C00B73788 /* AktivGroteskCorp-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 766A1BC92747A64C00B73788 /* AktivGroteskCorp-Bold.ttf */; };
+		766A1BCF2747A65C00B73788 /* AktivGroteskCorp-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 766A1BCE2747A65C00B73788 /* AktivGroteskCorp-Regular.ttf */; };
 		767BBC832635B95500693B63 /* ErrorLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BBC822635B95400693B63 /* ErrorLog.swift */; };
 		767BEBD52601261B00B6A3C3 /* TextReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBD42601261B00B6A3C3 /* TextReader.swift */; };
 		767BEBDA2601264900B6A3C3 /* Documents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767BEBD92601264900B6A3C3 /* Documents.swift */; };
@@ -86,7 +90,6 @@
 		76970635262AC7830063BABA /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76970631262AC7830063BABA /* Style.swift */; };
 		76970640262B347D0063BABA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7697063F262B347B0063BABA /* Data.swift */; };
 		769B1FDC26301C660077B625 /* ImageIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 769B1FDB26301C660077B625 /* ImageIcon.swift */; };
-		76A0AF092616CE6D0084E1F8 /* contact us pagehero v2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76A0AF082616CE6C0084E1F8 /* contact us pagehero v2.jpg */; };
 		76A0AF102616DAF50084E1F8 /* BookRoomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */; };
 		76A0AF112616DAF50084E1F8 /* BookRoomTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A0AF0F2616DAF50084E1F8 /* BookRoomTVC.xib */; };
 		76A0AF172616E2750084E1F8 /* BooKRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0AF162616E2750084E1F8 /* BooKRoomVC.swift */; };
@@ -105,7 +108,6 @@
 		76A103AD25F7E6C500C536B9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103AC25F7E6C500C536B9 /* User.swift */; };
 		76A103B225F7E6D600C536B9 /* ParentReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103B125F7E6D600C536B9 /* ParentReference.swift */; };
 		76A103B725F7E6F100C536B9 /* LastModifiedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103B625F7E6F100C536B9 /* LastModifiedBy.swift */; };
-		76A103C225F7E72D00C536B9 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103C125F7E72D00C536B9 /* ContentType.swift */; };
 		76A103CA25F7F2AA00C536B9 /* MSGraphData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A103C925F7F2AA00C536B9 /* MSGraphData.swift */; };
 		76A1045C25FF9AE100C536B9 /* ScanQRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A1045B25FF9AE100C536B9 /* ScanQRViewController.swift */; };
 		76A1046125FFA76300C536B9 /* VisitorListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A1046025FFA76300C536B9 /* VisitorListVC.swift */; };
@@ -127,7 +129,6 @@
 		76C3AC67261DBDF000FC6B85 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC66261DBDEF00FC6B85 /* MenuModel.swift */; };
 		76C3AC70261F1E0900FC6B85 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC6E261F1E0900FC6B85 /* Categories.swift */; };
 		76C3AC79261F5A4800FC6B85 /* Allrequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC78261F5A4800FC6B85 /* Allrequests.swift */; };
-		76C3AC8B261F5AE500FC6B85 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC82261F5AE300FC6B85 /* Requests.swift */; };
 		76C3AC8C261F5AE500FC6B85 /* List_info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC83261F5AE300FC6B85 /* List_info.swift */; };
 		76C3AC8D261F5AE500FC6B85 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC84261F5AE400FC6B85 /* Status.swift */; };
 		76C3AC8E261F5AE500FC6B85 /* Template.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76C3AC85261F5AE400FC6B85 /* Template.swift */; };
@@ -167,6 +168,7 @@
 		76F372BC262C6017001DF34E /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F372BB262C6017001DF34E /* Entities.swift */; };
 		76F372C1262C980B001DF34E /* VCDDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F372C0262C980B001DF34E /* VCDDataSource.swift */; };
 		76F372C6262C9826001DF34E /* VCDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F372C5262C9826001DF34E /* VCDViewModel.swift */; };
+		76FC063F2744BDB000EE1B98 /* ContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FC063E2744BDB000EE1B98 /* ContentType.swift */; };
 		76FFB4DF2616243A003FBBF8 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76FFB4DD26162438003FBBF8 /* HeaderView.xib */; };
 		76FFB4E02616243A003FBBF8 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FFB4DE2616243A003FBBF8 /* HeaderView.swift */; };
 		BF8DCA3832A9A9BB23B1D424 /* Pods_Staqo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2501CD86A8CB56FC58286A6 /* Pods_Staqo.framework */; };
@@ -232,6 +234,8 @@
 		71FB9E0DDBC4452E639922CB /* Pods-Staqo-StaqoUITests.release-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Staqo-StaqoUITests.release-dev.xcconfig"; path = "Target Support Files/Pods-Staqo-StaqoUITests/Pods-Staqo-StaqoUITests.release-dev.xcconfig"; sourceTree = "<group>"; };
 		76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic 400.ttf"; sourceTree = "<group>"; };
 		76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Century Gothic.ttf"; sourceTree = "<group>"; };
+		762F6C7D27324BF400EC426D /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		762F6C8527324CE700EC426D /* DemoArrangeType copy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "DemoArrangeType copy.jpg"; sourceTree = "<group>"; };
 		7660FD822613858B00C43B25 /* RoomModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		766189092654E9D00019B49D /* ProjectModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		7661891126554B800019B49D /* HelpdeskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpdeskModel.swift; sourceTree = "<group>"; };
@@ -269,6 +273,8 @@
 		7667E7E52615ADC500EB624E /* LogTicketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTicketVC.swift; sourceTree = "<group>"; };
 		7667E7EF2615D93800EB624E /* HelpDeskVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDeskVC.swift; sourceTree = "<group>"; };
 		7667E7F7261609AE00EB624E /* TicketStatusVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketStatusVC.swift; sourceTree = "<group>"; };
+		766A1BC92747A64C00B73788 /* AktivGroteskCorp-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AktivGroteskCorp-Bold.ttf"; sourceTree = "<group>"; };
+		766A1BCE2747A65C00B73788 /* AktivGroteskCorp-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AktivGroteskCorp-Regular.ttf"; sourceTree = "<group>"; };
 		767BBC822635B95400693B63 /* ErrorLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorLog.swift; sourceTree = "<group>"; };
 		767BEBD42601261B00B6A3C3 /* TextReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReader.swift; sourceTree = "<group>"; };
 		767BEBD92601264900B6A3C3 /* Documents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Documents.swift; sourceTree = "<group>"; };
@@ -304,7 +310,6 @@
 		76970631262AC7830063BABA /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		7697063F262B347B0063BABA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		769B1FDB26301C660077B625 /* ImageIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIcon.swift; sourceTree = "<group>"; };
-		76A0AF082616CE6C0084E1F8 /* contact us pagehero v2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "contact us pagehero v2.jpg"; sourceTree = "<group>"; };
 		76A0AF0E2616DAF50084E1F8 /* BookRoomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRoomTVC.swift; sourceTree = "<group>"; };
 		76A0AF0F2616DAF50084E1F8 /* BookRoomTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookRoomTVC.xib; sourceTree = "<group>"; };
 		76A0AF162616E2750084E1F8 /* BooKRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooKRoomVC.swift; sourceTree = "<group>"; };
@@ -323,7 +328,6 @@
 		76A103AC25F7E6C500C536B9 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		76A103B125F7E6D600C536B9 /* ParentReference.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentReference.swift; sourceTree = "<group>"; };
 		76A103B625F7E6F100C536B9 /* LastModifiedBy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastModifiedBy.swift; sourceTree = "<group>"; };
-		76A103C125F7E72D00C536B9 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentType.swift; path = ../../../../../Downloads/codegen_6047acb6ca84f/ContentType.swift; sourceTree = "<group>"; };
 		76A103C925F7F2AA00C536B9 /* MSGraphData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MSGraphData.swift; sourceTree = "<group>"; };
 		76A1045B25FF9AE100C536B9 /* ScanQRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanQRViewController.swift; sourceTree = "<group>"; };
 		76A1046025FFA76300C536B9 /* VisitorListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisitorListVC.swift; sourceTree = "<group>"; };
@@ -346,7 +350,6 @@
 		76C3AC66261DBDEF00FC6B85 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
 		76C3AC6E261F1E0900FC6B85 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
 		76C3AC78261F5A4800FC6B85 /* Allrequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Allrequests.swift; sourceTree = "<group>"; };
-		76C3AC82261F5AE300FC6B85 /* Requests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Requests.swift; path = ../../../../../Downloads/codegen_606f21f084ec3/Requests.swift; sourceTree = "<group>"; };
 		76C3AC83261F5AE300FC6B85 /* List_info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List_info.swift; sourceTree = "<group>"; };
 		76C3AC84261F5AE400FC6B85 /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		76C3AC85261F5AE400FC6B85 /* Template.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Template.swift; sourceTree = "<group>"; };
@@ -387,6 +390,7 @@
 		76F372BB262C6017001DF34E /* Entities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		76F372C0262C980B001DF34E /* VCDDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDDataSource.swift; sourceTree = "<group>"; };
 		76F372C5262C9826001DF34E /* VCDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCDViewModel.swift; sourceTree = "<group>"; };
+		76FC063E2744BDB000EE1B98 /* ContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentType.swift; sourceTree = "<group>"; };
 		76FFB4DD26162438003FBBF8 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		76FFB4DE2616243A003FBBF8 /* HeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		8823E62ABD353BD79E5BCDC6 /* Pods-StaqoTests.dev release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaqoTests.dev release.xcconfig"; path = "Target Support Files/Pods-StaqoTests/Pods-StaqoTests.dev release.xcconfig"; sourceTree = "<group>"; };
@@ -474,6 +478,8 @@
 		76257D9B25DF709B00F1BD47 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				766A1BCE2747A65C00B73788 /* AktivGroteskCorp-Regular.ttf */,
+				766A1BC92747A64C00B73788 /* AktivGroteskCorp-Bold.ttf */,
 				76257D9C25DF70C000F1BD47 /* Century Gothic 400.ttf */,
 				76257D9D25DF70C100F1BD47 /* Century Gothic.ttf */,
 			);
@@ -621,6 +627,7 @@
 				76A0F556260B7B4600601483 /* RoomDataSource.swift */,
 				76A0F54A260B4EFE00601483 /* RoomBTVC.swift */,
 				7692359C26396CC7008FF3BE /* DemoArrangeType copy.jpg */,
+				762F6C8527324CE700EC426D /* DemoArrangeType copy.jpg */,
 				76A0F54B260B4EFE00601483 /* RoomBTVC.xib */,
 			);
 			path = "Search Room";
@@ -857,7 +864,6 @@
 				CD5DB42B25D5A26500353084 /* LaunchScreen.storyboard */,
 				76B2058E25DC49800056FC68 /* AuthSettings.plist */,
 				CD5DB42E25D5A26500353084 /* Info.plist */,
-				76A0AF082616CE6C0084E1F8 /* contact us pagehero v2.jpg */,
 			);
 			path = Staqo;
 			sourceTree = "<group>";
@@ -946,7 +952,7 @@
 				76A103AC25F7E6C500C536B9 /* User.swift */,
 				76A103A725F7E6B300C536B9 /* Fields.swift */,
 				76A103B625F7E6F100C536B9 /* LastModifiedBy.swift */,
-				76A103C125F7E72D00C536B9 /* ContentType.swift */,
+				76FC063E2744BDB000EE1B98 /* ContentType.swift */,
 				76A103B125F7E6D600C536B9 /* ParentReference.swift */,
 				76A103C925F7F2AA00C536B9 /* MSGraphData.swift */,
 				767BEBD92601264900B6A3C3 /* Documents.swift */,
@@ -974,7 +980,7 @@
 				76C3AC84261F5AE400FC6B85 /* Status.swift */,
 				76C3AC85261F5AE400FC6B85 /* Template.swift */,
 				76C3AC6E261F1E0900FC6B85 /* Categories.swift */,
-				76C3AC82261F5AE300FC6B85 /* Requests.swift */,
+				762F6C7D27324BF400EC426D /* Requests.swift */,
 				76C3AC9F261F602700FC6B85 /* Technician.swift */,
 				76C3ACAC261F61CE00FC6B85 /* Site.swift */,
 				769705F8262036780063BABA /* Priority.swift */,
@@ -1138,12 +1144,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				766A1BCF2747A65C00B73788 /* AktivGroteskCorp-Regular.ttf in Resources */,
 				76656D8C260C65B10080669B /* FAQAnswerTableViewCell.xib in Resources */,
 				7667E7D72615AD1300EB624E /* HelpDesk.storyboard in Resources */,
 				CD5DB47925D5A5E500353084 /* EnvironmentList.plist in Resources */,
 				76FFB4DF2616243A003FBBF8 /* HeaderView.xib in Resources */,
 				76B2058F25DC49800056FC68 /* AuthSettings.plist in Resources */,
-				76A0AF092616CE6D0084E1F8 /* contact us pagehero v2.jpg in Resources */,
+				766A1BCA2747A64C00B73788 /* AktivGroteskCorp-Bold.ttf in Resources */,
 				7693C62925F3E26D001665DF /* Business.storyboard in Resources */,
 				7692359D26396CC7008FF3BE /* DemoArrangeType copy.jpg in Resources */,
 				CD5DB42D25D5A26500353084 /* LaunchScreen.storyboard in Resources */,
@@ -1155,6 +1162,7 @@
 				76B205BA25DED6650056FC68 /* Home.storyboard in Resources */,
 				7667E7AB26159B9C00EB624E /* ViewLogTicketTVC.xib in Resources */,
 				76B205C125DEDBD70056FC68 /* HomeCollectionViewCell.xib in Resources */,
+				762F6C8627324CE700EC426D /* DemoArrangeType copy.jpg in Resources */,
 				CD5DB42A25D5A26500353084 /* Assets.xcassets in Resources */,
 				76257D9E25DF70C100F1BD47 /* Century Gothic 400.ttf in Resources */,
 				76656D9B260DAA110080669B /* GoogleService-Info.plist in Resources */,
@@ -1344,7 +1352,6 @@
 				7661891A26554BB80019B49D /* Helpdesk_request1.swift in Sources */,
 				76656D8B260C65B10080669B /* PrivacyViewController.swift in Sources */,
 				76D66EB62619B3850013E5B4 /* ACDataSource.swift in Sources */,
-				76A103C225F7E72D00C536B9 /* ContentType.swift in Sources */,
 				76D66EBC2619BAC50013E5B4 /* ACViewCell.swift in Sources */,
 				769705FE2620B1A50063BABA /* ReqHelper.swift in Sources */,
 				76C3AC91261F5AE500FC6B85 /* Created_by.swift in Sources */,
@@ -1391,7 +1398,6 @@
 				76C3AC8E261F5AE500FC6B85 /* Template.swift in Sources */,
 				76D66EFE261C30450013E5B4 /* SalmeenViewController.swift in Sources */,
 				CD5DB48E25D5A60C00353084 /* Constant.swift in Sources */,
-				76C3AC8B261F5AE500FC6B85 /* Requests.swift in Sources */,
 				7667E79C2614F57300EB624E /* RoomType.swift in Sources */,
 				76D66ED1261A008A0013E5B4 /* VisiterListTVC.swift in Sources */,
 				76656DA6260DAB140080669B /* NotificationVC.swift in Sources */,
@@ -1418,6 +1424,7 @@
 				CD5DB48D25D5A60C00353084 /* NetworkClient.swift in Sources */,
 				76B205B025DED56E0056FC68 /* HomeViewModal.swift in Sources */,
 				76D66EC62619F8450013E5B4 /* MazzayakomSubViewController.swift in Sources */,
+				76FC063F2744BDB000EE1B98 /* ContentType.swift in Sources */,
 				7667E7E62615ADC500EB624E /* LogTicketVC.swift in Sources */,
 				76656D89260C65B10080669B /* AboutUsController.swift in Sources */,
 				76C3AC8F261F5AE500FC6B85 /* Group.swift in Sources */,
@@ -1439,6 +1446,7 @@
 				76A0F557260B7B4600601483 /* RoomDataSource.swift in Sources */,
 				CD5DB48925D5A60C00353084 /* Date.swift in Sources */,
 				76656D8D260C65B10080669B /* FAQHeaderTableViewCell.swift in Sources */,
+				762F6C7E27324BF400EC426D /* Requests.swift in Sources */,
 				76C3ACAD261F61CE00FC6B85 /* Site.swift in Sources */,
 				7661892D265561CA0019B49D /* Request1.swift in Sources */,
 				76970621262880000063BABA /* UITextViewPlaceholder.swift in Sources */,
@@ -1577,7 +1585,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1586,7 +1594,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
@@ -1706,7 +1714,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1715,7 +1723,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
@@ -1900,7 +1908,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1909,7 +1917,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
@@ -1927,7 +1935,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1936,7 +1944,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
@@ -2104,7 +2112,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = DEV;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -2113,7 +2121,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
@@ -2233,7 +2241,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2.5;
+				CURRENT_PROJECT_VERSION = 3.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = DEV;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -2242,7 +2250,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
+				MARKETING_VERSION = 3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;

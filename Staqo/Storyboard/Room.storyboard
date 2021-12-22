@@ -9,11 +9,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Century Gothic 400.ttf">
-            <string>CenturyGothic</string>
+        <array key="AktivGroteskCorp-Bold.ttf">
+            <string>AktivGroteskCorp-Bold</string>
         </array>
-        <array key="Century Gothic.ttf">
-            <string>CenturyGothic-Bold</string>
+        <array key="AktivGroteskCorp-Regular.ttf">
+            <string>AktivGroteskCorp-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -30,8 +30,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="AAh-Jh-GG6"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="17"/>
-                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                <color key="textColor" red="0.035294117649999998" green="0.1215686275" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Searching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MPQ-nU-nnX">
@@ -39,8 +39,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="WyC-UP-4wi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="17"/>
+                                <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="------Room Searching Details------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olu-8W-to9">
@@ -48,7 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="5PH-fI-SbE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="17"/>
                                 <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -153,7 +153,7 @@
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fNp-HL-We7">
                                         <rect key="frame" x="10" y="30" width="355" height="32"/>
-                                        <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.035294117649999998" green="0.1215686275" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <segments>
                                             <segment title="Free Room"/>
                                             <segment title="Booked Room"/>
@@ -291,24 +291,24 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="l0r-Oz-xdM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="24"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="24"/>
+                                        <color key="textColor" red="0.035294117649999998" green="0.1215686275" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vS-D4-BXE">
-                                        <rect key="frame" x="36.5" y="99" width="292.5" height="86"/>
+                                        <rect key="frame" x="46" y="99" width="283" height="80.5"/>
                                         <string key="text">Majalis is a group of meeting  rooms made available to interact and collaborate with our partners and visitors in convenient and comfortable environment that reflects OQ cultural.</string>
-                                        <fontDescription key="fontDescription" name="CenturyGothic" family="Century Gothic" pointSize="14"/>
-                                        <color key="textColor" red="0.14117647059999999" green="0.30196078430000001" blue="0.37647058820000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="14"/>
+                                        <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ha-jh-fMD" userLabel="Business  card">
-                                        <rect key="frame" x="60" y="203" width="255" height="67"/>
+                                        <rect key="frame" x="60" y="197.5" width="255" height="67"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tmg-70-zG1" userLabel="business card Outlet">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
-                                                <color key="backgroundColor" red="0.10980392160000001" green="0.72941176470000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                                <color key="backgroundColor" red="0.035294117649999998" green="0.1215686275" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="20"/>
                                                 <state key="normal" title="Room Booking">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -327,12 +327,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUY-hK-yga" userLabel="Scan Visiting card">
-                                        <rect key="frame" x="60" y="286" width="255" height="67"/>
+                                        <rect key="frame" x="60" y="280.5" width="255" height="67"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5a-eL-g3g" userLabel="Scan Btn Outlet">
                                                 <rect key="frame" x="0.0" y="0.0" width="255" height="67"/>
-                                                <color key="backgroundColor" red="0.96470588239999999" green="0.55294117649999996" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="20"/>
+                                                <color key="backgroundColor" red="0.97254901959999995" green="0.50980392159999999" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="20"/>
                                                 <state key="normal" title="View Booked Room">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
@@ -447,7 +447,7 @@
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Me6-5J-nfI">
                                         <rect key="frame" x="10" y="30" width="355" height="32"/>
-                                        <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.035294117649999998" green="0.1215686275" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <segments>
                                             <segment title="Unapproved"/>
                                             <segment title="Approved"/>

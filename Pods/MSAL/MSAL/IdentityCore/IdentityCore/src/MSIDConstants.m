@@ -47,7 +47,7 @@ NSString *const MSIDTrustedAuthorityWorldWide      = @"login.microsoftonline.com
 NSString *const MSIDTrustedAuthorityUSGovernment   = @"login-us.microsoftonline.com";
 NSString *const MSIDTrustedAuthorityCloudGovApi    = @"login.usgovcloudapi.net";
 
-NSString *const MSID_DEFAULT_AAD_AUTHORITY         = @"https://login.microsoftonline.com/common";
+NSString *const MSID_DEFAULT_AAD_AUTHORITY         = @"https://login.microsoftonline.com/b8ad8656-3bdc-47ec-b9b4-84a142b7e134";
 NSString *const MSID_DEFAULT_MSA_TENANTID          = @"b8ad8656-3bdc-47ec-b9b4-84a142b7e134";
 
 NSString *const MSID_CLIENT_SDK_TYPE_MSAL         = @"sdk_msal";

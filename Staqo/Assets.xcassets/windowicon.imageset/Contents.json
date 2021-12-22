@@ -6,12 +6,12 @@
       "scale" : "1x"
     },
     {
-      "filename" : "windows@2x.png",
+      "filename" : "windows-2.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "windows@3x.png",
+      "filename" : "windows-1.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

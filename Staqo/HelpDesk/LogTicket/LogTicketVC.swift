@@ -91,7 +91,12 @@ extension LogTicketVC: UITableViewDataSource{
 }
 
 extension LogTicketVC :TSModelDelegate{
-    
+    func didStopLoader() {
+        stopLoader()
+        tableView.reloadData()
+
+        
+    }
     func ticketUploadStatus() {
         stopLoader()
         showErrorMessage(title: "", message: "Successfully Submited") { (action) in
@@ -112,15 +117,32 @@ extension LogTicketVC : ViewModelDelegate{
     
     func didLoadData() {
         stopLoader()
-        tableView.reloadData()
+        if viewModel.rows?.count == 0{
+            showErrorMessage(title: "", message: "Something went wrong. Please try again.") { (action) in
+                self.navigationController?.popViewController(animated: true)
+            }
+        }else{
+            tableView.reloadData()
+        }
+       
         
         
         
     }
     
     func didFail(error: CustomError) {
+        
         showErrorMessage(title: "Error", error: error) { (action) in
-            
+            if error.localizedDescription.contains("401 Unauthorized") {
+                print("401")
+                self.showMessage(title: "", message: CustomError.Logout.localizedDescription, btnConfirmTitle:"YES", btnCancelTitle: "NO") { (isYes, action) in
+                    if isYes {
+                        let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }
+                }
+            }
+           
         }
         stopLoader()
     }

@@ -213,14 +213,37 @@ class SwipeUpViewController: PullUpController {
                     do{
                         self.spinner.stop()
                         let json1 = try JSON(data:data)
-                        let fieldsValue = json1["value"]
-                        self.arrDara.removeAll()
-                        for array in fieldsValue.arrayValue{
-                            self.arrDara.append(MazzayakomCatListModel(json: array["fields"]))
-                            let listValue = MazzayakomCatListModel(json: array["fields"])
-                            print(listValue.name)
+                       
+                        if ((json1["error"]["code"]) == "InvalidAuthenticationToken"){
                             
+                            let refreshAlert = UIAlertController(title: "Session Expire...", message: "You are about to logout, click Yes to end the session or cancel to continue.", preferredStyle: UIAlertController.Style.alert)
+
+                            refreshAlert.addAction(UIAlertAction(title: "YES", style: .default, handler: { (action: UIAlertAction!) in
+                                let vc = Constant.getViewController(storyboard: Constant.kMainStoryboard, identifier: Constant.kLoginVC, type: LoginVC.self)
+                                self.navigationController?.pushViewController(vc, animated: true)
+                            }))
+
+                            refreshAlert.addAction(UIAlertAction(title: "NO", style: .cancel, handler: { (action: UIAlertAction!) in
+                                
+                               
+                            }))
+
+                            self.present(refreshAlert, animated: true, completion: nil)
+                            
+                            
+                        }else{
+                            let fieldsValue = json1["value"]
+                            self.arrDara.removeAll()
+                            for array in fieldsValue.arrayValue{
+                                self.arrDara.append(MazzayakomCatListModel(json: array["fields"]))
+                                let listValue = MazzayakomCatListModel(json: array["fields"])
+                                print(listValue.name)
+                                print(listValue.id)
+                                self.catItems.append(listValue.name)
+                                self.catIdList.append(listValue.id)
+                            }
                         }
+                        
                         
                     }catch let err{
                         print(err.localizedDescription)
