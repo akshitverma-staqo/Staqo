@@ -34,6 +34,8 @@ enum CustomError:Printable {
     case ResetPasswordFail
     case ResetPassword
     case Otp
+    case QrCodeGenerated
+    case OtherError(error: Error)
     
     var localizedDescription: String {
         switch  self {
@@ -58,7 +60,7 @@ enum CustomError:Printable {
         case .Logout:
             return "You are about to logout, click Yes to end the session or cancel to continue."
         case .NoContent:
-            return "There are no contents available for the selection."
+            return "There are no available."
         case .DownloadFailed:
             return "We were unable to download, try later."
         case .Saved:
@@ -75,6 +77,10 @@ enum CustomError:Printable {
             return "Reset Password email sent successfully"
         case .Otp:
             return "Please enter the valid Otp Number"
+        case .QrCodeGenerated:
+            return "QR code can't be generate, without any contact number."
+        case .OtherError(let error):
+        return error.localizedDescription
             
         default:
             return ""

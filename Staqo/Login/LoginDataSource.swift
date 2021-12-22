@@ -6,3 +6,9 @@
 //
 
 import Foundation
+protocol LoginDataSourceDelegate {
+    
+}
+class LoginDataSource: LoginDataSourceDelegate {
+    
+}

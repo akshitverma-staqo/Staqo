@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AktivGroteskCorp-Bold.ttf">
+            <string>AktivGroteskCorp-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeMenuCollectionViewCell" id="gTV-IL-0wX" customClass="HomeMenuCollectionViewCell" customModule="Staqo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="246" height="215"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="246" height="215"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="ImG-CL-tJA">
+                        <rect key="frame" x="2" y="2" width="242" height="211"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blob1" translatesAutoresizingMaskIntoConstraints="NO" id="KAq-FW-Epz">
+                        <rect key="frame" x="2" y="2" width="242" height="211"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiral1" translatesAutoresizingMaskIntoConstraints="NO" id="mzv-ad-7EQ">
+                        <rect key="frame" x="2" y="2" width="242" height="211"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Portal sfas " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Keg-Rm-B0N">
+                        <rect key="frame" x="3" y="187" width="150" height="11.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="ziB-bb-Emn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="10"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to know more" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NM5-2N-lmp">
+                        <rect key="frame" x="3" y="200.5" width="67" height="9.5"/>
+                        <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="8"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="NM5-2N-lmp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="87U-YE-yWm"/>
+                <constraint firstItem="KAq-FW-Epz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="EpN-i2-m4M"/>
+                <constraint firstItem="Keg-Rm-B0N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="Ppn-uu-3IO"/>
+                <constraint firstItem="mzv-ad-7EQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Rqe-wv-EdZ"/>
+                <constraint firstAttribute="trailing" secondItem="mzv-ad-7EQ" secondAttribute="trailing" constant="2" id="TPs-ie-Tmv"/>
+                <constraint firstAttribute="bottom" secondItem="NM5-2N-lmp" secondAttribute="bottom" constant="5" id="VW3-zp-Za8"/>
+                <constraint firstAttribute="bottom" secondItem="ImG-CL-tJA" secondAttribute="bottom" constant="2" id="WKn-dl-z6f"/>
+                <constraint firstItem="KAq-FW-Epz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="XfH-b2-OYQ"/>
+                <constraint firstItem="ImG-CL-tJA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="ajg-r2-eTw"/>
+                <constraint firstItem="mzv-ad-7EQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="azX-Qe-cav"/>
+                <constraint firstAttribute="bottom" secondItem="KAq-FW-Epz" secondAttribute="bottom" constant="2" id="cdK-Jx-z6J"/>
+                <constraint firstAttribute="trailing" secondItem="ImG-CL-tJA" secondAttribute="trailing" constant="2" id="dkb-Nk-aTg"/>
+                <constraint firstAttribute="bottom" secondItem="mzv-ad-7EQ" secondAttribute="bottom" constant="2" id="mRs-Ik-TEL"/>
+                <constraint firstAttribute="trailing" secondItem="KAq-FW-Epz" secondAttribute="trailing" constant="2" id="o3u-px-lqS"/>
+                <constraint firstItem="ImG-CL-tJA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="pmi-3k-reN"/>
+                <constraint firstItem="NM5-2N-lmp" firstAttribute="top" secondItem="Keg-Rm-B0N" secondAttribute="bottom" constant="2" id="s7p-MD-ouW"/>
+            </constraints>
+            <size key="customSize" width="246" height="215"/>
+            <connections>
+                <outlet property="imgView1" destination="ImG-CL-tJA" id="ej0-hc-l1j"/>
+                <outlet property="imgView2" destination="KAq-FW-Epz" id="4pD-pE-3kJ"/>
+                <outlet property="imgView3" destination="mzv-ad-7EQ" id="NsB-rU-ed8"/>
+                <outlet property="lbl1" destination="Keg-Rm-B0N" id="MGA-c7-ay3"/>
+            </connections>
+            <point key="canvasLocation" x="247.82608695652175" y="118.19196428571428"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="1" width="315" height="331"/>
+        <image name="blob1" width="315" height="331"/>
+        <image name="spiral1" width="315" height="331"/>
+    </resources>
+</document>

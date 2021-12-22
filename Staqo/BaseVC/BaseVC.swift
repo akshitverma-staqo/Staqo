@@ -10,7 +10,7 @@ import UIKit
 import SVProgressHUD
 
 
-class BaseVC: UIViewController {
+class BaseVC: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +59,20 @@ class BaseVC: UIViewController {
         }
         
         alert.addAction(btnCancelAction)
+        alert.addAction(btnConfirmAction)
+        
+        self.present(alert, animated: true) {
+            
+        }
+    }
+    
+    func showMessageWithOneArgument(title: String, message: String, btnConfirmTitle: String , handler:@escaping (Bool, UIAlertAction) -> Void) {
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let btnConfirmAction = UIAlertAction(title: btnConfirmTitle, style: .default) { (action) in
+            handler(true, action)
+        }
+        
         alert.addAction(btnConfirmAction)
         
         self.present(alert, animated: true) {

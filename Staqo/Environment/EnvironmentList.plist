@@ -5,20 +5,24 @@
 	<key>DEV</key>
 	<dict>
 		<key>FTP_URL</key>
-		<string>FTP_URL</string>
+		<string>http://111.93.124.117:9088/oq</string>
 		<key>AuthURL</key>
-		<string>DEV AuthURL</string>
+		<string>https://graph.microsoft.com/v1.0</string>
 		<key>BaseURL</key>
-		<string>BaseURl</string>
+		<string>https://graph.microsoft.com/v1.0/sites/</string>
+		<key>BNSUrl</key>
+		<string>https://textmobile.cognitiveservices.azure.com/</string>
 	</dict>
 	<key>PROD</key>
 	<dict>
 		<key>FTP_URL</key>
-		<string>FTP_URL</string>
+		<string>https://oqmobileapp.oq.com/oq</string>
 		<key>AuthURL</key>
-		<string>PROD AuthURL</string>
+		<string>https://graph.microsoft.com/v1.0</string>
 		<key>BaseURL</key>
-		<string>BaseURl</string>
+		<string>https://graph.microsoft.com/v1.0/sites/</string>
+		<key>BNSUrl</key>
+		<string>https://textmobile.cognitiveservices.azure.com/</string>
 	</dict>
 </dict>
 </plist>
