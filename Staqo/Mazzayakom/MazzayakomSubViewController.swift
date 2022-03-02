@@ -9,7 +9,9 @@
     import Alamofire
     class MazzayakomSubViewController: UIViewController {
         
-        
+        var header:HeaderView!
+        @IBOutlet weak var herderView: HeaderView!
+
         @IBOutlet weak var collectionView: UICollectionView!
         
         @IBOutlet weak var tableView: UITableView!
@@ -20,7 +22,7 @@
         
         var accessToken = ""
         var arrDara = [MazzayakomCatListModel]()
-       // var arrDara1 = [MazzayakomCatURLModel]()
+        var arrDara1 = [MazzayakomCatURLModel]()
         var array = [""]
         var myarray = [""]
         var catIdList = [""]
@@ -30,7 +32,10 @@
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+            header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
+            header.delegate = self
+            herderView.addSubview(header)
+
             commonNavigationBar(controller: .listing)
             setCollectionLayout()
             collectionView.delegate = self
@@ -55,6 +60,25 @@
             }
           
         }
+        func getImage(){
+            
+            if  let imageString = UserDefaults.standard.getProfileImage() {
+          
+                if let imageView = UIImage(data: imageString) {
+                    print("data contains image data")
+                    //profileImage.image = imageView
+                    header.btnProfile.setImage(imageView, for: .normal)
+                }
+            }
+        }
+        
+        override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(true)
+            header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
+            header.btnNotiyCount.setTitle("\(UserDefaults.standard.getNotifyCount() )", for: .normal)
+
+            self.navigationController?.isNavigationBarHidden = true
+        }
         
         func getAllUsreDataAF(){
             accessToken = UserDefaults.standard.getAccessToken()
@@ -65,7 +89,7 @@
             //  NetworkClient.request(url: urlStr, method: .get, parameters: nil, encoder: JSONEncoding.default, headers: headers)
             print(urlStr)
             Alamofire.request(urlStr, encoding: JSONEncoding.default, headers: headers)
-                .responseJSON { response in
+                .responseJSON { [self] response in
                     print(response)     
                     
                     if let data = response.data {
@@ -92,16 +116,18 @@
                                 
                             }else{
                                 self.arrDara.removeAll()
+                                self.arrDara1.removeAll()
                                 for array in fieldsValue.arrayValue{
                                     self.arrDara.append(MazzayakomCatListModel(json: array["fields"]))
-                                   // self.arrDara1.append(MazzayakomCatURLModel(json: array["fields"]["Link"]))
+                                    self.arrDara1.append(MazzayakomCatURLModel(json: array["fields"]["Link"]))
                                     print(array["fields"]["Link"])
                                     print(self.arrDara)
-                                   // print(self.arrDara1)
+                                    print(self.arrDara1)
                                     DispatchQueue.main.async{
                                         self.tableView.reloadData()
                                     }
                                 }
+                                print(self.arrDara1)
                             }
                         }catch let err{
                             print(err.localizedDescription)
@@ -169,23 +195,32 @@
             //self.navigationController?.pushViewController(Constant1.Controllers.get(.backBottom)(), animated: true)
             let subtitleDes = arrDara[indexPath.row].Description.replacingOccurrences(of: "<[^>]+>", with: "", options: String.CompareOptions.regularExpression, range: nil).replacingOccurrences(of: "&[^;]+;", with: "", options: String.CompareOptions.regularExpression, range: nil)
             let alert = UIAlertController(title: arrDara[indexPath.row].Title, message: subtitleDes, preferredStyle: UIAlertController.Style.alert)
-            
-            // add an action (button)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+            if arrDara1[indexPath.row].Url == ""{
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+                }))
+            }else{
+                alert.addAction(UIAlertAction(title: "CANCEL", style: UIAlertAction.Style.default, handler: { action in
+                    
+                }))
+                alert.addAction(UIAlertAction(title: "OPEN LINK", style: UIAlertAction.Style.default, handler: { action in
                 
-                //self.dismiss(animated: true)
-                
-            }))
+                        let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+                        vc.url = URL(string: self.arrDara1[indexPath.row].Url)
+                        vc.linkName = self.arrDara[indexPath.row].Title
+                        self.navigationController?.pushViewController(vc, animated: true)
+                    }))
+            }
             
-            // show the alert
             self.present(alert, animated: true, completion: nil)
-            
-            
-            
         }
         
         
     }
+    
+    
+    
+    
+    
     
     
     extension MazzayakomSubViewController : UICollectionViewDelegate, UICollectionViewDataSource
@@ -247,3 +282,22 @@
         }
     }
     
+    extension MazzayakomSubViewController: HeaderViewDelegate{
+        func btnMenuTapped(sender: UIButton) {
+            
+            _ = navigationController?.popViewController(animated: true)
+
+        }
+        
+        func btnProfileTapped(sender: UIButton) {
+            let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        func btnLogoutTapped(sender: UIButton) {
+            
+            let vc = Constant.getViewController(storyboard: Constant.kNotification, identifier: Constant.kNotificationVC, type: NotificationVC.self)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
+    }

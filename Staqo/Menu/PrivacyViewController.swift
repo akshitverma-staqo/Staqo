@@ -20,7 +20,6 @@ class PrivacyViewController: UIViewController,UIWebViewDelegate {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
         header.delegate = self
-       
         herderView.addSubview(header)
         
         getImage()

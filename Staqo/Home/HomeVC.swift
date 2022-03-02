@@ -356,13 +356,13 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
         switch viewModel.rows?[indexPath.row].title ?? "" {
         case "1":
         
-            UserDefaults.standard.setWebStatus(value: "U")
-            UserDefaults.standard.set("oqportal", forKey: "webcheck")
+            
             //UserDefaults.standard.setWebStatus(value: "")
             //            UserDefaults.standard.getWebStatus()
             
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
-
+            vc.url = URL(string:Constant.kOQPORTAL_LINK)
+            vc.linkName = "OQ Portal"
             self.navigationController?.pushViewController(vc, animated: true)
             
             
@@ -443,8 +443,10 @@ extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollect
 
         case "11":
            print("OQ Roadshow")
-            UserDefaults.standard.set("roadshow", forKey: "webcheck")
+           // UserDefaults.standard.set("roadshow", forKey: "webcheck")
             let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+            vc.linkName = "OQ Roadshow"
+            vc.url = URL(string:Constant.kOqRoadshow)
             self.navigationController?.pushViewController(vc, animated: true)
 
         default:

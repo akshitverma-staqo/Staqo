@@ -133,7 +133,7 @@
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jMJ-ln-07p" customClass="DesignableButton" customModule="Staqo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="242" width="140.5" height="35"/>
-                                <color key="backgroundColor" red="0.3338460922" green="0.66975700859999998" blue="0.70981377359999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.02686542645" green="0.1634581685" blue="0.22353762390000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="CenturyGothic-Bold" family="Century Gothic" pointSize="16"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

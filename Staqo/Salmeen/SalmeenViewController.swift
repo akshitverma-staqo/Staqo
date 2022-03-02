@@ -35,8 +35,10 @@ class SalmeenViewController: UIViewController {
     @IBAction func sefdecBtnTap(_ sender: Any) {
         
 
-        UserDefaults.standard.set("salmeen2", forKey: "webcheck")
+       // UserDefaults.standard.set("salmeen2", forKey: "webcheck")
         let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+        vc.url = URL(string:Constant.kSALMEEN_POINT2)
+        vc.linkName = "Self-declaration"
         self.navigationController?.pushViewController(vc, animated: true)
         
         
@@ -48,8 +50,10 @@ class SalmeenViewController: UIViewController {
 
         
        
-        UserDefaults.standard.set("salmeen1", forKey: "webcheck")
+        //UserDefaults.standard.set("salmeen1", forKey: "webcheck")
         let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kWebViewVC, type: WebViewVC.self)
+        vc.url = URL(string:Constant.kSALMEEN_POINT1)
+        vc.linkName = "COVID-19 Info"
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

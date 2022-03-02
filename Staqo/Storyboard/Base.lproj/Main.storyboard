@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="41" id="Tbu-Ho-3kY"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2021 OQ SAOC. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fq-1I-ydY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="©2022 OQ SAOC. " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fq-1I-ydY">
                                 <rect key="frame" x="137.5" y="622" width="100" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Cb4-rG-dtP"/>

@@ -1465,11 +1465,11 @@
                                 <color key="textColor" red="0.031372549020000001" green="0.1215686275" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="XhR-bt-M2Z">
+                            <searchBar contentMode="scaleToFill" searchBarStyle="minimal" text="" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhR-bt-M2Z">
                                 <rect key="frame" x="20" y="122" width="287" height="56"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="h7m-ZZ-doe" id="OJN-Y8-YfW"/>
+                                    <outlet property="delegate" destination="h7m-ZZ-doe" id="ram-ZS-Yk6"/>
                                 </connections>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rud-5y-alE">

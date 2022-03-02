@@ -7,13 +7,14 @@
 
 import UIKit
 
-class VisitorListVC:  BaseVC {
+class VisitorListVC:  BaseVC,UITextFieldDelegate {
     
     var header:HeaderView!
     @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var hideBtn: UIButton!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tblView: UITableView!
+    var toolbar = UIToolbar()
     private let kVisiterListTVC = "VisiterListTVC"
     var viewModal: VisiterListViewModal!
     var viewModalEmp: EmpViewModal!
@@ -30,18 +31,29 @@ class VisitorListVC:  BaseVC {
         viewModalEmp.bootstrap()
         viewModal = VisiterListViewModal(dataSource: VisitorListDataSource())
         viewModal.delegate = self
-      getImage()
+        getImage()
         hideBtn.setTitleColor(UIColor.gray, for: UIControl.State.normal)
         searchBar.resignFirstResponder()
-      //  searchBar.returnKeyType = .done
+        searchBar.delegate = self
+    
+        toolbar.sizeToFit()
+        let flexibleSpace = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let doneButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: self, action: #selector(doneClicked))
+        toolbar.setItems([flexibleSpace, doneButton], animated: true)
+        searchBar.inputAccessoryView = toolbar
+        
+
         tblView.register(UINib(nibName: kVisiterListTVC, bundle: nil), forCellReuseIdentifier: kVisiterListTVC)
-     //   searchBar.searchTextField.keyboardToolbar.doneBarButton.setTarget(self, action: #selector(doneBtnClicked))
         // Do any additional setup after loading the view.
-    }
-    @objc func doneBtnClicked() {
+        
+        
         
     }
-  
+
+    @objc func doneClicked(){
+        view.endEditing(true)
+    }
+    
     
     func getImage(){
         
@@ -54,10 +66,7 @@ class VisitorListVC:  BaseVC {
             }
         }
     }
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//          view.endEditing(true)
-//          return true
-//       }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         header.BtnMenu.setImage(UIImage(named: "backArrow"), for: .normal)
@@ -90,11 +99,7 @@ extension VisitorListVC:UISearchBarDelegate{
             filteredData = viewModal.valueData?.filter {
                 return ($0.fields?.name?.localizedCaseInsensitiveContains(searchText) ?? false || $0.fields?.mobileno1?.contains(searchText) ?? false)
             }
-             print(filteredData)
-//            if let data = filteredData {
-//                viewModal.valueData? = data
-//            }
-          // check karo
+
 
         }else{
             filteredData = viewModal.valueData
@@ -232,3 +237,5 @@ extension VisitorListVC: HeaderViewDelegate{
     }
     
 }
+
+

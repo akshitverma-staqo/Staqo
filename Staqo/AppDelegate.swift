@@ -25,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         
         
+        
         FirebaseApp.configure()
 
         // [START set_messaging_delegate]

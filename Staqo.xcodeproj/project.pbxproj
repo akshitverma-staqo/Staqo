@@ -1585,7 +1585,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1594,13 +1594,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug-PROD";
 		};
@@ -1714,7 +1714,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1723,13 +1723,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Release-PROD";
 		};
@@ -1908,7 +1908,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1917,12 +1917,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1935,7 +1935,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = PROD;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -1944,13 +1944,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -2112,7 +2112,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = DEV;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -2121,13 +2121,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug-DEV";
 		};
@@ -2241,7 +2241,7 @@
 				CODE_SIGN_ENTITLEMENTS = Staqo/Staqo.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3.0;
+				CURRENT_PROJECT_VERSION = 5.0;
 				DEVELOPMENT_TEAM = 8RFP2YFTM2;
 				ENVIRONMENT = DEV;
 				INFOPLIST_FILE = Staqo/Info.plist;
@@ -2250,13 +2250,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3;
+				MARKETING_VERSION = 5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.OQ.EmployeeApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = OQAppProvisionalProfile;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Release-DEV";
 		};

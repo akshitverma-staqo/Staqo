@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dmK-oM-B2h">
-                                <rect key="frame" x="0.0" y="54" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="113" width="375" height="40"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="bHB-Cm-xI2"/>
@@ -75,7 +75,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="alY-yh-OAN">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="173" width="375" height="494"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="109" id="RtX-qk-SK4">
@@ -134,22 +134,35 @@
                                     <outlet property="delegate" destination="BxB-hm-wWP" id="CZO-hg-eWk"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WhV-pz-zTt" userLabel="NavigationView" customClass="HeaderView" customModule="Staqo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="375" height="64"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="Y9D-kJ-oAS"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="64" id="oH7-vY-Gle"/>
+                                    <constraint firstAttribute="height" constant="64" id="sgE-bA-1II"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X6N-QF-u0P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="alY-yh-OAN" firstAttribute="leading" secondItem="X6N-QF-u0P" secondAttribute="leading" id="7Lh-OA-tsr"/>
                             <constraint firstAttribute="bottom" secondItem="alY-yh-OAN" secondAttribute="bottom" id="CaK-w8-4Ny"/>
-                            <constraint firstItem="dmK-oM-B2h" firstAttribute="top" secondItem="X6N-QF-u0P" secondAttribute="top" constant="10" id="Dl9-rN-jdZ"/>
+                            <constraint firstItem="WhV-pz-zTt" firstAttribute="top" secondItem="X6N-QF-u0P" secondAttribute="top" id="IUp-Wh-NJS"/>
                             <constraint firstItem="dmK-oM-B2h" firstAttribute="leading" secondItem="X6N-QF-u0P" secondAttribute="leading" id="OgC-sj-Glx"/>
+                            <constraint firstItem="dmK-oM-B2h" firstAttribute="top" secondItem="WhV-pz-zTt" secondAttribute="bottom" constant="5" id="Sn0-y1-fce"/>
+                            <constraint firstItem="WhV-pz-zTt" firstAttribute="leading" secondItem="X6N-QF-u0P" secondAttribute="leading" id="XFg-lV-hyW"/>
                             <constraint firstItem="alY-yh-OAN" firstAttribute="top" secondItem="dmK-oM-B2h" secondAttribute="bottom" constant="20" id="dbE-Ea-fb3"/>
                             <constraint firstItem="X6N-QF-u0P" firstAttribute="trailing" secondItem="dmK-oM-B2h" secondAttribute="trailing" id="ded-06-nYX"/>
                             <constraint firstItem="alY-yh-OAN" firstAttribute="trailing" secondItem="X6N-QF-u0P" secondAttribute="trailing" id="q4i-2v-gdc"/>
+                            <constraint firstAttribute="trailing" secondItem="WhV-pz-zTt" secondAttribute="trailing" id="qVs-Xk-cdP"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="collectionView" destination="dmK-oM-B2h" id="skV-uB-VT2"/>
+                        <outlet property="herderView" destination="WhV-pz-zTt" id="uj5-nk-fPo"/>
                         <outlet property="tableView" destination="alY-yh-OAN" id="tRB-wh-Lq5"/>
                     </connections>
                 </viewController>

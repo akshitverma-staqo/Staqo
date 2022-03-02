@@ -12,6 +12,7 @@ import MSAL
 import ANActivityIndicator
 
 class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate, WKUIDelegate {
+    @IBOutlet weak var lblLinkRedirect: UILabel!
     @IBOutlet weak var webView: WKWebView!
     weak var timer: Timer?
     @IBOutlet weak var loaderView: UIView!
@@ -19,7 +20,7 @@ class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate, WKUI
     @IBOutlet weak var herderView: HeaderView!
     @IBOutlet weak var loaderImage: UIImageView!
     var url: URL!
-    
+    var linkName : String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         header = HeaderView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height:70))
@@ -28,31 +29,9 @@ class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate, WKUI
         loaderView.isHidden = false
         webView.uiDelegate = self
         loaderView.layer.cornerRadius = 10
-        
+        lblLinkRedirect.text = linkName
         webView.navigationDelegate = self
         webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
-        
-        let webteststr = UserDefaults.standard.string(forKey: "webcheck")!
-        print(webteststr as Any)
-        let webcheck: String = webteststr
-        switch webcheck {
-        case "salmeen1":
-            url = URL(string:Constant.kSALMEEN_POINT1)
-            
-        case "salmeen2":
-            url = URL(string:Constant.kSALMEEN_POINT2)
-            
-        case "roadshow":
-            //url = URL(string:"http://dx.oq.com")
-            url = URL(string:Constant.kOqRoadshow)
-            
-        default:
-            url = URL(string:Constant.OQPORTAL_LINK)
-            
-            
-            
-        }
-        
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
         DispatchQueue.main.async {
@@ -149,17 +128,19 @@ class WebViewVC: UIViewController, UIWebViewDelegate, WKNavigationDelegate, WKUI
 
 extension WebViewVC: HeaderViewDelegate{
     func btnMenuTapped(sender: UIButton) {
-        
+        timer?.invalidate()
         _ = navigationController?.popViewController(animated: true)
 
     }
     
     func btnProfileTapped(sender: UIButton) {
+        timer?.invalidate()
         let vc = Constant.getViewController(storyboard: Constant.kHomeStoryboard, identifier: Constant.kEmpVC, type: EmpVC.self)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func btnLogoutTapped(sender: UIButton) {
+        timer?.invalidate()
         
         let vc = Constant.getViewController(storyboard: Constant.kNotification, identifier: Constant.kNotificationVC, type: NotificationVC.self)
         self.navigationController?.pushViewController(vc, animated: true)

@@ -198,6 +198,7 @@ extension LogTicketVC : LogTicketTCVDelegate{
 //                print(str)
                 
                 viewModel.submitTicketData(desc: desc, subj: subj, catID: catID, prioName: prioName, subID: subID, email_ID: email_ID, projName: projName)
+       
 //            }catch{
 //
 //            }

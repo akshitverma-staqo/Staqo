@@ -19,32 +19,32 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HomeCollectionViewCell" id="gTV-IL-0wX" customClass="HomeCollectionViewCell" customModule="Staqo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="360" height="433"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
+                <rect key="frame" x="0.0" y="0.0" width="360" height="433"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CVu-Ww-IlZ">
-                        <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="433"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L57-CA-jQM">
-                                <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4" translatesAutoresizingMaskIntoConstraints="NO" id="L57-CA-jQM">
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="433"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blob1" translatesAutoresizingMaskIntoConstraints="NO" id="ink-F0-5ia">
-                                <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="433"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spiral1" translatesAutoresizingMaskIntoConstraints="NO" id="ooy-gy-uMo">
-                                <rect key="frame" x="0.0" y="0.0" width="229" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="433"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to know more" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taa-aa-ogL">
-                                <rect key="frame" x="20" y="365" width="104.5" height="15"/>
+                                <rect key="frame" x="20" y="398" width="104.5" height="15"/>
                                 <fontDescription key="fontDescription" name="AktivGroteskCorp-Regular" family="Aktiv Grotesk Corp" pointSize="13"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OQ Portal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reD-qQ-IgU">
-                                <rect key="frame" x="20" y="333.5" width="108" height="26.5"/>
+                                <rect key="frame" x="20" y="366.5" width="108" height="26.5"/>
                                 <fontDescription key="fontDescription" name="AktivGroteskCorp-Bold" family="Aktiv Grotesk Corp" pointSize="23"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,17 +79,18 @@
                 <constraint firstAttribute="trailing" secondItem="CVu-Ww-IlZ" secondAttribute="trailing" id="8iB-yW-w83"/>
                 <constraint firstItem="CVu-Ww-IlZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="m2I-MO-A9p"/>
             </constraints>
-            <size key="customSize" width="397" height="332"/>
+            <size key="customSize" width="528" height="365"/>
             <connections>
                 <outlet property="imgView1" destination="L57-CA-jQM" id="iSw-Zx-yRK"/>
                 <outlet property="imgView2" destination="ink-F0-5ia" id="Z7c-bG-Vjs"/>
                 <outlet property="imgView3" destination="ooy-gy-uMo" id="eHG-uk-fvm"/>
                 <outlet property="lbl1" destination="reD-qQ-IgU" id="d50-FO-SNr"/>
             </connections>
-            <point key="canvasLocation" x="363.04347826086962" y="129.24107142857142"/>
+            <point key="canvasLocation" x="476.81159420289856" y="170.42410714285714"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="4" width="409" height="429"/>
         <image name="blob1" width="315" height="331"/>
         <image name="spiral1" width="315" height="331"/>
     </resources>

@@ -86,6 +86,7 @@ class LogTicketTVC: UITableViewCell, UIImagePickerControllerDelegate & UINavigat
   //          print(subCatData?[selectedIndex].id ?? "")
             delegate?.submitRequest(desc: descriptionTxt.text ?? "", subj: subjectTxt.text ?? "", catID: catIDData , prioName: priorityTxt.text ?? "", subID: subCatIDData, email_ID: (UserDefaults.standard.getProfile()?.email)!, projName: "null")
             print("Category:" + "\(catData?[selectedIndex].id)" + "SubcatID:" + "\(subCatData?[selectedIndex].id)")
+            print("desc: \(descriptionTxt.text ?? "")" +  "subject : \(subjectTxt.text ?? "")" + "cat : \(catIDData)" + "priority : \(priorityTxt.text ?? "")" + "subcatid : \(subCatIDData)" + "Email :\((UserDefaults.standard.getProfile()?.email)!)")
         
         }
         
@@ -238,13 +239,6 @@ extension LogTicketTVC : UITextFieldDelegate{
             }
            
         }else if txtTag == 3{
-//            if subCount == 0{
-//                subCount = +1
-//                print("Hello count" + "\(subCount)")
-//                picker.selectRow(0, inComponent: 0, animated: false)
-//            }else{
-//                picker.selectRow(subCount, inComponent: 0, animated: false)
-//            }
             if categoryTxt.text == ""{
                 delegate?.showMsgValidation(msg: "Please select Category")
             }else{

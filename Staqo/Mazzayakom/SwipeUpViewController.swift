@@ -280,7 +280,8 @@ extension SwipeUpViewController : UITableViewDelegate, UITableViewDataSource
         print(catItems.count)
         defaults.set(catIdList, forKey: "catIdList")
         defaults.set(arrDara.count, forKey: "arrDaraCount")
-        present(vc!, animated: true, completion: nil)
+        //present(vc!, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc!, animated: true)
    
 
 

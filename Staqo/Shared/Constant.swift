@@ -332,7 +332,7 @@ class Constant {
         if let date =  formatter.date(from: strDate) {
             let viewFormatter = DateFormatter()
             //viewFormatter.dateFormat = "dd,MMM - h:mm a"
-            viewFormatter.dateFormat = "dd-MM"
+            viewFormatter.dateFormat = "dd-MM-yyyy"
             
             return viewFormatter.string(from: date)
         }

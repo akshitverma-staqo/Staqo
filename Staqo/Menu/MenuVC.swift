@@ -11,7 +11,7 @@ class MenuVC: BaseVC {
     
     var viewModal: MenuViewModal!
 
-    var descriptionStringTwo = "©2020 OQ SAOC. Powered by Staqo"
+    var descriptionStringTwo = "©2022 OQ SAOC. Powered by Staqo"
     @IBOutlet weak var bottomLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
